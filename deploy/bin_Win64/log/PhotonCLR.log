@@ -248,3 +248,4 @@ System.Exception: Can't find ServerApplication.dll in  or D:\Projects\ThesisMMO\
 2017-04-17 21:52:34,499 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'MMOServer', assemblyName = 'MMOServer', typeName = 'MMOServerApplication'
 2017-04-17 21:52:34,507 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'MMOServer', DomainId='2' -- calling Application.Setup
 2017-04-17 21:52:34,519 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2017-04-17 22:40:31,059 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'

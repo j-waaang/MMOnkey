@@ -34,3 +34,9 @@
 8144: 21:11:41.202 - Will produce at most: 10 crash dumps
 8144: 21:11:41.202 - Service shutting down
 8144: 21:11:41.203 - Service shut down complete
+11408: 22:40:31.053 - ---
+11408: 22:40:31.053 - Service: "Photon Socket Server" starting
+11408: 22:40:31.053 - Config File: D:\Projects\ThesisMMO\deploy\bin_Win64\PhotonServer.config
+11408: 22:40:31.054 - Will produce at most: 10 crash dumps
+11408: 22:40:31.054 - Service shutting down
+11408: 22:40:31.055 - Service shut down complete
