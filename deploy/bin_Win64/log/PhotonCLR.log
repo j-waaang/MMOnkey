@@ -249,3 +249,24 @@ System.Exception: Can't find ServerApplication.dll in  or D:\Projects\ThesisMMO\
 2017-04-17 21:52:34,507 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'MMOServer', DomainId='2' -- calling Application.Setup
 2017-04-17 21:52:34,519 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
 2017-04-17 22:40:31,059 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'
+2017-04-23 13:30:27,554 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Initialize: ApplicationName = 'DefaultDomain', DomainID = '1'
+2017-04-23 13:30:27,600 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AppDomains with unhandled exceptions are usually not unloaded and restarted.
+2017-04-23 13:30:27,605 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Getting license information:
+2017-04-23 13:30:27,998 [ 1] INFO  PhotonHostRuntime.PhotonLicensing - LICENSE: Type:Standard; Plan:Free; Expiration: never; floating license: yes; max connections: 100; valid IPs: any; status:Licensed
+2017-04-23 13:30:29,204 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - CreateAppDomain: name = 'MMOServer' , assemblyName = 'MMOServer'
+2017-04-23 13:30:29,225 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationBase = 'D:\Projects\ThesisMMO\deploy'
+2017-04-23 13:30:29,230 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   PrivateBinPath = 'D:\Projects\ThesisMMO\deploy\MMOServer\bin;bin_Win64;Shared;'
+2017-04-23 13:30:29,233 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ConfigurationFile = ''
+2017-04-23 13:30:29,236 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   CachePath = ''
+2017-04-23 13:30:29,275 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationPath = 'D:\Projects\ThesisMMO\deploy\MMOServer'
+2017-04-23 13:30:29,279 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   BinaryPath = 'D:\Projects\ThesisMMO\deploy\MMOServer\bin'
+2017-04-23 13:30:29,283 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   ApplicationRootPath = 'D:\Projects\ThesisMMO\deploy'
+2017-04-23 13:30:29,286 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager -   UnmanagedLogPath = 'D:\Projects\ThesisMMO\deploy\bin_Win64\log'
+2017-04-23 13:30:29,305 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: MMOServer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null from file:///D:/Projects/ThesisMMO/deploy/MMOServer/bin/MMOServer.DLL
+2017-04-23 13:30:29,309 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Photon SDK:4.0.28.11245
+2017-04-23 13:30:29,366 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e from file:///D:/Projects/ThesisMMO/deploy/MMOServer/bin/Photon.SocketServer.DLL
+2017-04-23 13:30:29,424 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - AssemblyLoadEvent: ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0 from file:///D:/Projects/ThesisMMO/deploy/MMOServer/bin/ExitGamesLibs.DLL
+2017-04-23 13:30:29,438 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - Starting: name = 'MMOServer', assemblyName = 'MMOServer', typeName = 'MMOServerApplication'
+2017-04-23 13:30:29,447 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'MMOServer', DomainId='2' -- calling Application.Setup
+2017-04-23 13:30:29,461 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - PhotonRunning: ApplicationName = 'DefaultDomain', DomainId='1'
+2017-04-23 13:49:00,295 [ 1] INFO  PhotonHostRuntime.PhotonDomainManager - RequestStop: ApplicationName = 'DefaultDomain', DomainId='1'

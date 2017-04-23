@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
 
 namespace JYW.ThesisMMO.Common.GameWorld.Entities {
     abstract class Entity {
-        public Vector2 Position { get; set; }
+        protected List<Attribute> m_Attributes;
     }
 }
