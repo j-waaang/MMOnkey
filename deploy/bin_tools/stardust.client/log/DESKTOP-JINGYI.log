@@ -1,16 +1,20 @@
-2017-04-17 16:53:18,727 [1] INFO  Photon.StarDust.Client.Program - Starting 5 games with 3 players
-2017-04-17 16:53:19,353 [6] INFO  Photon.StarDust.Client.Program - [9876] Started game DESKTOP-JINGYI(9876)1 with 3 clients
-2017-04-17 16:53:19,728 [6] INFO  Photon.StarDust.Client.Program - [9876] Started game DESKTOP-JINGYI(9876)2 with 3 clients
-2017-04-17 16:53:19,746 [7] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:20,118 [6] INFO  Photon.StarDust.Client.Program - [9876] Started game DESKTOP-JINGYI(9876)3 with 3 clients
-2017-04-17 16:53:20,642 [6] INFO  Photon.StarDust.Client.Program - [9876] Started game DESKTOP-JINGYI(9876)4 with 3 clients
-2017-04-17 16:53:20,745 [11] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:21,166 [6] INFO  Photon.StarDust.Client.Program - [9876] Started game DESKTOP-JINGYI(9876)5 with 3 clients
-2017-04-17 16:53:21,756 [41] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:22,759 [41] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:23,773 [5] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:24,774 [41] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:25,789 [45] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:26,791 [41] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:27,792 [6] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
-2017-04-17 16:53:28,795 [44] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:32,178 [1] INFO  Photon.StarDust.Client.Program - Starting 5 games with 3 players
+2017-04-24 14:41:32,705 [6] INFO  Photon.StarDust.Client.Program - [4680] Started game DESKTOP-JINGYI(4680)1 with 3 clients
+2017-04-24 14:41:33,063 [6] INFO  Photon.StarDust.Client.Program - [4680] Started game DESKTOP-JINGYI(4680)2 with 3 clients
+2017-04-24 14:41:33,198 [7] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:33,536 [6] INFO  Photon.StarDust.Client.Program - [4680] Started game DESKTOP-JINGYI(4680)3 with 3 clients
+2017-04-24 14:41:33,975 [6] INFO  Photon.StarDust.Client.Program - [4680] Started game DESKTOP-JINGYI(4680)4 with 3 clients
+2017-04-24 14:41:34,192 [28] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:34,520 [6] INFO  Photon.StarDust.Client.Program - [4680] Started game DESKTOP-JINGYI(4680)5 with 3 clients
+2017-04-24 14:41:35,206 [31] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:36,208 [28] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:37,209 [29] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:38,209 [7] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:39,223 [5] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:40,225 [29] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:41,225 [29] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:42,226 [6] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:43,238 [6] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:44,237 [47] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:45,243 [29] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0
+2017-04-24 14:41:46,255 [30] DEBUG Photon.StarDust.Client.Program - peers: 0, r-ev: 0, ur-ev: 0, r-op: 0, ur-op: 0, res: 0, r-rtt: 0, ur-rtt: 0, rtt: 0, var: 0, flsh-rtt: 0, flsh-ev 0, flsh-op 0

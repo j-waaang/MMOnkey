@@ -47,6 +47,7 @@
     <Compile Include="GameWorld\Entities\Attribute.cs" />
     <Compile Include="GameWorld\Entities\Entity.cs" />
     <Compile Include="GameWorld\TestMap.cs" />
+    <Compile Include="OperationCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

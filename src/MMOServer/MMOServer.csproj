@@ -7,7 +7,7 @@
     <ProjectGuid>{E2525352-7192-4627-8152-438DD23FA802}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MMOServer</RootNamespace>
+    <RootNamespace>JYW.ThesisMMO.MMOServer</RootNamespace>
     <AssemblyName>MMOServer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -56,9 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MMOServerApplication.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="OperationHandler\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
