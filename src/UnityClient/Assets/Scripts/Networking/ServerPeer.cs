@@ -17,14 +17,12 @@ namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking {
 
             m_ServerPeerListener = new ServerPeerListener();
             m_ServerPeerListener.ConnectedEvent += Connected;
-            m_ServerPeerListener.DisconnectedEvent -= Disconnected;
+            m_ServerPeerListener.DisconnectedEvent += Disconnected;
 
             m_PhotonPeer = new PhotonPeer(m_ServerPeerListener, ConnectionProtocol.Tcp);
         }
 
         private void Update() {
-            if(!m_Connected) { return; }
-
             m_PhotonPeer.Service();
         }
 
@@ -51,7 +49,7 @@ namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking {
 
         private void OnDestroy() {
             Disconnect();
-            m_ServerPeerListener.ConnectedEvent += Connected;
+            m_ServerPeerListener.ConnectedEvent -= Connected;
             m_ServerPeerListener.DisconnectedEvent -= Disconnected;
         }
     }
