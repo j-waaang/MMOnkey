@@ -3,13 +3,13 @@
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
     using PhotonHostRuntimeInterfaces;
-    class MMOPeer : Peer {
-        public MMOPeer(InitRequest initRequest) : base(initRequest) {
+    class ClientPeer : Peer {
+        public ClientPeer(InitRequest initRequest) : base(initRequest) {
 
             BroadcastMessage += OnBroadcastMessage;
         }
 
-        private static event Action<MMOPeer, EventData, SendParameters> BroadcastMessage;
+        private static event Action<ClientPeer, EventData, SendParameters> BroadcastMessage;
 
 
         protected override void OnDisconnect(DisconnectReason reasonCode, string reasonDetail) {
@@ -28,7 +28,7 @@
             }
         }
 
-        private void OnBroadcastMessage(MMOPeer peer, EventData eventData, SendParameters sendParameters) {
+        private void OnBroadcastMessage(ClientPeer peer, EventData eventData, SendParameters sendParameters) {
             if (peer != this) // do not send chat custom event to peer who called the chat custom operation 
             {
                 SendEvent(eventData, sendParameters);

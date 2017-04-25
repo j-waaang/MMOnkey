@@ -19,7 +19,7 @@ namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking {
             m_ServerPeerListener.ConnectedEvent += Connected;
             m_ServerPeerListener.DisconnectedEvent += Disconnected;
 
-            m_PhotonPeer = new PhotonPeer(m_ServerPeerListener, ConnectionProtocol.Tcp);
+            m_PhotonPeer = new PhotonPeer(m_ServerPeerListener, ConnectionProtocol.Udp);
         }
 
         private void Update() {

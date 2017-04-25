@@ -1,8 +1,8 @@
 ﻿namespace JYW.ThesisMMO.MMOServer {
     using Photon.SocketServer;
-    class MMOServerApplication : ApplicationBase {
+    class ServerApplication : ApplicationBase {
         protected override PeerBase CreatePeer(InitRequest initRequest) {
-            return new MMOPeer(initRequest);
+            return new ClientPeer(initRequest);
         }
 
         protected override void Setup() {

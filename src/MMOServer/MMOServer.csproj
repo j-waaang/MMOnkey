@@ -52,9 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MMOPeer.cs" />
+    <Compile Include="InitialOperationHandler.cs" />
+    <Compile Include="ClientPeer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MMOServerApplication.cs" />
+    <Compile Include="ServerApplication.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
