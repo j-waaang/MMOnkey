@@ -46,8 +46,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>XCOPY "$(TargetDir)*" "$(SolutionDir)UnityClient\Assets\Common" /Y /S
-XCOPY "$(TargetDir)*" "$(SolutionDir)..\deploy\MMOServer\bin" /Y /S</PostBuildEvent>
+    <PostBuildEvent>XCOPY "$(TargetDir)*" "$(SolutionDir)UnityClient\Assets\Common" /Y /S</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
