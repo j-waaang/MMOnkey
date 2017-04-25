@@ -38,22 +38,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\lib\Unity\UnityEngine.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameWorld\BoundingBox.cs" />
-    <Compile Include="GameWorld\Entities\Attribute.cs" />
-    <Compile Include="GameWorld\Entities\Entity.cs" />
-    <Compile Include="GameWorld\TestMap.cs" />
     <Compile Include="OperationCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(TargetDir)*" "$(SolutionDir)UnityClient\Assets\Common" /Y /S
+XCOPY "$(TargetDir)*" "$(SolutionDir)..\deploy\MMOServer\bin" /Y /S</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

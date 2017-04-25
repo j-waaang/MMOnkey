@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace JYW.ThesisMMO.MMOServer {
+    using System;
+    using Photon.SocketServer;
+    using Photon.SocketServer.Rpc;
+    class InitialOperationHandler : IOperationHandler {
+        public void OnDisconnect(PeerBase peer) {
+        }
 
-namespace JYW.ThesisMMO.MMOServer {
-    class InitialOperationHandler {
+        public OperationResponse OnOperationRequest(PeerBase peer, OperationRequest operationRequest, SendParameters sendParameters) {
+            throw new NotImplementedException();
+        }
     }
 }
