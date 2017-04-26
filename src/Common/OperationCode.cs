@@ -1,8 +1,6 @@
 ﻿namespace JYW.ThesisMMO.Common {
     public enum OperationCode : byte{
-
-        EnterWorld = 10,
-        
-        Move = 20
+        EnterWorld = 1,
+        Move = 2
     }
 }

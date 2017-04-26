@@ -14,14 +14,13 @@
 
         [SerializeField] private Button m_ConnectButton;
         [SerializeField] private Text m_ConnectInput;
-        [SerializeField] private ServerPeer m_ServerPeer;
 
         private void Awake() {
             m_ConnectButton.onClick.AddListener(OnConnect);
         }
 
         private void OnConnect() {
-            m_ServerPeer.Connect(m_ConnectInput.text, OnConnected);
+            Game.Instance.Connect(m_ConnectInput.text, OnConnected);
         }
 
         private void OnConnected() {

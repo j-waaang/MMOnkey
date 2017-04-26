@@ -6,9 +6,14 @@
         }
 
         protected override void Setup() {
+            CreateWorld();
         }
 
         protected override void TearDown() {
+        }
+
+        private void CreateWorld() {
+
         }
     }
 }
