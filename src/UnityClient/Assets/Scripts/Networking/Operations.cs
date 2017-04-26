@@ -1,5 +1,5 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking {
-    using Common;
+    using Common.Codes;
     using System;
     using System.Collections.Generic;
 

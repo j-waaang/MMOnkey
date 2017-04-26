@@ -5,8 +5,15 @@
 
     public class EnterWorldController : MonoBehaviour {
 
+        //Set by textinput inspector
+        public string Username { get; set; }
+
         public void OnEnterWorld() {
-            Game.Instance.EnterWorld(EnteredWorldCallback);
+            if(Username == "") {
+                Debug.LogError("No username entered");
+                return;
+            }
+            Game.Instance.EnterWorld(Username, EnteredWorldCallback);
         }
 
         private void EnteredWorldCallback(Vector2 position) {

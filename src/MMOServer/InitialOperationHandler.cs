@@ -4,6 +4,9 @@
     using System.ComponentModel;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
+    using Common.Codes;
+    using Common.Entities;
+    using Operations;
     using Common;
 
     class InitialOperationHandler : IOperationHandler {
@@ -21,13 +24,47 @@
         public OperationResponse OnOperationRequest(PeerBase peer, OperationRequest operationRequest, SendParameters sendParameters) {
             switch ((OperationCode)operationRequest.OperationCode) {
                 case OperationCode.EnterWorld:
-                    return Operations.OperationEnterWorld(peer, operationRequest, sendParameters);
+                    return OperationEnterWorld(peer, operationRequest, sendParameters);
                 case OperationCode.Move:
-                    throw new InvalidOperationException();
+                    return NegativeResponse(operationRequest, ReturnCode.OperationNotAllowed);
                 default:
-                    throw new InvalidEnumArgumentException();
+                    return NegativeResponse(operationRequest, ReturnCode.OperationNotSupported);
             }
-            throw new InvalidOperationException();
+        }
+
+        private OperationResponse NegativeResponse(OperationRequest operationRequest, ReturnCode returnCode) {
+            return new OperationResponse(operationRequest.OperationCode) {
+                ReturnCode = (short) returnCode,
+                DebugMessage = returnCode.ToString() + ": " + operationRequest.OperationCode
+            };
+        }
+
+        private OperationResponse OperationEnterWorld(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
+            var operation = new EnterWorld(peer.Protocol, request);
+
+            if (!operation.IsValid) {
+                return new OperationResponse(request.OperationCode) { ReturnCode = (int)ReturnCode.InvalidOperationParameter, DebugMessage = operation.GetErrorMessage() };
+            }
+
+            //TODO: Think about where characters should enter the world.
+            var position = GetRandomWorldPosition();
+            var entity = new CharacterEntity(operation.Username, position);
+
+            //TODO: Missing checks when adding new entity. E.g. is there already an entity with the same name.
+            World.Instance.AddEntity(entity);
+
+
+            var responseObject = new EnterWorldResponse {
+                Position = position
+            };
+
+            return new OperationResponse(request.OperationCode, responseObject) {
+                ReturnCode = (short)ReturnCode.OK,
+            };
+        }
+
+        private Vector GetRandomWorldPosition() {
+            return Vector.Zero;
         }
     }
 }

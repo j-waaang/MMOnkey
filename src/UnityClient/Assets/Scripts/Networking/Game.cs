@@ -4,12 +4,11 @@
     using UnityEngine;
     using ExitGames.Client.Photon;
     using Util;
-    using Common;
+    using Common.Codes;
 
     public class Game : Singleton<Game> {
 
         private PhotonPeer m_PhotonPeer;
-
         private ServerPeerListener m_ServerPeerListener;
         private const string m_ApplicationName = "MMOServer";
         public bool Connected { get; private set; }
@@ -59,9 +58,9 @@
             base.OnDestroy();
         }
 
-        internal void EnterWorld(Action<Vector2> callback) {
+        internal void EnterWorld(string username,Action<Vector2> callback) {
             m_EnteredWorldCallback = callback;
-            Operations.EnterWorld(SendOperation, "Yolo");
+            Operations.EnterWorld(SendOperation, username);
         }
 
         internal void OnEnteredWorld() {
