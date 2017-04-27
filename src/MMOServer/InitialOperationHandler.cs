@@ -40,10 +40,14 @@
         }
 
         private OperationResponse OperationEnterWorld(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
+
             var operation = new EnterWorld(peer.Protocol, request);
 
             if (!operation.IsValid) {
-                return new OperationResponse(request.OperationCode) { ReturnCode = (int)ReturnCode.InvalidOperationParameter, DebugMessage = operation.GetErrorMessage() };
+                return new OperationResponse(request.OperationCode) {
+                    ReturnCode = (int)ReturnCode.InvalidOperationParameter,
+                    DebugMessage = operation.GetErrorMessage()
+                };
             }
 
             //TODO: Think about where characters should enter the world.
@@ -59,7 +63,7 @@
             };
 
             return new OperationResponse(request.OperationCode, responseObject) {
-                ReturnCode = (short)ReturnCode.OK,
+                ReturnCode = (short)ReturnCode.OK
             };
         }
 

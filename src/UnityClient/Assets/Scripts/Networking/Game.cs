@@ -4,6 +4,7 @@
     using UnityEngine;
     using ExitGames.Client.Photon;
     using Util;
+    using Common;
     using Common.Codes;
 
     public class Game : Singleton<Game> {
@@ -23,6 +24,12 @@
             m_ServerPeerListener.DisconnectedEvent += OnDisconnected;
 
             m_PhotonPeer = new PhotonPeer(m_ServerPeerListener, ConnectionProtocol.Udp);
+
+            RegisterTypes();
+        }
+
+        private void RegisterTypes() {
+            PhotonPeer.RegisterType(typeof(Vector), (byte)Common.Protocol.CustomTypeCodes.Vector, Common.Protocol.SerializeVector, Common.Protocol.DeserializeVector);
         }
 
         private void Update() {
