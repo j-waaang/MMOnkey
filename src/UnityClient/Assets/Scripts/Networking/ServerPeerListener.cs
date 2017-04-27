@@ -1,12 +1,14 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking {
     using ExitGames.Client.Photon;
     using System;
+    using Common.Codes;
     using UnityEngine;
 
     public class ServerPeerListener : IPhotonPeerListener {
 
         internal event Action ConnectedEvent;
         internal event Action DisconnectedEvent;
+        internal event Action EnterWorldEvent;
 
         public void DebugReturn(DebugLevel level, string message) {
             Debug.Log(string.Format("{0}: {1}", level, message));
@@ -18,6 +20,15 @@
 
         public void OnOperationResponse(OperationResponse operationResponse) {
             DebugReturn(DebugLevel.INFO, operationResponse.ToStringFull());
+            switch ((OperationCode)operationResponse.OperationCode) {
+                case OperationCode.EnterWorld:
+                    if((ReturnCode) operationResponse.ReturnCode == 0) {
+                        EnterWorldEvent();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void OnStatusChanged(StatusCode statusCode) {

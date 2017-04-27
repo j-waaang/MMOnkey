@@ -68,6 +68,7 @@
         internal void EnterWorld(string username,Action<Vector2> callback) {
             m_EnteredWorldCallback = callback;
             Operations.EnterWorld(SendOperation, username);
+            m_ServerPeerListener.EnterWorldEvent += OnEnteredWorld;
         }
 
         internal void OnEnteredWorld() {
