@@ -1,6 +1,5 @@
-﻿namespace JYW.ThesisMMO.Common {
+﻿namespace JYW.ThesisMMO.Common.Types {
     using System;
-    using System.Linq;
     public static class Protocol {
         public enum CustomTypeCodes {
             Vector = 0

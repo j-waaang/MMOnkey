@@ -1,6 +1,8 @@
 ﻿namespace JYW.ThesisMMO.MMOServer {
-    using Common;
+    using Common.Types;
     using Photon.SocketServer;
+    using ClientPeer = Peers.ClientPeer;
+    using Protocol = Common.Types.Protocol;
     sealed class ServerApplication : ApplicationBase {
         private World m_World;
 
@@ -12,7 +14,11 @@
             CreateWorld();
         }
         private static void RegisterTypes() {
-            Photon.SocketServer.Protocol.TryRegisterCustomType(typeof(Vector), (byte)Common.Protocol.CustomTypeCodes.Vector, Common.Protocol.SerializeVector, Common.Protocol.DeserializeVector);
+            Photon.SocketServer.Protocol.TryRegisterCustomType(
+                typeof(Vector),
+                (byte)Protocol.CustomTypeCodes.Vector,
+                Protocol.SerializeVector,
+                Protocol.DeserializeVector);
         }
         private void CreateWorld() {
             m_World = new World();

@@ -1,5 +1,5 @@
-﻿namespace JYW.ThesisMMO.MMOServer.Operations {
-    using Common;
+﻿namespace JYW.ThesisMMO.MMOServer.Operations.Responses {
+    using Common.Types;
     using Common.Codes;
     using Photon.SocketServer.Rpc;
 

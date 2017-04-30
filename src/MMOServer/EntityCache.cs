@@ -1,7 +1,8 @@
 ﻿namespace JYW.ThesisMMO.MMOServer {
     using Common.Entities;
+    using Common.Types;
     using System.Collections.Generic;
-    class EntityCache {
+    internal class EntityCache {
         private Dictionary<string, EntityBase> m_Entities;
 
         internal EntityCache() {
@@ -12,6 +13,10 @@
         }
         internal void RemoveEntity(string id) {
             m_Entities.Remove(id);
+        }
+
+        internal void MoveEntity(string username, Vector position) {
+
         }
     }
 }

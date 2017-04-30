@@ -4,8 +4,9 @@
     using UnityEngine;
     using ExitGames.Client.Photon;
     using Util;
-    using Common;
+    using Common.Types;
     using Common.Codes;
+    using Protocol = Common.Types.Protocol;
 
     public class Game : Singleton<Game> {
 
@@ -29,7 +30,7 @@
         }
 
         private void RegisterTypes() {
-            PhotonPeer.RegisterType(typeof(Vector), (byte)Common.Protocol.CustomTypeCodes.Vector, Common.Protocol.SerializeVector, Common.Protocol.DeserializeVector);
+            PhotonPeer.RegisterType(typeof(Vector), (byte)Protocol.CustomTypeCodes.Vector, Protocol.SerializeVector, Protocol.DeserializeVector);
         }
 
         private void Update() {

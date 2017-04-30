@@ -1,4 +1,4 @@
-﻿namespace JYW.ThesisMMO.Common {
+﻿namespace JYW.ThesisMMO.Common.Types {
 
     using System;
 
