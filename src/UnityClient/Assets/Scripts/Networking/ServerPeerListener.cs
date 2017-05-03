@@ -3,12 +3,13 @@
     using System;
     using Common.Codes;
     using UnityEngine;
+    using Common.Types;
 
     public class ServerPeerListener : IPhotonPeerListener {
 
         internal event Action ConnectedEvent;
         internal event Action DisconnectedEvent;
-        internal event Action EnterWorldEvent;
+        internal event Action<Vector2> EnterWorldEvent;
 
         public void DebugReturn(DebugLevel level, string message) {
             Debug.Log(string.Format("{0}: {1}", level, message));
@@ -23,7 +24,9 @@
             switch ((OperationCode)operationResponse.OperationCode) {
                 case OperationCode.EnterWorld:
                     if((ReturnCode) operationResponse.ReturnCode == 0) {
-                        EnterWorldEvent();
+                        var data = (Vector) operationResponse.Parameters[(byte) ParameterCode.Position];
+                        var pos = new Vector2(data.X, data.Y);
+                        EnterWorldEvent(pos);
                     }
                     break;
                 default:

@@ -3,13 +3,12 @@
     using Photon.SocketServer.Rpc;
     using Common.Types;
     using Common.Codes;
-    using Common.Entities;
     using Operations;
     using Operations.Responses;
-    using ClientPeer = Peers.ClientPeer;
+    using Peers;
     class InitialOperationHandler : IOperationHandler {
-        private ClientPeer m_Peer;
-        internal InitialOperationHandler(ClientPeer peer) {
+        private MMOPeer m_Peer;
+        internal InitialOperationHandler(MMOPeer peer) {
             m_Peer = peer;
         }
         public void OnDisconnect(PeerBase peer) {
@@ -36,26 +35,31 @@
                 };
             }
 
-            //TODO: Think about where characters should enter the world.
+            // TODO: Think about where characters should enter the world.
             var position = GetRandomWorldPosition();
-            var entity = new CharacterEntity(operation.Username, position);
+            var entity = new PlayerEntity(m_Peer, operation.Username, position);
 
-            //TODO: Missing checks when adding new entity. E.g. is there already an entity with the same name.
-            World.Instance.entityCache.AddEntity(entity);
-
+            // TODO: Think about a different place to store the username.
             m_Peer.Username = operation.Username;
-            m_Peer.SetCurrentOperationHandler(new EntityOperationHandler(m_Peer));
 
-            var responseObject = new EnterWorldResponse {
+            // Send entered world response.
+            var responseData = new EnterWorldResponse {
                 Position = position
             };
-
-            return new OperationResponse(request.OperationCode, responseObject) {
+            var response = new OperationResponse(request.OperationCode, responseData) {
                 ReturnCode = (short)ReturnCode.OK
             };
+            m_Peer.SendOperationResponse(response, sendParameters);
+
+            // Notify other peers about new player by adding the entity to the world cache.
+            //TODO: Missing checks when adding new entity. E.g. is there already an entity with the same name.
+            World.Instance.AddEntity(entity);
+
+            m_Peer.SetCurrentOperationHandler(new EntityOperationHandler(m_Peer));
+            return null;
         }
         private Vector GetRandomWorldPosition() {
-            //TODO: Actually return a random position.
+            // TODO: Actually return a random position.
             return Vector.Zero;
         }
     }

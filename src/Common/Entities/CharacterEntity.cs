@@ -1,14 +1,15 @@
 ﻿namespace JYW.ThesisMMO.Common.Entities {
     using Types;
-    public class CharacterEntity : EntityBase {
+    public class PlayerCharacterEntity : EntityBase {
         public string Name { get; private set; }
         public Vector Position { get; private set; }
-        public CharacterEntity(string name, Vector position) {
+        public PlayerCharacterEntity(string name, Vector position) {
             Identifier = name;
             Name = name;
             Position = position;
         }
         public void Move(Vector newPosition) {
+            Position = newPosition;
         }
     }
 }

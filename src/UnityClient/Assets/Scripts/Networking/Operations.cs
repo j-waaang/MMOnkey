@@ -2,7 +2,6 @@
     using Common.Codes;
     using System;
     using System.Collections.Generic;
-
     internal class Operations {
         internal static void EnterWorld(Action<OperationCode, Dictionary<byte, object>, bool, byte> SendOperation, string username) {
             var data = new Dictionary<byte, object>
@@ -11,6 +10,13 @@
                 };
             
             SendOperation(OperationCode.EnterWorld, data, true, 0);
+        }
+        internal static void Move(Action<OperationCode, Dictionary<byte, object>, bool, byte> SendOperation, string position) {
+            var data = new Dictionary<byte, object>
+                {
+                    { (byte)ParameterCode.Position, position }
+                };
+            SendOperation(OperationCode.Move, data, true, 0);
         }
     }
 }

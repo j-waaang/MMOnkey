@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\deploy\MMOServer\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,9 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExitGames.Logging.Log4Net">
+      <HintPath>..\..\lib\Photon\ExitGames.Logging.Log4Net.dll</HintPath>
+    </Reference>
     <Reference Include="ExitGamesLibs, Version=1.0.4.0, Culture=neutral, PublicKeyToken=eac0edd9746a4aa0, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Photon\ExitGamesLibs.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\lib\Photon\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Photon.SocketServer, Version=4.0.28.11245, Culture=neutral, PublicKeyToken=48c2fa3b6988090e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -52,14 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityCache.cs" />
+    <Compile Include="Events\NewPlayerEvent.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="Operations\Responses\DefaultResponses.cs" />
+    <Compile Include="Events\UpdatePosition.cs" />
     <Compile Include="Peers\OperationHandlers\EntityOperationHandler.cs" />
     <Compile Include="Peers\OperationHandlers\InitialOperationHandler.cs" />
-    <Compile Include="Peers\ClientPeer.cs" />
+    <Compile Include="Peers\MMOPeer.cs" />
     <Compile Include="Operations\EnterWorld.cs" />
     <Compile Include="Operations\Responses\EnterWorldResponse.cs" />
     <Compile Include="Operations\Move.cs" />
+    <Compile Include="PlayerEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerApplication.cs" />
     <Compile Include="World.cs" />
@@ -69,6 +78,14 @@
       <Project>{46caa3c6-3718-4538-986f-14f95f3aff5e}</Project>
       <Name>Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Operations\FromClient\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,5 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.Peers.OperationHandlers {
+    using PhotonHostRuntimeInterfaces;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
     using Common.Types;
@@ -6,11 +7,17 @@
     using Common.Entities;
     using Operations;
     using Operations.Responses;
-    using ClientPeer = Peers.ClientPeer;
+    using MMOPeer = Peers.MMOPeer;
+    using ExitGames.Logging;
+
     class EntityOperationHandler : IOperationHandler {
-        private ClientPeer m_Peer;
-        internal EntityOperationHandler(ClientPeer peer) {
+        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        private MMOPeer m_Peer;
+        internal EntityOperationHandler(MMOPeer peer) {
             m_Peer = peer;
+
+            // Subscribe to world messages. (New player events)
+            World.Instance.SubscribeToMessageChannel(m_Peer.RequestFiber, SendMessage);
         }
         public void OnDisconnect(PeerBase peer) {
             peer.Dispose();
@@ -37,10 +44,15 @@
                 };
             }
 
-            World.Instance.entityCache.MoveEntity(m_Peer.Username, operation.Position);
+            World.Instance.MoveEntity(m_Peer.Username, operation.Position);
 
             //We don't respond directly on movement. World cache updates movement to clients.
             return null;
+        }
+
+        private void SendMessage(Message message) {
+            log.DebugFormat("Received message. Now sending to client.");
+            m_Peer.SendMessage(message.eventData, message.sendParameters);
         }
     }
 }

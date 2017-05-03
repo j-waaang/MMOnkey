@@ -72,8 +72,8 @@
             m_ServerPeerListener.EnterWorldEvent += OnEnteredWorld;
         }
 
-        internal void OnEnteredWorld() {
-            m_EnteredWorldCallback(Vector2.zero);
+        internal void OnEnteredWorld(Vector2 position) {
+            m_EnteredWorldCallback(position);
             m_EnteredWorldCallback = null;
         }
 

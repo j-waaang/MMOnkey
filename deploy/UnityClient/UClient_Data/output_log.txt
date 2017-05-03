@@ -1,0 +1,72 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660 Ti (ID=0x1183)
+    Vendor:   NVIDIA
+    VRAM:     2016 MB
+    Driver:   21.21.13.7653
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Common.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Common.dll into Unity Child Domain
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.020 seconds
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.045916 ms
+[Singleton] Using instance already created: ServerPeer
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connecting to server at 188.174.162.119:5055
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INFO: Connected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.611637 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 294.
+Total: 0.260953 ms (FindLiveObjects: 0.021621 ms CreateObjectMapping: 0.014414 ms MarkObjects: 0.219213 ms  DeleteObjects: 0.005104 ms)
+
+INFO: OperationResponse 1: ReturnCode: 0 (). Parameters: {(Byte)2=(Vector)V(0.00, 0.00, 0.00)}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Entered world at (0.0, 0.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.335726 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 293.
+Total: 0.264857 ms (FindLiveObjects: 0.021921 ms CreateObjectMapping: 0.014714 ms MarkObjects: 0.209903 ms  DeleteObjects: 0.017717 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 888 -> priority: 1 
+  Thread -> id: 34fc -> priority: 1 
+INFO: Disconnected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

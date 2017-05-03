@@ -1,4 +1,3 @@
-2017-04-16 19:07:56,070 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMoDemo; AppPath=D:\Projects\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MmoDemo, Type=Photon.MmoDemo.Server.PhotonApplication 
-2017-04-16 19:11:01,875 [12] INFO  Photon.MmoDemo.Server.World - created world Mmo Grid Demo
-2017-04-16 19:14:44,320 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMoDemo
-2017-04-16 19:14:44,435 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMoDemo
+2017-05-03 15:48:28,720 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-03 15:57:36,680 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-03 15:57:36,680 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

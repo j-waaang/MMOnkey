@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Codes\EventCode.cs" />
     <Compile Include="Codes\ReturnCode.cs" />
     <Compile Include="Entities\CharacterEntity.cs" />
     <Compile Include="Entities\EntityBase.cs" />
