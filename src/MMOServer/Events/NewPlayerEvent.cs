@@ -3,12 +3,7 @@
     using Common.Types;
     using Photon.SocketServer.Rpc;
 
-    internal class NewPlayerEvent : DataContract{
-        internal NewPlayerEvent(string username, Vector position) {
-            Username = username;
-            Position = position;
-        }
-
+    class NewPlayerEvent {
         [DataMember(Code = (byte)ParameterCode.Username)]
         public string Username;
 

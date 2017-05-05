@@ -17,6 +17,11 @@
 
         public void OnEvent(EventData eventData) {
             DebugReturn(DebugLevel.INFO, eventData.ToStringFull());
+            switch ((EventCode)eventData.Code) {
+                case EventCode.NewPlayer:
+                    Debug.Log("Received new player event");
+                    break;
+            }
         }
 
         public void OnOperationResponse(OperationResponse operationResponse) {
@@ -28,8 +33,6 @@
                         var pos = new Vector2(data.X, data.Y);
                         EnterWorldEvent(pos);
                     }
-                    break;
-                default:
                     break;
             }
         }

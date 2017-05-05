@@ -7,35 +7,35 @@ Direct3D:
     VRAM:     2016 MB
     Driver:   21.21.13.7653
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Common.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Common.dll into Unity Child Domain
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\jingy\Desktop\b\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.020 seconds
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\jingy\Desktop\b\UClient_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.527 seconds
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.045916 ms
+UnloadTime: 1.946791 ms
 [Singleton] Using instance already created: ServerPeer
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Connecting to server at 188.174.162.119:5055
+Connecting to server at 188.174.178.6:5055
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -44,10 +44,10 @@ INFO: Connected
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.611637 ms
+UnloadTime: 2.717340 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 294.
-Total: 0.260953 ms (FindLiveObjects: 0.021621 ms CreateObjectMapping: 0.014414 ms MarkObjects: 0.219213 ms  DeleteObjects: 0.005104 ms)
+Total: 0.275667 ms (FindLiveObjects: 0.024924 ms CreateObjectMapping: 0.013513 ms MarkObjects: 0.231524 ms  DeleteObjects: 0.005104 ms)
 
 INFO: OperationResponse 1: ReturnCode: 0 (). Parameters: {(Byte)2=(Vector)V(0.00, 0.00, 0.00)}
  
@@ -58,14 +58,14 @@ Entered world at (0.0, 0.0)
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.335726 ms
+UnloadTime: 0.336627 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 293.
-Total: 0.264857 ms (FindLiveObjects: 0.021921 ms CreateObjectMapping: 0.014714 ms MarkObjects: 0.209903 ms  DeleteObjects: 0.017717 ms)
+Total: 0.259752 ms (FindLiveObjects: 0.021020 ms CreateObjectMapping: 0.013813 ms MarkObjects: 0.207801 ms  DeleteObjects: 0.016215 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 888 -> priority: 1 
-  Thread -> id: 34fc -> priority: 1 
+  Thread -> id: bcc -> priority: 1 
+  Thread -> id: 990 -> priority: 1 
 INFO: Disconnected
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)

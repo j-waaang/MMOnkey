@@ -17,7 +17,7 @@
             m_Peer = peer;
 
             // Subscribe to world messages. (New player events)
-            World.Instance.SubscribeToMessageChannel(m_Peer.RequestFiber, SendMessage);
+            World.Instance.SubscribeToMessageChannel(m_Peer.RequestFiber, SendEvent);
         }
         public void OnDisconnect(PeerBase peer) {
             peer.Dispose();
@@ -50,9 +50,8 @@
             return null;
         }
 
-        private void SendMessage(Message message) {
-            log.DebugFormat("Received message. Now sending to client.");
-            m_Peer.SendMessage(message.eventData, message.sendParameters);
+        private void SendEvent(Message message) {
+            m_Peer.SendEvent(message.eventData, message.sendParameters);
         }
     }
 }

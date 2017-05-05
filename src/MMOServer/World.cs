@@ -39,7 +39,9 @@
             log.DebugFormat("Adding entity with name: " + entity.Username);
             m_Entities[entity.Username] = entity;
 
-            var newPlayerEvent = new NewPlayerEvent(entity.Username, entity.Position);
+            var newPlayerEvent = new NewPlayerEvent();
+            newPlayerEvent.Username = entity.Username;
+            newPlayerEvent.Position = entity.Position;
             IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEvent);
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
             var message = new Message(eventData, sendParameters);
