@@ -2,7 +2,7 @@
     using UnityEngine;
     using UnityEngine.UI;
     using UnityEngine.SceneManagement;
-    using Networking;
+    using Core;
 
         /// <summary>  
         ///  1. Listen to onClick of the connect button and takes information from the input field and hands it to the connector.

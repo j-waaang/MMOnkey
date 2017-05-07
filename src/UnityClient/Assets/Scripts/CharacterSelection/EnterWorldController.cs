@@ -2,11 +2,12 @@
 
     using UnityEngine;
     using UnityEngine.SceneManagement;
-    using Networking;
+    using Core.MessageHandling;
 
     public class EnterWorldController : MonoBehaviour {
-
-        //Set by textinput inspector
+        /// <summary>  
+        ///  Set by textinput inspector.
+        /// </summary>  
         public string Username { get; set; }
 
         public void OnEnterWorld() {
@@ -14,12 +15,13 @@
                 Debug.LogError("No username entered");
                 return;
             }
-            Game.Instance.EnterWorld(Username, EnteredWorldCallback);
+            RequestOperations.EnterWorld(Username);
+            //Game.Instance.EnterWorld(Username, EnteredWorldCallback);
         }
 
-        private void EnteredWorldCallback(Vector2 position) {
-            Debug.Log("Entered world at " + position);
-            SceneManager.LoadScene("World");
-        } 
+        //private void EnteredWorldCallback(Vector2 position) {
+        //    Debug.Log("Entered world at " + position);
+        //    SceneManager.LoadScene("World");
+        //} 
     }
 }

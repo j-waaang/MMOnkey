@@ -1,10 +1,9 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking {
-    using ExitGames.Client.Photon;
+﻿namespace JYW.ThesisMMO.UnityClient.Core.Photon {
     using System;
-    using Common.Codes;
+    using ExitGames.Client.Photon;
     using UnityEngine;
+    using Common.Codes;
     using Common.Types;
-
     public class ServerPeerListener : IPhotonPeerListener {
 
         internal event Action ConnectedEvent;
