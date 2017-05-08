@@ -1,4 +1,4 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling {
+﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
 
     using ExitGames.Client.Photon;
     using Common.Codes;

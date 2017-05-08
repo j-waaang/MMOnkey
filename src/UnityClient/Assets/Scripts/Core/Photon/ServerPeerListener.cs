@@ -2,13 +2,14 @@
     using System;
     using ExitGames.Client.Photon;
     using UnityEngine;
-    using Common.Codes;
-    using Common.Types;
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.Common.Types;
+    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses;
+    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
     public class ServerPeerListener : IPhotonPeerListener {
 
         internal event Action ConnectedEvent;
         internal event Action DisconnectedEvent;
-        internal event Action<Vector2> EnterWorldEvent;
 
         public void DebugReturn(DebugLevel level, string message) {
             Debug.Log(string.Format("{0}: {1}", level, message));
@@ -25,15 +26,7 @@
 
         public void OnOperationResponse(OperationResponse operationResponse) {
             DebugReturn(DebugLevel.INFO, operationResponse.ToStringFull());
-            switch ((OperationCode)operationResponse.OperationCode) {
-                case OperationCode.EnterWorld:
-                    if((ReturnCode) operationResponse.ReturnCode == 0) {
-                        var data = (Vector) operationResponse.Parameters[(byte) ParameterCode.Position];
-                        var pos = new Vector2(data.X, data.Y);
-                        EnterWorldEvent(pos);
-                    }
-                    break;
-            }
+            ResponseOperations.OnOperationResponse(operationResponse);
         }
 
         public void OnStatusChanged(StatusCode statusCode) {

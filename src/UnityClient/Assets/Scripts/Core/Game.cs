@@ -3,27 +3,26 @@
     using System.Collections.Generic;
     using UnityEngine;
     using ExitGames.Client.Photon;
-    using JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking;
     using JYW.ThesisMMO.UnityClient.Util;
     using JYW.ThesisMMO.UnityClient.Core.Photon;
-    using JYW.ThesisMMO.UnityClient.Core.MessageHandling;
+    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
+    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses;
+    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
     using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.Common.Codes;
     using Protocol = JYW.ThesisMMO.Common.Types.Protocol;
-    using Operations = JYW.ThesisMMO.UnityClient.Assets.Scripts.Networking.Operations;
 
     public class Game : MonobehaviourSingleton<Game> {
         private PhotonPeer m_PhotonPeer;
         private ServerPeerListener m_ServerPeerListener;
 
         private RequestForwarder m_RequestForwarder;
-        private ResponseForwarder m_ResponseForwarder;
+        private ResponseOperations m_ResponseForwarder;
         private EventForwarder m_EventForwarder;
 
         private const string m_ApplicationName = "MMOServer";
         public bool Connected { get; private set; }
         private Action m_ConnectedCallback;
-        private Action<Vector2> m_EnteredWorldCallback;
 
         private void Awake() {
             DontDestroyOnLoad(gameObject);
@@ -45,7 +44,6 @@
             m_PhotonPeer.Service();
         }
 
-
         public void Connect(string serverAddress, Action connectedCallback) {
             m_ConnectedCallback = connectedCallback;
             m_PhotonPeer.Connect(serverAddress, m_ApplicationName);
@@ -56,10 +54,6 @@
             Connected = true;
             m_ConnectedCallback();
             m_ConnectedCallback = null;
-            CreateMessageForwarders();
-        }
-
-        private void CreateMessageForwarders() {
             m_RequestForwarder = new RequestForwarder(m_PhotonPeer);
         }
 
@@ -77,17 +71,6 @@
             m_ServerPeerListener.ConnectedEvent -= OnConnected;
             m_ServerPeerListener.DisconnectedEvent -= OnDisconnected;
             base.OnDestroy();
-        }
-
-        internal void EnterWorld(string username,Action<Vector2> callback) {
-            m_EnteredWorldCallback = callback;
-            Operations.EnterWorld(SendOperation, username);
-            m_ServerPeerListener.EnterWorldEvent += OnEnteredWorld;
-        }
-
-        internal void OnEnteredWorld(Vector2 position) {
-            m_EnteredWorldCallback(position);
-            m_EnteredWorldCallback = null;
         }
 
         private void SendOperation(OperationCode operationCode, Dictionary<byte, object> parameter, bool sendReliable, byte channelId) {

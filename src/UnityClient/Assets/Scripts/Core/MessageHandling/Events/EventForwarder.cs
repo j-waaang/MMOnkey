@@ -1,4 +1,4 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling {
+﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
     using Events;
     public class EventForwarder : IEventForwarder{
         private EventHandlerFactory m_EventHandlerFactory;

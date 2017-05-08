@@ -2,7 +2,8 @@
 
     using UnityEngine;
     using UnityEngine.SceneManagement;
-    using Core.MessageHandling;
+    using Core.MessageHandling.Requests;
+    using Core.MessageHandling.Responses;
 
     public class EnterWorldController : MonoBehaviour {
         /// <summary>  
@@ -10,18 +11,25 @@
         /// </summary>  
         public string Username { get; set; }
 
-        public void OnEnterWorld() {
+        /// <summary>  
+        ///  Called by button click.
+        /// </summary>  
+        public void OnEnterWorldClick() {
             if(Username == "") {
                 Debug.LogError("No username entered");
                 return;
             }
             RequestOperations.EnterWorld(Username);
-            //Game.Instance.EnterWorld(Username, EnteredWorldCallback);
+            ResponseOperations.EnterWorldEvent += OnEnteredWorldResponse;
         }
 
-        //private void EnteredWorldCallback(Vector2 position) {
-        //    Debug.Log("Entered world at " + position);
-        //    SceneManager.LoadScene("World");
-        //} 
+        /// <summary>  
+        ///  Callback on response.
+        /// </summary>  
+        private void OnEnteredWorldResponse(Vector2 position) {
+            ResponseOperations.EnterWorldEvent -= OnEnteredWorldResponse;
+            Debug.Log("Entered world at " + position);
+            SceneManager.LoadScene("World");
+        }
     }
 }
