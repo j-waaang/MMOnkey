@@ -53,9 +53,26 @@
         internal void SubscribeToMessageChannel(IFiber fiber, Action<Message> receive) {
             m_MessageChannel.Subscribe(fiber, receive);
         }
+
         internal void RemoveEntity(string id) {
             m_Entities.Remove(id);
         }
+
+        internal void NotifyEntityAboutExistingPlayers(string username) {
+            var entityToNotify = m_Entities[username];
+
+            foreach (PlayerEntity existingEntity in m_Entities.Values) {
+                if(existingEntity == entityToNotify) { continue; }
+
+                var existingPlayerEvent = new NewPlayerEvent();
+                existingPlayerEvent.Username = existingEntity.Username;
+                existingPlayerEvent.Position = existingEntity.Position;
+                IEventData eventData = new EventData((byte)EventCode.NewPlayer, existingPlayerEvent);
+                var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+                entityToNotify.Peer.SendEvent(eventData, sendParameters);
+            }
+        }
+
         internal void MoveEntity(string username, Vector position) {
             var entity = m_Entities[username];
             entity.Position = position;

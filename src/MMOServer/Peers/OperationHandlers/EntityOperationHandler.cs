@@ -1,4 +1,5 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.Peers.OperationHandlers {
+
     using PhotonHostRuntimeInterfaces;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
@@ -11,17 +12,21 @@
     using ExitGames.Logging;
 
     class EntityOperationHandler : IOperationHandler {
+
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private MMOPeer m_Peer;
+
         internal EntityOperationHandler(MMOPeer peer) {
             m_Peer = peer;
-
+            World.Instance.NotifyEntityAboutExistingPlayers(m_Peer.Username);
             // Subscribe to world messages. (New player events)
             World.Instance.SubscribeToMessageChannel(m_Peer.RequestFiber, SendEvent);
         }
+
         public void OnDisconnect(PeerBase peer) {
             peer.Dispose();
         }
+
         public OperationResponse OnOperationRequest(PeerBase peer, OperationRequest operationRequest, SendParameters sendParameters) {
             switch ((OperationCode)operationRequest.OperationCode) {
                 case OperationCode.EnterWorld:

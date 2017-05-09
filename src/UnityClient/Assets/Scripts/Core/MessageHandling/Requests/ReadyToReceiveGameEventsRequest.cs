@@ -7,17 +7,11 @@
     public partial class RequestOperations {
 
         /// <summary>  
-        ///  Builds the EnterWorld request end hands it to the forwarder.
+        ///  Builds the FinishedLoadingWorld request end hands it to the forwarder.
         /// </summary>  
-        public static void EnterWorldRequest(string username) {
-            var data = new Dictionary<byte, object>
-            {
-                    { (byte)ParameterCode.Username, username }
-            };
-
+        public static void ReadyToReceiveGameEventsRequest() {
             var operationRequest = new OperationRequest() {
-                OperationCode = (byte)OperationCode.EnterWorld,
-                Parameters = data
+                OperationCode = (byte)OperationCode.ReadyToReceiveGameEvents,
             };
             RequestForwarder.ForwardRequest(
                 operationRequest,

@@ -19,7 +19,7 @@
                 Debug.LogError("No username entered");
                 return;
             }
-            RequestOperations.EnterWorld(Username);
+            RequestOperations.EnterWorldRequest(Username);
             ResponseOperations.EnterWorldEvent += OnEnteredWorldResponse;
         }
 
@@ -28,7 +28,6 @@
         /// </summary>  
         private void OnEnteredWorldResponse(Vector2 position) {
             ResponseOperations.EnterWorldEvent -= OnEnteredWorldResponse;
-            Debug.Log("Entered world at " + position);
             SceneManager.LoadScene("World");
         }
     }

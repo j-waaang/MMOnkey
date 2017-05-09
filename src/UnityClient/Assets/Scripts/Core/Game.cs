@@ -1,24 +1,18 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Core {
+
     using System;
-    using System.Collections.Generic;
     using UnityEngine;
     using ExitGames.Client.Photon;
+    using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.UnityClient.Util;
     using JYW.ThesisMMO.UnityClient.Core.Photon;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
-    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses;
-    using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
-    using JYW.ThesisMMO.Common.Types;
-    using JYW.ThesisMMO.Common.Codes;
     using Protocol = JYW.ThesisMMO.Common.Types.Protocol;
 
     public class Game : MonobehaviourSingleton<Game> {
+
         private PhotonPeer m_PhotonPeer;
         private ServerPeerListener m_ServerPeerListener;
-
-        private RequestForwarder m_RequestForwarder;
-        private ResponseOperations m_ResponseForwarder;
-        private EventForwarder m_EventForwarder;
 
         private const string m_ApplicationName = "MMOServer";
         public bool Connected { get; private set; }
@@ -54,7 +48,7 @@
             Connected = true;
             m_ConnectedCallback();
             m_ConnectedCallback = null;
-            m_RequestForwarder = new RequestForwarder(m_PhotonPeer);
+            RequestForwarder.Initialize(m_PhotonPeer);
         }
 
         private void Disconnect() {
@@ -71,10 +65,6 @@
             m_ServerPeerListener.ConnectedEvent -= OnConnected;
             m_ServerPeerListener.DisconnectedEvent -= OnDisconnected;
             base.OnDestroy();
-        }
-
-        private void SendOperation(OperationCode operationCode, Dictionary<byte, object> parameter, bool sendReliable, byte channelId) {
-            m_PhotonPeer.OpCustom((byte)operationCode, parameter, sendReliable, channelId);
         }
     }
 }

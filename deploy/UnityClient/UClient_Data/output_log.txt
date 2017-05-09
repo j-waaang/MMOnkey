@@ -23,19 +23,19 @@ Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll into Unity Child Domain
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.527 seconds
+- Completed reload, in  0.019 seconds
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.946791 ms
+UnloadTime: 0.994268 ms
 [Singleton] Using instance already created: ServerPeer
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Connecting to server at 188.174.178.6:5055
+Connecting to server at 188.174.174.67:5055
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -44,28 +44,108 @@ INFO: Connected
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.717340 ms
+UnloadTime: 2.879504 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 294.
-Total: 0.275667 ms (FindLiveObjects: 0.024924 ms CreateObjectMapping: 0.013513 ms MarkObjects: 0.231524 ms  DeleteObjects: 0.005104 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 304.
+Total: 0.270563 ms (FindLiveObjects: 0.021320 ms CreateObjectMapping: 0.017116 ms MarkObjects: 0.226420 ms  DeleteObjects: 0.004804 ms)
 
 INFO: OperationResponse 1: ReturnCode: 0 (). Parameters: {(Byte)2=(Vector)V(0.00, 0.00, 0.00)}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Entered world at (0.0, 0.0)
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.426114 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 318.
+Total: 0.245338 ms (FindLiveObjects: 0.019819 ms CreateObjectMapping: 0.018017 ms MarkObjects: 0.191286 ms  DeleteObjects: 0.015314 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2380 -> priority: 1 
+  Thread -> id: 122c -> priority: 1 
+INFO: 1Event 1: {(Byte)1=(String)2man, (Byte)2=(Vector)V(0.00, 0.00, 0.00)}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 660 Ti (ID=0x1183)
+    Vendor:   NVIDIA
+    VRAM:     2016 MB
+    Driver:   21.21.13.7653
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll into Unity Child Domain
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.021 seconds
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.262429 ms
+[Singleton] Using instance already created: ServerPeer
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connecting to server at 188.174.174.67:5055
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INFO: Connected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.100219 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 304.
+Total: 0.268161 ms (FindLiveObjects: 0.021621 ms CreateObjectMapping: 0.015615 ms MarkObjects: 0.224919 ms  DeleteObjects: 0.005104 ms)
+
+INFO: 1Event 1: {(Byte)1=(String)sddfshj, (Byte)2=(Vector)V(0.00, 0.00, 0.00)}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INFO: OperationResponse 1: ReturnCode: 0 (). Parameters: {(Byte)2=(Vector)V(0.00, 0.00, 0.00)}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.336627 ms
+UnloadTime: 0.353444 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 293.
-Total: 0.259752 ms (FindLiveObjects: 0.021020 ms CreateObjectMapping: 0.013813 ms MarkObjects: 0.207801 ms  DeleteObjects: 0.016215 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 318.
+Total: 0.312304 ms (FindLiveObjects: 0.025524 ms CreateObjectMapping: 0.029128 ms MarkObjects: 0.240233 ms  DeleteObjects: 0.016816 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: bcc -> priority: 1 
-  Thread -> id: 990 -> priority: 1 
+  Thread -> id: 3294 -> priority: 1 
+  Thread -> id: 3080 -> priority: 1 
+INFO: 1Event 1: {(Byte)1=(String)1, (Byte)2=(Vector)V(0.00, 0.00, 0.00)}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INFO: 1Event 1: {(Byte)1=(String)2man, (Byte)2=(Vector)V(0.00, 0.00, 0.00)}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+INFO: Disconnected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 INFO: Disconnected
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)

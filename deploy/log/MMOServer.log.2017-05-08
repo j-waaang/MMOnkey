@@ -1,0 +1,224 @@
+2017-05-08 13:24:37,520 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Started------------------------
+2017-05-08 13:24:37,571 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Created game world.
+2017-05-08 13:24:37,572 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-08 13:25:55,369 [14] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=0, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 13:25:55,372 [14] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 13:25:55,386 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 0
+2017-05-08 13:25:55,386 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 0
+2017-05-08 13:25:55,389 [12] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 0 with SendResult Ok
+2017-05-08 13:25:55,389 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:52803
+2017-05-08 13:26:07,582 [14] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=0 reasonCode=ClientDisconnect
+2017-05-08 13:26:07,583 [11] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 13:26:07,584 [11] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 13:32:07,577 [14] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=1, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 13:32:07,577 [14] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 13:32:07,577 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 1
+2017-05-08 13:32:07,577 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 1
+2017-05-08 13:32:07,577 [13] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 1 with SendResult Ok
+2017-05-08 13:32:07,577 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:65401
+2017-05-08 13:32:09,796 [10] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:65401, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 13:32:09,797 [10] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: kkko
+2017-05-08 13:32:09,801 [10] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 1
+2017-05-08 13:32:15,134 [14] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=1 reasonCode=ClientDisconnect
+2017-05-08 13:32:15,134 [11] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 13:32:15,134 [11] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 13:38:47,464 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-08 13:38:47,470 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Tear Down
+2017-05-08 13:38:47,470 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-05-08 19:24:55,769 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Started------------------------
+2017-05-08 19:24:55,849 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Created game world.
+2017-05-08 19:24:55,850 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-08 19:28:20,908 [9] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=0, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:28:20,912 [9] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:28:20,926 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 0
+2017-05-08 19:28:20,926 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 0
+2017-05-08 19:28:20,928 [12] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 0 with SendResult Ok
+2017-05-08 19:28:20,929 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:57888
+2017-05-08 19:28:24,708 [11] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:57888, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:28:24,709 [11] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: jingyi
+2017-05-08 19:28:24,712 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 0
+2017-05-08 19:28:47,585 [9] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=1, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:28:47,585 [9] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:28:47,586 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 1
+2017-05-08 19:28:47,586 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 1
+2017-05-08 19:28:47,586 [11] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 1 with SendResult Ok
+2017-05-08 19:28:47,586 [11] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:51214
+2017-05-08 19:28:49,990 [14] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:51214, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:28:49,991 [14] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: jjjjjj
+2017-05-08 19:28:49,991 [14] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 1
+2017-05-08 19:28:49,994 [11] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:57888, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:31:24,231 [9] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=1 reasonCode=ClientDisconnect
+2017-05-08 19:31:24,232 [14] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 19:31:24,232 [14] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 19:31:35,078 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-08 19:31:35,107 [9] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=0 reasonCode=ManagedDisconnect
+2017-05-08 19:31:35,107 [14] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:31:35,107 [14] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:31:35,118 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Tear Down
+2017-05-08 19:31:35,118 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-05-08 19:31:39,662 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Started------------------------
+2017-05-08 19:31:39,698 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Created game world.
+2017-05-08 19:31:39,698 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-08 19:32:27,307 [13] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=0, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:32:27,311 [13] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:32:27,319 [10] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 0
+2017-05-08 19:32:27,319 [10] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 0
+2017-05-08 19:32:27,322 [10] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 0 with SendResult Ok
+2017-05-08 19:32:27,323 [10] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:54874
+2017-05-08 19:32:38,106 [10] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:54874, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:32:38,106 [10] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: jingyi
+2017-05-08 19:32:38,110 [10] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 0
+2017-05-08 19:32:55,678 [13] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=1, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:32:55,678 [13] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:32:55,678 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 1
+2017-05-08 19:32:55,678 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 1
+2017-05-08 19:32:55,678 [12] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 1 with SendResult Ok
+2017-05-08 19:32:55,678 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:60436
+2017-05-08 19:32:59,815 [10] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:60436, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:32:59,816 [10] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: jinjjj
+2017-05-08 19:32:59,816 [10] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 1
+2017-05-08 19:32:59,819 [11] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:54874, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:33:15,328 [13] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=0 reasonCode=ClientDisconnect
+2017-05-08 19:33:15,329 [10] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:33:15,330 [10] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:33:23,143 [13] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=1 reasonCode=ClientDisconnect
+2017-05-08 19:33:23,143 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 19:33:23,143 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 19:43:26,251 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-08 19:43:26,259 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Tear Down
+2017-05-08 19:43:26,259 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-05-08 19:44:08,585 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Started------------------------
+2017-05-08 19:44:08,625 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Created game world.
+2017-05-08 19:44:08,626 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-08 19:44:20,963 [15] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=0, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:44:20,967 [15] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:44:20,975 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 0
+2017-05-08 19:44:20,976 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 0
+2017-05-08 19:44:20,978 [12] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 0 with SendResult Ok
+2017-05-08 19:44:20,979 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:65059
+2017-05-08 19:44:23,971 [11] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:65059, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:44:23,973 [11] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: jingyi
+2017-05-08 19:44:23,976 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 0
+2017-05-08 19:44:44,420 [15] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=1, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:44:44,420 [15] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:44:44,420 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 1
+2017-05-08 19:44:44,420 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 1
+2017-05-08 19:44:44,420 [13] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 1 with SendResult Ok
+2017-05-08 19:44:44,420 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:65041
+2017-05-08 19:44:48,058 [11] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:65041, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:44:48,060 [11] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:65059, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:44:48,060 [11] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: asdsaj
+2017-05-08 19:44:48,061 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 1
+2017-05-08 19:44:48,061 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:65059, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:45:17,622 [15] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=0 reasonCode=ClientDisconnect
+2017-05-08 19:45:17,623 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:45:17,623 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:45:30,975 [15] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=2, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:45:30,975 [15] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:45:30,975 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 2
+2017-05-08 19:45:30,975 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 2
+2017-05-08 19:45:30,975 [13] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 2 with SendResult Ok
+2017-05-08 19:45:30,975 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:58783
+2017-05-08 19:45:32,845 [12] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:58783, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:45:32,846 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0, evCode=1, ChannelId=0, result=Disconnected size=32 bytes
+2017-05-08 19:45:32,846 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:65041, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:45:32,846 [12] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: bbb
+2017-05-08 19:45:32,846 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 2
+2017-05-08 19:45:32,846 [13] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:65041, evCode=1, ChannelId=0, result=Ok size=29 bytes
+2017-05-08 19:45:54,414 [15] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=2 reasonCode=ClientDisconnect
+2017-05-08 19:45:54,414 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:0
+2017-05-08 19:45:54,414 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:0
+2017-05-08 19:46:36,771 [15] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=1 reasonCode=ClientDisconnect
+2017-05-08 19:46:36,772 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 19:46:36,772 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 19:46:43,121 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-08 19:46:43,133 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Tear Down
+2017-05-08 19:46:43,133 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-05-08 19:46:47,848 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Started------------------------
+2017-05-08 19:46:47,883 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Created game world.
+2017-05-08 19:46:47,884 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-08 19:46:53,586 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-08 19:46:53,604 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Tear Down
+2017-05-08 19:46:53,604 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-05-08 19:47:04,950 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Started------------------------
+2017-05-08 19:47:04,986 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Created game world.
+2017-05-08 19:47:04,986 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-05-08 19:47:24,411 [8] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=0, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:47:24,414 [8] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:47:24,423 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 0
+2017-05-08 19:47:24,423 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 0
+2017-05-08 19:47:24,427 [13] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 0 with SendResult Ok
+2017-05-08 19:47:24,427 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:53079
+2017-05-08 19:47:27,813 [13] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:53079, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:47:27,815 [13] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: jingyi
+2017-05-08 19:47:27,818 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 0
+2017-05-08 19:47:48,277 [8] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=1, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:47:48,277 [8] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:47:48,277 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 1
+2017-05-08 19:47:48,277 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 1
+2017-05-08 19:47:48,277 [11] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 1 with SendResult Ok
+2017-05-08 19:47:48,277 [11] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:53080
+2017-05-08 19:47:50,715 [11] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:53080, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:47:50,718 [11] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:53080, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:47:50,718 [11] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: bhjasdh
+2017-05-08 19:47:50,718 [11] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 1
+2017-05-08 19:47:50,719 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:53079, evCode=1, ChannelId=0, result=Ok size=33 bytes
+2017-05-08 19:48:05,298 [8] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=0 reasonCode=ClientDisconnect
+2017-05-08 19:48:05,299 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:48:05,299 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:0,ip:188.174.190.68:0
+2017-05-08 19:48:15,513 [8] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=2, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:48:15,513 [8] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:48:15,513 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 2
+2017-05-08 19:48:15,513 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 2
+2017-05-08 19:48:15,513 [13] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 2 with SendResult Ok
+2017-05-08 19:48:15,513 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:60262
+2017-05-08 19:48:18,012 [12] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:60262, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:48:18,012 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:60262, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:48:18,012 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:60262, evCode=1, ChannelId=0, result=Ok size=33 bytes
+2017-05-08 19:48:18,012 [12] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: bnvvbn
+2017-05-08 19:48:18,012 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 2
+2017-05-08 19:48:18,012 [11] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:53080, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:49:44,536 [8] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=3, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:49:44,536 [8] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:49:44,536 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 3
+2017-05-08 19:49:44,536 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 3
+2017-05-08 19:49:44,536 [12] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 3 with SendResult Ok
+2017-05-08 19:49:44,536 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:57310
+2017-05-08 19:49:48,148 [14] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:57310, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 19:49:48,148 [14] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:57310, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:49:48,148 [14] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:57310, evCode=1, ChannelId=0, result=Ok size=33 bytes
+2017-05-08 19:49:48,148 [14] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:57310, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 19:49:48,148 [14] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: aa
+2017-05-08 19:49:48,148 [14] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 3
+2017-05-08 19:49:48,148 [12] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:53080, evCode=1, ChannelId=0, result=Ok size=28 bytes
+2017-05-08 19:49:48,148 [14] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:60262, evCode=1, ChannelId=0, result=Ok size=28 bytes
+2017-05-08 19:49:56,586 [8] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=2 reasonCode=TimeoutDisconnect
+2017-05-08 19:49:56,587 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:0
+2017-05-08 19:49:56,587 [13] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:2,ip:188.174.190.68:0
+2017-05-08 19:59:54,661 [8] DEBUG Photon.SocketServer.ApplicationBase - OnInit - ConnID=4, IP 188.174.190.68 on port 5055, type = ENetListener
+2017-05-08 19:59:54,661 [8] DEBUG Photon.SocketServer.Protocol - Parsed init message for application MMOServer, client version 4.0.5.0, protocol GpBinaryV2 version 1.6 sdk 65535 using IPv6 False
+2017-05-08 19:59:54,661 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to Photon.SocketServer.Rpc.OperationHandlerDisabled, was {null} - peer id 4
+2017-05-08 19:59:54,661 [12] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler, was Photon.SocketServer.Rpc.OperationHandlerDisabled - peer id 4
+2017-05-08 19:59:54,661 [12] DEBUG Photon.SocketServer.PeerBase - OnInit - response sent to ConnId 4 with SendResult Ok
+2017-05-08 19:59:54,661 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Initializing to Connected: peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:58430
+2017-05-08 20:00:02,662 [13] DEBUG Photon.SocketServer.PeerBase - SentOpResponse: Peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:58430, opCode=1, return=0, ChannelId=0 result=Ok size=25 bytes
+2017-05-08 20:00:02,662 [13] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:58430, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 20:00:02,662 [13] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:58430, evCode=1, ChannelId=0, result=Ok size=33 bytes
+2017-05-08 20:00:02,662 [13] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:58430, evCode=1, ChannelId=0, result=Ok size=32 bytes
+2017-05-08 20:00:02,663 [13] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:58430, evCode=1, ChannelId=0, result=Ok size=28 bytes
+2017-05-08 20:00:02,663 [13] DEBUG JYW.ThesisMMO.MMOServer.World - Adding entity with name: dnsn
+2017-05-08 20:00:02,663 [13] DEBUG Photon.SocketServer.Rpc.Peer - set operation handler to JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler, was JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.InitialOperationHandler - peer id 4
+2017-05-08 20:00:02,663 [14] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:53080, evCode=1, ChannelId=0, result=Ok size=30 bytes
+2017-05-08 20:00:02,663 [13] DEBUG Photon.SocketServer.PeerBase - SentEvent: Peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:57310, evCode=1, ChannelId=0, result=Ok size=30 bytes
+2017-05-08 20:00:05,512 [8] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=3 reasonCode=TimeoutDisconnect
+2017-05-08 20:00:05,512 [15] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:0
+2017-05-08 20:00:05,512 [15] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:3,ip:188.174.190.68:0
+2017-05-08 20:01:24,921 [8] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=4 reasonCode=ClientDisconnect
+2017-05-08 20:01:24,921 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:0
+2017-05-08 20:01:24,921 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:4,ip:188.174.190.68:0
+2017-05-08 20:08:53,032 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-05-08 20:08:53,039 [8] DEBUG Photon.SocketServer.ApplicationBase - OnDisconnect - ConnID=1 reasonCode=ManagedDisconnect
+2017-05-08 20:08:53,040 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Connected to Disconnected: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 20:08:53,040 [12] DEBUG Photon.SocketServer.PeerBase - Connection state changed from Disconnected to Disposed: peer=T:MMOPeer,ConnId:1,ip:188.174.190.68:0
+2017-05-08 20:08:53,041 [1] DEBUG JYW.ThesisMMO.MMOServer.ServerApplication - Tear Down
+2017-05-08 20:08:53,041 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

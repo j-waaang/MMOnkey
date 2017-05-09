@@ -2,8 +2,6 @@
     using System;
     using ExitGames.Client.Photon;
     using UnityEngine;
-    using JYW.ThesisMMO.Common.Codes;
-    using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
     public class ServerPeerListener : IPhotonPeerListener {
@@ -16,12 +14,8 @@
         }
 
         public void OnEvent(EventData eventData) {
-            DebugReturn(DebugLevel.INFO, eventData.ToStringFull());
-            switch ((EventCode)eventData.Code) {
-                case EventCode.NewPlayer:
-                    Debug.Log("Received new player event");
-                    break;
-            }
+            DebugReturn(DebugLevel.INFO, eventData.Code.ToString() + eventData.ToStringFull());
+            EventOperations.OnEvent(eventData);
         }
 
         public void OnOperationResponse(OperationResponse operationResponse) {

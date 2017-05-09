@@ -7,19 +7,18 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
     /// <summary>  
     ///  Fascades photon peer from game logic.
     /// </summary>  
-    public sealed class RequestForwarder : Singleton<RequestForwarder>{
+    public sealed class RequestForwarder {
         private const bool m_Encrypt = false;
-        private PhotonPeer m_PhotonPeer;
+        private static PhotonPeer m_PhotonPeer;
 
-        internal RequestForwarder(PhotonPeer peer) {
-            Instance = this;
+        internal static void Initialize(PhotonPeer peer) {
             m_PhotonPeer = peer;
         }
 
         /// <summary>  
         ///  Forwards the request to the peer which then sends the request to the server.
         /// </summary>  
-        public void ForwardRequest(OperationRequest operationRequest, bool sendReliable, byte channelId) {
+        internal static void ForwardRequest(OperationRequest operationRequest, bool sendReliable, byte channelId) {
             m_PhotonPeer.OpCustom(operationRequest, sendReliable, channelId, m_Encrypt);
         }
     }

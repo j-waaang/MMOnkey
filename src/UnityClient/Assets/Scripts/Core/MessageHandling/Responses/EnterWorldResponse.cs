@@ -9,6 +9,9 @@
     public sealed partial class ResponseOperations {
         public static event Action<Vector2> EnterWorldEvent;
 
+        /// <summary>  
+        ///  Extract data from a enter world response and call the enter world event.
+        /// </summary>  
         private static void OnEnterWorldResponse(OperationResponse operationResponse) {
             if ((ReturnCode)operationResponse.ReturnCode == 0) {
                 var data = (Vector)operationResponse.Parameters[(byte)ParameterCode.Position];
