@@ -17,6 +17,9 @@
         }
 
         public void OnDisconnect(PeerBase peer) {
+            if(m_Peer.Username != null) {
+                World.Instance.RemoveEntity(m_Peer.Username);
+            }
             peer.Dispose();
         }
 
@@ -35,7 +38,7 @@
 
         private OperationResponse OperationEnterWorld(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
 
-            var operation = new EnterWorld(peer.Protocol, request);
+            var operation = new EnterWorldOperation(peer.Protocol, request);
 
             if (!operation.IsValid) {
                 return new OperationResponse(request.OperationCode) {

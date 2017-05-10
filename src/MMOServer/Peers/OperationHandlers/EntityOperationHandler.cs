@@ -10,20 +10,24 @@
     using Operations.Responses;
     using MMOPeer = Peers.MMOPeer;
     using ExitGames.Logging;
+    using System;
 
     class EntityOperationHandler : IOperationHandler {
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private MMOPeer m_Peer;
+        private IDisposable m_MessageChannelSubscriber;
 
         internal EntityOperationHandler(MMOPeer peer) {
             m_Peer = peer;
             World.Instance.NotifyEntityAboutExistingPlayers(m_Peer.Username);
             // Subscribe to world messages. (New player events)
-            World.Instance.SubscribeToMessageChannel(m_Peer.RequestFiber, SendEvent);
+            m_MessageChannelSubscriber = World.Instance.SubscribeToMessageChannel(m_Peer.RequestFiber, SendEvent);
         }
 
         public void OnDisconnect(PeerBase peer) {
+            World.Instance.RemoveEntity(m_Peer.Username);
+            m_MessageChannelSubscriber.Dispose();
             peer.Dispose();
         }
 
@@ -40,7 +44,7 @@
 
         private OperationResponse OperationMove(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
 
-            var operation = new Move(peer.Protocol, request);
+            var operation = new MoveOperation(peer.Protocol, request);
 
             if (!operation.IsValid) {
                 return new OperationResponse(request.OperationCode) {

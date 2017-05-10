@@ -10,6 +10,9 @@
                 case EventCode.NewPlayer:
                     OnNewPlayerEvent(eventData);
                     return;
+                case EventCode.Move:
+                    OnMoveEvent(eventData);
+                    return;
             }
             Debug.LogError("Cannot handle response.");
         }

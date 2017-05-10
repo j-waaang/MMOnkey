@@ -3,6 +3,9 @@
     using UnityEngine;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
 
+    /// <summary>  
+    ///  Listen to new player events from the server and creates characters on event.
+    /// </summary>  
     public class CharacterSpawner : MonoBehaviour {
 
         [SerializeField] RemoteCharacterController m_RemoteCharacterPrefab;

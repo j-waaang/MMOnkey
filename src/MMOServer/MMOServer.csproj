@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\NewPlayerEvent.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Operations\Responses\DefaultResponses.cs" />
@@ -65,9 +66,9 @@
     <Compile Include="Peers\OperationHandlers\EntityOperationHandler.cs" />
     <Compile Include="Peers\OperationHandlers\InitialOperationHandler.cs" />
     <Compile Include="Peers\MMOPeer.cs" />
-    <Compile Include="Operations\EnterWorld.cs" />
+    <Compile Include="Operations\EnterWorldOperation.cs" />
     <Compile Include="Operations\Responses\EnterWorldResponse.cs" />
-    <Compile Include="Operations\Move.cs" />
+    <Compile Include="Operations\MoveOperation.cs" />
     <Compile Include="PlayerEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerApplication.cs" />

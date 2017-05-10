@@ -1,4 +1,5 @@
 ﻿namespace JYW.ThesisMMO.MMOServer {
+
     using System;
     using System.Collections.Generic;
     using Common.Types;
@@ -27,11 +28,13 @@
             m_Entities = new Dictionary<string, PlayerEntity>();
 
         }
+
         private void SetupActionFiberChannel() {
             m_Fiber = new PoolFiber();
             m_Fiber.Start();
             m_ActionQueue = new ActionQueue(this, m_Fiber);
         }
+
         /// <summary>
         /// First add a new entity.
         /// </summary>
@@ -47,11 +50,12 @@
             var message = new Message(eventData, sendParameters);
             m_MessageChannel.Publish(message);
         }
+
         /// <summary>
         /// Then subscribe for future messages. To avoid receiving messages from AddEntity in the first place.
         /// </summary>
-        internal void SubscribeToMessageChannel(IFiber fiber, Action<Message> receive) {
-            m_MessageChannel.Subscribe(fiber, receive);
+        internal IDisposable SubscribeToMessageChannel(IFiber fiber, Action<Message> receive) {
+            return m_MessageChannel.Subscribe(fiber, receive);
         }
 
         internal void RemoveEntity(string id) {
@@ -77,6 +81,14 @@
             var entity = m_Entities[username];
             entity.Position = position;
             // TODO: check if position change is valid
+
+            var moveEvent = new MoveEvent();
+            moveEvent.Username = entity.Username;
+            moveEvent.Position = entity.Position;
+            IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
+            var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
+            var message = new Message(eventData, sendParameters);
+            m_MessageChannel.Publish(message);
         }
         public void Dispose() {
             Instance = null;
