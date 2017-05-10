@@ -74,5 +74,12 @@
         public float Len2 {
             get { return X * X + Y * Y + Z * Z; }
         }
+
+        public static float Distance(Vector value1, Vector value2) {
+            return (float) Math.Sqrt(
+                (value1.X - value2.X) * (value1.X - value2.X) +
+                (value1.Y - value2.Y) * (value1.Y - value2.Y) +
+                (value1.Z - value2.Z) * (value1.Z - value2.Z));
+        }
     }
 }

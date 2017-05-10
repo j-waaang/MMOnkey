@@ -1,7 +1,10 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Player {
+
     using UnityEngine;
     using UnityStandardAssets.CrossPlatformInput;
+
     public class RotationController : MonoBehaviour {
+
         private Rigidbody2D m_Rigidbody;
 
         private void Awake() {

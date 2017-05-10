@@ -25,6 +25,7 @@
         /// </summary>  
         private void OnMoveEvent(string username, Vector2 position) {
             if (!m_Initialized) { return; }
+
             if (m_Username != username) { return; }
 
             transform.position = position;
