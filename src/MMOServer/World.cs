@@ -5,9 +5,6 @@
     using Common.Types;
     using Common.Codes;
     using Events;
-    //using Photon.SocketServer.Concurrency;
-    //using ExitGames.Concurrency.Fibers;
-    //using ExitGames.Concurrency.Channels;
     using Photon.SocketServer;
     using ExitGames.Logging;
 
@@ -16,9 +13,6 @@
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         private Dictionary<string, PlayerEntity> m_Entities;
-        //private ActionQueue m_ActionQueue;
-        //private IFiber m_Fiber;
-        //private Channel<Message> m_MessageChannel = new Channel<Message>();
 
         private const float InterestDistance = 15f;
 
@@ -29,12 +23,6 @@
             else { return; }
             m_Entities = new Dictionary<string, PlayerEntity>();
         }
-
-        //private void SetupActionFiberChannel() {
-        //    m_Fiber = new PoolFiber();
-        //    m_Fiber.Start();
-        //    m_ActionQueue = new ActionQueue(this, m_Fiber);
-        //}
 
         /// <summary>
         /// First add a new entity.
@@ -54,25 +42,9 @@
             foreach (PlayerEntity entity in interestedEntities) {
                 entity.Peer.SendEvent(eventData, sendParameters);
             }
-
-            //var message = new Message(eventData, sendParameters);
-            //m_MessageChannel.Publish(message);
-
-            //foreach (PlayerEntity existingEntity in m_Entities.Values) {
-            //    if (Vector.Distance(existingEntity.Position, newEntity.Position) > InterestDistance) { continue; }
-            //    existingEntity.Peer.SendEvent(eventData, sendParameters);
-            //}
-
-            //log.DebugFormat("Adding entity with name: " + newEntity.Username);
+            
             m_Entities[newEntity.Username] = newEntity;
         }
-
-        /// <summary>
-        /// Then subscribe for future messages. To avoid receiving messages from AddEntity in the first place.
-        /// </summary>
-        //internal IDisposable SubscribeToMessageChannel(IFiber fiber, Action<Message> receive) {
-        //    return m_MessageChannel.Subscribe(fiber, receive);
-        //}
 
         internal void RemoveEntity(string id) {
             m_Entities.Remove(id);
@@ -129,16 +101,7 @@
                 entity.Peer.SendEvent(eventData, sendParameters);
             }
         }
-
-        //private void BroadcastEvent(PlayerEntity from, IEventData eventData, SendParameters sendParameters) {
-        //    foreach (PlayerEntity entity in m_Entities.Values) {
-        //        if (entity == from) { continue; }
-        //        if (Vector.Distance(entity.Position, from.Position) > InterestDistance) { continue; }
-
-        //        entity.Peer.SendEvent(eventData, sendParameters);
-        //    }
-        //}
-
+        
         private List<PlayerEntity> GetEntitiesInInterestRange(PlayerEntity centerEntity) {
             var entities = new List<PlayerEntity>();
             foreach (PlayerEntity entity in m_Entities.Values) {
