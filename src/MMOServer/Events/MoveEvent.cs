@@ -5,6 +5,7 @@
     using Photon.SocketServer.Rpc;
 
     class MoveEvent {
+
         [DataMember(Code = (byte)ParameterCode.Username)]
         public string Username;
 
