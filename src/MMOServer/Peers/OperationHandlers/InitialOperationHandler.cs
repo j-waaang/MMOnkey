@@ -7,9 +7,11 @@
     using Operations.Responses;
     using Peers;
     using Requests;
+    using ExitGames.Logging;
 
     class InitialOperationHandler : IOperationHandler {
 
+        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private MMOPeer m_Peer;
 
         internal InitialOperationHandler(MMOPeer peer) {
@@ -46,13 +48,14 @@
                     DebugMessage = operation.GetErrorMessage()
                 };
             }
+            log.DebugFormat("New character with skills: " + operation.Skills.ToString());
 
             // TODO: Think about where characters should enter the world.
             var position = GetRandomWorldPosition();
-            var entity = new PlayerEntity(m_Peer, operation.Username, position);
+            var entity = new PlayerEntity(m_Peer, operation.Name, position);
 
             // TODO: Think about a different place to store the username.
-            m_Peer.Username = operation.Username;
+            m_Peer.Username = operation.Name;
 
             // Send entered world response.
             var responseData = new EnterWorldResponse {

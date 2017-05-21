@@ -1,4 +1,4 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.CharacterSelection {
+﻿namespace JYW.ThesisMMO.UnityClient.CharacterSelection {
 
     using UnityEngine;
     using UnityEngine.SceneManagement;
@@ -6,20 +6,20 @@
     using Core.MessageHandling.Responses;
 
     public class EnterWorldController : MonoBehaviour {
-        /// <summary>  
-        ///  Set by textinput inspector.
-        /// </summary>  
-        public string Username { get; set; }
+        
+        [SerializeField] CharacterCreationController m_CharacterCreationController;
 
         /// <summary>  
         ///  Called by button click.
         /// </summary>  
         public void OnEnterWorldClick() {
-            if(Username == "") {
+            var characterSettings = m_CharacterCreationController.GetCharacterSetting();
+            if (characterSettings == null) {
                 Debug.LogError("No username entered");
                 return;
             }
-            RequestOperations.EnterWorldRequest(Username);
+
+            RequestOperations.EnterWorldRequest(characterSettings);
             ResponseOperations.EnterWorldEvent += OnEnteredWorldResponse;
         }
 

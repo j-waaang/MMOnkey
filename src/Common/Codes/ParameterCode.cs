@@ -2,7 +2,7 @@
     public enum ParameterCode : byte{
         Username,
         Position,
-        Skill,
-        AutoAttackType
+        Weapon,
+        Skill
     }
 }
