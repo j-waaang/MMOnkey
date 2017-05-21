@@ -4,9 +4,9 @@
     using Photon.SocketServer.Rpc;
     using Common.Types;
     using Common.Codes;
-    using Operations;
     using Operations.Responses;
     using Peers;
+    using Requests;
 
     class InitialOperationHandler : IOperationHandler {
 
@@ -38,7 +38,7 @@
 
         private OperationResponse OperationEnterWorld(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
 
-            var operation = new EnterWorldOperation(peer.Protocol, request);
+            var operation = new EnterWorldRequest(peer.Protocol, request);
 
             if (!operation.IsValid) {
                 return new OperationResponse(request.OperationCode) {

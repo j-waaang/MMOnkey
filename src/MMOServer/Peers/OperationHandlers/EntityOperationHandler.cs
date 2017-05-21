@@ -35,7 +35,7 @@
 
         private OperationResponse OperationMove(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
 
-            var operation = new MoveOperation(peer.Protocol, request);
+            var operation = new MoveRequest(peer.Protocol, request);
 
             if (!operation.IsValid) {
                 return new OperationResponse(request.OperationCode) {

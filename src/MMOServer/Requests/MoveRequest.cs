@@ -3,8 +3,8 @@
     using Common.Codes;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
-    class MoveOperation : Operation{
-        public MoveOperation(IRpcProtocol protocol, OperationRequest request)
+    class MoveRequest : Operation{
+        public MoveRequest(IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
         }
 
