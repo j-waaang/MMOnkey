@@ -1,5 +1,6 @@
 ﻿namespace JYW.ThesisMMO.UnityClient {
 
+    using CharacterSelection;
     using System;
     using UnityEngine;
 
@@ -9,6 +10,7 @@
     internal static class GameData {
 
         internal static Action<Vector2> ClientCharacterPositionChange;
+        internal static CharacterSetting characterSetting { get; set; }
 
         private static Vector2 clientCharacterPosition;
 

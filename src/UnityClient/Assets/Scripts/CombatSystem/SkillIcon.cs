@@ -1,29 +1,32 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.CombatSystem {
+    using Common.Codes;
     using UnityEngine;
     using UnityEngine.UI;
 
     public class SkillIcon : MonoBehaviour {
 
-        [SerializeField]
-        private string m_Skillname;
+        [SerializeField] private int m_SlotNumber;
+        private SkillCodes m_Skill;
 
-        internal void ChangeSkill(string skillname) {
-            m_Skillname = skillname;
-            LoadSkill();
+        internal void ChangeSkill(SkillCodes skillname) {
+            m_Skill = skillname;
+            LoadSprite();
         }
 
         private void Awake() {
             LoadSkill();
+            LoadSprite();
         }
 
         private void LoadSkill() {
-            var image = GetSkillIcon(m_Skillname);
-            GetComponent<Image>().sprite = image;
-            gameObject.name = m_Skillname;
+            m_Skill = (SkillCodes) GameData.characterSetting.Skills[m_SlotNumber];
         }
 
-        private static Sprite GetSkillIcon(string skillName) {
-            return Resources.Load<Sprite>(skillName);
+        private void LoadSprite() {
+            var skillName = m_Skill.ToString();
+            var image = Resources.Load<Sprite>(skillName);
+            GetComponent<Image>().sprite = image;
+            gameObject.name = skillName;
         }
     }
 }

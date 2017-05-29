@@ -48,7 +48,8 @@
                     DebugMessage = operation.GetErrorMessage()
                 };
             }
-            log.DebugFormat("New character with skills: " + operation.Skills.ToString());
+
+            DebugCharacter(operation);
 
             // TODO: Think about where characters should enter the world.
             var position = GetRandomWorldPosition();
@@ -71,6 +72,17 @@
             World.Instance.AddEntity(entity);
 
             return null;
+        }
+
+        private void DebugCharacter(EnterWorldRequest request) {
+            var dbgString = "New character";
+            dbgString += " " + request.Name;
+
+            foreach (int skill in request.Skills) {
+                dbgString += " " + (SkillCodes)skill;
+            }
+
+            log.DebugFormat(dbgString);
         }
 
         private OperationResponse OperationReadyToReceiveGameEventsRequest(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
