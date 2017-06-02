@@ -60,7 +60,7 @@
   <ItemGroup>
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AIModule.cs" />
-    <Compile Include="AI\NpcAi.cs" />
+    <Compile Include="AI\TestBot.cs" />
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\NewPlayerEvent.cs" />
     <Compile Include="Message.cs" />
@@ -71,7 +71,7 @@
     <Compile Include="Requests\EnterWorldRequest.cs" />
     <Compile Include="Responses\EnterWorldResponse.cs" />
     <Compile Include="Requests\MoveRequest.cs" />
-    <Compile Include="PlayerEntity.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerApplication.cs" />
     <Compile Include="World.cs" />

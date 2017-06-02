@@ -53,7 +53,7 @@
 
             // TODO: Think about where characters should enter the world.
             var position = GetRandomWorldPosition();
-            var entity = new PlayerEntity(m_Peer, operation.Name, position);
+            var entity = new Entity(m_Peer, operation.Name, position);
 
             // TODO: Think about a different place to store the username.
             m_Peer.Username = operation.Name;
