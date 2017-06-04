@@ -1,14 +1,8 @@
-﻿using UnityEngine;
+﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
 
-public class RequestOperations : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    /// <summary>  
+    ///  Every request op has is in a own partial class/file.
+    /// </summary>  
+    public partial class RequestOperations {
+    }
 }

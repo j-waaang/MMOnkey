@@ -10,7 +10,7 @@
         internal event Action DisconnectedEvent;
 
         public void DebugReturn(DebugLevel level, string message) {
-            Debug.Log(string.Format("{0}: {1}", level, message));
+            //Debug.Log(string.Format("{0}: {1}", level, message));
         }
 
         public void OnEvent(EventData eventData) {

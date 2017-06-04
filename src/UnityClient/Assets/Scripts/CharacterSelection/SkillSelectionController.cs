@@ -16,7 +16,7 @@
         }
 
         private void LoadSkills() {
-            foreach (SkillCodes skill in System.Enum.GetValues(typeof(SkillCodes))) {
+            foreach (CombatActionCodes skill in System.Enum.GetValues(typeof(CombatActionCodes))) {
                 m_DropDownDatas.Add(new Dropdown.OptionData(skill.ToString()));
             }
         }

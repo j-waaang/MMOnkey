@@ -44,8 +44,10 @@
     <Compile Include="Codes\AutoAttackCodes.cs" />
     <Compile Include="Codes\EventCode.cs" />
     <Compile Include="Codes\ReturnCode.cs" />
-    <Compile Include="Codes\SkillCodes.cs" />
+    <Compile Include="Codes\CombatActionCodes.cs" />
     <Compile Include="Entities\CharacterEntity.cs" />
+    <Compile Include="Entities\ActionState.cs" />
+    <Compile Include="Entities\MovementState.cs" />
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Codes\OperationCode.cs" />
     <Compile Include="Codes\ParameterCode.cs" />

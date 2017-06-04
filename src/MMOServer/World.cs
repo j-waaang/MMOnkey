@@ -12,7 +12,9 @@
     /// The game world containing entities and methods modifiying them.
     /// </summary>
     internal class World : IDisposable {
+
         public static World Instance { get; private set; }
+
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         private Dictionary<string, Entity> m_Entities;
@@ -28,7 +30,7 @@
         }
 
         /// <summary>
-        /// First add a new entity.
+        /// Adding a entity to the game world.
         /// </summary>
         internal void AddEntity(Entity newEntity) {
 
@@ -49,6 +51,9 @@
             m_Entities[newEntity.Name] = newEntity;
         }
 
+        /// <summary>
+        /// Removes the entity from the list.
+        /// </summary>
         internal void RemoveEntity(string id) {
             m_Entities.Remove(id);
         }

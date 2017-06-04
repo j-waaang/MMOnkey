@@ -1,5 +1,7 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Cameras {
+
     using UnityEngine;
+
     /// <summary>
     // Follows the a target. Usually a player.
     // Angle and offset are currently hardcoded.

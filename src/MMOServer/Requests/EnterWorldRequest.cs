@@ -10,7 +10,7 @@
             : base(protocol, request) {
         }
 
-        [DataMember(Code = (byte)ParameterCode.Username)]
+        [DataMember(Code = (byte)ParameterCode.CharacterName)]
         public string Name { get; set; }
 
         [DataMember(Code = (byte)ParameterCode.Weapon)]

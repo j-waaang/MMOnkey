@@ -15,7 +15,7 @@
 
         public string Name { get; private set; }
         public Vector Position { get; set; }
-        public HashSet<SkillCodes> Skills { get; set; }
+        public HashSet<CombatActionCodes> Skills { get; set; }
         public AutoAttackCodes AutoAttackType { get; set; }
 
         private MMOPeer m_Peer;

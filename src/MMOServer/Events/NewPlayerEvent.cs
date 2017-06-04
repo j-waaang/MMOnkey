@@ -6,7 +6,7 @@
 
     class NewPlayerEvent {
 
-        [DataMember(Code = (byte)ParameterCode.Username)]
+        [DataMember(Code = (byte)ParameterCode.CharacterName)]
         public string Username;
 
         [DataMember(Code = (byte)ParameterCode.Position)]

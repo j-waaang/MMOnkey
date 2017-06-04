@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Action>
+    <Identifier>A1</Identifier>
+    <Name>MeeleAttack</Name>
+    <Description>Meele attack with your word.</Description>
+    <ActionType>InstantSkill</ActionType>
+    <Prerequisites>
+        <Prerequisite>
+            <Cooldown>5</Cooldown>
+        </Prerequisite>
+        <Prerequisite>
+            <Mana>5</Mana>
+        </Prerequisite>
+    </Prerequisites>
+    <Targets>
+        <Target>
+            Entity
+        </Target>
+    </Targets>
+</Action>

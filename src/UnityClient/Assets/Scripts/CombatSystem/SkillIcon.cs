@@ -1,4 +1,5 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.CombatSystem {
+
     using Common.Codes;
     using UnityEngine;
     using UnityEngine.UI;
@@ -6,9 +7,9 @@
     public class SkillIcon : MonoBehaviour {
 
         [SerializeField] private int m_SlotNumber;
-        private SkillCodes m_Skill;
+        private CombatActionCodes m_Skill;
 
-        internal void ChangeSkill(SkillCodes skillname) {
+        internal void ChangeSkill(CombatActionCodes skillname) {
             m_Skill = skillname;
             LoadSprite();
         }
@@ -19,7 +20,7 @@
         }
 
         private void LoadSkill() {
-            m_Skill = (SkillCodes) GameData.characterSetting.Skills[m_SlotNumber];
+            m_Skill = (CombatActionCodes) GameData.characterSetting.Skills[m_SlotNumber];
         }
 
         private void LoadSprite() {

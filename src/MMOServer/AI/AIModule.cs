@@ -29,6 +29,9 @@
             m_Running = false;
         }
 
+        /// <summary> 
+        /// Loop.
+        /// </summary>
         private void AILoop() {
             while (m_Running) {
                 foreach(AIEntity entity in m_AIEntites) {

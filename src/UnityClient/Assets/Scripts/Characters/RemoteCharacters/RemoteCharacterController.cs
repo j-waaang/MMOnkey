@@ -8,14 +8,16 @@
     /// </summary>  
     public class RemoteCharacterController : MonoBehaviour {
 
-        public string Name { get; private set; }
+        public string CharacterName { get; private set; }
         private bool m_Initialized;
 
         /// <summary>  
         ///  Subscribe to server events.
         /// </summary>  
         internal void Initialize(string username) {
-            Name = username;
+            CharacterName = username;
+            gameObject.name = username;
+            transform.GetChild(0).name = username;
             EventOperations.MoveEvent += OnMoveEvent;
             m_Initialized = true;
         }
@@ -26,7 +28,7 @@
         private void OnMoveEvent(string username, Vector2 position) {
             if (!m_Initialized) { return; }
 
-            if (Name != username) { return; }
+            if (CharacterName != username) { return; }
 
             transform.position = position;
         }

@@ -2,6 +2,7 @@
     public enum OperationCode : byte{
         EnterWorld = 1,
         ReadyToReceiveGameEvents,
-        Move
+        Move,
+        AutoAttack
     }
 }

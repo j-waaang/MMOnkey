@@ -16,12 +16,12 @@
 
         private static void OnNewPlayerEvent(EventData eventData) {
             // TODO: Extend this event with more data later.
-            var username = (string)eventData.Parameters[(byte)ParameterCode.Username];
+            var name = (string)eventData.Parameters[(byte)ParameterCode.CharacterName];
             var vecPos = (Vector)eventData.Parameters[(byte)ParameterCode.Position];
             var vec2Pos = new Vector2(vecPos.X, vecPos.Y);
 
             if (NewPlayerEvent != null) {
-                NewPlayerEvent(username, vec2Pos);
+                NewPlayerEvent(name, vec2Pos);
             }
             else {
                 Debug.Log("No new player listener");
