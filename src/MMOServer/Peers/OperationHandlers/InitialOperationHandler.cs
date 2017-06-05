@@ -51,22 +51,21 @@
 
             DebugCharacter(operation);
 
-            // TODO: Think about where characters should enter the world.
-            var position = GetRandomWorldPosition();
-            var entity = new Entity(m_Peer, operation.Name, position);
+            var entity = EntityFactory.CreatePeerControlledEntity(m_Peer, operation);
 
             // TODO: Think about a different place to store the username.
             m_Peer.Username = operation.Name;
 
             // Send entered world response.
             var responseData = new EnterWorldResponse {
-                Position = position
+                Position = entity.Position
             };
             var response = new OperationResponse(request.OperationCode, responseData) {
                 ReturnCode = (short)ReturnCode.OK
             };
             m_Peer.SendOperationResponse(response, sendParameters);
 
+            // Must happen after OK is sent to server.
             // Notify other peers about new player by adding the entity to the world cache.
             //TODO: Missing checks when adding new entity. E.g. is there already an entity with the same name.
             World.Instance.AddEntity(entity);
@@ -88,11 +87,6 @@
         private OperationResponse OperationReadyToReceiveGameEventsRequest(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
             m_Peer.SetCurrentOperationHandler(new EntityOperationHandler(m_Peer));
             return null;
-        }
-
-        private Vector GetRandomWorldPosition() {
-            // TODO: Actually return a random position.
-            return Vector.Zero;
         }
     }
 }

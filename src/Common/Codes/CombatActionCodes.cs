@@ -1,6 +1,7 @@
 ﻿namespace JYW.ThesisMMO.Common.Codes {
     public enum CombatActionCodes {
-        MeeleAutoAttack = 1,
+        AutoAttack,
+        MeeleAutoAttack,
         RangedAutoAttack,
         Move,
 

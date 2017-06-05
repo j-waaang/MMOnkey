@@ -122,6 +122,40 @@
             return entities;
         }
 
+        internal void AutoAttack() {
+
+        }
+
+        internal bool CanPerformAction(string entityName, CombatActionCodes action) {
+            if (!m_Entities[entityName].CanPerformAction(action)) { return false; }
+
+            // TODO: Check distance for autoattacks.
+            switch (action) {
+                case CombatActionCodes.AutoAttack:
+                    break;
+                case CombatActionCodes.MeeleAutoAttack:
+                    break;
+                case CombatActionCodes.RangedAutoAttack:
+                    break;
+                case CombatActionCodes.Move:
+                    break;
+                case CombatActionCodes.Dash:
+                    break;
+                case CombatActionCodes.DistractingShot:
+                    break;
+                case CombatActionCodes.FireStorm:
+                    break;
+                case CombatActionCodes.HammerBash:
+                    break;
+                case CombatActionCodes.OrisonOfHealing:
+                    break;
+                default:
+                    break;
+            }
+
+            return true;
+        }
+
         public void Dispose() {
             Instance = null;
         }

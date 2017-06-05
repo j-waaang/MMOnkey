@@ -1,6 +1,7 @@
 ﻿namespace JYW.ThesisMMO.MMOServer {
 
     using Common.Codes;
+    using Common.Entities;
     using Common.Types;
     using Photon.SocketServer;
     using System.Collections.Generic;
@@ -12,11 +13,14 @@
     class Entity {
 
         // TODO: Restrict variables to be only changeable by game world.
-
-        public string Name { get; private set; }
-        public Vector Position { get; set; }
-        public HashSet<CombatActionCodes> Skills { get; set; }
-        public AutoAttackCodes AutoAttackType { get; set; }
+        internal string Name { get; private set; }
+        internal Vector Position { get; set; }
+        internal float CurHealth { get; set; }
+        internal float MaxHealth { get; set; }
+        internal ActionState ActionState { get; set; }
+        internal MovementState MovementState { get; set; }
+        internal AutoAttackCodes AutoAttackType { get; set; }
+        internal HashSet<CombatActionCodes> Skills { get; set; }
 
         private MMOPeer m_Peer;
         private bool m_AiControlled;
@@ -24,10 +28,13 @@
         /// <summary> 
         /// Use this constructor if it is controlled by a peer/client.
         /// </summary>
-        public Entity(MMOPeer peer, string name, Vector position) {
+        public Entity(MMOPeer peer, string name, Vector position, float maxHealth) {
             Name = name;
             m_Peer = peer;
             m_AiControlled = false;
+            MaxHealth = maxHealth;
+            CurHealth = maxHealth;
+            ActionState = ActionState.Idle;
         }
 
         /// <summary> 
@@ -47,6 +54,12 @@
             if (m_AiControlled) { return SendResult.Ok; }
 
             return m_Peer.SendEvent(eventData, sendParameters);
+        }
+
+        public bool CanPerformAction(CombatActionCodes action) {
+            if(ActionState != ActionState.Idle) { return false; }
+
+            return true;
         }
     }
 }

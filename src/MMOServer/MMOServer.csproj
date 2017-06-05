@@ -61,9 +61,11 @@
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AIModule.cs" />
     <Compile Include="AI\TestBot.cs" />
+    <Compile Include="EntityFactory.cs" />
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\NewPlayerEvent.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="Requests\AutoAttackRequest.cs" />
     <Compile Include="Responses\DefaultResponses.cs" />
     <Compile Include="Peers\OperationHandlers\EntityOperationHandler.cs" />
     <Compile Include="Peers\OperationHandlers\InitialOperationHandler.cs" />

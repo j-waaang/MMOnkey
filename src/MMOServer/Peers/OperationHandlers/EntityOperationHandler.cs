@@ -3,9 +3,9 @@
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
     using Common.Codes;
-    using Operations;
     using Operations.Responses;
     using ExitGames.Logging;
+    using Requests;
 
     class EntityOperationHandler : IOperationHandler {
 
@@ -28,6 +28,8 @@
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotAllowed);
                 case OperationCode.Move:
                     return OperationMove(peer, operationRequest, sendParameters);
+                case OperationCode.AutoAttack:
+                    return OperationAutoAttack(peer, operationRequest, sendParameters);
                 default:
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotSupported);
             }
@@ -47,6 +49,18 @@
             World.Instance.MoveEntity(m_Peer.Username, operation.Position);
 
             //We don't respond directly on movement. World cache updates movement to clients.
+            return null;
+        }
+
+        private OperationResponse OperationAutoAttack(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
+            var operation = new AutoAttackRequest(peer.Protocol, request);
+
+            if (!operation.IsValid) { return DefaultResponses.CreateInvalidOperationParameterResponse(operation); }
+            
+            if (!World.Instance.CanPerformAction(m_Peer.Username, CombatActionCodes.AutoAttack)) {
+                    return DefaultResponses.CreateNegativeResponse(request, ReturnCode.Declined);
+            }
+
             return null;
         }
     }
