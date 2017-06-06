@@ -17,7 +17,7 @@
 
         private void Awake() {
             EventOperations.MoveEvent += OnMoveEvent;
-            GameData.ClientCharacterPositionChange += OnClientCharacterPositionChange;
+            GameData.AvatarPositionChangedEvent += OnClientCharacterPositionChange;
         }
 
         private void OnMoveEvent(string username, Vector2 position) {

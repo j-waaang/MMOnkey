@@ -16,7 +16,7 @@
         private Text m_TargetName;
 
         private void Awake() {
-            GameData.TargetChangedAction += TargetChanged;
+            GameData.TargetChangedEvent += TargetChanged;
             m_TargetName = m_NameUI.GetComponentInChildren<Text>();
         }
 
@@ -28,7 +28,6 @@
                 return;
             }
 
-            Debug.Log(newTarget.name);
             var remoteChar = newTarget.GetComponent<RemoteCharacterController>();
             m_TargetName.text = remoteChar.CharacterName;
             m_NameUI.SetActive(true);

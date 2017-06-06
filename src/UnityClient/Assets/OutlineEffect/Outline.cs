@@ -20,15 +20,17 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+//
+//  Modified for MMOClient by Jing Yi.
 */
 
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using JYW.ThesisMMO.UnityClient;
 
 namespace cakeslice
 {
-    [RequireComponent(typeof(Renderer))]
     public class Outline : MonoBehaviour
     {
         public Renderer Renderer { get; private set; }
@@ -44,11 +46,34 @@ namespace cakeslice
         private void Awake()
         {
             Renderer = GetComponent<Renderer>();
+            GameData.TargetChangedEvent += OnTargetChanged;
+        }
+
+        private void OnTargetChanged(GameObject newTarget) {
+            eraseRenderer = true;
+
+            if (newTarget == null) { return; }
+
+            var thisOrParent = gameObject.transform;
+            Debug.Log("Looking for: " + newTarget.name);
+
+            do {
+                Debug.Log("Comparing with" + thisOrParent.name);
+                if (thisOrParent == newTarget.transform) {
+                    eraseRenderer = false;
+                    return;
+                }
+
+                if(thisOrParent.parent == null) {
+                    return;
+                }
+                thisOrParent = thisOrParent.parent;
+
+            } while (true);
         }
 
         void OnEnable()
         {
-
 			IEnumerable<OutlineEffect> effects = Camera.allCameras.AsEnumerable()
 				.Select(c => c.GetComponent<OutlineEffect>())
 				.Where(e => e != null);
@@ -57,12 +82,10 @@ namespace cakeslice
             {
                 effect.AddOutline(this);
             }
-
         }
 
         void OnDisable()
         {
-
 			IEnumerable<OutlineEffect> effects = Camera.allCameras.AsEnumerable()
 				.Select(c => c.GetComponent<OutlineEffect>())
 				.Where(e => e != null);
@@ -71,7 +94,6 @@ namespace cakeslice
             {
                 effect.RemoveOutline(this);
             }
-
         }
     }
 }
