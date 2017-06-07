@@ -55,10 +55,8 @@ namespace cakeslice
             if (newTarget == null) { return; }
 
             var thisOrParent = gameObject.transform;
-            Debug.Log("Looking for: " + newTarget.name);
 
             do {
-                Debug.Log("Comparing with" + thisOrParent.name);
                 if (thisOrParent == newTarget.transform) {
                     eraseRenderer = false;
                     return;

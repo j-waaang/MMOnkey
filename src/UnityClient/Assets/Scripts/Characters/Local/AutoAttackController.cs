@@ -5,6 +5,7 @@
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
     using RemoteCharacters;
+    using System.Collections;
 
     /// <summary>
     // Performs the autoattack on input.
@@ -14,10 +15,10 @@
 
         private CharacterState m_CharacterState;
         private float m_AttackRange;
-        //private GameObject m_Target;
 
         private const float MaxMeeleAARange = 1.5f;
         private const float MaxRangedAARange = 6.0f;
+        private const float MeeleAADuration = 1f;
 
         private void Awake() {
             m_CharacterState = GetComponent<CharacterState>();
@@ -45,7 +46,8 @@
                     if (Input.GetButtonDown("AutoAttack")) {
                         //SetAATarget();
                         if (!TestPrerequisite()) { return; }
-                        StartAutoAttack();
+
+                        StartCoroutine(PerformAutoAttack());
                     }
                     break;
                 case ActionState.Casting:
@@ -59,40 +61,30 @@
         // True if preconditions are passed. Else false.
         /// </summary>
         private bool TestPrerequisite() {
-            if(m_CharacterState.ActionState == ActionState.Casting) { return false; }
-            
-            if(GameData.Target == null) { return false; }
+            if (m_CharacterState.ActionState == ActionState.Casting) { return false; }
+
+            if (GameData.Target == null) { return false; }
 
             var distance = Mathf.Abs(GetTargetDistance(GameData.Target));
-            if(distance > m_AttackRange) { return false; }
+            if (distance > m_AttackRange) { return false; }
 
             return true;
         }
 
-        private void StartAutoAttack() {
+        private IEnumerator PerformAutoAttack() {
             m_CharacterState.ActionState = ActionState.Casting;
             SendAAStartToServer();
+            // TODO: Listen to interupt events.
+            yield return new WaitForSeconds(MeeleAADuration);
+            if (m_CharacterState.ActionState == ActionState.Casting) {
+                m_CharacterState.ActionState = ActionState.Idle;
+            }
         }
 
         private void SendAAStartToServer() {
             var targetName = GameData.Target.GetComponent<RemoteCharacterController>().CharacterName;
             RequestOperations.AutoAttackRequest(targetName);
         }
-
-        ///// <summary>
-        //// Look for a target unter the mouse position and returns it.
-        ///// </summary>
-        //private void SetAATarget() {
-        //    var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    var target = Physics2D.Raycast(mouseRay.origin, mouseRay.direction);
-
-        //    if (target.collider != null && target.collider.tag == "Enemy") {
-        //        m_Target = target.collider.gameObject;
-        //    }
-        //    else {
-        //        m_Target = null;
-        //    }
-        //}
 
         private float GetTargetDistance(GameObject target) {
             var targetCollider = target.GetComponent<CircleCollider2D>();
