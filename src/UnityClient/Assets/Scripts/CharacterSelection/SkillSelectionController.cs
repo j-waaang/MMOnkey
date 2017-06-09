@@ -16,8 +16,9 @@
         }
 
         private void LoadSkills() {
-            foreach (CombatActionCodes skill in System.Enum.GetValues(typeof(CombatActionCodes))) {
-                m_DropDownDatas.Add(new Dropdown.OptionData(skill.ToString()));
+            foreach (CharacterActionCode action in System.Enum.GetValues(typeof(CharacterActionCode))) {
+                if ((int)action < 10) { continue; }
+                m_DropDownDatas.Add(new Dropdown.OptionData(action.ToString()));
             }
         }
 

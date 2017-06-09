@@ -30,11 +30,11 @@
         /// </summary>
         private void SetAttackRange() {
             var weapon = GameData.characterSetting.Weapon;
-            switch ((AutoAttackCodes)weapon) {
-                case AutoAttackCodes.Meele:
+            switch ((WeaponCode)weapon) {
+                case WeaponCode.Axe:
                     m_AttackRange = MaxMeeleAARange;
                     return;
-                case AutoAttackCodes.Ranged:
+                case WeaponCode.Bow:
                     m_AttackRange = MaxRangedAARange;
                     return;
             }

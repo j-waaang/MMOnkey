@@ -16,7 +16,7 @@
 
         private static void OnNewPlayerEvent(EventData eventData) {
             // TODO: Extend this event with more data later.
-            var name = (string)eventData.Parameters[(byte)ParameterCode.CharacterName];
+            var name = (string)eventData.Parameters[(byte)ParameterCode.Name];
             var vecPos = (Vector)eventData.Parameters[(byte)ParameterCode.Position];
             var vec2Pos = new Vector2(vecPos.X, vecPos.Y);
 

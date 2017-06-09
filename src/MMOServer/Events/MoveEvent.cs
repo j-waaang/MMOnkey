@@ -6,7 +6,7 @@
 
     class MoveEvent {
 
-        [DataMember(Code = (byte)ParameterCode.CharacterName)]
+        [DataMember(Code = (byte)ParameterCode.Name)]
         public string Username;
 
         [DataMember(Code = (byte)ParameterCode.Position)]

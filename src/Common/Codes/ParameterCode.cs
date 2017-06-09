@@ -1,8 +1,8 @@
 ﻿namespace JYW.ThesisMMO.Common.Codes {
     public enum ParameterCode : byte{
-        CharacterName,
+        Name,
         Position,
         Weapon,
-        Skill
+        CombatActionCode
     }
 }

@@ -4,13 +4,13 @@
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
 
-    class AutoAttackRequest : Operation {
+    class BowAutoAttackRequest : CharacterActionRequest {
 
-        public AutoAttackRequest(IRpcProtocol protocol, OperationRequest request)
+        public BowAutoAttackRequest(IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
         }
 
-        [DataMember(Code = (byte)ParameterCode.CharacterName)]
+        [DataMember(Code = (byte)ParameterCode.Name)]
         public string Target { get; set; }
     }
 }

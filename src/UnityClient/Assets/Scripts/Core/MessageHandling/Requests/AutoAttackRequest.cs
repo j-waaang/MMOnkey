@@ -13,11 +13,12 @@
 
             var data = new Dictionary<byte, object>
             {
-                    { (byte)ParameterCode.CharacterName, target }
+                    { (byte)ParameterCode.CombatActionCode, CharacterActionCode.MeeleAutoAttack },
+                    { (byte)ParameterCode.Name, target }
             };
 
             var operationRequest = new OperationRequest() {
-                OperationCode = (byte)OperationCode.AutoAttack,
+                OperationCode = (byte)OperationCode.CharacterAction,
                 Parameters = data
             };
 

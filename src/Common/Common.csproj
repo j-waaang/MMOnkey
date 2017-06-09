@@ -41,10 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Codes\AutoAttackCodes.cs" />
+    <Compile Include="Codes\AttributeCode.cs" />
+    <Compile Include="Codes\WeaponCode.cs" />
     <Compile Include="Codes\EventCode.cs" />
     <Compile Include="Codes\ReturnCode.cs" />
-    <Compile Include="Codes\CombatActionCodes.cs" />
+    <Compile Include="Codes\CharacterActionCode.cs" />
     <Compile Include="Entities\CharacterEntity.cs" />
     <Compile Include="Entities\ActionState.cs" />
     <Compile Include="Entities\MovementState.cs" />

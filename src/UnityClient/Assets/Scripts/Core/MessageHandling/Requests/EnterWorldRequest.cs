@@ -13,9 +13,9 @@
         public static void EnterWorldRequest(CharacterSetting characterSetting) {
             var data = new Dictionary<byte, object>
             {
-                { (byte)ParameterCode.CharacterName, characterSetting.Name },
+                { (byte)ParameterCode.Name, characterSetting.Name },
                 { (byte)ParameterCode.Weapon, characterSetting.Weapon},
-                { (byte)ParameterCode.Skill, characterSetting.Skills}
+                { (byte)ParameterCode.CombatActionCode, characterSetting.Skills}
             };
 
             var operationRequest = new OperationRequest() {

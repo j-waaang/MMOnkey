@@ -78,7 +78,7 @@
             dbgString += " " + request.Name;
 
             foreach (int skill in request.Skills) {
-                dbgString += " " + (CombatActionCodes)skill;
+                dbgString += " " + (CharacterActionCode)skill;
             }
 
             log.DebugFormat(dbgString);

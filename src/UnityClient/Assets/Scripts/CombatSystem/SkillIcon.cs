@@ -7,9 +7,9 @@
     public class SkillIcon : MonoBehaviour {
 
         [SerializeField] private int m_SlotNumber;
-        private CombatActionCodes m_Skill;
+        private WeaponCode m_Skill;
 
-        internal void ChangeSkill(CombatActionCodes skillname) {
+        internal void ChangeSkill(WeaponCode skillname) {
             m_Skill = skillname;
             LoadSprite();
         }
@@ -20,7 +20,7 @@
         }
 
         private void LoadSkill() {
-            m_Skill = (CombatActionCodes) GameData.characterSetting.Skills[m_SlotNumber];
+            m_Skill = (WeaponCode) GameData.characterSetting.Skills[m_SlotNumber];
         }
 
         private void LoadSprite() {

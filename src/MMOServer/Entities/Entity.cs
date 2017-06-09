@@ -3,6 +3,7 @@
     using Common.Codes;
     using Common.Entities;
     using Common.Types;
+    using Entities;
     using Photon.SocketServer;
     using System.Collections.Generic;
     using MMOPeer = Peers.MMOPeer;
@@ -12,6 +13,8 @@
     /// </summary>
     class Entity {
 
+        private Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
+
         // TODO: Restrict variables to be only changeable by game world.
         internal string Name { get; private set; }
         internal Vector Position { get; set; }
@@ -19,8 +22,8 @@
         internal float MaxHealth { get; set; }
         internal ActionState ActionState { get; set; }
         internal MovementState MovementState { get; set; }
-        internal AutoAttackCodes AutoAttackType { get; set; }
-        internal HashSet<CombatActionCodes> Skills { get; set; }
+        internal WeaponCode AutoAttackType { get; set; }
+        internal HashSet<CharacterActionCode> Skills { get; set; }
 
         private MMOPeer m_Peer;
         private bool m_AiControlled;
@@ -56,7 +59,7 @@
             return m_Peer.SendEvent(eventData, sendParameters);
         }
 
-        public bool CanPerformAction(CombatActionCodes action) {
+        public bool CanPerformAction(CharacterActionCode action) {
             if(ActionState != ActionState.Idle) { return false; }
 
             return true;

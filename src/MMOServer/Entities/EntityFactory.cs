@@ -9,24 +9,25 @@
 
         internal static Entity CreatePeerControlledEntity(MMOPeer peer, EnterWorldRequest operation) {
             var position = GetRandomWorldPosition();
-            var maxHealth = GetMaxHealth((AutoAttackCodes) operation.Weapon);
+            var maxHealth = GetMaxHealth((WeaponCode) operation.Weapon);
             var entity = new Entity(peer, operation.Name, position, maxHealth);
             return entity;
         }
 
-        private static int GetMaxHealth(AutoAttackCodes weapon) {
+        // TODO: Change design so health does not depend on weapon.
+        private static int GetMaxHealth(WeaponCode weapon) {
             switch (weapon) {
-                case AutoAttackCodes.Meele:
+                case WeaponCode.Axe:
                     return 100;
-                case AutoAttackCodes.Ranged:
+                case WeaponCode.Bow:
                     return 70;
                 default:
                     throw new System.ArgumentOutOfRangeException();
             }
         }
 
+        // TODO: Actually return a random position.
         private static Vector GetRandomWorldPosition() {
-            // TODO: Actually return a random position.
             return Vector.Zero;
         }
     }

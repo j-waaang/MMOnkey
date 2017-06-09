@@ -1,8 +1,7 @@
 ﻿namespace JYW.ThesisMMO.Common.Codes {
-    public enum CombatActionCodes {
-        AutoAttack,
-        MeeleAutoAttack,
-        RangedAutoAttack,
+    public enum CharacterActionCode {
+        AxeAutoAttack,
+        BowAutoAttack,
         Move,
 
         Dash = 10,
