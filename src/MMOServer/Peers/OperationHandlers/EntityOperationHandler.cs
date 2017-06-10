@@ -2,15 +2,17 @@
 
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
-    using Common.Codes;
-    using Operations.Responses;
     using ExitGames.Logging;
-    using Requests;
-    using CombatActions;
+
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.MMOServer.Operations.Responses;
+    using JYW.ThesisMMO.MMOServer.Requests;
+    using JYW.ThesisMMO.MMOServer.ActionObjects;
 
     class EntityOperationHandler : IOperationHandler {
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        private ActionObjectFactory m_ActionObjectFactory = new ActionObjectFactory();
         private MMOPeer m_Peer;
 
         internal EntityOperationHandler(MMOPeer peer) {
@@ -28,15 +30,27 @@
                 case OperationCode.EnterWorld:
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotAllowed);
                 case OperationCode.Move:
-                    return OperationMove(peer, operationRequest, sendParameters);
+                    return OperationMove(peer, operationRequest);
                 case OperationCode.CharacterAction:
-                    return CombatActionManager.Instance.CombatActionRequest(peer, operationRequest, sendParameters);
+                    return OperationCharacterAction(peer, operationRequest);
                 default:
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotSupported);
             }
         }
 
-        private OperationResponse OperationMove(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
+        private OperationResponse OperationCharacterAction(PeerBase peer, OperationRequest request) {
+            var actionObject = m_ActionObjectFactory.CreateActionObject(peer.Protocol, request);
+
+            if(actionObject == null) {
+                return DefaultResponses.CreateNegativeResponse(request, m_ActionObjectFactory.LastCreationFailReason);
+            }
+
+            World.Instance.AttachActionToEntity(m_Peer.Username, actionObject);
+
+            return null;
+        }
+
+        private OperationResponse OperationMove(PeerBase peer, OperationRequest request) {
 
             var operation = new MoveRequest(peer.Protocol, request);
 

@@ -2,11 +2,14 @@
 
     using System;
     using System.Collections.Generic;
-    using Common.Types;
-    using Common.Codes;
-    using Events;
+
     using Photon.SocketServer;
     using ExitGames.Logging;
+
+    using JYW.ThesisMMO.Common.Types;
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.MMOServer.Events;
+    using JYW.ThesisMMO.MMOServer.ActionObjects;
 
     /// <summary> 
     /// The game world containing entities and methods modifiying them.
@@ -108,6 +111,10 @@
             foreach (Entity entity in interestedEntities) {
                 entity.SendEvent(eventData, sendParameters);
             }
+        }
+
+        internal void AttachActionToEntity(string entityName, ActionObject actionObject) {
+            m_Entities[entityName].AttachActionObject(actionObject);
         }
         
         private List<Entity> GetEntitiesInInterestRange(Entity centerEntity) {

@@ -1,12 +1,12 @@
-﻿namespace JYW.ThesisMMO.MMOServer.Requests {
+﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects {
 
     using Common.Codes;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
 
-    class AxeAutoAttackRequest : CharacterActionRequest {
+    class BowAutoAttackRequest : ActionObject {
 
-        public AxeAutoAttackRequest(IRpcProtocol protocol, OperationRequest request)
+        public BowAutoAttackRequest(IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
         }
 

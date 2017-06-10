@@ -1,4 +1,4 @@
-﻿namespace JYW.ThesisMMO.MMOServer.CombatActions {
+﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects {
     internal enum ContinueReason {
         Interupted,
         ConditionFullfilled

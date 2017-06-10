@@ -5,6 +5,8 @@
         Declined,
         InvalidOperationParameter = 50,
         OperationNotAllowed,
-        OperationNotSupported
+        OperationNotSupported,
+        OperationNotImplemented,
+        NoCodeAssigned
     }
 }
