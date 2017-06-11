@@ -10,22 +10,22 @@
 
         internal ReturnCode LastCreationFailReason { get; private set; }
 
-        internal ActionObject CreateActionObject(IRpcProtocol protocol, OperationRequest request) {
-            var action = (CharacterActionCode)request.Parameters[(byte)ParameterCode.CombatActionCode];
+        internal ActionObject CreateActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request) {
+            var action = (ActionCode)request.Parameters[(byte)ParameterCode.ActionCode];
             ActionObject actionObject = null;
             switch (action) {
-                case CharacterActionCode.AxeAutoAttack:
-                    actionObject = new AxeAutoAttackRequest(protocol, request);
+                case ActionCode.AxeAutoAttack:
+                    actionObject = new AxeAutoAttackRequest(actionSource, protocol, request);
                     break;
-                case CharacterActionCode.BowAutoAttack:
+                case ActionCode.BowAutoAttack:
                     actionObject = new BowAutoAttackRequest(protocol, request);
                     break;
-                case CharacterActionCode.Move:
-                case CharacterActionCode.Dash:
-                case CharacterActionCode.DistractingShot:
-                case CharacterActionCode.FireStorm:
-                case CharacterActionCode.HammerBash:
-                case CharacterActionCode.OrisonOfHealing:
+                case ActionCode.Move:
+                case ActionCode.Dash:
+                case ActionCode.DistractingShot:
+                case ActionCode.FireStorm:
+                case ActionCode.HammerBash:
+                case ActionCode.OrisonOfHealing:
                 default:
                     LastCreationFailReason = ReturnCode.OperationNotImplemented;
                     break;

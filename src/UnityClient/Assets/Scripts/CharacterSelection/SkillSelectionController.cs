@@ -16,7 +16,7 @@
         }
 
         private void LoadSkills() {
-            foreach (CharacterActionCode action in System.Enum.GetValues(typeof(CharacterActionCode))) {
+            foreach (ActionCode action in System.Enum.GetValues(typeof(ActionCode))) {
                 if ((int)action < 10) { continue; }
                 m_DropDownDatas.Add(new Dropdown.OptionData(action.ToString()));
             }

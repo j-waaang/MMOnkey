@@ -11,5 +11,11 @@
 
         [DataMember(Code = (byte)ParameterCode.Position)]
         public Vector Position;
+
+        [DataMember(Code = (byte)ParameterCode.MaxHealth)]
+        public Vector MaxHealth;
+
+        [DataMember(Code = (byte)ParameterCode.CurrentHealth)]
+        public Vector CurrentHealth;
     }
 }

@@ -4,14 +4,30 @@
     using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.MMOServer.Requests;
     using JYW.ThesisMMO.MMOServer.Peers;
+    using Entities.Attributes;
 
     internal static class EntityFactory {
 
         internal static Entity CreatePeerControlledEntity(MMOPeer peer, EnterWorldRequest operation) {
             var position = GetRandomWorldPosition();
-            var maxHealth = GetMaxHealth((WeaponCode) operation.Weapon);
-            var entity = new Entity(peer, operation.Name, position, maxHealth);
-            return entity;
+            var maxHealth = GetMaxHealth((WeaponCode)operation.Weapon);
+            var attributes = new Attribute[3];
+            attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
+            attributes[1] = new HealthAttribute(maxHealth);
+            attributes[2] = new ActionStateAttribute();
+
+            return new Entity(operation.Name, position, attributes, peer);
+        }
+
+        internal static Entity CreateAIBot(string name, Vector startPosition) {
+            var position = startPosition;
+            var maxHealth = GetMaxHealth(WeaponCode.Axe);
+            var attributes = new Attribute[3];
+            attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
+            attributes[1] = new HealthAttribute(maxHealth);
+            attributes[2] = new ActionStateAttribute();
+
+            return new Entity(name, position, attributes, null);
         }
 
         // TODO: Change design so health does not depend on weapon.

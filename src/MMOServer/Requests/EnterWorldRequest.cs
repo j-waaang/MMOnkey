@@ -16,7 +16,7 @@
         [DataMember(Code = (byte)ParameterCode.Weapon)]
         public int Weapon { get; set; }
 
-        [DataMember(Code = (byte)ParameterCode.CombatActionCode)]
+        [DataMember(Code = (byte)ParameterCode.ActionCode)]
         public int[] Skills { get; set; }
     }
 }

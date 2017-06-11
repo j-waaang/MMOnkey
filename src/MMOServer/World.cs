@@ -9,7 +9,8 @@
     using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.MMOServer.Events;
-    using JYW.ThesisMMO.MMOServer.ActionObjects;
+    using JYW.ThesisMMO.MMOServer.Entities;
+    using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
 
     /// <summary> 
     /// The game world containing entities and methods modifiying them.
@@ -24,6 +25,9 @@
 
         private const float InterestDistance = 15f;
 
+        /// <summary>
+        /// Creates a instance of the game world.
+        /// </summary>
         internal World() {
             if (Instance == null) {
                 Instance = this;
@@ -113,10 +117,6 @@
             }
         }
 
-        internal void AttachActionToEntity(string entityName, ActionObject actionObject) {
-            m_Entities[entityName].AttachActionObject(actionObject);
-        }
-        
         private List<Entity> GetEntitiesInInterestRange(Entity centerEntity) {
             var entities = new List<Entity>();
             foreach (Entity entity in m_Entities.Values) {
@@ -129,35 +129,37 @@
             return entities;
         }
 
-        //internal bool CanPerformAction(string entityName, CombatActionCode action) {
-        //    if (!m_Entities[entityName].CanPerformAction(action)) { return false; }
+        internal bool CanPerformAction(string actionSource, ActionCode action, Target target) {
 
-        //    // TODO: Check distance for autoattacks.
-        //    switch (action) {
-        //        case CombatActionCode.AutoAttack:
-        //            break;
-        //        case CombatActionCode.MeeleAutoAttack:
-        //            break;
-        //        case CombatActionCode.RangedAutoAttack:
-        //            break;
-        //        case CombatActionCode.Move:
-        //            break;
-        //        case CombatActionCode.Dash:
-        //            break;
-        //        case CombatActionCode.DistractingShot:
-        //            break;
-        //        case CombatActionCode.FireStorm:
-        //            break;
-        //        case CombatActionCode.HammerBash:
-        //            break;
-        //        case CombatActionCode.OrisonOfHealing:
-        //            break;
-        //        default:
-        //            break;
-        //    }
+            if (!m_Entities[actionSource].CanPerformAction(action)) { return false; }
 
-        //    return true;
-        //}
+            // TODO: Test distance
+            switch (action) {
+                case ActionCode.AxeAutoAttack:
+                    break;
+                case ActionCode.BowAutoAttack:
+                    break;
+                case ActionCode.Move:
+                    break;
+                case ActionCode.Dash:
+                    break;
+                case ActionCode.DistractingShot:
+                    break;
+                case ActionCode.FireStorm:
+                    break;
+                case ActionCode.HammerBash:
+                    break;
+                case ActionCode.OrisonOfHealing:
+                    break;
+                default:
+                    break;
+            }
+            return true;
+        }
+
+        internal void ApplyModifier(string target, Modifier modifier) {
+            modifier.ApplyOnEntity(m_Entities[target]);
+        }
 
         public void Dispose() {
             Instance = null;

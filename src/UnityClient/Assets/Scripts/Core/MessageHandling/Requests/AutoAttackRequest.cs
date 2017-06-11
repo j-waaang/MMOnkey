@@ -13,7 +13,7 @@
 
             var data = new Dictionary<byte, object>
             {
-                    { (byte)ParameterCode.CombatActionCode, CharacterActionCode.MeeleAutoAttack },
+                    { (byte)ParameterCode.ActionCode, ActionCode.AxeAutoAttack },
                     { (byte)ParameterCode.Name, target }
             };
 

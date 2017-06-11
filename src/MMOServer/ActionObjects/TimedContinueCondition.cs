@@ -9,12 +9,12 @@
 
         private Thread m_Thread;
 
-        internal TimedContinueCondition(TimeSpan waitTime) {
-            // TODO: Also listen to interupt events;
-            var m_Thread = new Thread(() => SleepAndContinue(waitTime));
+        internal TimedContinueCondition(ActionObject actionObject, TimeSpan waitTime)
+            : base(actionObject) {
+            m_Thread = new Thread(() => SleepAndContinue(waitTime));
         }
 
-        internal void Start() {
+        internal override void Start() {
             m_Thread.Start();
         }
 

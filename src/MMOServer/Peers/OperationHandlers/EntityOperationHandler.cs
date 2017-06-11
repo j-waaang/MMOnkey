@@ -39,13 +39,18 @@
         }
 
         private OperationResponse OperationCharacterAction(PeerBase peer, OperationRequest request) {
-            var actionObject = m_ActionObjectFactory.CreateActionObject(peer.Protocol, request);
+            log.DebugFormat("Received character action from {0}", m_Peer.Username);
+            var actionObject = m_ActionObjectFactory.CreateActionObject(m_Peer.Username, peer.Protocol, request);
 
             if(actionObject == null) {
                 return DefaultResponses.CreateNegativeResponse(request, m_ActionObjectFactory.LastCreationFailReason);
             }
 
-            World.Instance.AttachActionToEntity(m_Peer.Username, actionObject);
+            if (!actionObject.CheckPrerequesite()) {
+                return DefaultResponses.CreateNegativeResponse(request, ReturnCode.Declined);
+            }
+
+            actionObject.StartAction();
 
             return null;
         }

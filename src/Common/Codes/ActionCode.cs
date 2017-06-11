@@ -1,5 +1,5 @@
 ﻿namespace JYW.ThesisMMO.Common.Codes {
-    public enum CharacterActionCode {
+    public enum ActionCode {
         AxeAutoAttack,
         BowAutoAttack,
         Move,

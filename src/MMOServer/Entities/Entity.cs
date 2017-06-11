@@ -3,12 +3,12 @@
     using Common.Codes;
     using Common.Entities;
     using Common.Types;
-    using Entities;
     using ExitGames.Logging;
     using Photon.SocketServer;
     using ActionObjects;
     using System.Collections.Generic;
     using MMOPeer = Peers.MMOPeer;
+    using Entities.Attributes;
 
     /// <summary> 
     /// Entity which is stored in the game world.
@@ -27,27 +27,43 @@
         internal ActionState ActionState { get; set; }
         internal MovementState MovementState { get; set; }
         internal WeaponCode AutoAttackType { get; set; }
-        internal HashSet<CharacterActionCode> Skills { get; set; }
+        internal HashSet<ActionCode> Skills { get; set; }
 
         private MMOPeer m_Peer;
         private bool m_AiControlled;
         private ActionObject m_ActionObject = null;
 
         /// <summary> 
-        /// Use this constructor if it is controlled by a peer/client.
+        /// Leave out peer if this is a AI controlled enity.
         /// </summary>
-        internal Entity(MMOPeer peer, string name, Vector position, float maxHealth) {
+        internal Entity(string name, Vector position, Attribute[] attributes, MMOPeer peer) {
             Name = name;
-            m_Peer = peer;
-            m_AiControlled = false;
-            MaxHealth = maxHealth;
-            CurHealth = maxHealth;
-            ActionState = ActionState.Idle;
+            Position = position;
+
+            if(peer != null) {
+                m_Peer = peer;
+                m_AiControlled = false;
+            }
+            else {
+                m_AiControlled = true;
+            }
+
+            foreach(Attribute attribute in attributes) {
+                m_Attributes.Add(attribute.AttributeCode, attribute);
+                attribute.SetEntity(this);
+            }
+
+            string attributesString = "";
+            foreach(AttributeCode code in m_Attributes.Keys) {
+                attributesString += code.ToString();
+            }
+            log.DebugFormat("Entity created w. name {0} w. attributes {1}", Name, attributesString);
         }
 
         /// <summary> 
         /// Use this constructor if it is controlled by the server's AI Module.
         /// </summary>
+        [System.Obsolete]
         internal Entity(string name, Vector position) {
             Name = name;
             Position = position;
@@ -64,22 +80,19 @@
             return m_Peer.SendEvent(eventData, sendParameters);
         }
 
-        internal bool CanPerformAction(CharacterActionCode action) {
-            if (ActionState != ActionState.Idle) { return false; }
+        internal bool CanPerformAction(ActionCode action) {
+            var actionState = m_Attributes[AttributeCode.ActionState] as ActionStateAttribute;
+            if (actionState.ActionState != ActionState.Idle) { return false; }
 
             return true;
         }
 
-        internal void AttachActionObject(ActionObject actionObject) {
-            if (m_ActionObject != null) {
-                log.DebugFormat(
-                    "Trying to attach {0} to {1} failed. Entity still has a ActionObject of type {2}.",
-                    actionObject.GetType(),
-                    Name,
-                    m_ActionObject.GetType());
-                return;
-            }
-            m_ActionObject = actionObject;
+        internal Attribute GetAttribute(AttributeCode attributeCode) {
+            return m_Attributes[attributeCode];
+        }
+
+        internal void Die() {
+            log.InfoFormat("{0} died.", Name);
         }
     }
 }

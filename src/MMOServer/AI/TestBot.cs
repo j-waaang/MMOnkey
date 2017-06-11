@@ -16,7 +16,7 @@
         private int m_StepsDoneInOneDirection = 0;
 
         internal TestBot(string name, Vector position) {
-            m_Entity = new Entity(name, position);
+            m_Entity = EntityFactory.CreateAIBot(name, position);
             World.Instance.AddEntity(m_Entity);
         }
 

@@ -53,7 +53,7 @@
 
         private void CreateWorld() {
             m_World = new World();
-            log.DebugFormat("Created game world.");
+            log.DebugFormat("Created Game World.");
         }
 
         private void StartAIModule() {

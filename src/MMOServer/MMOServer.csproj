@@ -59,13 +59,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionObjects\ActionObjectFactory.cs" />
+    <Compile Include="ActionObjects\InteruptContinueCondition.cs" />
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AIModule.cs" />
     <Compile Include="AI\TestBot.cs" />
-    <Compile Include="Entities\AttackAttribute.cs" />
-    <Compile Include="Entities\Attribute.cs" />
+    <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
+    <Compile Include="Entities\Attributes\Attribute.cs" />
+    <Compile Include="Entities\Attributes\IntAttribute.cs" />
+    <Compile Include="Entities\Attributes\Modifiers\ActionStateModifier.cs" />
+    <Compile Include="Entities\Attributes\Modifiers\IntModifier.cs" />
+    <Compile Include="Entities\Attributes\Modifiers\Modifier.cs" />
+    <Compile Include="Entities\Attributes\Modifiers\ModifyMode.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
-    <Compile Include="Entities\HealthAttribute.cs" />
+    <Compile Include="Entities\Attributes\HealthAttribute.cs" />
+    <Compile Include="Entities\Target.cs" />
+    <Compile Include="Entities\TargetType.cs" />
+    <Compile Include="Events\ActionEvent.cs" />
+    <Compile Include="Events\DamageEvent.cs" />
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\NewPlayerEvent.cs" />
     <Compile Include="Message.cs" />
