@@ -49,11 +49,14 @@
             IEventData eventData = new EventData((byte)EventCode.Move, newPlayerEvent);
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
-
-            var interestedEntities = GetEntitiesInInterestRange(newEntity);
-            foreach (Entity entity in interestedEntities) {
+            foreach (Entity entity in m_Entities.Values) {
                 entity.SendEvent(eventData, sendParameters);
             }
+
+            //var interestedEntities = GetEntitiesInInterestRange(newEntity);
+            //foreach (Entity entity in interestedEntities) {
+            //    entity.SendEvent(eventData, sendParameters);
+            //}
             
             m_Entities[newEntity.Name] = newEntity;
         }
@@ -70,7 +73,8 @@
 
             foreach (Entity existingEntity in m_Entities.Values) {
                 if (existingEntity == entityToNotify) { continue; }
-                if (Vector.Distance(existingEntity.Position, entityToNotify.Position) > InterestDistance) { continue; }
+
+                //if (Vector.Distance(existingEntity.Position, entityToNotify.Position) > InterestDistance) { continue; }
 
                 var existingPlayerEvent = new MoveEvent() {
                     Username = existingEntity.Name,
@@ -86,48 +90,62 @@
         internal void MoveEntity(string username, Vector position) {
 
             var movedEntity = m_Entities[username];
-            IEventData eventData;
-            MoveEvent moveEvent;
-            var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
-
-            var interestedEntities = GetEntitiesInInterestRange(movedEntity);
-            foreach (Entity interestedEntity in interestedEntities) {
-                if (Vector.Distance(position, interestedEntity.Position) < InterestDistance) {
-                    moveEvent = new MoveEvent() {
-                        Username = interestedEntity.Name,
-                        Position = interestedEntity.Position
-                    };
-                    eventData = new EventData((byte)EventCode.Move, moveEvent);
-
-                    movedEntity.SendEvent(eventData, sendParameters);
-                }
-            }
-
             movedEntity.Position = position;
-            // TODO: check if new position is valid
-
-            moveEvent = new MoveEvent() {
+            var moveEvent = new MoveEvent() {
                 Username = movedEntity.Name,
                 Position = movedEntity.Position
             };
-            eventData = new EventData((byte)EventCode.Move, moveEvent);
+            IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
+            var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
 
-            foreach (Entity entity in interestedEntities) {
+            foreach (Entity entity in m_Entities.Values) {
+                if(entity == movedEntity) { continue; }
                 entity.SendEvent(eventData, sendParameters);
             }
+
+            //var movedEntity = m_Entities[username];
+            //IEventData eventData;
+            //MoveEvent moveEvent;
+            //var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
+
+            //var interestedEntities = GetEntitiesInInterestRange(movedEntity);
+            //foreach (Entity interestedEntity in interestedEntities) {
+            //    if (Vector.Distance(position, interestedEntity.Position) < InterestDistance) {
+            //        moveEvent = new MoveEvent() {
+            //            Username = interestedEntity.Name,
+            //            Position = interestedEntity.Position
+            //        };
+            //        eventData = new EventData((byte)EventCode.Move, moveEvent);
+
+            //        movedEntity.SendEvent(eventData, sendParameters);
+            //    }
+            //}
+
+            //movedEntity.Position = position;
+            //// TODO: check if new position is valid
+
+            //moveEvent = new MoveEvent() {
+            //    Username = movedEntity.Name,
+            //    Position = movedEntity.Position
+            //};
+            //eventData = new EventData((byte)EventCode.Move, moveEvent);
+
+            //foreach (Entity entity in interestedEntities) {
+            //    entity.SendEvent(eventData, sendParameters);
+            //}
         }
 
-        private List<Entity> GetEntitiesInInterestRange(Entity centerEntity) {
-            var entities = new List<Entity>();
-            foreach (Entity entity in m_Entities.Values) {
-                if (entity == centerEntity) { continue; }
-                if (Vector.Distance(entity.Position, centerEntity.Position) > InterestDistance) { continue; }
+        //private List<Entity> GetEntitiesInInterestRange(Entity centerEntity) {
+        //    var entities = new List<Entity>();
+        //    foreach (Entity entity in m_Entities.Values) {
+        //        if (entity == centerEntity) { continue; }
+        //        if (Vector.Distance(entity.Position, centerEntity.Position) > InterestDistance) { continue; }
 
-                entities.Add(entity);
-            }
+        //        entities.Add(entity);
+        //    }
 
-            return entities;
-        }
+        //    return entities;
+        //}
 
         internal bool CanPerformAction(string actionSource, ActionCode action, Target target) {
 
