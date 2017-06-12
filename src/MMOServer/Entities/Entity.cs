@@ -18,20 +18,12 @@
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
 
-        // TODO: Clean up variables and move to attributes dict.
-        // TODO: Restrict variables to be only changeable by game world.
+        // TODO: Add quick references for attributes.
         internal string Name { get; private set; }
         internal Vector Position { get; set; }
-        internal float CurHealth { get; set; }
-        internal float MaxHealth { get; set; }
-        internal ActionState ActionState { get; set; }
-        internal MovementState MovementState { get; set; }
-        internal WeaponCode AutoAttackType { get; set; }
-        internal HashSet<ActionCode> Skills { get; set; }
 
         private MMOPeer m_Peer;
         private bool m_AiControlled;
-        private ActionObject m_ActionObject = null;
 
         /// <summary> 
         /// Leave out peer if this is a AI controlled enity.

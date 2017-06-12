@@ -82,7 +82,7 @@
         }
 
         private void SendAAStartToServer() {
-            var targetName = GameData.Target.GetComponent<RemoteCharacterController>().CharacterName;
+            var targetName = GameData.Target.name;
             RequestOperations.AutoAttackRequest(targetName);
         }
 

@@ -7,7 +7,7 @@
 
     class MMOPeer : Peer {
 
-        public string Username { get; set; }
+        public string Name { get; set; }
         private readonly InitialOperationHandler m_InitialOpHandler;
 
         public MMOPeer(InitRequest initRequest) : base(initRequest) {

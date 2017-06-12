@@ -3,21 +3,15 @@
     using Common.Entities;
     using UnityEngine;
 
-    [RequireComponent(typeof(CharacterState))]
     public class CharacterAnimationController : MonoBehaviour {
 
         private Animator m_Animator;
 
         private void Awake() {
             m_Animator = transform.GetChild(0).GetComponent<Animator>();
-
-            var characterState = GetComponent<CharacterState>();
-            characterState.MovementStateChangedEvent += UpdateRunningAnimation;
-
-            characterState.ActionStateChangedEvent += PerformAutoAttackAnimation;
         }
 
-        private void UpdateRunningAnimation(MovementState newState) {
+        public void UpdateRunningAnimation(MovementState newState) {
             switch (newState) {
                 case MovementState.Idle:
                     m_Animator.SetBool("Running", false);
@@ -28,17 +22,8 @@
             }
         }
 
-        private void PerformAutoAttackAnimation(ActionState newState) {
-            switch (newState) {
-                case ActionState.Idle:
-                    break;
-                case ActionState.Casting:
-                    //m_Animator.SetBool("Attack", true);
-                    m_Animator.SetTrigger("AutoAttack");
-                    break;
-                default:
-                    break;
-            }
+        public void TriggerAutoAttackAnimation(ActionState newState) {
+            m_Animator.SetTrigger("AutoAttack");
         }
     }
 }

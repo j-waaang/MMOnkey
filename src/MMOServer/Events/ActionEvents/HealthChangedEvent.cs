@@ -1,9 +1,9 @@
-﻿namespace JYW.ThesisMMO.MMOServer.Events {
+﻿namespace JYW.ThesisMMO.MMOServer.Events.ActionEvents {
 
     using Common.Codes;
     using Photon.SocketServer.Rpc;
 
-    class DamageEvent {
+    class HealthChangedEvent : ActionEvent{
 
         [DataMember(Code = (byte)ParameterCode.Name)]
         public string Username;

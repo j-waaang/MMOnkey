@@ -10,7 +10,7 @@
 
         protected Entity m_Entity;
 
-        public AttributeCode AttributeCode { get; protected set; }
+        internal protected AttributeCode AttributeCode { get; protected set; }
 
         internal Attribute(AttributeCode attributeCode) {
             AttributeCode = attributeCode;

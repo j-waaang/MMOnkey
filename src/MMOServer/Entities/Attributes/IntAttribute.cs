@@ -24,6 +24,8 @@
             }
 
             log.DebugFormat("{0}'s {1} changed from {2} to {3}.", m_Entity.Name, AttributeCode, oldVal, m_Value);
+
+            // TODO: Replicate change.
         }
 
         internal IntAttribute(int value, AttributeCode attributeCode)

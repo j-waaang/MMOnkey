@@ -6,7 +6,7 @@ public class TargetSelection : MonobehaviourSingleton<TargetSelection> {
 
     protected TargetSelection() { }
 
-    void Update() {
+    private void Update() {
         if (Input.GetButtonDown("AutoAttack") || Input.GetButtonDown("Select")) {
             var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             var target = Physics2D.Raycast(mouseRay.origin, mouseRay.direction);

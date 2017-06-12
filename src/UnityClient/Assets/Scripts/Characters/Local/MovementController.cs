@@ -16,6 +16,7 @@
         private float m_MovementSpeed = 0.2f;
         private Rigidbody2D m_Rigidbody;
 
+        private CharacterAnimationController m_CharacterAnimationController;
         private CharacterState m_CharacterState;
         private Vector2 m_LastSendVector;
         private float m_LastSendTime = 0;
@@ -23,6 +24,7 @@
         private const float m_SendRateInSeconds = 0.25f;
 
         private void Awake() {
+            m_CharacterAnimationController = GetComponent<CharacterAnimationController>();
             m_CharacterState = GetComponent<CharacterState>();
             m_Rigidbody = GetComponent<Rigidbody2D>();
         }
@@ -39,14 +41,14 @@
             Vector2 inputVector = new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal"), CrossPlatformInputManager.GetAxisRaw("Vertical"));
 
             if (inputVector == Vector2.zero) {
-                m_CharacterState.MovementState = MovementState.Idle;
+                MovementState = MovementState.Idle;
                 return;
             }
 
             inputVector = inputVector.normalized;
             transform.position += (Vector3)inputVector * m_MovementSpeed;
             UpdateRotation(inputVector);
-            m_CharacterState.MovementState = MovementState.Moving;
+            MovementState = MovementState.Moving;
         }
 
         private void UpdateRotation(Vector2 lookDirection) {
@@ -58,7 +60,7 @@
         ///  Actors which are interest in the position change are notified.
         /// </summary>  
         private void NotifyAboutPositionUpdate() {
-            GameData.ClientCharacterPosition = transform.position;
+            //GameData.ClientCharacterPosition = transform.position;
             UpdateNetworkPosition();
         }
 
@@ -81,6 +83,20 @@
             return
                 (Time.time - m_LastSendTime > m_SendRateInSeconds) &&
                 (distance > m_MinMovDistance);
+        }
+
+        private MovementState m_MovementState;
+        private MovementState MovementState {
+            get {
+                return m_MovementState;
+            }
+
+            set {
+                if(value == m_MovementState) { return; }
+
+                m_MovementState = value;
+                m_CharacterAnimationController.UpdateRunningAnimation(value);
+            }
         }
     }
 }

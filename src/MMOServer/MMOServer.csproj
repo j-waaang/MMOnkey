@@ -74,10 +74,13 @@
     <Compile Include="Entities\Attributes\HealthAttribute.cs" />
     <Compile Include="Entities\Target.cs" />
     <Compile Include="Entities\TargetType.cs" />
-    <Compile Include="Events\ActionEvent.cs" />
-    <Compile Include="Events\DamageEvent.cs" />
+    <Compile Include="Events\ActionEvents\ActionEvent.cs" />
+    <Compile Include="Events\ActionEvents\ActionStateChangedEvent.cs" />
+    <Compile Include="Events\ActionEvents\BroadcastOptions.cs" />
+    <Compile Include="Events\ActionEvents\HealthChangedEvent.cs" />
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\NewPlayerEvent.cs" />
+    <Compile Include="Events\RemovePlayerEvent.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="ActionObjects\ActionObject.cs" />
     <Compile Include="ActionObjects\AxeAutoAttackRequest.cs" />

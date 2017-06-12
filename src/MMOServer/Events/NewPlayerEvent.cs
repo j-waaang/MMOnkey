@@ -7,15 +7,15 @@
     class NewPlayerEvent {
 
         [DataMember(Code = (byte)ParameterCode.Name)]
-        public string Username;
+        public string Name;
 
         [DataMember(Code = (byte)ParameterCode.Position)]
         public Vector Position;
 
         [DataMember(Code = (byte)ParameterCode.MaxHealth)]
-        public Vector MaxHealth;
+        public int MaxHealth;
 
         [DataMember(Code = (byte)ParameterCode.CurrentHealth)]
-        public Vector CurrentHealth;
+        public int CurrentHealth;
     }
 }

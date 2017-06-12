@@ -2,60 +2,34 @@
 
     using UnityEngine;
     using System.Collections.Generic;
+
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
 
     /// <summary>  
-    ///  Listen to move events from the server.
-    ///  Creates or destroys characters if needed.
+    ///  Creates and destroys remote characters.
     /// </summary>  
     public class CharacterSpawner : MonoBehaviour {
 
-        [SerializeField]
-        private RemoteCharacterController m_RemoteCharacterPrefab;
+        [SerializeField] private RemoteCharacter m_RemoteCharacterPrefab;
 
         private Dictionary<string, GameObject> m_RemoteCharacters = new Dictionary<string, GameObject>();
 
         private void Awake() {
-            EventOperations.MoveEvent += OnMoveEvent;
-            GameData.AvatarPositionChangedEvent += OnClientCharacterPositionChange;
+            EventOperations.NewPlayerEvent += CreateRemoteCharacter;
+            EventOperations.RemovePlayerEvent += RemoveRemoteCharacter;
         }
 
-        private void OnMoveEvent(string username, Vector2 position) {
-            if (m_RemoteCharacters.ContainsKey(username) == false) {
-                AddEntity(username, position);
-            }
-            else if (!PositionInsideInterestArea(position)){
-                DestroyCharacter(username);
-            }
-        }
-
-        private static bool PositionInsideInterestArea(Vector2 position) {
-            var distanceToClientCharacter = Vector2.Distance(GameData.ClientCharacterPosition, position);
-            return distanceToClientCharacter < GameData.InterestDistance;
-        }
-
-        private void AddEntity(string username, Vector2 position) {
-            var character = Instantiate(m_RemoteCharacterPrefab, position, Quaternion.identity);
-            character.Initialize(username);
-            m_RemoteCharacters.Add(username, character.gameObject);
-        }
-
-        private void OnClientCharacterPositionChange(Vector2 position) {
-            var removals = new List<string>();
-
-            foreach(var character in m_RemoteCharacters) {
-                if (!PositionInsideInterestArea(character.Value.transform.position)) {
-                    removals.Add(character.Key);
-                }
-            }
-
-            foreach(var removal in removals) {
-                DestroyCharacter(removal);
+        private void CreateRemoteCharacter(string name, Vector2 position, int health, int maxHealth) {
+            if (m_RemoteCharacters.ContainsKey(name) == false) {
+                var character = Instantiate(m_RemoteCharacterPrefab, position, Quaternion.identity);
+                character.Initialize(name, health, maxHealth);
+                m_RemoteCharacters.Add(name, character.gameObject);
             }
         }
 
-        private void DestroyCharacter(string name) {
-            Destroy(m_RemoteCharacters[name]);
+        private void RemoveRemoteCharacter(string name) {
+            var character = m_RemoteCharacters[name];
+            Destroy(character);
             m_RemoteCharacters.Remove(name);
         }
     }

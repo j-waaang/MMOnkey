@@ -6,11 +6,13 @@
     using Photon.SocketServer;
     using ExitGames.Logging;
 
-    using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.Common.Codes;
-    using JYW.ThesisMMO.MMOServer.Events;
+    using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.MMOServer.Entities;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
+    using JYW.ThesisMMO.MMOServer.Events;
+    using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
+    using JYW.ThesisMMO.MMOServer.Entities.Attributes;
 
     /// <summary> 
     /// The game world containing entities and methods modifiying them.
@@ -42,7 +44,7 @@
         internal void AddEntity(Entity newEntity) {
 
             var newPlayerEvent = new MoveEvent() {
-                Username = newEntity.Name,
+                Name = newEntity.Name,
                 Position = newEntity.Position
             };
 
@@ -64,24 +66,34 @@
         /// <summary>
         /// Removes the entity from the list.
         /// </summary>
-        internal void RemoveEntity(string id) {
-            m_Entities.Remove(id);
+        internal void RemoveEntity(string name) {
+            var ev = new RemovePlayerEvent() {
+                Username = name,
+            };
+
+            IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
+            var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+            m_Entities[name].SendEvent(eventData, sendParameters);
+
+            m_Entities.Remove(name);
         }
 
         internal void NotifyEntityAboutExistingPlayers(string username) {
             var entityToNotify = m_Entities[username];
 
-            foreach (Entity existingEntity in m_Entities.Values) {
-                if (existingEntity == entityToNotify) { continue; }
+            foreach (Entity newPlayer in m_Entities.Values) {
+                if (newPlayer == entityToNotify) { continue; }
 
                 //if (Vector.Distance(existingEntity.Position, entityToNotify.Position) > InterestDistance) { continue; }
 
-                var existingPlayerEvent = new MoveEvent() {
-                    Username = existingEntity.Name,
-                    Position = existingEntity.Position
+                var newPlayerEv = new NewPlayerEvent() {
+                    Name = newPlayer.Name,
+                    Position = newPlayer.Position,
+                    CurrentHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
+                    MaxHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
                 };
 
-                IEventData eventData = new EventData((byte)EventCode.Move, existingPlayerEvent);
+                IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
                 var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
                 entityToNotify.SendEvent(eventData, sendParameters);
             }
@@ -92,7 +104,7 @@
             var movedEntity = m_Entities[username];
             movedEntity.Position = position;
             var moveEvent = new MoveEvent() {
-                Username = movedEntity.Name,
+                Name = movedEntity.Name,
                 Position = movedEntity.Position
             };
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
@@ -173,6 +185,19 @@
                     break;
             }
             return true;
+        }
+
+        /// <summary>
+        /// Use this to replicate a attribute change. Do not use for position changes.
+        /// </summary>
+        internal void ReplicateMessage(string src, IEventData eventData, BroadcastOptions options ) {
+            var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+
+            foreach (Entity entity in m_Entities.Values) {
+                if(options == BroadcastOptions.AllExceptMsgOwner && entity.Name == src) { continue; }
+
+                entity.SendEvent(eventData, sendParameters);
+            }
         }
 
         internal void ApplyModifier(string target, Modifier modifier) {

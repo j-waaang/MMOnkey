@@ -1,7 +1,9 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
 
+    using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Entities;
+    using Photon.SocketServer;
 
     internal class ActionStateAttribute : Attribute {
 
@@ -14,8 +16,15 @@
             set {
                 m_ActionState = value;
 
-                // TODO: Notify entity about change.
                 log.DebugFormat("{0}'s actionState changed to {1}", m_Entity.Name, m_ActionState.ToString());
+
+                var ev = new ActionStateChangedEvent() {
+                    Username = m_Entity.Name,
+                    ActionState = (int)m_ActionState
+                };
+                IEventData evData = new EventData((byte)EventCode.ActionStateUpdate, ev);
+
+                World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.AllExceptMsgOwner);
             }
         }
 

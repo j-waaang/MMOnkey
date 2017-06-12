@@ -1,6 +1,5 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Characters {
 
-    using System;
     using UnityEngine;
     using JYW.ThesisMMO.Common.Entities;
 
@@ -9,12 +8,13 @@
     /// </summary>  
     public class CharacterState : MonoBehaviour {
 
-        internal Action<ActionState> ActionStateChangedEvent;
-        internal Action<MovementState> MovementStateChangedEvent;
-
         private ActionState m_ActionState;
-        private MovementState m_MovementState;
+        private CharacterAnimationController m_CharacterAnimationController;
 
+        private void Awake() {
+            m_CharacterAnimationController = GetComponent<CharacterAnimationController>();
+        }
+        
         internal ActionState ActionState {
             get {
                 return m_ActionState;
@@ -23,22 +23,8 @@
             set {
                 var oldState = m_ActionState;
                 m_ActionState = value;
-                if (oldState != value && ActionStateChangedEvent != null) {
-                    ActionStateChangedEvent(value);
-                }
-            }
-        }
-
-        internal MovementState MovementState {
-            get {
-                return m_MovementState;
-            }
-
-            set {
-                var oldState = m_MovementState;
-                m_MovementState = value;
-                if (oldState != value && MovementStateChangedEvent != null) {
-                    MovementStateChangedEvent(value);
+                if (oldState != value) {
+                    m_CharacterAnimationController.TriggerAutoAttackAnimation(m_ActionState);
                 }
             }
         }

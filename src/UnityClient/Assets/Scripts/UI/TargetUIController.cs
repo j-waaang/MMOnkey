@@ -1,23 +1,24 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.UI {
 
     using JYW.ThesisMMO.UnityClient;
-    using JYW.ThesisMMO.UnityClient.Characters.RemoteCharacters;
     using UnityEngine;
     using UnityEngine.UI;
 
     public class TargetUIController : MonoBehaviour {
 
-        [SerializeField]
-        GameObject m_NameUI;
-        [SerializeField]
-        GameObject m_HealthUI;
+        [SerializeField] private GameObject m_NameUI;
+        private Text m_TargetName;
+
+        [SerializeField] private GameObject m_HealthUI;
+        private Image m_HealthImage;
+
         [SerializeField]
         GameObject m_SkillUI;
-        private Text m_TargetName;
 
         private void Awake() {
             GameData.TargetChangedEvent += TargetChanged;
             m_TargetName = m_NameUI.GetComponentInChildren<Text>();
+            m_HealthImage = m_HealthUI.GetComponentInChildren<Image>();
         }
 
         private void TargetChanged(GameObject newTarget) {
@@ -28,11 +29,22 @@
                 return;
             }
 
-            var remoteChar = newTarget.GetComponent<RemoteCharacterController>();
-            m_TargetName.text = remoteChar.CharacterName;
+            // Name
+            m_TargetName.text = newTarget.name;
             m_NameUI.SetActive(true);
+
+            // Health bar
+            var healthComponent = newTarget.GetComponent<HealthComponent>();
+            m_HealthImage.fillAmount = (float)healthComponent.Health / (float)healthComponent.MaxHealth;
             m_HealthUI.SetActive(true);
+            healthComponent.DamageHealthMaxHealthUpdatedEvent += OnHealthUpdated;
+
+            // Action bar
             m_SkillUI.SetActive(false);
+        }
+
+        private void OnHealthUpdated(int damage, int health, int maxHealth) {
+            m_HealthImage.fillAmount = (float)health / (float)maxHealth;
         }
     }
 }

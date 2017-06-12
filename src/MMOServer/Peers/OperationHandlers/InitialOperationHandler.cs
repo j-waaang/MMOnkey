@@ -19,8 +19,8 @@
         }
 
         public void OnDisconnect(PeerBase peer) {
-            if(m_Peer.Username != null) {
-                World.Instance.RemoveEntity(m_Peer.Username);
+            if(m_Peer.Name != null) {
+                World.Instance.RemoveEntity(m_Peer.Name);
             }
             peer.Dispose();
         }
@@ -54,7 +54,7 @@
             var entity = EntityFactory.CreatePeerControlledEntity(m_Peer, operation);
 
             // TODO: Think about a different place to store the username.
-            m_Peer.Username = operation.Name;
+            m_Peer.Name = operation.Name;
 
             // Send entered world response.
             var responseData = new EnterWorldResponse {
