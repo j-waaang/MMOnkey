@@ -80,12 +80,12 @@
 
         private void SendAAStartToServer() {
             var targetName = GameData.Target.name;
-            RequestOperations.AutoAttackRequest(targetName);
+            RequestOperations.AxeAutoAttackRequest(targetName);
         }
 
         private float GetTargetDistance(GameObject target) {
-            var targetCollider = target.GetComponent<CircleCollider2D>();
-            return Vector2.Distance(target.transform.position, transform.position) - targetCollider.radius;
+            var targetCollider = target.GetComponent<BoxCollider>();
+            return Vector2.Distance(target.transform.position, transform.position) - targetCollider.size.x;
         }
     }
 }

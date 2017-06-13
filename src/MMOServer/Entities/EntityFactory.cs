@@ -11,10 +11,11 @@
         internal static Entity CreatePeerControlledEntity(MMOPeer peer, EnterWorldRequest operation) {
             var position = GetRandomWorldPosition();
             var maxHealth = GetMaxHealth((WeaponCode)operation.Weapon);
-            var attributes = new Attribute[3];
+            var attributes = new Attribute[4];
             attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
             attributes[1] = new HealthAttribute(maxHealth);
             attributes[2] = new ActionStateAttribute();
+            attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
             return new Entity(operation.Name, position, attributes, peer);
         }
@@ -22,10 +23,11 @@
         internal static Entity CreateAIBot(string name, Vector startPosition) {
             var position = startPosition;
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
-            var attributes = new Attribute[3];
+            var attributes = new Attribute[4];
             attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
             attributes[1] = new HealthAttribute(maxHealth);
             attributes[2] = new ActionStateAttribute();
+            attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
             return new Entity(name, position, attributes, null);
         }

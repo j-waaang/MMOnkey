@@ -160,10 +160,13 @@
 
         //    return entities;
         //}
+        internal bool CanPerformAction(string actionSource, ActionCode action) {
+            return m_Entities[actionSource].CanPerformAction(action);
+        }
+
 
         internal bool CanPerformAction(string actionSource, ActionCode action, Target target) {
-
-            if (!m_Entities[actionSource].CanPerformAction(action)) { return false; }
+            if(!CanPerformAction(actionSource, action)) { return false; }
 
             // TODO: Test distance
             switch (action) {

@@ -11,7 +11,8 @@
                     OnEnterWorldResponse(operationResponse);
                     return;
             }
-            Debug.LogError("Cannot handle response.");
+
+            Debug.LogError("Cannot handle response." + operationResponse.DebugMessage);
         }
     }
 }

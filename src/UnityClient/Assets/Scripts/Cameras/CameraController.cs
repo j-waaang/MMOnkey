@@ -15,7 +15,7 @@
         private float m_CameraHeight;
 
         [SerializeField] private Transform m_Target = null;
-        private readonly Vector3 m_CameraToTargetOffset = new Vector3(0, -5f, -10f);
+        [SerializeField] private Vector3 m_CameraToTargetOffset = new Vector3(0, -5f, -10f);
 
         private void Awake() {
             if (m_Target == null) {

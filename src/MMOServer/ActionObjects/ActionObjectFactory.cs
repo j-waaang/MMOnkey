@@ -1,6 +1,7 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects {
 
     using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests;
     using Photon.SocketServer;
 
     /// <summary> 
@@ -18,14 +19,17 @@
                     actionObject = new AxeAutoAttackRequest(actionSource, protocol, request);
                     break;
                 case ActionCode.BowAutoAttack:
-                    actionObject = new BowAutoAttackRequest(protocol, request);
+                    actionObject = new BowAutoAttackRequest(actionSource, protocol, request);
                     break;
-                case ActionCode.Move:
                 case ActionCode.Dash:
+                    actionObject = new DashRequest(actionSource, protocol, request);
+                    break;
+                case ActionCode.OrisonOfHealing:
+                    actionObject = new OrisonOfHealingRequest(actionSource, protocol, request);
+                    break;
                 case ActionCode.DistractingShot:
                 case ActionCode.FireStorm:
                 case ActionCode.HammerBash:
-                case ActionCode.OrisonOfHealing:
                 default:
                     LastCreationFailReason = ReturnCode.OperationNotImplemented;
                     break;

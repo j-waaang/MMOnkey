@@ -10,7 +10,7 @@ public class RemotePositionComponent : MonoBehaviour {
     /// <summary>  
     ///  Listen to the servers events and moves on event.
     /// </summary>  
-    private void OnMoveEvent(string name, Vector2 position) {
+    private void OnMoveEvent(string name, Vector3 position) {
         if (gameObject.name != name) { return; }
 
         transform.position = position;

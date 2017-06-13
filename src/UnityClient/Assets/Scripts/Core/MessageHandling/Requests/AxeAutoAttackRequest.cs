@@ -9,7 +9,7 @@
         /// <summary>  
         ///  Builds the Move request end hands it to the forwarder.
         /// </summary>  
-        internal static void AutoAttackRequest(string target) {
+        internal static void AxeAutoAttackRequest(string target) {
 
             var data = new Dictionary<byte, object>
             {

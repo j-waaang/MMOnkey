@@ -11,8 +11,8 @@
         /// <summary>  
         ///  Builds the Move request end hands it to the forwarder.
         /// </summary>  
-        internal static void MoveRequest(Vector2 newPosition) {
-            var position = new Vector(newPosition.x, newPosition.y);
+        internal static void MoveRequest(Vector3 newPosition) {
+            var position = new Vector(newPosition.x, newPosition.z);
 
             var data = new Dictionary<byte, object>
             {

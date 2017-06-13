@@ -30,7 +30,7 @@
         }
 
         private void Move() {
-            var newPos = m_Entity.Position + new Vector(0, m_MoveDirection * MoveSpeed, 0);
+            var newPos = m_Entity.Position + new Vector(0, m_MoveDirection * MoveSpeed);
             World.Instance.MoveEntity(m_Entity.Name, newPos);
             m_StepsDoneInOneDirection++;
         }

@@ -67,9 +67,9 @@
         }
 
         private void CreateTestBots() {
-            m_AIModule.AddEntity(new TestBot("one", new Vector(2, 2, 0)));
-            m_AIModule.AddEntity(new TestBot("two", new Vector(0, -2, 0)));
-            m_AIModule.AddEntity(new TestBot("three", new Vector(-3, 4, 0)));
+            m_AIModule.AddEntity(new TestBot("one", new Vector(2, 2)));
+            m_AIModule.AddEntity(new TestBot("two", new Vector(0, -2)));
+            m_AIModule.AddEntity(new TestBot("three", new Vector(-3, 4)));
         }
     }
 }

@@ -12,21 +12,17 @@
     /// </summary>  
     public class MovementController : MonoBehaviour {
 
-        [SerializeField]
-        private float m_MovementSpeed = 0.2f;
-        private Rigidbody2D m_Rigidbody;
+        private RemoteMovementSpeedComponent m_MovementSpeed;
 
         private CharacterAnimationController m_CharacterAnimationController;
-        private ActionStateComponent m_CharacterState;
-        private Vector2 m_LastSendVector;
+        private Vector3 m_LastSendVector;
         private float m_LastSendTime = 0;
-        private float m_MinMovDistance = 0.25f;
+        private float m_MinMovDistance = 0.15f;
         private const float m_SendRateInSeconds = 0.25f;
 
         private void Awake() {
+            m_MovementSpeed = GetComponent<RemoteMovementSpeedComponent>();
             m_CharacterAnimationController = GetComponent<CharacterAnimationController>();
-            m_CharacterState = GetComponent<ActionStateComponent>();
-            m_Rigidbody = GetComponent<Rigidbody2D>();
         }
 
         private void FixedUpdate() {
@@ -38,23 +34,24 @@
         ///  Changes the position depending on the input.
         /// </summary>  
         private void UpdatePosition() {
-            Vector2 inputVector = new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal"), CrossPlatformInputManager.GetAxisRaw("Vertical"));
+            var inputVector = new Vector3(CrossPlatformInputManager.GetAxisRaw("Horizontal"),0 , CrossPlatformInputManager.GetAxisRaw("Vertical"));
 
-            if (inputVector == Vector2.zero) {
+            if (inputVector == Vector3.zero) {
                 MovementState = MovementState.Idle;
                 return;
             }
 
             inputVector = inputVector.normalized;
-            transform.position += (Vector3)inputVector * m_MovementSpeed;
-            UpdateRotation(inputVector);
+            transform.position += inputVector * m_MovementSpeed.MovementSpeed;
+            transform.forward = inputVector;
+            //UpdateRotation(inputVector);
             MovementState = MovementState.Moving;
         }
 
-        private void UpdateRotation(Vector2 lookDirection) {
-            float rot_z = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-        }
+        //private void UpdateRotation(Vector2 lookDirection) {
+        //    float rot_z = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+        //    transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        //}
 
         /// <summary>  
         ///  Actors which are interest in the position change are notified.
@@ -78,7 +75,7 @@
         ///  Time and distance based.
         /// </summary>  
         private bool PositionPropagationCondition() {
-            var distance = Vector2.Distance(transform.position, m_LastSendVector);
+            var distance = Vector3.Distance(transform.position, m_LastSendVector);
 
             return
                 (Time.time - m_LastSendTime > m_SendRateInSeconds) &&

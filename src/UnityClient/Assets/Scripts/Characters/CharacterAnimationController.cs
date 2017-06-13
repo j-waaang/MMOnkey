@@ -27,6 +27,7 @@
             float m_AnimationSpeed = 1;
 
             switch (actionCode) {
+                case ActionCode.Idle:
                 case ActionCode.Dash:
                     return;
                 case ActionCode.DistractingShot:

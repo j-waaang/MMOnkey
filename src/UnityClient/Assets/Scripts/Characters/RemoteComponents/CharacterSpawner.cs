@@ -19,7 +19,7 @@
             EventOperations.RemovePlayerEvent += RemoveRemoteCharacter;
         }
 
-        private void CreateRemoteCharacter(string name, Vector2 position, int health, int maxHealth) {
+        private void CreateRemoteCharacter(string name, Vector3 position, int health, int maxHealth) {
             if (m_RemoteCharacters.ContainsKey(name) == false) {
                 var character = Instantiate(m_RemoteCharacterPrefab, position, Quaternion.identity);
                 character.Initialize(name, health, maxHealth);

@@ -59,14 +59,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionObjects\ActionObjectFactory.cs" />
+    <Compile Include="ActionObjects\SkillRequests\DashRequest.cs" />
     <Compile Include="ActionObjects\InteruptContinueCondition.cs" />
+    <Compile Include="ActionObjects\SkillRequests\OrisonOfHealingRequest.cs" />
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AIModule.cs" />
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
     <Compile Include="Entities\Attributes\Attribute.cs" />
+    <Compile Include="Entities\Attributes\FloatAttribute.cs" />
     <Compile Include="Entities\Attributes\IntAttribute.cs" />
     <Compile Include="Entities\Attributes\Modifiers\ActionStateModifier.cs" />
+    <Compile Include="Entities\Attributes\Modifiers\FloatModifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\IntModifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\Modifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\ModifyMode.cs" />
@@ -76,15 +80,20 @@
     <Compile Include="Entities\TargetType.cs" />
     <Compile Include="Events\ActionEvents\ActionEvent.cs" />
     <Compile Include="Events\ActionEvents\ActionStateChangedEvent.cs" />
+    <Compile Include="Events\ActionEvents\AttributeChangedEvent.cs" />
     <Compile Include="Events\ActionEvents\BroadcastOptions.cs" />
+    <Compile Include="Events\EntityEvents\BowAutoAttackEntityEvent.cs" />
+    <Compile Include="Events\EntityEvents\FireStormEntityEvent.cs" />
+    <Compile Include="Events\ActionEvents\FloatAttributeChangedEvent.cs" />
     <Compile Include="Events\ActionEvents\HealthChangedEvent.cs" />
+    <Compile Include="Events\EntityEvents\EntityEvent.cs" />
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\NewPlayerEvent.cs" />
     <Compile Include="Events\RemovePlayerEvent.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="ActionObjects\ActionObject.cs" />
-    <Compile Include="ActionObjects\AxeAutoAttackRequest.cs" />
-    <Compile Include="ActionObjects\BowAutoAttackRequest.cs" />
+    <Compile Include="ActionObjects\SkillRequests\AxeAutoAttackRequest.cs" />
+    <Compile Include="ActionObjects\SkillRequests\BowAutoAttackRequest.cs" />
     <Compile Include="Responses\DefaultResponses.cs" />
     <Compile Include="Peers\OperationHandlers\EntityOperationHandler.cs" />
     <Compile Include="Peers\OperationHandlers\InitialOperationHandler.cs" />

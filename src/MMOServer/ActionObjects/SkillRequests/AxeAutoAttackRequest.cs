@@ -1,10 +1,11 @@
-﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects {
+﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
-    using Common.Codes;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
     using Entities;
     using Entities.Attributes.Modifiers;
+
+    using Common.Codes;
     using Common.Entities;
 
     class AxeAutoAttackRequest : ActionObject {
@@ -12,7 +13,6 @@
         #region DataContract
         public AxeAutoAttackRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(actionSource, protocol, request) {
-            log.DebugFormat("Created axe aa");
         }
 
         [DataMember(Code = (byte)ParameterCode.Name)]
@@ -25,7 +25,6 @@
         }
 
         internal override void StartAction() {
-            log.DebugFormat("Started axe aa");
             SetState();
         }
 
@@ -39,8 +38,6 @@
         }
 
         private void DoDamage(ContinueReason continueReason) {
-            log.DebugFormat("Do damage");
-
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
             World.Instance.ApplyModifier(Target, healthModifier);
             AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 0, 500)));
@@ -52,7 +49,7 @@
         }
 
         private void SetIdle(ContinueReason continueReason) {
-            log.DebugFormat("Set idle");
+            ContinueEvent -= SetIdle;
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
         }

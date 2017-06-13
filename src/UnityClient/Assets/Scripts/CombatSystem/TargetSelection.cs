@@ -8,15 +8,20 @@ public class TargetSelection : MonobehaviourSingleton<TargetSelection> {
 
     private void Update() {
         if (Input.GetButtonDown("AutoAttack") || Input.GetButtonDown("Select")) {
-            var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-            var target = Physics2D.Raycast(mouseRay.origin, mouseRay.direction);
+            SetTarget();
+        }
+    }
 
-            if (target.collider != null && target.collider.tag == "Enemy") {
-                GameData.Target = target.collider.gameObject;
-            }
-            else {
-                GameData.Target = null;
-            }
+    public bool SetTarget() {
+        var mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(mouseRay, out hit) && hit.collider.tag == "Enemy") {
+            GameData.Target = hit.collider.gameObject;
+            return true;
+        }
+        else {
+            GameData.Target = null;
+            return false;
         }
     }
 }

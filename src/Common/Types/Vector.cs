@@ -19,10 +19,10 @@
             Z = z;
         }
 
-        public Vector(float x, float y) : this() {
+        public Vector(float x, float z) : this() {
             X = x;
-            Y = y;
-            Z = 0;
+            Y = 0;
+            Z = z;
         }
 
         public Vector(Vector v) : this() {

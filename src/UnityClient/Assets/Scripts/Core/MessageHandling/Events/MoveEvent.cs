@@ -9,14 +9,14 @@
 
     public sealed partial class EventOperations {
 
-        public static Action<string, Vector2> MoveEvent;
+        public static Action<string, Vector3> MoveEvent;
 
         private static void OnMoveEvent(EventData eventData) {
             var name = (string)eventData.Parameters[(byte)ParameterCode.Name];
             var vecPos = (Vector)eventData.Parameters[(byte)ParameterCode.Position];
-            var vec2Pos = new Vector2(vecPos.X, vecPos.Y);
+            var unityVec = new Vector3(vecPos.X, 0, vecPos.Z);
             if (MoveEvent != null) {
-                MoveEvent(name, vec2Pos);
+                MoveEvent(name, unityVec);
             }
         }
     }
