@@ -7,9 +7,9 @@
 
     internal class ActionStateAttribute : Attribute {
 
-        private ActionState m_ActionState = ActionState.Idle;
+        private ActionCode m_ActionState = ActionCode.Idle;
 
-        public ActionState ActionState {
+        public ActionCode ActionState {
             get {
                 return m_ActionState;
             }

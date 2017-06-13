@@ -33,7 +33,7 @@
                     break;
             }
 
-            var amtChanged = beforeHealth - m_Value;
+            var amtChanged = m_Value - beforeHealth;
             if (m_Value <= 0) {
                 m_Value = 0;
                 m_Entity.Die();

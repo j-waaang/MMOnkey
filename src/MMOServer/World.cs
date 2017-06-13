@@ -41,14 +41,16 @@
         /// <summary>
         /// Adding a entity to the game world.
         /// </summary>
-        internal void AddEntity(Entity newEntity) {
+        internal void AddEntity(Entity newPlayer) {
 
-            var newPlayerEvent = new MoveEvent() {
-                Name = newEntity.Name,
-                Position = newEntity.Position
+            var newPlayerEv = new NewPlayerEvent() {
+                Name = newPlayer.Name,
+                Position = newPlayer.Position,
+                CurrentHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
+                MaxHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
             };
 
-            IEventData eventData = new EventData((byte)EventCode.Move, newPlayerEvent);
+            IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
             foreach (Entity entity in m_Entities.Values) {
@@ -60,7 +62,7 @@
             //    entity.SendEvent(eventData, sendParameters);
             //}
             
-            m_Entities[newEntity.Name] = newEntity;
+            m_Entities[newPlayer.Name] = newPlayer;
         }
 
         /// <summary>

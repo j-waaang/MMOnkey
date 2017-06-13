@@ -1,27 +1,27 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Characters.Player {
 
     using UnityEngine;
-    using JYW.ThesisMMO.Common.Entities;
+    using System.Collections;
+
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
-    using RemoteCharacters;
-    using System.Collections;
 
     /// <summary>
     // Performs the autoattack on input.
     /// </summary>
-    [RequireComponent(typeof(CharacterState))]
+    [RequireComponent(typeof(ActionStateComponent))]
     public class AutoAttackController : MonoBehaviour {
 
-        private CharacterState m_CharacterState;
+        private ActionStateComponent m_ActionState;
         private float m_AttackRange;
+        private ActionCode m_AutoAttackAction;
 
         private const float MaxMeeleAARange = 1.5f;
         private const float MaxRangedAARange = 6.0f;
-        private const float MeeleAADuration = 1f;
+        private const float AADuration = 1f;
 
         private void Awake() {
-            m_CharacterState = GetComponent<CharacterState>();
+            m_ActionState = GetComponent<ActionStateComponent>();
             SetAttackRange();
         }
 
@@ -33,27 +33,23 @@
             switch ((WeaponCode)weapon) {
                 case WeaponCode.Axe:
                     m_AttackRange = MaxMeeleAARange;
+                    m_AutoAttackAction = ActionCode.AxeAutoAttack;
                     return;
                 case WeaponCode.Bow:
                     m_AttackRange = MaxRangedAARange;
+                    m_AutoAttackAction = ActionCode.BowAutoAttack;
                     return;
             }
         }
 
         private void LateUpdate() {
-            switch (m_CharacterState.ActionState) {
-                case ActionState.Idle:
-                    if (Input.GetButtonDown("AutoAttack")) {
-                        //SetAATarget();
-                        if (!TestPrerequisite()) { return; }
+            if(m_ActionState.ActionState == ActionCode.Idle) {
+                if (Input.GetButtonDown("AutoAttack")) {
+                    //SetAATarget();
+                    if (!TestPrerequisite()) { return; }
 
-                        StartCoroutine(PerformAutoAttack());
-                    }
-                    break;
-                case ActionState.Casting:
-                    break;
-                default:
-                    break;
+                    StartCoroutine(PerformAutoAttack());
+                }
             }
         }
 
@@ -61,7 +57,7 @@
         // True if preconditions are passed. Else false.
         /// </summary>
         private bool TestPrerequisite() {
-            if (m_CharacterState.ActionState == ActionState.Casting) { return false; }
+            if (m_ActionState.ActionState != ActionCode.Idle) { return false; }
 
             if (GameData.Target == null) { return false; }
 
@@ -72,12 +68,13 @@
         }
 
         private IEnumerator PerformAutoAttack() {
-            m_CharacterState.ActionState = ActionState.Casting;
+            m_ActionState.ActionState = m_AutoAttackAction;
             SendAAStartToServer();
             // TODO: Listen to interupt events.
-            yield return new WaitForSeconds(MeeleAADuration);
-            if (m_CharacterState.ActionState == ActionState.Casting) {
-                m_CharacterState.ActionState = ActionState.Idle;
+            yield return new WaitForSeconds(AADuration);
+
+            if (m_ActionState.ActionState == m_AutoAttackAction) {
+                m_ActionState.ActionState = ActionCode.Idle;
             }
         }
 

@@ -1,5 +1,5 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.Characters {
-
+    using Common.Codes;
     using Common.Entities;
     using UnityEngine;
 
@@ -22,7 +22,22 @@
             }
         }
 
-        public void TriggerAutoAttackAnimation(ActionState newState) {
+        public void TriggerActionAnimation(ActionCode actionCode) {
+
+            float m_AnimationSpeed = 1;
+
+            switch (actionCode) {
+                case ActionCode.Dash:
+                    return;
+                case ActionCode.DistractingShot:
+                    m_AnimationSpeed = 2f;
+                    break;
+                case ActionCode.FireStorm:
+                    m_AnimationSpeed = 0.5f;
+                    break;
+            }
+
+            m_Animator.SetFloat("AnimationSpeed", m_AnimationSpeed);
             m_Animator.SetTrigger("AutoAttack");
         }
     }

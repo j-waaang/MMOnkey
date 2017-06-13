@@ -26,12 +26,12 @@
 
         internal override void StartAction() {
             log.DebugFormat("Started axe aa");
-            SetCast();
+            SetState();
         }
 
-        private void SetCast() {
-            var setCastingModifier = new ActionStateModifier(ActionState.Casting);
-            World.Instance.ApplyModifier(m_ActionSource, setCastingModifier);
+        private void SetState() {
+            var stateModifier = new ActionStateModifier(ActionCode.AxeAutoAttack);
+            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent += DoDamage;
@@ -53,8 +53,8 @@
 
         private void SetIdle(ContinueReason continueReason) {
             log.DebugFormat("Set idle");
-            var setCastingModifier = new ActionStateModifier(ActionState.Idle);
-            World.Instance.ApplyModifier(m_ActionSource, setCastingModifier);
+            var stateModifier = new ActionStateModifier(ActionCode.Idle);
+            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
         }
     }
 }

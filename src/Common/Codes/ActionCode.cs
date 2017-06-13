@@ -3,6 +3,7 @@
         AxeAutoAttack,
         BowAutoAttack,
         Move,
+        Idle,
 
         Dash = 10,
         DistractingShot,

@@ -31,7 +31,7 @@
         internal int[] GetSelectedSkills() {
             var skills = new List<int>();
             foreach (Dropdown dropdown in m_SkillDropDowns) {
-                skills.Add(dropdown.value);
+                skills.Add(dropdown.value + 10);
             }
             return skills.ToArray();
         }

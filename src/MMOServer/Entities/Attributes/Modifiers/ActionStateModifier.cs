@@ -5,9 +5,9 @@
 
     internal class ActionStateModifier : Modifier {
 
-        private ActionState m_ActionState;
+        private ActionCode m_ActionState;
 
-        internal ActionStateModifier(ActionState value) {
+        internal ActionStateModifier(ActionCode value) {
             m_ActionState = value;
             m_Attribute = AttributeCode.ActionState;
         }

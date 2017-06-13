@@ -12,13 +12,12 @@
         [SerializeField] private GameObject m_HealthUI;
         private Image m_HealthImage;
 
-        [SerializeField]
-        GameObject m_SkillUI;
+        [SerializeField] private GameObject m_SkillUI;
 
         private void Awake() {
             GameData.TargetChangedEvent += TargetChanged;
             m_TargetName = m_NameUI.GetComponentInChildren<Text>();
-            m_HealthImage = m_HealthUI.GetComponentInChildren<Image>();
+            m_HealthImage = m_HealthUI.transform.GetChild(0).GetComponent<Image>();
         }
 
         private void TargetChanged(GameObject newTarget) {

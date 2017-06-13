@@ -8,11 +8,11 @@
 
     public sealed partial class EventOperations {
 
-        public static Action<string, ActionState> ActionStateUpdateEvent;
+        public static Action<string, ActionCode> ActionStateUpdateEvent;
 
         private static void OnActionStateUpdateEvent(EventData eventData) {
             var name = (string)eventData.Parameters[(byte)ParameterCode.Name];
-            var actionState = (ActionState)eventData.Parameters[(byte)ParameterCode.ActionState];
+            var actionState = (ActionCode)eventData.Parameters[(byte)ParameterCode.ActionState];
             if (ActionStateUpdateEvent != null) {
                 ActionStateUpdateEvent(name, actionState);
             }

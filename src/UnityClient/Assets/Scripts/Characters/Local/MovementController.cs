@@ -17,7 +17,7 @@
         private Rigidbody2D m_Rigidbody;
 
         private CharacterAnimationController m_CharacterAnimationController;
-        private CharacterState m_CharacterState;
+        private ActionStateComponent m_CharacterState;
         private Vector2 m_LastSendVector;
         private float m_LastSendTime = 0;
         private float m_MinMovDistance = 0.25f;
@@ -25,7 +25,7 @@
 
         private void Awake() {
             m_CharacterAnimationController = GetComponent<CharacterAnimationController>();
-            m_CharacterState = GetComponent<CharacterState>();
+            m_CharacterState = GetComponent<ActionStateComponent>();
             m_Rigidbody = GetComponent<Rigidbody2D>();
         }
 

@@ -31,8 +31,6 @@
                     return OperationEnterWorld(peer, operationRequest, sendParameters);
                 case OperationCode.ReadyToReceiveGameEvents:
                     return OperationReadyToReceiveGameEventsRequest(peer, operationRequest, sendParameters);
-                case OperationCode.Move:
-                    return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotAllowed);
                 default:
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotSupported);
             }

@@ -74,7 +74,7 @@
 
         internal bool CanPerformAction(ActionCode action) {
             var actionState = m_Attributes[AttributeCode.ActionState] as ActionStateAttribute;
-            if (actionState.ActionState != ActionState.Idle) { return false; }
+            if (actionState.ActionState != ActionCode.Idle) { return false; }
 
             return true;
         }
