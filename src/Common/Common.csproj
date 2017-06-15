@@ -46,6 +46,10 @@
     <Compile Include="Codes\EventCode.cs" />
     <Compile Include="Codes\ReturnCode.cs" />
     <Compile Include="Codes\ActionCode.cs" />
+    <Compile Include="ContinueObjects\ActionContinueCondition.cs" />
+    <Compile Include="ContinueObjects\ContinueReason.cs" />
+    <Compile Include="ContinueObjects\InteruptContinueCondition.cs" />
+    <Compile Include="ContinueObjects\TimedContinueCondition.cs" />
     <Compile Include="Entities\CharacterEntity.cs" />
     <Compile Include="Entities\MovementState.cs" />
     <Compile Include="Entities\EntityBase.cs" />

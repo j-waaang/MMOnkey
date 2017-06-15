@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="ActionObjects\ActionObjectFactory.cs" />
     <Compile Include="ActionObjects\SkillRequests\DashRequest.cs" />
-    <Compile Include="ActionObjects\InteruptContinueCondition.cs" />
     <Compile Include="ActionObjects\SkillRequests\OrisonOfHealingRequest.cs" />
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AIModule.cs" />
@@ -104,9 +103,6 @@
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerApplication.cs" />
-    <Compile Include="ActionObjects\ActionContinueCondition.cs" />
-    <Compile Include="ActionObjects\ContinueReason.cs" />
-    <Compile Include="ActionObjects\TimedContinueCondition.cs" />
     <Compile Include="World.cs" />
   </ItemGroup>
   <ItemGroup>

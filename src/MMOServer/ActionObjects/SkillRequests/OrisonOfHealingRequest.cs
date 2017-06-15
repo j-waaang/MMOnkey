@@ -1,10 +1,12 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
-    using Common.Codes;
-    using Entities;
-    using Entities.Attributes.Modifiers;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
+
+    using Common.Codes;
+    using Common.ContinueObjects;
+    using Entities;
+    using Entities.Attributes.Modifiers;
 
     class OrisonOfHealingRequest : ActionObject{
 
@@ -29,7 +31,7 @@
         private void SetState() {
             var stateModifier = new ActionStateModifier(ActionCode.OrisonOfHealing);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
-            AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 1)));
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
 
             ContinueEvent += DoHealing;
             ActivateConditions();

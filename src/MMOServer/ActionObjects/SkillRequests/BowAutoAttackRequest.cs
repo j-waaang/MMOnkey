@@ -1,11 +1,12 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
-    using Common.Codes;
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
+
     using Entities;
     using Entities.Attributes.Modifiers;
-    using Common.Entities;
+    using Common.Codes;
+    using Common.ContinueObjects;
 
     class BowAutoAttackRequest : ActionObject {
 
@@ -30,7 +31,7 @@
         private void SetState() {
             var stateModifier = new ActionStateModifier(ActionCode.AxeAutoAttack);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
-            AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 0, 500)));
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent += DoDamage;
             ActivateConditions();
@@ -39,7 +40,7 @@
         private void DoDamage(ContinueReason continueReason) {
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
             World.Instance.ApplyModifier(Target, healthModifier);
-            AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 0, 500)));
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent -= DoDamage;
             ContinueEvent += SetIdle;

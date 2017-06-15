@@ -1,0 +1,21 @@
+﻿namespace JYW.ThesisMMO.Common.ContinueObjects {
+
+    using System;
+
+    /// <summary> 
+    /// A condition required for an action to continue.
+    /// </summary>
+    public abstract class ActionContinueCondition : IDisposable {
+        public event Action<ContinueReason> ContinueEvent;
+
+        protected void RaiseContinueEvent(ContinueReason reason) {
+            ContinueEvent(reason);
+        }
+
+        public abstract void Start();
+
+        public void Dispose() {
+            ContinueEvent = null;
+        }
+    }
+}

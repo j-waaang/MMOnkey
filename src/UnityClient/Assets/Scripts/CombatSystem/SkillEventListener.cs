@@ -3,6 +3,8 @@ using JYW.ThesisMMO.UnityClient;
 using JYW.ThesisMMO.UnityClient.Characters;
 using JYW.ThesisMMO.UnityClient.CombatSystem;
 using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class SkillEventListener : MonoBehaviour {
@@ -59,9 +61,22 @@ public class SkillEventListener : MonoBehaviour {
                 if (m_GroundCollider.Raycast(screenRay, out hit, 20)) {
                     RequestOperations.FireStormRequest(hit.point);
                     m_PlayerActionState.SetActionStateForSeconds(skill, 2);
+                    StartCoroutine(WaitAndCall(2, () => CreateSkillEntity(skill, hit.point)));
                 }
                 break;
         }
+    }
 
+    IEnumerator WaitAndCall(float waitTime, Action method) {
+        yield return new WaitForSeconds(waitTime);
+        // TODO: check for incoming interupt events
+        method();
+    }
+
+    private void CreateSkillEntity(ActionCode skill, Vector3 position) {
+        var name = Enum.GetName(typeof(ActionCode), skill);
+        name += "Entity";
+        Debug.LogFormat("Try instantiating object with name {0}", name);
+        Instantiate(Resources.Load(name, typeof(GameObject)), position, Quaternion.identity);
     }
 }

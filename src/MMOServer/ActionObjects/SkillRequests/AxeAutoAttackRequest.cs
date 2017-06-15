@@ -7,6 +7,7 @@
 
     using Common.Codes;
     using Common.Entities;
+    using Common.ContinueObjects;
 
     class AxeAutoAttackRequest : ActionObject {
 
@@ -31,7 +32,7 @@
         private void SetState() {
             var stateModifier = new ActionStateModifier(ActionCode.AxeAutoAttack);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
-            AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 0, 500)));
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent += DoDamage;
             ActivateConditions();
@@ -40,7 +41,7 @@
         private void DoDamage(ContinueReason continueReason) {
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
             World.Instance.ApplyModifier(Target, healthModifier);
-            AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 0, 500)));
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent -= DoDamage;
             ContinueEvent += SetIdle;

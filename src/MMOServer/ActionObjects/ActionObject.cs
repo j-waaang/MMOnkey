@@ -8,6 +8,7 @@
     using ExitGames.Logging;
 
     using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.Common.ContinueObjects;
 
     /// <summary> 
     /// A game action requested by the client to change the game state.

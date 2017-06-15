@@ -1,20 +1,19 @@
-﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects {
+﻿namespace JYW.ThesisMMO.Common.ContinueObjects {
     using System;
     using System.Threading;
 
     /// <summary> 
     /// Time based ActionCondition.
     /// </summary>
-    internal class TimedContinueCondition : ActionContinueCondition {
+    public class TimedContinueCondition : ActionContinueCondition {
 
         private Thread m_Thread;
 
-        internal TimedContinueCondition(ActionObject actionObject, TimeSpan waitTime)
-            : base(actionObject) {
+        public TimedContinueCondition(TimeSpan waitTime) {
             m_Thread = new Thread(() => SleepAndContinue(waitTime));
         }
 
-        internal override void Start() {
+        public override void Start() {
             m_Thread.Start();
         }
 

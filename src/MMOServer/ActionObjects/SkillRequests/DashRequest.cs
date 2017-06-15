@@ -1,9 +1,10 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
-    using Common.Codes;
-    using Entities.Attributes.Modifiers;
     using Photon.SocketServer;
-    using Photon.SocketServer.Rpc;
+
+    using Common.Codes;
+    using Common.ContinueObjects;
+    using Entities.Attributes.Modifiers;
 
     class DashRequest : ActionObject {
 
@@ -25,7 +26,7 @@
         private void SetState() {
             var speedModifier = new FloatModifier(ModifyMode.Multiplication, AttributeCode.Speed, 1.5f);
             World.Instance.ApplyModifier(m_ActionSource, speedModifier);
-            AddCondition(new TimedContinueCondition(this, new System.TimeSpan(0, 0, 0, 1)));
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
 
             ContinueEvent += ResetSpeed;
             ActivateConditions();
