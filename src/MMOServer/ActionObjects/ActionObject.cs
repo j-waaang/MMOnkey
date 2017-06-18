@@ -19,7 +19,7 @@
         internal ActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
             m_ActionSource = actionSource;
-            log.DebugFormat("Created {0} ActionObject", this.GetType().ToString());
+            log.DebugFormat("Created {0} ActionObject", GetType().Name);
         }
 
         public ActionObject(IRpcProtocol protocol, OperationRequest request) {

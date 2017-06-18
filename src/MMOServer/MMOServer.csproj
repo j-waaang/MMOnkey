@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="ActionObjects\ActionObjectFactory.cs" />
     <Compile Include="ActionObjects\SkillRequests\DashRequest.cs" />
+    <Compile Include="ActionObjects\SkillRequests\FireStormRequest.cs" />
     <Compile Include="ActionObjects\SkillRequests\OrisonOfHealingRequest.cs" />
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AIModule.cs" />

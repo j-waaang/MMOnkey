@@ -9,6 +9,8 @@
     using log4net.Config;
     using System.IO;
     using AI;
+    using System;
+    using System.Reflection;
 
     /// <summary> 
     /// Main class of the server.
@@ -30,6 +32,7 @@
             StartAIModule();
 
             CreateTestBots();
+            //TestFireStorm();
         }
 
         private void SetupLogger() {
@@ -70,6 +73,22 @@
             m_AIModule.AddEntity(new TestBot("one", new Vector(2, 2)));
             m_AIModule.AddEntity(new TestBot("two", new Vector(0, -2)));
             m_AIModule.AddEntity(new TestBot("three", new Vector(-3, 4)));
+        }
+
+        private void TestFireStorm() {
+            log.Debug("------------------------Test reflection------------------------");
+            log.Debug("Listing all classes");
+
+            Assembly thisType = GetType().Assembly;
+            foreach (Type type in thisType.GetTypes()) {
+                log.Debug(type.FullName);
+            }
+            var namespacke = "JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.";
+            var stringType = namespacke + Common.Codes.ActionCode.FireStorm.ToString() + "Request";
+            log.DebugFormat("Looking for type {0}", stringType);
+            var fsType = Type.GetType(stringType);
+            if(fsType == null) { log.Debug("Type not found."); }
+            Activator.CreateInstance(fsType, "mofofofoosso");
         }
     }
 }
