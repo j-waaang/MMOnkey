@@ -7,12 +7,12 @@
 
         private ActionCode m_ActionState;
 
-        internal ActionStateModifier(ActionCode value) {
+        public ActionStateModifier(ActionCode value) {
             m_ActionState = value;
             m_Attribute = AttributeCode.ActionState;
         }
 
-        internal override void ApplyOnEntity(Entity entity) {
+        public override void ApplyEffect(Entity entity) {
             var actionState = entity.GetAttribute(m_Attribute) as ActionStateAttribute;
             actionState.ActionState = m_ActionState;
         }

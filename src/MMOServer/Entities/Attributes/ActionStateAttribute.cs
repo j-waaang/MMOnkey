@@ -1,9 +1,9 @@
-﻿namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
+﻿using Photon.SocketServer;
+
+namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
 
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.Common.Codes;
-    using JYW.ThesisMMO.Common.Entities;
-    using Photon.SocketServer;
 
     internal class ActionStateAttribute : Attribute {
 

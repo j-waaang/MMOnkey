@@ -15,11 +15,11 @@
 
         #endregion DataContract
 
-        internal override bool CheckPrerequesite() {
+        public override bool CheckPrerequesite() {
             return World.Instance.CanPerformAction(m_ActionSource, ActionCode.Dash);
         }
 
-        internal override void StartAction() {
+        public override void StartAction() {
             SetState();
         }
 

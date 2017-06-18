@@ -7,8 +7,9 @@
     using Common.ContinueObjects;
     using Entities;
     using Entities.Attributes.Modifiers;
+    using Targets;
 
-    class OrisonOfHealingRequest : ActionObject{
+    class OrisonOfHealingRequest : ActionObject {
 
         #region DataContract
         public OrisonOfHealingRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -19,12 +20,12 @@
         public string Target { get; set; }
         #endregion DataContract
 
-        internal override bool CheckPrerequesite() {
-            var target = new Target { TargetType = TargetType.Entity, TargetName = Target };
+        public override bool CheckPrerequesite() {
+            var target = new EntityTarget() { TargetName = Target };
             return World.Instance.CanPerformAction(m_ActionSource, ActionCode.AxeAutoAttack, target);
         }
 
-        internal override void StartAction() {
+        public override void StartAction() {
             SetState();
         }
 

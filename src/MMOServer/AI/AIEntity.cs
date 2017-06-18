@@ -1,13 +1,29 @@
-﻿namespace JYW.ThesisMMO.MMOServer.AI {
+﻿using ExitGames.Logging;
+using System;
+
+namespace JYW.ThesisMMO.MMOServer.AI {
 
     /// <summary> 
     /// Base class for AIs to deerive from.
     /// </summary>
-    internal abstract class AIEntity {
+     abstract internal class AIEntity : IDisposable {
+
+        protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        protected Entity m_Entity;
+
+
+        public AIEntity(Entity entity) {
+            m_Entity = entity;
+            AILooper.Instance.AddEntity(this);
+        }
+
+        public void Dispose() {
+            AILooper.Instance.RemoveEntity(this);
+        }
 
         /// <summary> 
         /// Called by AIModule's loop.
         /// </summary>
-        internal abstract void Update();
+        public abstract void Update();
     }
 }

@@ -20,6 +20,9 @@
                 case EventCode.Move:
                     OnMoveEvent(eventData);
                     return;
+                case EventCode.NewEntity:
+                    Debug.Log("Missing new entity behaviour.");
+                    return;
                 case EventCode.NewPlayer:
                     OnNewPlayerEvent(eventData);
                     return;

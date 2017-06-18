@@ -5,6 +5,7 @@
         HealthUpdate,
         Move,
         NewPlayer,
+        NewEntity,
         RemovePlayer
     }
 }

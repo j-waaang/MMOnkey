@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Codes\AttributeCode.cs" />
+    <Compile Include="Codes\EntityType.cs" />
     <Compile Include="Codes\WeaponCode.cs" />
     <Compile Include="Codes\EventCode.cs" />
     <Compile Include="Codes\ReturnCode.cs" />

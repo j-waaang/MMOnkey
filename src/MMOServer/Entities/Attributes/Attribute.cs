@@ -1,6 +1,6 @@
-﻿namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
+﻿using ExitGames.Logging;
 
-    using ExitGames.Logging;
+namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
 
     using JYW.ThesisMMO.Common.Codes;
 

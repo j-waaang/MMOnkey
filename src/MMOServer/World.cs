@@ -13,6 +13,7 @@
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
+    using Targets;
 
     /// <summary> 
     /// The game world containing entities and methods modifiying them.
@@ -41,28 +42,14 @@
         /// <summary>
         /// Adding a entity to the game world.
         /// </summary>
-        internal void AddEntity(Entity newPlayer) {
+        internal void AddEntity(Entity newEntity) {
 
-            var newPlayerEv = new NewPlayerEvent() {
-                Name = newPlayer.Name,
-                Position = newPlayer.Position,
-                CurrentHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
-                MaxHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
-            };
-
-            IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-
             foreach (Entity entity in m_Entities.Values) {
-                entity.SendEvent(eventData, sendParameters);
+                entity.SendEvent(newEntity.GetNewEntityEventData(), sendParameters);
             }
-
-            //var interestedEntities = GetEntitiesInInterestRange(newEntity);
-            //foreach (Entity entity in interestedEntities) {
-            //    entity.SendEvent(eventData, sendParameters);
-            //}
             
-            m_Entities[newPlayer.Name] = newPlayer;
+            m_Entities[newEntity.Name] = newEntity;
         }
 
         /// <summary>
@@ -164,31 +151,10 @@
             return m_Entities[actionSource].CanPerformAction(action);
         }
 
-
         internal bool CanPerformAction(string actionSource, ActionCode action, Target target) {
             if(!CanPerformAction(actionSource, action)) { return false; }
 
             // TODO: Test distance
-            switch (action) {
-                case ActionCode.AxeAutoAttack:
-                    break;
-                case ActionCode.BowAutoAttack:
-                    break;
-                case ActionCode.Move:
-                    break;
-                case ActionCode.Dash:
-                    break;
-                case ActionCode.DistractingShot:
-                    break;
-                case ActionCode.FireStorm:
-                    break;
-                case ActionCode.HammerBash:
-                    break;
-                case ActionCode.OrisonOfHealing:
-                    break;
-                default:
-                    break;
-            }
             return true;
         }
 
@@ -206,7 +172,7 @@
         }
 
         internal void ApplyModifier(string target, Modifier modifier) {
-            modifier.ApplyOnEntity(m_Entities[target]);
+            modifier.ApplyEffect(m_Entities[target]);
         }
 
         public void Dispose() {

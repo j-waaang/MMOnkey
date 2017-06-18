@@ -6,6 +6,7 @@
         BoolValue,
         CurrentHealth,
         Damage,
+        EntityType,
         FloatValue,
         IntValue,
         MaxHealth,

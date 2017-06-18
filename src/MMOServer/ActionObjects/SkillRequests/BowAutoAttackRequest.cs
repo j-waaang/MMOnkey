@@ -3,12 +3,12 @@
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
 
-    using Entities;
     using Entities.Attributes.Modifiers;
     using Common.Codes;
     using Common.ContinueObjects;
+    using Targets;
 
-    class BowAutoAttackRequest : ActionObject {
+    internal class BowAutoAttackRequest : ActionObject {
 
         #region DataContract
         public BowAutoAttackRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -19,12 +19,12 @@
         public string Target { get; set; }
         #endregion DataContract
 
-        internal override bool CheckPrerequesite() {
-            var target = new Target { TargetType = TargetType.Entity, TargetName = Target };
+        public override bool CheckPrerequesite() {
+            var target = new EntityTarget() { TargetName = Target };
             return World.Instance.CanPerformAction(m_ActionSource, ActionCode.AxeAutoAttack, target);
         }
 
-        internal override void StartAction() {
+        public override void StartAction() {
             SetState();
         }
 

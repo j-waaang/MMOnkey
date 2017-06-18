@@ -5,9 +5,7 @@
     /// <summary> 
     /// Simple ai moving left and right.
     /// </summary>
-    class TestBot : AIEntity {
-
-        private Entity m_Entity;
+    internal class TestBot : AIEntity {
 
         private const int MaxStepsInOneDirection = 10;
         private const float MoveSpeed = 0.2f;
@@ -15,12 +13,10 @@
         private int m_MoveDirection = 1;
         private int m_StepsDoneInOneDirection = 0;
 
-        internal TestBot(string name, Vector position) {
-            m_Entity = EntityFactory.CreateAIBot(name, position);
-            World.Instance.AddEntity(m_Entity);
+        public TestBot(Entity entity) : base (entity) {
         }
 
-        internal override void Update() {
+        public override void Update() {
             if (m_StepsDoneInOneDirection >= MaxStepsInOneDirection) {
                 ChangeDirection();
                 return;

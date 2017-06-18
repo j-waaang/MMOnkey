@@ -16,7 +16,7 @@
     internal abstract class ActionObject : Operation{
 
         #region DataContract
-        internal ActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
+        public ActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
             m_ActionSource = actionSource;
             log.DebugFormat("Created {0} ActionObject", GetType().Name);
@@ -28,7 +28,7 @@
         }
 
         [DataMember(Code = (byte)ParameterCode.ActionCode)]
-        internal ActionCode actionCode { get; set; }
+        public ActionCode actionCode { get; set; }
         #endregion DataContract
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
@@ -40,9 +40,9 @@
         private IRpcProtocol protocol;
         private OperationRequest request;
 
-        abstract internal bool CheckPrerequesite();
+        abstract public bool CheckPrerequesite();
 
-        abstract internal void StartAction();
+        abstract public void StartAction();
 
         protected void AddCondition(ActionContinueCondition condition) {
             m_ContinueConidtions.Add(condition);

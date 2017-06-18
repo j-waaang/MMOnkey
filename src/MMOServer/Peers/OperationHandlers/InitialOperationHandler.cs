@@ -49,7 +49,7 @@
 
             DebugCharacter(operation);
 
-            var entity = EntityFactory.CreatePeerControlledEntity(m_Peer, operation);
+            var entity = EntityFactory.Instance.CreatePeerControlledEntity(m_Peer, operation);
 
             // TODO: Think about a different place to store the username.
             m_Peer.Name = operation.Name;
