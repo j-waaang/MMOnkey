@@ -38,7 +38,7 @@
             ActivateConditions();
         }
 
-        private void DoDamage(ContinueReason continueReason) {
+        private void DoDamage(CallReason continueReason) {
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
             World.Instance.ApplyModifier(Target, healthModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
@@ -49,7 +49,7 @@
             ActivateConditions();
         }
 
-        private void SetIdle(ContinueReason continueReason) {
+        private void SetIdle(CallReason continueReason) {
             ContinueEvent -= SetIdle;
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);

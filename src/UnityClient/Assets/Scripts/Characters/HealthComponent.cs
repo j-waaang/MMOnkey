@@ -18,7 +18,7 @@ public class HealthComponent : MonoBehaviour {
     private void OnHealthUpdateEvent(string name, int damage, int newHealth) {
         if (gameObject.name != name) { return; }
 
-        Debug.LogFormat("Update {0}'s health to {1}. Damage done {2}", name, newHealth, damage);
+        //Debug.LogFormat("Update {0}'s health to {1}. Damage done {2}", name, newHealth, damage);
 
         Health = newHealth;
         if (DamageHealthMaxHealthUpdatedEvent != null) {

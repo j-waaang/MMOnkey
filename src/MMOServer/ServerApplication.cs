@@ -19,7 +19,6 @@
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private World m_World;
-        private AILooper m_AIModule;
 
         protected override PeerBase CreatePeer(InitRequest initRequest) {
             return new MMOPeer(initRequest);
@@ -33,7 +32,7 @@
         }
         protected override void TearDown() {
             AILooper.Instance.Dispose();
-            log.DebugFormat("------------------------Tear Down------------------------");
+            log.InfoFormat("------------------------Tear Down------------------------");
         }
 
         private void SetupLogger() {
@@ -44,7 +43,7 @@
                 XmlConfigurator.ConfigureAndWatch(configFileInfo);
             }
 
-            log.DebugFormat("------------------------Server Started------------------------");
+            log.InfoFormat("------------------------Server Started------------------------");
         }
 
         private static void RegisterTypes() {
@@ -57,7 +56,7 @@
 
         private void CreateWorld() {
             m_World = new World();
-            log.DebugFormat("Created Game World.");
+            log.InfoFormat("Created Game World.");
         }
 
         private void CreateTestBots() {

@@ -33,7 +33,7 @@
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
-        protected event Action<ContinueReason> ContinueEvent;
+        protected event Action<CallReason> ContinueEvent;
         protected string m_ActionSource;
 
         private List<ActionContinueCondition> m_ContinueConidtions = new List<ActionContinueCondition>();
@@ -55,7 +55,7 @@
             }
         }
 
-        private void OnConditionFullfilled(ContinueReason continueReason) {
+        private void OnConditionFullfilled(CallReason continueReason) {
             foreach(ActionContinueCondition condition in m_ContinueConidtions) {
                 condition.Dispose();
             }

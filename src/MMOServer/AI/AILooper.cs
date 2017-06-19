@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Threading;
 using ExitGames.Logging;
@@ -58,6 +59,11 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         }
 
         internal void RemoveEntity(AIEntity aiEntity) {
+            m_AIEntites.Remove(aiEntity);
+        }
+
+        internal void RemoveEntity(Entity entity) {
+            AIEntity aiEntity = m_AIEntites.Single(a => a.Entity == entity);
             m_AIEntites.Remove(aiEntity);
         }
 

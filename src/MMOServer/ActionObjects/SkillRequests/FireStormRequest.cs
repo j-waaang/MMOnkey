@@ -18,13 +18,13 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
             : base(actionSource, protocol, request) {
         }
 
-        [DataMember(Code = (byte)ParameterCode.Name)]
+        [DataMember(Code = (byte)ParameterCode.Position)]
         public Vector Target { get; set; }
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            var target = new CircleAreaTarget() { Center = Target, Radius = 7f };
-            return World.Instance.CanPerformAction(m_ActionSource, ActionCode.AxeAutoAttack, target);
+            //var target = new CircleAreaTarget() { Center = Target, Radius = 3.5f };
+            return World.Instance.CanPerformAction(m_ActionSource, ActionCode.FireStorm);
         }
 
         public override void StartAction() {
@@ -36,14 +36,17 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 2)));
 
-            ContinueEvent += CreateFireStorm;
+            ContinueEvent += CreateFireStormAndSetIdle;
             ActivateConditions();
         }
 
-        private void CreateFireStorm(ContinueReason continueReason) {
+        private void CreateFireStormAndSetIdle(CallReason continueReason) {
+            log.InfoFormat("FireStoremReq with pos {0}", Target);
             m_LastCreatedID++;
             EntityFactory.Instance.CreateSkillEntity(m_LastCreatedID.ToString(), ActionCode.FireStorm, Target);
-            ContinueEvent -= CreateFireStorm;
+            var stateModifier = new ActionStateModifier(ActionCode.Idle);
+            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            ContinueEvent -= CreateFireStormAndSetIdle;
         }
     }
 }

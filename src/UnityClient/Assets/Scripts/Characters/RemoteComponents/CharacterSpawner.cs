@@ -28,6 +28,8 @@
         }
 
         private void RemoveRemoteCharacter(string name) {
+            if(m_RemoteCharacters.ContainsKey(name) == false) { return; }
+
             var character = m_RemoteCharacters[name];
             Destroy(character);
             m_RemoteCharacters.Remove(name);

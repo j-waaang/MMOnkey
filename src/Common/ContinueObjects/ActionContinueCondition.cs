@@ -6,9 +6,9 @@
     /// A condition required for an action to continue.
     /// </summary>
     public abstract class ActionContinueCondition : IDisposable {
-        public event Action<ContinueReason> ContinueEvent;
+        public event Action<CallReason> ContinueEvent;
 
-        protected void RaiseContinueEvent(ContinueReason reason) {
+        protected void RaiseContinueEvent(CallReason reason) {
             ContinueEvent(reason);
         }
 

@@ -15,6 +15,7 @@
 
         public override void ApplyEffect(Entity entity) {
             var attribute = entity.GetAttribute(m_Attribute) as IntAttribute;
+            if(attribute == null) { return; }
             attribute.SetValue(m_Mode, m_Value);
         }
     }

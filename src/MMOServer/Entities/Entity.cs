@@ -9,6 +9,7 @@ namespace JYW.ThesisMMO.MMOServer {
     using MMOPeer = Peers.MMOPeer;
     using Entities.Attributes;
     using Events;
+    using AI;
 
     /// <summary> 
     /// Entity which is stored in the game world.
@@ -74,11 +75,17 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public Attribute GetAttribute(AttributeCode attributeCode) {
-            return m_Attributes[attributeCode];
+            Attribute attribute = null;
+            m_Attributes.TryGetValue(attributeCode, out attribute);
+
+            return attribute;
         }
 
         public void Die() {
             log.InfoFormat("{0} died.", Name);
+            if (m_AiControlled) {
+                AILooper.Instance.RemoveEntity(this);
+            }
             World.Instance.RemoveEntity(Name);
         }
 

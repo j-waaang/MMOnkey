@@ -6,19 +6,15 @@ namespace JYW.ThesisMMO.MMOServer.AI {
     /// <summary> 
     /// Base class for AIs to deerive from.
     /// </summary>
-     abstract internal class AIEntity : IDisposable {
+     abstract internal class AIEntity {
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
-        protected Entity m_Entity;
-
+        public Entity Entity { get; private set; }
 
         public AIEntity(Entity entity) {
-            m_Entity = entity;
+            log.InfoFormat("Created {0} skill entity.", GetType().Name);
+            Entity = entity;
             AILooper.Instance.AddEntity(this);
-        }
-
-        public void Dispose() {
-            AILooper.Instance.RemoveEntity(this);
         }
 
         /// <summary> 

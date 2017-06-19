@@ -76,7 +76,7 @@
     <Compile Include="Entities\Attributes\Modifiers\Modifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\ModifyMode.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
-    <Compile Include="Entities\Attributes\HealthAttribute.cs" />
+    <Compile Include="Entities\Attributes\IntHealthAttribute.cs" />
     <Compile Include="Entities\SkillEntity.cs" />
     <Compile Include="Events\EntityEvents\NewSkillEntityEvent.cs" />
     <Compile Include="Events\EntityEvents\NewEntityEvent.cs" />

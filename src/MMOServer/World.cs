@@ -1,14 +1,14 @@
-﻿namespace JYW.ThesisMMO.MMOServer {
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
-    using System;
-    using System.Collections.Generic;
+using Photon.SocketServer;
+using ExitGames.Logging;
 
-    using Photon.SocketServer;
-    using ExitGames.Logging;
+namespace JYW.ThesisMMO.MMOServer {
 
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Types;
-    using JYW.ThesisMMO.MMOServer.Entities;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
@@ -171,8 +171,30 @@
             }
         }
 
-        internal void ApplyModifier(string target, Modifier modifier) {
-            modifier.ApplyEffect(m_Entities[target]);
+        internal void ApplyModifier(Target target, Modifier modifier) {
+            switch (target.TargetType) {
+                case TargetType.Entity:
+                    ApplyModifier(((EntityTarget)target).TargetName, modifier);
+                    break;
+                case TargetType.Point:
+                    throw new NotImplementedException();
+                case TargetType.Area:
+                    var areaTarget = (AreaTarget)target;
+
+                    //Create array because elements in dictionary could get removed in the process.
+                    var entities = m_Entities.Values.ToArray();
+                    foreach(Entity entity in entities) {
+                        if (areaTarget.IsEntityInArea(entity)) {
+                            modifier.ApplyEffect(entity);
+                            log.InfoFormat("Applying aoe to {0}.", entity.Name);
+                        }
+                    }
+                    break;
+            }
+        }
+
+        internal void ApplyModifier(string entityTargetName, Modifier modifier) {
+            modifier.ApplyEffect(m_Entities[entityTargetName]);
         }
 
         public void Dispose() {

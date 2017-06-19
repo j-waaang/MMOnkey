@@ -32,7 +32,7 @@
             ActivateConditions();
         }
 
-        private void ResetSpeed(ContinueReason continueReason) {
+        private void ResetSpeed(CallReason continueReason) {
 
             var speedModifier = new FloatModifier(ModifyMode.Divide, AttributeCode.Speed, 1.5f);
             World.Instance.ApplyModifier(m_ActionSource, speedModifier);

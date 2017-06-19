@@ -6,7 +6,7 @@
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
 
-    internal class HealthAttribute : IntAttribute {
+    internal class IntHealthAttribute : IntAttribute {
 
         internal override void SetValue(ModifyMode mode, int value) {
 
@@ -40,7 +40,7 @@
                 return;
             }
 
-            log.DebugFormat("{0} took {1} damage. Health left: {2}", m_Entity.Name, amtChanged.ToString(), m_Value);
+            log.InfoFormat("{0} took {1} damage. Health left: {2}", m_Entity.Name, amtChanged.ToString(), m_Value);
 
             var ev = new HealthChangedEvent() {
                 Username = m_Entity.Name,
@@ -52,7 +52,7 @@
             World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.All);
         }
 
-        internal HealthAttribute(int value)
+        internal IntHealthAttribute(int value)
             : base(value, AttributeCode.Health) { }
     }
 }

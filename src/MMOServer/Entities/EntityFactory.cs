@@ -41,7 +41,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var maxHealth = GetMaxHealth((WeaponCode)operation.Weapon);
             var attributes = new Attribute[4];
             attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
-            attributes[1] = new HealthAttribute(maxHealth);
+            attributes[1] = new IntHealthAttribute(maxHealth);
             attributes[2] = new ActionStateAttribute();
             attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
@@ -51,7 +51,6 @@ namespace JYW.ThesisMMO.MMOServer {
         internal void CreateSkillEntity(string id, ActionCode actionCode, Vector startPosition) {
 
             var name = actionCode.ToString() + id;
-            var position = startPosition;
 
             var stringType = aiEntityNameSpace + actionCode.ToString() + "AI";
             var actionType = Type.GetType(stringType);
@@ -61,7 +60,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 return;
             }
 
-            Entity skillEntity = new SkillEntity(name, position, actionCode);
+            Entity skillEntity = new SkillEntity(name, startPosition, actionCode);
             Activator.CreateInstance(actionType, skillEntity);
         }
 
@@ -70,7 +69,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
             var attributes = new Attribute[4];
             attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
-            attributes[1] = new HealthAttribute(maxHealth);
+            attributes[1] = new IntHealthAttribute(maxHealth);
             attributes[2] = new ActionStateAttribute();
             attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 

@@ -5,7 +5,7 @@
         }
 
         private void OnInterupt() {
-            RaiseContinueEvent(ContinueReason.Interupted);
+            RaiseContinueEvent(CallReason.Interupted);
         }
     }
 }

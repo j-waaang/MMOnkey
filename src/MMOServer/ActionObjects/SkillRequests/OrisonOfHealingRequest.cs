@@ -38,7 +38,7 @@
             ActivateConditions();
         }
 
-        private void DoHealing(ContinueReason continueReason) {
+        private void DoHealing(CallReason continueReason) {
             ContinueEvent -= DoHealing;
 
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, 30);

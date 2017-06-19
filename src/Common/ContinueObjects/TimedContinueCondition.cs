@@ -19,7 +19,7 @@
 
         private void SleepAndContinue(TimeSpan sleepTime) {
             Thread.Sleep(sleepTime);
-            RaiseContinueEvent(ContinueReason.ConditionFullfilled);
+            RaiseContinueEvent(CallReason.ConditionFullfilled);
         }
     }
 }

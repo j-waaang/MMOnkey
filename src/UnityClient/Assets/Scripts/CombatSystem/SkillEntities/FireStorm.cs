@@ -22,7 +22,7 @@ public class FireStorm : MonoBehaviour {
         }
     }
 
-    private void SelfDestroy(ContinueReason r) {
+    private void SelfDestroy(CallReason r) {
         m_SelfDestroy = true;
     }
 }
