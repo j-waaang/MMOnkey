@@ -29,4 +29,8 @@ public class HealthComponent : MonoBehaviour {
     private void OnDestroy() {
         EventOperations.HealthUpdateEvent -= OnHealthUpdateEvent;
     }
+
+    public void OnDeath() {
+        EventOperations.HealthUpdateEvent -= OnHealthUpdateEvent;
+    }
 }

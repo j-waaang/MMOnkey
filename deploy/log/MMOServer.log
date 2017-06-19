@@ -6076,3 +6076,72 @@
 2017-06-19 15:23:25,663 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
 2017-06-19 15:23:25,672 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
 2017-06-19 15:23:25,672 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-19 15:52:19,867 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-19 15:52:19,901 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-19 15:52:19,911 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-19 15:52:19,923 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-19 15:52:19,923 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-19 15:52:19,923 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-19 15:52:35,891 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 80
+2017-06-19 15:52:38,969 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 60
+2017-06-19 15:52:40,543 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 40
+2017-06-19 15:52:41,852 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 20
+2017-06-19 15:52:43,807 [24] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-19 15:52:47,723 [26] ERROR Photon.SocketServer.ApplicationBase - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 42
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 65
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-19 15:53:06,664 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-19 15:53:06,673 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-19 15:53:06,673 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-19 16:00:37,622 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-19 16:00:37,657 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-19 16:00:37,669 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-19 16:00:37,680 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-19 16:00:37,680 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-19 16:00:37,681 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-19 16:00:48,995 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(-2,09, 0,00, 6,83)
+2017-06-19 16:00:48,998 [16] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-19 16:00:49,502 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 90
+2017-06-19 16:00:49,502 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:50,003 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 80
+2017-06-19 16:00:50,003 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:50,503 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 70
+2017-06-19 16:00:50,503 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:51,004 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 60
+2017-06-19 16:00:51,004 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:51,505 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 50
+2017-06-19 16:00:51,505 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:52,005 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 40
+2017-06-19 16:00:52,005 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:52,506 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 30
+2017-06-19 16:00:52,506 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:53,007 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 20
+2017-06-19 16:00:53,007 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:53,508 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 10
+2017-06-19 16:00:53,508 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:54,008 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 0
+2017-06-19 16:00:54,009 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-19 16:00:54,010 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-19 16:00:54,010 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-19 16:10:26,804 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 80
+2017-06-19 16:10:27,957 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 60
+2017-06-19 16:10:29,382 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 40
+2017-06-19 16:10:30,641 [25] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 20
+2017-06-19 16:10:33,142 [24] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 0
+2017-06-19 16:10:33,142 [24] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 234932 died.
+2017-06-19 16:10:41,382 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 80
+2017-06-19 16:10:42,625 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 60
+2017-06-19 16:10:43,686 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 40
+2017-06-19 16:10:44,779 [8] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 20
+2017-06-19 16:10:46,220 [4] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 0
+2017-06-19 16:10:46,220 [4] INFO  JYW.ThesisMMO.MMOServer.Entity - One Punch Man died.
+2017-06-19 16:10:58,311 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-19 16:10:58,319 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-19 16:10:58,319 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

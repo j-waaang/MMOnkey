@@ -61,9 +61,8 @@ namespace JYW.ThesisMMO.MMOServer {
             };
 
             IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
-            var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-            m_Entities[name].SendEvent(eventData, sendParameters);
 
+            ReplicateMessage(name, eventData, BroadcastOptions.All);
             m_Entities.Remove(name);
         }
 
@@ -81,6 +80,8 @@ namespace JYW.ThesisMMO.MMOServer {
                     CurrentHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
                     MaxHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
                 };
+
+
 
                 IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
                 var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };

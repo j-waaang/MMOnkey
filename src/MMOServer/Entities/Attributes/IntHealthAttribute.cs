@@ -34,13 +34,10 @@
             }
 
             var amtChanged = m_Value - beforeHealth;
-            if (m_Value <= 0) {
-                m_Value = 0;
-                m_Entity.Die();
-                return;
-            }
 
             log.InfoFormat("{0} took {1} damage. Health left: {2}", m_Entity.Name, amtChanged.ToString(), m_Value);
+
+
 
             var ev = new HealthChangedEvent() {
                 Username = m_Entity.Name,
@@ -50,6 +47,12 @@
             IEventData evData = new EventData((byte)EventCode.HealthUpdate, ev);
 
             World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.All);
+
+            if (m_Value <= 0) {
+                m_Value = 0;
+                m_Entity.Die();
+                return;
+            }
         }
 
         internal IntHealthAttribute(int value)

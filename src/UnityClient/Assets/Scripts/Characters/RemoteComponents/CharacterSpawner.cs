@@ -1,7 +1,7 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Characters.RemoteCharacters {
+﻿using UnityEngine;
+using System.Collections.Generic;
 
-    using UnityEngine;
-    using System.Collections.Generic;
+namespace JYW.ThesisMMO.UnityClient.Characters.RemoteCharacters {
 
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
 
@@ -12,7 +12,7 @@
 
         [SerializeField] private RemoteCharacter m_RemoteCharacterPrefab;
 
-        private Dictionary<string, GameObject> m_RemoteCharacters = new Dictionary<string, GameObject>();
+        private Dictionary<string, RemoteCharacter> m_RemoteCharacters = new Dictionary<string, RemoteCharacter>();
 
         private void Awake() {
             EventOperations.NewPlayerEvent += CreateRemoteCharacter;
@@ -23,7 +23,7 @@
             if (m_RemoteCharacters.ContainsKey(name) == false) {
                 var character = Instantiate(m_RemoteCharacterPrefab, position, Quaternion.identity);
                 character.Initialize(name, health, maxHealth);
-                m_RemoteCharacters.Add(name, character.gameObject);
+                m_RemoteCharacters.Add(name, character);
             }
         }
 
@@ -31,7 +31,7 @@
             if(m_RemoteCharacters.ContainsKey(name) == false) { return; }
 
             var character = m_RemoteCharacters[name];
-            Destroy(character);
+            character.SendMessage("OnDeath");
             m_RemoteCharacters.Remove(name);
         }
     }

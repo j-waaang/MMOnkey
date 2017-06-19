@@ -19,5 +19,10 @@
             gameObject.name = name;
             transform.GetChild(0).name = name; // Easier to differentiate debug messages
         }
+
+        private void OnDeath() {
+            if(GameData.Target == gameObject) { GameData.Target = null; }
+            Destroy(GetComponent<Collider>());
+        }
     }
 }

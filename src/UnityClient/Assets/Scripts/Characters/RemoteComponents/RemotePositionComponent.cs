@@ -19,4 +19,8 @@ public class RemotePositionComponent : MonoBehaviour {
     private void OnDestroy() {
         EventOperations.MoveEvent -= OnMoveEvent;
     }
+
+    private void OnDeath() {
+        EventOperations.MoveEvent -= OnMoveEvent;
+    }
 }

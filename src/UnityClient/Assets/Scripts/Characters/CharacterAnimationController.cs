@@ -41,5 +41,9 @@
             m_Animator.SetFloat("AnimationSpeed", m_AnimationSpeed);
             m_Animator.SetTrigger("AutoAttack");
         }
+
+        public void OnDeath() {
+            m_Animator.SetTrigger("DeathTrigger");
+        }
     }
 }

@@ -16,4 +16,8 @@ public class RemoteActionStateComponent : ActionStateComponent {
     private void OnDestroy() {
         EventOperations.ActionStateUpdateEvent -= OnActionStateUpdateEvent;
     }
+
+    private void OnDeath() {
+        EventOperations.ActionStateUpdateEvent -= OnActionStateUpdateEvent;
+    }
 }
