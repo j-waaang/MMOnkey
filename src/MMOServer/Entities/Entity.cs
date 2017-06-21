@@ -69,7 +69,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public bool CanPerformAction(ActionCode action) {
             var actionState = m_Attributes[AttributeCode.ActionState] as ActionStateAttribute;
-            if (actionState.ActionState != ActionCode.Idle) { return false; }
+            if (actionState.GetActionState() != ActionCode.Idle) { return false; }
 
             return true;
         }

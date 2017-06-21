@@ -5,11 +5,10 @@
 
     using Common.Codes;
     using Common.ContinueObjects;
-    using Entities;
     using Entities.Attributes.Modifiers;
     using Targets;
 
-    class OrisonOfHealingRequest : ActionObject {
+    class OrisonOfHealingRequest : CastActionObject {
 
         #region DataContract
         public OrisonOfHealingRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -30,7 +29,8 @@
         }
 
         private void SetState() {
-            var stateModifier = new ActionStateModifier(ActionCode.OrisonOfHealing);
+            var lookDir = GetLookDir(m_ActionSource, Target);
+            var stateModifier = new CastActionStateModifier(ActionCode.OrisonOfHealing, lookDir);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
 

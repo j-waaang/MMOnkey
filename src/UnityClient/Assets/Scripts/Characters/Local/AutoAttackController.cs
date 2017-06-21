@@ -13,14 +13,16 @@
     public class AutoAttackController : MonoBehaviour {
 
         private ActionStateComponent m_ActionState;
+        private RotationController m_RotationController;
         private float m_AttackRange;
         private ActionCode m_AutoAttackAction;
 
-        private const float MaxMeeleAARange = 1.5f;
+        private const float MaxMeeleAARange = 1f;
         private const float MaxRangedAARange = 6.0f;
         private const float AADuration = 1f;
 
         private void Awake() {
+            m_RotationController = GetComponent<RotationController>();
             m_ActionState = GetComponent<ActionStateComponent>();
             SetAttackRange();
         }
@@ -47,6 +49,8 @@
                 if (Input.GetButtonDown("AutoAttack")) {
                     //SetAATarget();
                     if (!TestPrerequisite()) { return; }
+
+                    m_RotationController.LookAt(GameData.Target.transform.position - transform.position, 1f);
 
                     StartCoroutine(PerformAutoAttack());
                 }

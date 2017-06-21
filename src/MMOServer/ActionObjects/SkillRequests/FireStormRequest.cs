@@ -7,9 +7,8 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
     using Common.ContinueObjects;
     using Entities.Attributes.Modifiers;
     using Common.Types;
-    using Targets;
 
-    internal class FireStormRequest : ActionObject {
+    internal class FireStormRequest : CastActionObject {
 
         private int m_LastCreatedID = 0;
 
@@ -23,7 +22,6 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            //var target = new CircleAreaTarget() { Center = Target, Radius = 3.5f };
             return World.Instance.CanPerformAction(m_ActionSource, ActionCode.FireStorm);
         }
 
@@ -32,7 +30,8 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         }
 
         private void SetState() {
-            var stateModifier = new ActionStateModifier(ActionCode.FireStorm);
+            var lookDir = GetLookDir(m_ActionSource, Target);
+            var stateModifier = new CastActionStateModifier(ActionCode.FireStorm, lookDir);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 2)));
 

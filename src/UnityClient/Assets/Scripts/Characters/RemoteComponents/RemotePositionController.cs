@@ -7,11 +7,13 @@ public class RemotePositionController : MonoBehaviour {
     private const float m_AutoIdle = 0.1f;
 
     private MovementStateComponent m_MovementState;
+    private RotationController m_RotationController;
     private Vector3 m_LastReceivedPosition;
     private float m_LastReceivedTime;
 
     private void Start() {
         m_MovementState = GetComponent<MovementStateComponent>();
+        m_RotationController = GetComponent<RotationController>();
         EventOperations.MoveEvent += OnMoveEvent;
     }
 
@@ -45,7 +47,7 @@ public class RemotePositionController : MonoBehaviour {
     }
 
     private void UpdateRotation(Vector3 newPosition) {
-        transform.forward = newPosition - transform.position;
+        m_RotationController.LookAt(newPosition - transform.position);
     }
 
     private void OnDestroy() {

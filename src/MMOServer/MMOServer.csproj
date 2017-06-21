@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionObjects\ActionObjectFactory.cs" />
+    <Compile Include="ActionObjects\CastActionObject.cs" />
     <Compile Include="ActionObjects\SkillRequests\DashRequest.cs" />
     <Compile Include="ActionObjects\SkillRequests\FireStormRequest.cs" />
     <Compile Include="ActionObjects\SkillRequests\OrisonOfHealingRequest.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Entities\Attributes\FloatAttribute.cs" />
     <Compile Include="Entities\Attributes\IntAttribute.cs" />
     <Compile Include="Entities\Attributes\Modifiers\ActionStateModifier.cs" />
+    <Compile Include="Entities\Attributes\Modifiers\CastActionStateModifiercs.cs" />
     <Compile Include="Entities\Attributes\Modifiers\FloatModifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\IntModifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\Modifier.cs" />

@@ -3,7 +3,7 @@
     using Photon.SocketServer.Rpc;
 
     using JYW.ThesisMMO.Common.Codes;
-    using JYW.ThesisMMO.Common.Entities;
+    using Common.Types;
 
     class ActionStateChangedEvent : ActionEvent {
         [DataMember(Code = (byte)ParameterCode.Name)]
@@ -11,5 +11,8 @@
 
         [DataMember(Code = (byte)ParameterCode.ActionState)]
         public int ActionState;
+
+        [DataMember(Code = (byte)ParameterCode.LookDirection)]
+        public Vector LookDirection;
     }
 }

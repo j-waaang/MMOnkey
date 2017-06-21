@@ -7,8 +7,9 @@
     using Common.Codes;
     using Common.ContinueObjects;
     using Targets;
+    using Common.Types;
 
-    internal class BowAutoAttackRequest : ActionObject {
+    internal class BowAutoAttackRequest : CastActionObject {
 
         #region DataContract
         public BowAutoAttackRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -29,7 +30,8 @@
         }
 
         private void SetState() {
-            var stateModifier = new ActionStateModifier(ActionCode.AxeAutoAttack);
+            Vector lookDir = GetLookDir(m_ActionSource, Target);
+            var stateModifier = new CastActionStateModifier(ActionCode.BowAutoAttack, lookDir);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 

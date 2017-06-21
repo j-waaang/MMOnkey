@@ -52,6 +52,10 @@ namespace JYW.ThesisMMO.MMOServer {
             m_Entities[newEntity.Name] = newEntity;
         }
 
+        public Entity GetEntity(string name) {
+            return m_Entities[name];
+        }
+
         /// <summary>
         /// Removes the entity from the list.
         /// </summary>

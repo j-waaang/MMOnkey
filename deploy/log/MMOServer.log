@@ -46,3 +46,382 @@
 2017-06-21 15:38:30,750 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
 2017-06-21 15:38:30,760 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
 2017-06-21 15:38:30,760 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 16:42:43,212 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 16:42:43,248 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 16:42:43,260 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 16:42:43,272 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 16:42:43,272 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 16:42:43,272 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 17:24:45,999 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 80
+2017-06-21 17:24:47,827 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 60
+2017-06-21 17:24:51,124 [31] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 40
+2017-06-21 17:24:53,082 [29] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 20
+2017-06-21 17:28:25,486 [6] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 0
+2017-06-21 17:28:25,487 [6] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 234932 died.
+2017-06-21 17:28:30,589 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 80
+2017-06-21 17:28:32,726 [27] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 60
+2017-06-21 17:28:34,019 [25] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 40
+2017-06-21 17:28:37,812 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 20
+2017-06-21 17:28:40,346 [33] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 0
+2017-06-21 17:28:40,346 [33] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-21 17:28:43,345 [35] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 80
+2017-06-21 17:28:44,414 [37] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 60
+2017-06-21 17:28:45,631 [36] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 40
+2017-06-21 17:28:47,158 [34] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 20
+2017-06-21 17:28:48,632 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 0
+2017-06-21 17:28:48,632 [22] INFO  JYW.ThesisMMO.MMOServer.Entity - One Punch Man died.
+2017-06-21 17:30:14,243 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 17:30:14,275 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 17:30:14,275 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 17:30:18,385 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 17:30:18,420 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 17:30:18,431 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 17:30:18,444 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 17:30:18,444 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 17:30:18,445 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 17:30:31,392 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 80
+2017-06-21 17:30:35,505 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 60
+2017-06-21 17:30:43,611 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 40
+2017-06-21 18:44:54,561 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(-1,05, 0,00, 1,10)
+2017-06-21 18:44:54,569 [19] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-21 18:44:55,074 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 90
+2017-06-21 18:44:55,075 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:56,076 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 80
+2017-06-21 18:44:56,076 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:56,577 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 90
+2017-06-21 18:44:56,577 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 18:44:56,577 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 70
+2017-06-21 18:44:56,577 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:57,078 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 60
+2017-06-21 18:44:57,078 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:58,079 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 50
+2017-06-21 18:44:58,079 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:58,580 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 80
+2017-06-21 18:44:58,580 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 18:44:58,580 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 40
+2017-06-21 18:44:58,580 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:59,081 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 30
+2017-06-21 18:44:59,081 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:59,582 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 20
+2017-06-21 18:44:59,582 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:44:59,583 [21] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-21 18:45:01,205 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(5,44, 0,00, -0,52)
+2017-06-21 18:45:01,205 [20] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-21 18:45:06,211 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-21 18:45:10,759 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(-3,43, 0,00, 4,94)
+2017-06-21 18:45:10,759 [17] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-21 18:45:11,260 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 30
+2017-06-21 18:45:11,260 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-21 18:45:11,761 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 20
+2017-06-21 18:45:11,761 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-21 18:45:12,261 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 10
+2017-06-21 18:45:12,261 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:45:12,762 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 10
+2017-06-21 18:45:12,762 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-21 18:45:13,263 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 0
+2017-06-21 18:45:13,263 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-21 18:45:13,263 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-21 18:45:14,264 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 0
+2017-06-21 18:45:14,264 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 234932 died.
+2017-06-21 18:45:14,264 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 18:45:15,765 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-21 18:50:23,622 [8] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 60
+2017-06-21 18:50:32,178 [4] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 40
+2017-06-21 18:50:34,303 [24] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 20
+2017-06-21 18:50:40,565 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -20 damage. Health left: 0
+2017-06-21 18:50:40,565 [26] INFO  JYW.ThesisMMO.MMOServer.Entity - One Punch Man died.
+2017-06-21 18:50:49,729 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 18:50:49,748 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 18:50:49,748 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 18:50:54,716 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 18:50:54,759 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 18:50:54,770 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 18:50:54,782 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 18:50:54,782 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 18:50:54,783 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 19:43:34,996 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 19:43:35,031 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 19:43:35,031 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 19:43:46,840 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 19:43:46,877 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 19:43:46,887 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 19:43:46,900 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 19:43:46,900 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 19:43:46,900 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 20:01:19,027 [8] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 80
+2017-06-21 20:01:23,569 [4] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 80
+2017-06-21 20:01:30,007 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took 20 damage. Health left: 100
+2017-06-21 20:02:44,309 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(0,82, 0,00, 2,31)
+2017-06-21 20:02:44,315 [19] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-21 20:02:44,822 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 90
+2017-06-21 20:02:44,823 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:02:44,823 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 90
+2017-06-21 20:02:44,823 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:45,324 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 80
+2017-06-21 20:02:45,324 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:45,824 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 70
+2017-06-21 20:02:45,824 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:46,325 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 80
+2017-06-21 20:02:46,325 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:02:46,325 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 60
+2017-06-21 20:02:46,325 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:46,825 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 70
+2017-06-21 20:02:46,825 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:02:46,825 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 50
+2017-06-21 20:02:46,825 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:47,326 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 40
+2017-06-21 20:02:47,326 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:47,827 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 30
+2017-06-21 20:02:47,827 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:48,328 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 60
+2017-06-21 20:02:48,328 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:02:48,328 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 20
+2017-06-21 20:02:48,328 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:48,829 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 50
+2017-06-21 20:02:48,829 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:02:48,829 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 10
+2017-06-21 20:02:48,829 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:49,329 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -10 damage. Health left: 0
+2017-06-21 20:02:49,330 [20] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 234932 died.
+2017-06-21 20:02:49,331 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-21 20:02:49,332 [20] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-21 20:03:00,356 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(-4,07, 0,00, 0,52)
+2017-06-21 20:03:00,361 [21] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-21 20:03:00,862 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 90
+2017-06-21 20:03:00,862 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:01,363 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 80
+2017-06-21 20:03:01,363 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:01,864 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 70
+2017-06-21 20:03:01,864 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:02,364 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 60
+2017-06-21 20:03:02,364 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:02,864 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 50
+2017-06-21 20:03:02,864 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:03,365 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 40
+2017-06-21 20:03:03,365 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:03,866 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 30
+2017-06-21 20:03:03,866 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:04,366 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 20
+2017-06-21 20:03:04,366 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:04,867 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 10
+2017-06-21 20:03:04,867 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:05,367 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ghfghgh took -10 damage. Health left: 0
+2017-06-21 20:03:05,367 [22] INFO  JYW.ThesisMMO.MMOServer.Entity - ghfghgh died.
+2017-06-21 20:03:05,367 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ghfghgh.
+2017-06-21 20:03:05,367 [22] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-21 20:03:07,074 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - FireStoremReq with pos V(0,80, 0,00, 4,63)
+2017-06-21 20:03:07,074 [20] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-21 20:03:07,078 [20] ERROR Photon.SocketServer.ApplicationBase - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.FireStormRequest.CreateFireStormAndSetIdle(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\FireStormRequest.cs:line 46
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 65
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-21 20:03:07,575 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 40
+2017-06-21 20:03:07,575 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:03:08,076 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 30
+2017-06-21 20:03:08,076 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:03:08,892 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-50-EB-5C-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:08,937 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-3B-29-C6-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:08,972 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-2C-4F-DA-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,004 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-1D-4E-38-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,037 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-0E-6D-C1-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,070 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-BF-FE-FB-1A-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,077 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 20
+2017-06-21 20:03:09,077 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:03:09,104 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-BF-E0-82-BE-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,153 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-BF-C3-40-8C-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,488 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-BF-E0-F3-D7-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,521 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-BF-FE-D3-4A-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,554 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-0E-51-FF-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,578 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 10
+2017-06-21 20:03:09,579 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:03:09,587 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-1D-3E-7B-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,620 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-2C-97-62-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,670 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-42-C2-0B-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,722 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-58-E8-9B-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,756 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-68-99-0E-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,789 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-77-80-B8-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:09,822 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-83-3D-82-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:10,080 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -10 damage. Health left: 0
+2017-06-21 20:03:10,080 [19] INFO  JYW.ThesisMMO.MMOServer.Entity - One Punch Man died.
+2017-06-21 20:03:10,080 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-21 20:03:10,206 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-77-74-CE-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:10,239 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-68-7D-3A-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:10,272 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:2,ip:127.0.0.1:54669, Data: F3-02-02-00-01-0C-63-00-00-0C-C0-59-69-61-00-00-00-00-3F-B3-6F-A5,
+Exception:System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.World.MoveEntity(String username, Vector position) in D:\Projects\ThesisMMO\src\MMOServer\World.cs:line 98
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationMove(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 72
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-21 20:03:12,083 [19] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-21 20:03:26,921 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 20:03:26,928 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 20:03:26,928 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

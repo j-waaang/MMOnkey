@@ -2,10 +2,10 @@ Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55255
-Multi-casting "[IP] 192.168.178.83 [Port] 55255 [Flags] 2 [Guid] 2472335361 [EditorId] 1277564149 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55255]
-PlayerConnection already initialized - listening to [0.0.0.0:55255]
+PlayerConnection initialized network socket : 0.0.0.0 55493
+Multi-casting "[IP] 192.168.178.83 [Port] 55493 [Flags] 2 [Guid] 2714361081 [EditorId] 1277564149 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55493]
+PlayerConnection already initialized - listening to [0.0.0.0:55493]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -38,7 +38,7 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.265430 ms
+UnloadTime: 1.542299 ms
 No connection address entered. Using localhost:5055
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -109,12 +109,12 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 44)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.418741 ms
-System memory in use before: 18.7 MB.
-System memory in use after: 18.7 MB.
+UnloadTime: 5.609154 ms
+System memory in use before: 18.9 MB.
+System memory in use after: 19.0 MB.
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 580.
-Total: 0.469056 ms (FindLiveObjects: 0.036935 ms CreateObjectMapping: 0.013813 ms MarkObjects: 0.409898 ms  DeleteObjects: 0.007207 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.419507 ms (FindLiveObjects: 0.037836 ms CreateObjectMapping: 0.012311 ms MarkObjects: 0.360650 ms  DeleteObjects: 0.007207 ms)
 
 No new player listener
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -133,24 +133,51 @@ JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\Unity
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Events/NewPlayerEvent.cs Line: 28)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.562446 ms
-System memory in use before: 20.6 MB.
-System memory in use after: 20.6 MB.
+UnloadTime: 0.617100 ms
+System memory in use before: 21.1 MB.
+System memory in use after: 21.1 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 571.
-Total: 0.417105 ms (FindLiveObjects: 0.036935 ms CreateObjectMapping: 0.013513 ms MarkObjects: 0.334525 ms  DeleteObjects: 0.030930 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 577.
+Total: 0.391881 ms (FindLiveObjects: 0.036935 ms CreateObjectMapping: 0.013513 ms MarkObjects: 0.310201 ms  DeleteObjects: 0.030029 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 37a4 -> priority: 1 
-  Thread -> id: 210c -> priority: 1 
+  Thread -> id: 3dac -> priority: 1 
+  Thread -> id: 1648 -> priority: 1 
+Try instantiating object with name FireStormEntity
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+SkillEventListener:CreateSkillEntity(ActionCode, Vector3) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:95)
+<SkillCalled>c__AnonStorey2:<>m__0() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:70)
+<WaitAndCall>c__Iterator0:MoveNext() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/CombatSystem/SkillEventListener.cs Line: 95)
+
+Missing new entity behaviour.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:24)
+JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:18)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:Service()
+JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Events/EventOperations.cs Line: 24)
+
 Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55069
-Multi-casting "[IP] 192.168.178.83 [Port] 55069 [Flags] 2 [Guid] 484720048 [EditorId] 1277564149 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55069]
-PlayerConnection already initialized - listening to [0.0.0.0:55069]
+PlayerConnection initialized network socket : 0.0.0.0 55005
+Multi-casting "[IP] 192.168.178.83 [Port] 55005 [Flags] 2 [Guid] 1911704674 [EditorId] 1277564149 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55005]
+PlayerConnection already initialized - listening to [0.0.0.0:55005]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -183,7 +210,7 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.612568 ms
+UnloadTime: 1.611066 ms
 No connection address entered. Using localhost:5055
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -254,12 +281,12 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 44)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.058090 ms
+UnloadTime: 11.837210 ms
 System memory in use before: 18.7 MB.
 System memory in use after: 18.7 MB.
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 580.
-Total: 0.491578 ms (FindLiveObjects: 0.038737 ms CreateObjectMapping: 0.014714 ms MarkObjects: 0.429417 ms  DeleteObjects: 0.007207 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 581.
+Total: 0.486172 ms (FindLiveObjects: 0.042641 ms CreateObjectMapping: 0.014714 ms MarkObjects: 0.419507 ms  DeleteObjects: 0.007807 ms)
 
 No new player listener
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
@@ -278,13 +305,100 @@ JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\Unity
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Events/NewPlayerEvent.cs Line: 28)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.605088 ms
-System memory in use before: 20.5 MB.
-System memory in use after: 20.5 MB.
+UnloadTime: 0.650732 ms
+System memory in use before: 20.4 MB.
+System memory in use after: 20.4 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 571.
-Total: 0.375965 ms (FindLiveObjects: 0.036035 ms CreateObjectMapping: 0.012912 ms MarkObjects: 0.297589 ms  DeleteObjects: 0.028227 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 577.
+Total: 0.462449 ms (FindLiveObjects: 0.039338 ms CreateObjectMapping: 0.015014 ms MarkObjects: 0.362452 ms  DeleteObjects: 0.043542 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2c90 -> priority: 1 
-  Thread -> id: 2fb8 -> priority: 1 
+  Thread -> id: 1e90 -> priority: 1 
+  Thread -> id: 3bdc -> priority: 1 
+Try instantiating object with name FireStormEntity
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+SkillEventListener:CreateSkillEntity(ActionCode, Vector3) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:95)
+<SkillCalled>c__AnonStorey2:<>m__0() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:70)
+<WaitAndCall>c__Iterator0:MoveNext() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/CombatSystem/SkillEventListener.cs Line: 95)
+
+Missing new entity behaviour.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:24)
+JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:18)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:Service()
+JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Events/EventOperations.cs Line: 24)
+
+Missing new entity behaviour.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:24)
+JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:18)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:Service()
+JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Events/EventOperations.cs Line: 24)
+
+Look rotation viewing vector is zero
+UnityEngine.Quaternion:INTERNAL_CALL_LookRotation(Vector3&, Vector3&, Quaternion&)
+UnityEngine.Quaternion:LookRotation(Vector3) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MathBindings.gen.cs:112)
+UnityEngine.Transform:set_forward(Vector3) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\TransformBindings.gen.cs:90)
+RotationController:LookAt(Vector3, Single) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Characters\RotationController.cs:17)
+RemoteActionStateComponent:OnActionStateUpdateEvent(String, ActionCode, Nullable`1) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Characters\RemoteComponents\RemoteActionStateComponent.cs:22)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:OnActionStateUpdateEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\ActionStateUpdateEvent.cs:29)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:12)
+JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:18)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:Service()
+JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
+
+[C:/buildslave/unity/build/artifacts/generated/common/runtime/MathBindings.gen.cpp line 92] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/MathBindings.gen.cs Line: 112)
+
+Try instantiating object with name FireStormEntity
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+SkillEventListener:CreateSkillEntity(ActionCode, Vector3) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:95)
+<SkillCalled>c__AnonStorey2:<>m__0() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:70)
+<WaitAndCall>c__Iterator0:MoveNext() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\CombatSystem\SkillEventListener.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/CombatSystem/SkillEventListener.cs Line: 95)
+
+Missing new entity behaviour.
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:24)
+JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnEvent(EventData) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:18)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:Service()
+JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Events/EventOperations.cs Line: 24)
+

@@ -9,6 +9,7 @@
         EntityType,
         FloatValue,
         IntValue,
+        LookDirection,
         MaxHealth,
         Name,
         Position,

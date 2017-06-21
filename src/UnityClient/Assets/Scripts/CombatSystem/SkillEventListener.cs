@@ -9,11 +9,19 @@ using UnityEngine;
 
 public class SkillEventListener : MonoBehaviour {
 
-    [SerializeField] private Collider m_GroundCollider;
-    [SerializeField] private ActionStateComponent m_PlayerActionState;
+    [SerializeField]
+    private Collider m_GroundCollider;
+    [SerializeField]
+    private GameObject m_Player;
+
+    private ActionStateComponent m_PlayerActionState;
+    private RotationController m_PlayerRotationController;
     private TargetSelection m_TargetSelector;
 
     void Start() {
+        m_PlayerActionState = m_Player.GetComponent<ActionStateComponent>();
+        m_PlayerRotationController = m_Player.GetComponent<RotationController>();
+
         m_TargetSelector = FindObjectOfType<TargetSelection>();
         var skillCallers = FindObjectsOfType<SkillCaller>();
         foreach (SkillCaller skillCaller in skillCallers) {
@@ -31,7 +39,7 @@ public class SkillEventListener : MonoBehaviour {
                 break;
             case ActionCode.HammerBash:
                 RequestOperations.HammerBashRequest();
-                m_PlayerActionState.SetActionStateForSeconds(skill, 1);
+                CastSkill(skill, Vector3.back, 1f);
                 break;
         }
 
@@ -40,14 +48,13 @@ public class SkillEventListener : MonoBehaviour {
             case ActionCode.DistractingShot:
                 if (GameData.Target != null || m_TargetSelector.SetTarget()) {
                     RequestOperations.DistractingShotRequest(GameData.Target.name);
-                    m_PlayerActionState.SetActionStateForSeconds(skill, 0.5f);
-
+                    CastSkill(skill, GameData.Target.transform.position, 0.5f);
                 }
                 break;
             case ActionCode.OrisonOfHealing:
                 if (GameData.Target != null || m_TargetSelector.SetTarget()) {
                     RequestOperations.OrisonOfHealingRequest(GameData.Target.name);
-                    m_PlayerActionState.SetActionStateForSeconds(skill, 1);
+                    CastSkill(skill, GameData.Target.transform.position, 1f);
                 }
                 break;
         }
@@ -58,10 +65,9 @@ public class SkillEventListener : MonoBehaviour {
                 var screenPos = Input.mousePosition;
                 var screenRay = Camera.main.ScreenPointToRay(screenPos);
                 RaycastHit hit;
-                if (m_GroundCollider.Raycast(screenRay, out hit, 20)) {
+                if (m_GroundCollider.Raycast(screenRay, out hit, 20f)) {
                     RequestOperations.FireStormRequest(hit.point);
-                    m_PlayerActionState.SetActionStateForSeconds(skill, 2);
-                    StartCoroutine(WaitAndCall(2, () => CreateSkillEntity(skill, hit.point)));
+                    CastSkill(skill, hit.point, 2f, () => CreateSkillEntity(skill, hit.point));
                 }
                 break;
         }
@@ -71,6 +77,16 @@ public class SkillEventListener : MonoBehaviour {
         yield return new WaitForSeconds(waitTime);
         // TODO: check for incoming interupt events
         method();
+    }
+
+    private void CastSkill(ActionCode action, Vector3 lookPoint, float duration) {
+        m_PlayerActionState.SetActionStateForSeconds(action, duration);
+        m_PlayerRotationController.LookAtPoint(lookPoint, duration);
+    }
+
+    private void CastSkill(ActionCode action, Vector3 lookPoint, float duration, Action onFinishCast) {
+        CastSkill(action, lookPoint, duration);
+        StartCoroutine(WaitAndCall(2, onFinishCast));
     }
 
     private void CreateSkillEntity(ActionCode skill, Vector3 position) {
