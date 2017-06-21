@@ -1,4 +1,5 @@
-﻿using JYW.ThesisMMO.Common.ContinueObjects;
+﻿using System;
+using JYW.ThesisMMO.Common.ContinueObjects;
 using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
 using JYW.ThesisMMO.MMOServer.Targets;
 
@@ -21,9 +22,7 @@ namespace JYW.ThesisMMO.MMOServer.AI {
             m_DamageTicker.ContinueEvent += Tick;
             m_DamageTicker.Start();
         }
-
-        public override void Update() {
-        }
+        
 
         private void Tick(CallReason callReason) {
             DoDamage();
@@ -36,6 +35,9 @@ namespace JYW.ThesisMMO.MMOServer.AI {
 
         private void DoDamage() {
             World.Instance.ApplyModifier(m_AoeTarget, m_DamageMod);
+        }
+
+        public override void Update(TimeSpan deltaTime) {
         }
     }
 }

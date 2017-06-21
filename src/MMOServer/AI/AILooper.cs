@@ -14,7 +14,7 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         private List<AIEntity> m_AIEntites = new List<AIEntity>();
         private Thread m_AIThread;
         private bool m_Running;
-        private const int m_TickrateMilliSec = 300;
+        private readonly TimeSpan m_TickTimeout = new TimeSpan(0, 0, 0, 0, 33);
 
         private static AILooper m_Instance = null;
         private static readonly object m_Lock = new object();
@@ -34,6 +34,7 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         }
 
         private AILooper() {
+
             m_Running = true;
             m_AIThread = new Thread(AILoop);
             m_AIThread.Start();
@@ -45,9 +46,9 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         private void AILoop() {
             while (m_Running) {
                 foreach(AIEntity entity in m_AIEntites) {
-                    entity.Update();
+                    entity.Update(m_TickTimeout);
                 }
-                Thread.Sleep(m_TickrateMilliSec);
+                Thread.Sleep(m_TickTimeout);
             }
         }
 

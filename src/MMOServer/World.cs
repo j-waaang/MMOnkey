@@ -97,6 +97,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 Name = movedEntity.Name,
                 Position = movedEntity.Position
             };
+
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
             var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
 
@@ -148,6 +149,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         //    return entities;
         //}
+
         internal bool CanPerformAction(string actionSource, ActionCode action) {
             return m_Entities[actionSource].CanPerformAction(action);
         }

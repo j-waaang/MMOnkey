@@ -20,6 +20,6 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         /// <summary> 
         /// Called by AIModule's loop.
         /// </summary>
-        public abstract void Update();
+        public abstract void Update(TimeSpan deltaTime);
     }
 }

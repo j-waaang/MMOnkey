@@ -1,5 +1,6 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.AI {
 
+    using System;
     using JYW.ThesisMMO.Common.Types;
 
     /// <summary> 
@@ -7,8 +8,8 @@
     /// </summary>
     internal class TestBot : AIEntity {
 
-        private const int MaxStepsInOneDirection = 10;
-        private const float MoveSpeed = 0.2f;
+        private const int MaxStepsInOneDirection = 30;
+        private const float MoveSpeed = 7f;
 
         private int m_MoveDirection = 1;
         private int m_StepsDoneInOneDirection = 0;
@@ -16,17 +17,17 @@
         public TestBot(Entity entity) : base (entity) {
         }
 
-        public override void Update() {
+        public override void Update(TimeSpan deltaTime) {
             if (m_StepsDoneInOneDirection >= MaxStepsInOneDirection) {
                 ChangeDirection();
                 return;
             }
-
-            Move();
+            Move(deltaTime);
         }
 
-        private void Move() {
-            var newPos = Entity.Position + new Vector(0, m_MoveDirection * MoveSpeed);
+        private void Move(TimeSpan deltaTime) {
+            var moveAmt = new Vector(0, m_MoveDirection * MoveSpeed * (float)deltaTime.TotalSeconds);
+            var newPos = Entity.Position + moveAmt;
             World.Instance.MoveEntity(Entity.Name, newPos);
             m_StepsDoneInOneDirection++;
         }

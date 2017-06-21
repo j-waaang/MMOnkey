@@ -1,5 +1,4 @@
 ﻿using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
-using UnityEngine;
 
 public class RemoteMovementSpeedComponent : MovementSpeedComponent {
 
