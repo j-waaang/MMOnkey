@@ -16,3 +16,33 @@
 2017-06-21 11:12:17,352 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
 2017-06-21 11:12:17,363 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
 2017-06-21 11:12:17,363 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 15:14:35,615 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 15:14:35,673 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 15:14:35,687 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 15:14:35,715 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 15:14:35,715 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 15:14:35,716 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 15:23:29,411 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 15:23:29,432 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 15:23:29,432 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 15:24:15,955 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 15:24:15,994 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 15:24:15,994 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 15:25:28,765 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 15:25:28,775 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 15:25:28,775 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 15:32:50,357 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 15:32:50,426 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 15:32:50,426 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 15:38:00,134 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 15:38:00,154 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 15:38:00,154 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-21 15:38:05,669 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-21 15:38:05,713 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-21 15:38:05,725 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 15:38:05,738 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 15:38:05,738 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-21 15:38:05,738 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-21 15:38:30,750 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-21 15:38:30,760 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-21 15:38:30,760 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
