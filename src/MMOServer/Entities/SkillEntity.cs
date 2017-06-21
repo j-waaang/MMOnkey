@@ -9,12 +9,17 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
     internal class SkillEntity : Entity {
 
         public ActionCode ActionCode { get; private set; }
+        public string Caster { get; private set; }
 
-        public SkillEntity(string name, Vector position, ActionCode actionCode) : base(name, position, null, null) {
+        public SkillEntity(string caster, string name, Vector position, ActionCode actionCode) : base(name, position, null, null) {
+            log.InfoFormat("Creating skillentity with actioncode {0}", ActionCode);
+
             ActionCode = actionCode;
+            Caster = caster;
         }
 
         public override IEventData GetNewEntityEventData() {
+            log.InfoFormat("Creating skillentity event data with actioncode {0}", ActionCode.ToString());
             var newPlayerEv = new NewSkillEntityEvent() {
                 Name = Name,
                 Position = Position,

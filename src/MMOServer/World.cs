@@ -14,6 +14,7 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using Targets;
+    using Entities;
 
     /// <summary> 
     /// The game world containing entities and methods modifiying them.
@@ -45,11 +46,22 @@ namespace JYW.ThesisMMO.MMOServer {
         internal void AddEntity(Entity newEntity) {
 
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+
+            ////In case this is a skill enity we skip notifying the owner.
+            //Entity entityOwner = null;
+            //if(newEntity.GetType() == typeof(SkillEntity)) {
+            //    entityOwner = m_Entities[((SkillEntity)newEntity).Caster];
+            //}
+
+            var eventData = newEntity.GetNewEntityEventData();
+
             foreach (Entity entity in m_Entities.Values) {
-                entity.SendEvent(newEntity.GetNewEntityEventData(), sendParameters);
+                //if(entity == entityOwner) { continue; }
+                entity.SendEvent(eventData, sendParameters);
             }
-            
-            m_Entities[newEntity.Name] = newEntity;
+
+            m_Entities.Add(newEntity.Name, newEntity);
+            //m_Entities[newEntity.Name] = newEntity;
         }
 
         public Entity GetEntity(string name) {

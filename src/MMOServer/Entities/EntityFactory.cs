@@ -45,11 +45,13 @@ namespace JYW.ThesisMMO.MMOServer {
             attributes[2] = new ActionStateAttribute();
             attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
-            return new Entity(operation.Name, position, attributes, peer);
+            var entity = new Entity(operation.Name, position, attributes, peer);
+            World.Instance.AddEntity(entity);
+            return entity;
         }
 
-        internal void CreateSkillEntity(string id, ActionCode actionCode, Vector startPosition) {
-
+        internal void CreateSkillEntity(string caster, string id, ActionCode actionCode, Vector startPosition) {
+            log.InfoFormat("Factory received skill entity creation request with code {0}", actionCode);
             var name = actionCode.ToString() + id;
 
             var stringType = aiEntityNameSpace + actionCode.ToString() + "AI";
@@ -60,7 +62,8 @@ namespace JYW.ThesisMMO.MMOServer {
                 return;
             }
 
-            Entity skillEntity = new SkillEntity(name, startPosition, actionCode);
+            var skillEntity = new SkillEntity(caster, name, startPosition, actionCode);
+            World.Instance.AddEntity(skillEntity);
             Activator.CreateInstance(actionType, skillEntity);
         }
 
@@ -73,7 +76,9 @@ namespace JYW.ThesisMMO.MMOServer {
             attributes[2] = new ActionStateAttribute();
             attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
-            new TestBot(new Entity(name, position, attributes, null));
+            var aiEntity = new Entity(name, position, attributes, null);
+            World.Instance.AddEntity(aiEntity);
+            new TestBot(aiEntity);
         }
         
         // TODO: Change design so health does not depend on weapon.

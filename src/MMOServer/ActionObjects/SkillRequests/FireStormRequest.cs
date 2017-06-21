@@ -42,9 +42,9 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         private void CreateFireStormAndSetIdle(CallReason continueReason) {
             log.InfoFormat("FireStoremReq with pos {0}", Target);
             m_LastCreatedID++;
-            EntityFactory.Instance.CreateSkillEntity(m_LastCreatedID.ToString(), ActionCode.FireStorm, Target);
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
             World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            EntityFactory.Instance.CreateSkillEntity(m_ActionSource, m_LastCreatedID.ToString(), ActionCode.FireStorm, Target);
             ContinueEvent -= CreateFireStormAndSetIdle;
         }
     }

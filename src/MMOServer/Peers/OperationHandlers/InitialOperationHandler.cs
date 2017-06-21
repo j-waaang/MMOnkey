@@ -66,7 +66,7 @@
             // Must happen after OK is sent to server.
             // Notify other peers about new player by adding the entity to the world cache.
             //TODO: Missing checks when adding new entity. E.g. is there already an entity with the same name.
-            World.Instance.AddEntity(entity);
+            //World.Instance.AddEntity(entity);
 
             return null;
         }

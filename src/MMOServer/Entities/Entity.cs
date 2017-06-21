@@ -16,7 +16,7 @@ namespace JYW.ThesisMMO.MMOServer {
     /// </summary>
     internal class Entity {
 
-        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
 
         // TODO: Add quick references for attributes.
@@ -53,8 +53,6 @@ namespace JYW.ThesisMMO.MMOServer {
                 attributesString += code.ToString();
             }
             log.DebugFormat("Entity created w. name {0} w. attributes {1}", Name, attributesString);
-
-            World.Instance.AddEntity(this);
         }
 
         /// <summary> 

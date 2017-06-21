@@ -67,7 +67,7 @@ public class SkillEventListener : MonoBehaviour {
                 RaycastHit hit;
                 if (m_GroundCollider.Raycast(screenRay, out hit, 20f)) {
                     RequestOperations.FireStormRequest(hit.point);
-                    CastSkill(skill, hit.point, 2f, () => CreateSkillEntity(skill, hit.point));
+                    CastSkill(skill, hit.point, 2f, () => SkillEntitySpawner.CreateSkillEntity(skill, hit.point));
                 }
                 break;
         }
@@ -87,12 +87,5 @@ public class SkillEventListener : MonoBehaviour {
     private void CastSkill(ActionCode action, Vector3 lookPoint, float duration, Action onFinishCast) {
         CastSkill(action, lookPoint, duration);
         StartCoroutine(WaitAndCall(2, onFinishCast));
-    }
-
-    private void CreateSkillEntity(ActionCode skill, Vector3 position) {
-        var name = Enum.GetName(typeof(ActionCode), skill);
-        name += "Entity";
-        Debug.LogFormat("Try instantiating object with name {0}", name);
-        Instantiate(Resources.Load(name, typeof(GameObject)), position, Quaternion.identity);
     }
 }
