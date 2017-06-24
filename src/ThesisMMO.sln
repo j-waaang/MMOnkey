@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMOServer", "MMOServer\MMOS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{46CAA3C6-3718-4538-986F-14F95F3AFF5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotClient", "BotClient\BotClient.csproj", "{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +21,7 @@ Global
 		{E2525352-7192-4627-8152-438DD23FA802}.Debug|x64.Build.0 = Debug|Any CPU
 		{E2525352-7192-4627-8152-438DD23FA802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2525352-7192-4627-8152-438DD23FA802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2525352-7192-4627-8152-438DD23FA802}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{E2525352-7192-4627-8152-438DD23FA802}.Release|x64.ActiveCfg = Release|Any CPU
 		{E2525352-7192-4627-8152-438DD23FA802}.Release|x64.Build.0 = Release|Any CPU
 		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -31,16 +30,9 @@ Global
 		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Debug|x64.Build.0 = Debug|Any CPU
 		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Release|x64.ActiveCfg = Release|Any CPU
 		{46CAA3C6-3718-4538-986F-14F95F3AFF5E}.Release|x64.Build.0 = Release|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Debug|x64.Build.0 = Debug|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Release|x64.ActiveCfg = Release|Any CPU
-		{9BB46CF9-33DC-4488-ADEA-59E005D8DB7F}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

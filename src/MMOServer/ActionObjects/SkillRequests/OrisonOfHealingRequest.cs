@@ -21,7 +21,7 @@
 
         public override bool CheckPrerequesite() {
             var target = new EntityTarget() { TargetName = Target };
-            return World.Instance.CanPerformAction(m_ActionSource, ActionCode.AxeAutoAttack, target);
+            return World.Instance.CanPerformAction(ActionSource, ActionCode.OrisonOfHealing, target);
         }
 
         public override void StartAction() {
@@ -29,9 +29,9 @@
         }
 
         private void SetState() {
-            var lookDir = GetLookDir(m_ActionSource, Target);
+            var lookDir = GetLookDir(ActionSource, Target);
             var stateModifier = new CastActionStateModifier(ActionCode.OrisonOfHealing, lookDir);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
 
             ContinueEvent += DoHealing;
@@ -44,7 +44,7 @@
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, 30);
             World.Instance.ApplyModifier(Target, healthModifier);
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
         }
     }
 }

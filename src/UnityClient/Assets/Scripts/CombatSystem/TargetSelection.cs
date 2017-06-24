@@ -19,9 +19,6 @@ public class TargetSelection : MonobehaviourSingleton<TargetSelection> {
             GameData.Target = hit.collider.gameObject;
             return true;
         }
-        else {
-            GameData.Target = null;
-            return false;
-        }
+        return false;
     }
 }

@@ -14,7 +14,6 @@
 
         private RemoteMovementSpeedComponent m_MovementSpeed;
         private MovementStateComponent m_MovementState;
-        private CharacterAnimationController m_CharacterAnimationController;
         private RotationController m_RotationController;
 
         private Vector3 m_LastSendVector;
@@ -26,7 +25,6 @@
             m_RotationController = GetComponent<RotationController>();
             m_MovementSpeed = GetComponent<RemoteMovementSpeedComponent>();
             m_MovementState = GetComponent<MovementStateComponent>();
-            m_CharacterAnimationController = GetComponent<CharacterAnimationController>();
         }
 
         private void Update() {

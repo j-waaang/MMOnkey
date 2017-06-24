@@ -16,13 +16,12 @@
             : base(actionSource, protocol, request) {
         }
 
-        [DataMember(Code = (byte)ParameterCode.Name)]
-        public string Target { get; set; }
+        [DataMember(Code = (byte)ParameterCode.LookDirection)]
+        public Vector LookDirection { get; set; }
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            var target = new EntityTarget() { TargetName = Target };
-            return World.Instance.CanPerformAction(m_ActionSource, ActionCode.AxeAutoAttack, target);
+            return World.Instance.CanPerformAction(ActionSource, ActionCode.BowAutoAttack);
         }
 
         public override void StartAction() {
@@ -30,30 +29,22 @@
         }
 
         private void SetState() {
-            Vector lookDir = GetLookDir(m_ActionSource, Target);
-            var stateModifier = new CastActionStateModifier(ActionCode.BowAutoAttack, lookDir);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            var stateModifier = new CastActionStateModifier(ActionCode.BowAutoAttack, LookDirection);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
-            ContinueEvent += DoDamage;
+            ContinueEvent += CreateArrow;
             ActivateConditions();
         }
 
-        private void DoDamage(CallReason continueReason) {
-            var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
-            World.Instance.ApplyModifier(Target, healthModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
+        private void CreateArrow(CallReason continueReason) {
+            ContinueEvent -= CreateArrow;
 
-            ContinueEvent -= DoDamage;
-            ContinueEvent += SetIdle;
-
-            ActivateConditions();
-        }
-
-        private void SetIdle(CallReason continueReason) {
-            ContinueEvent -= SetIdle;
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
+
+            var startPos = World.Instance.GetEntity(ActionSource).Position;
+            EntityFactory.Instance.CreateSkillEntity(this, startPos);
         }
     }
 }

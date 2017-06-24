@@ -9,31 +9,30 @@
     using Targets;
     using Common.Types;
 
-    class AxeAutoAttackRequest : CastActionObject {
+    internal class AxeAutoAttackRequest : CastActionObject {
 
         #region DataContract
         public AxeAutoAttackRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(actionSource, protocol, request) {
         }
 
-        [DataMember(Code = (byte)ParameterCode.Name)]
-        public string Target { get; set; }
+        [DataMember(Code = (byte)ParameterCode.LookDirection)]
+        public Vector LookDirection { get; set; }
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            var target = new EntityTarget() { TargetName = Target };
-
-            return World.Instance.CanPerformAction(m_ActionSource, ActionCode.AxeAutoAttack, target);
+            return World.Instance.CanPerformAction(ActionSource, ActionCode.AxeAutoAttack);
         }
 
         public override void StartAction() {
+            // In case the client did not normalize
+            LookDirection = LookDirection.Normalized;
             SetState();
         }
 
         private void SetState() {
-            Vector lookDir = GetLookDir(m_ActionSource, Target);
-            var stateModifier = new CastActionStateModifier(ActionCode.AxeAutoAttack, lookDir);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            var stateModifier = new CastActionStateModifier(ActionCode.AxeAutoAttack, LookDirection);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent += DoDamage;
@@ -42,7 +41,18 @@
 
         private void DoDamage(CallReason continueReason) {
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
-            World.Instance.ApplyModifier(Target, healthModifier);
+            var sourcePos = World.Instance.GetEntity(ActionSource).Position;
+            var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
+
+            var dmgArea = new RectangleAreaTarget() {
+                AreaTargetOption = AreaTargetOption.IgnoreSource,
+                A = sourcePos + LookDirP * 0.7f,
+                B = sourcePos - LookDirP * 0.7f,
+                C = sourcePos - LookDirP * 0.7f + LookDirection * 2,
+                SourceName = ActionSource
+            };
+
+            World.Instance.ApplyModifier(dmgArea, healthModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent -= DoDamage;
@@ -54,7 +64,7 @@
         private void SetIdle(CallReason continueReason) {
             ContinueEvent -= SetIdle;
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
         }
     }
 }

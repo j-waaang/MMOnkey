@@ -18,7 +18,7 @@
         #region DataContract
         public ActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
-            m_ActionSource = actionSource;
+            ActionSource = actionSource;
             log.DebugFormat("Created {0} ActionObject", GetType().Name);
         }
 
@@ -32,9 +32,10 @@
         #endregion DataContract
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        private static int LastUsedID = 0;
 
         protected event Action<CallReason> ContinueEvent;
-        protected string m_ActionSource;
+        public string ActionSource { get; protected set; }
 
         private List<ActionContinueCondition> m_ContinueConidtions = new List<ActionContinueCondition>();
         private IRpcProtocol protocol;
@@ -62,6 +63,11 @@
             m_ContinueConidtions.Clear();
             
             ContinueEvent(continueReason);
+        }
+
+        public int GetNextID() {
+            LastUsedID++;
+            return LastUsedID;
         }
     }
 }

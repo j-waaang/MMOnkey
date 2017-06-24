@@ -65,6 +65,7 @@
     <Compile Include="ActionObjects\SkillRequests\OrisonOfHealingRequest.cs" />
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AILooper.cs" />
+    <Compile Include="AI\BowAutoAttackAI.cs" />
     <Compile Include="AI\FireStormAI.cs" />
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
@@ -85,8 +86,10 @@
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />
     <Compile Include="Targets\CircleAreaTarget.cs" />
+    <Compile Include="Targets\ConeAreaTarget.cs" />
     <Compile Include="Targets\EntityTarget.cs" />
     <Compile Include="Targets\PointTarget.cs" />
+    <Compile Include="Targets\RectangleAreaTarget.cs" />
     <Compile Include="Targets\Target.cs" />
     <Compile Include="Targets\TargetType.cs" />
     <Compile Include="Events\ActionEvents\ActionEvent.cs" />

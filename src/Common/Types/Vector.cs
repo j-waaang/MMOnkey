@@ -63,12 +63,27 @@
             return new Vector { X = Math.Min(value1.X, value2.X), Y = Math.Min(value1.Y, value2.Y), Z = Math.Min(value1.Z, value2.Z) };
         }
 
+        public static float Dot(Vector a, Vector b) {
+            return a.X * b.X + a.Y * b.Y + a.Z * b.Z;
+        }
+
         public override string ToString() {
             return string.Format("{0}({1:0.00}, {2:0.00}, {3:0.00})", "V", X, Y, Z);
         }
 
+        public Vector Normalized {
+            get {
+                var length = Length;
+                return new Vector(X / Length, Y / Length, Z / Length);
+            }
+        }
+
         public bool IsZero {
             get { return Math.Abs(this.X) < TOLERANCE && Math.Abs(this.Y) < TOLERANCE && Math.Abs(this.Z) < TOLERANCE; }
+        }
+
+        public float Length {
+            get { return X * X + Y * Y + Z * Z; }
         }
 
         public float Len2 {

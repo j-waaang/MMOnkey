@@ -1,4 +1,5 @@
 ﻿using JYW.ThesisMMO.Common.Entities;
+using JYW.ThesisMMO.UnityClient.Core;
 using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
 using UnityEngine;
 
@@ -23,6 +24,8 @@ public class RemotePositionController : MonoBehaviour {
         if(Time.time - m_LastReceivedTime > m_AutoIdle) {
             m_MovementState.MovementState = MovementState.Idle;
         }
+
+        //Debug.LogFormat("Ping: {0}", Game.Instance.GetRTT());
     }
 
     /// <summary>  

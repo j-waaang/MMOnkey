@@ -10,7 +10,7 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
     internal class FireStormRequest : CastActionObject {
 
-        private int m_LastCreatedID = 0;
+        private static int m_LastCreatedID = 0;
 
         #region DataContract
         public FireStormRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -22,7 +22,7 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(m_ActionSource, ActionCode.FireStorm);
+            return World.Instance.CanPerformAction(ActionSource, ActionCode.FireStorm);
         }
 
         public override void StartAction() {
@@ -30,9 +30,9 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         }
 
         private void SetState() {
-            var lookDir = GetLookDir(m_ActionSource, Target);
+            var lookDir = GetLookDir(ActionSource, Target);
             var stateModifier = new CastActionStateModifier(ActionCode.FireStorm, lookDir);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 2)));
 
             ContinueEvent += CreateFireStormAndSetIdle;
@@ -43,8 +43,8 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
             log.InfoFormat("FireStoremReq with pos {0}", Target);
             m_LastCreatedID++;
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(m_ActionSource, stateModifier);
-            EntityFactory.Instance.CreateSkillEntity(m_ActionSource, m_LastCreatedID.ToString(), ActionCode.FireStorm, Target);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
+            EntityFactory.Instance.CreateSkillEntity(ActionSource, m_LastCreatedID.ToString(), ActionCode.FireStorm, Target);
             ContinueEvent -= CreateFireStormAndSetIdle;
         }
     }

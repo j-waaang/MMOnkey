@@ -3,7 +3,6 @@
 namespace JYW.ThesisMMO.MMOServer.Targets {
     abstract internal class AreaTarget : Target{
 
-        public Vector Center { get; set; }
         public string SourceName { get; set; }
         public AreaTargetOption AreaTargetOption { get; set; }
 

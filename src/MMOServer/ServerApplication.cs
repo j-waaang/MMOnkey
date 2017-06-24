@@ -9,8 +9,6 @@
     using log4net.Config;
     using System.IO;
     using AI;
-    using System;
-    using System.Reflection;
 
     /// <summary> 
     /// Main class of the server.
@@ -60,9 +58,9 @@
         }
 
         private void CreateTestBots() {
-            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(2, 2));
-            EntityFactory.Instance.CreateAIBot("Ork 234932", new Vector(0, -2));
-            EntityFactory.Instance.CreateAIBot("Ork 452537", new Vector(-3, 4));
+            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(2, 2), true);
+            EntityFactory.Instance.CreateAIBot("Ork 234932", new Vector(0, -2), true);
+            EntityFactory.Instance.CreateAIBot("Ork 452537", new Vector(-3, 4), false);
         }
     }
 }

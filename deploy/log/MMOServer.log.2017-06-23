@@ -1,0 +1,177 @@
+2017-06-23 14:27:56,390 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-23 14:27:56,465 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-23 14:27:56,488 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:27:56,489 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:27:56,489 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:27:56,489 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-23 14:28:08,258 [12] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:54809, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-C0-53-DF-E2-00-00-00-00-3F-C7-59-B0,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:23,705 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-C0-29-CC-D1-00-00-00-00-BC-92-A6-00,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:24,749 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-C0-0E-7C-EC-00-00-00-00-3F-CB-EE-E8,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:25,843 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-3F-3C-63-80-00-00-00-00-BD-5B-F9-40,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:27,051 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-C0-4A-99-AF-00-00-00-00-BF-C2-C4-8A,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:29,304 [10] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-C0-2F-09-48-00-00-00-00-40-29-DE-6A,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:31,740 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-90-0B-00-00-00-00-00-40-93-7D-19,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:29:33,314 [12] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:52806, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-EC-7B-7A-00-00-00-00-40-9B-3D-C6,
+Exception:System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.GetLookDir(String actionSource, String actionTarget) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 16
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.SetState() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 35
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-23 14:36:04,038 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-23 14:36:04,107 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-23 14:36:04,107 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-23 14:53:17,515 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-23 14:53:17,549 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-23 14:53:17,570 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:53:17,571 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:53:17,571 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:53:17,571 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-23 14:56:07,324 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-23 14:56:07,334 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-23 14:56:07,334 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-23 14:56:22,045 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-23 14:56:22,110 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-23 14:56:22,131 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:56:22,132 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:56:22,132 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:56:22,132 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-23 14:57:19,696 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-23 14:57:19,707 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-23 14:57:19,707 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-23 14:57:54,486 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-23 14:57:54,520 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-23 14:57:54,542 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:57:54,543 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:57:54,543 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 14:57:54,543 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-23 14:58:12,941 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 80
+2017-06-23 14:58:12,942 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 14:58:17,843 [24] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 60
+2017-06-23 14:58:17,843 [24] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 14:58:20,312 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 40
+2017-06-23 14:58:20,312 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 14:58:25,330 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-23 14:58:25,340 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-23 14:58:25,340 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-23 15:01:38,822 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-23 15:01:38,857 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-23 15:01:38,880 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 15:01:38,881 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 15:01:38,881 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 15:01:38,882 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-23 15:02:14,610 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 80
+2017-06-23 15:02:14,611 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 15:02:16,465 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 60
+2017-06-23 15:02:16,465 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 15:02:18,320 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 40
+2017-06-23 15:02:18,320 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 15:02:20,722 [24] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 20
+2017-06-23 15:02:20,722 [24] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 15:02:22,445 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -20 damage. Health left: 0
+2017-06-23 15:02:22,446 [26] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-23 15:02:22,447 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-23 15:02:25,609 [28] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 80
+2017-06-23 15:02:25,609 [28] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-23 15:02:34,274 [34] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 60
+2017-06-23 15:02:34,277 [34] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-23 15:04:25,913 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 40
+2017-06-23 15:04:25,913 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-23 15:04:29,227 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 20
+2017-06-23 15:04:29,227 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-23 15:08:55,914 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-23 15:08:55,922 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-23 15:08:55,922 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-23 15:20:53,358 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-23 15:20:53,393 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-23 15:20:53,415 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 15:20:53,417 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 15:20:53,417 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-23 15:20:53,417 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-23 15:24:47,404 [50] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -20 damage. Health left: 80
+2017-06-23 15:24:47,405 [50] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-23 22:33:31,659 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-23 22:33:31,690 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-23 22:33:31,690 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

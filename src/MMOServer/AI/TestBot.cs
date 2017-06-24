@@ -8,6 +8,8 @@
     /// </summary>
     internal class TestBot : AIEntity {
 
+        public bool canMove = true;
+
         private const int MaxStepsInOneDirection = 30;
         private const float MoveSpeed = 7f;
 
@@ -18,6 +20,8 @@
         }
 
         public override void Update(TimeSpan deltaTime) {
+            if (!canMove) { return; }
+
             if (m_StepsDoneInOneDirection >= MaxStepsInOneDirection) {
                 ChangeDirection();
                 return;

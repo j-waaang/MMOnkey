@@ -8,6 +8,7 @@ namespace JYW.ThesisMMO.MMOServer.Targets {
     class CircleAreaTarget : AreaTarget {
 
         public float Radius { get; set; }
+        public Vector Center { get; set; }
 
         public override bool IsEntityInArea(Entity entity) {
             if(entity.GetType() == typeof(SkillEntity)) { return false; }

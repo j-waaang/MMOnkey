@@ -38,6 +38,10 @@
             m_PhotonPeer.Service();
         }
 
+        public int GetRTT() {
+            return m_PhotonPeer.RoundTripTime;
+        }
+
         public void Connect(string serverAddress, Action connectedCallback) {
             m_ConnectedCallback = connectedCallback;
             m_PhotonPeer.Connect(serverAddress, m_ApplicationName);

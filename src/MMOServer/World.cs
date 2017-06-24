@@ -212,8 +212,14 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        internal void ApplyModifier(string entityTargetName, Modifier modifier) {
-            modifier.ApplyEffect(m_Entities[entityTargetName]);
+        internal void ApplyModifier(string target, Modifier modifier) {
+            Entity entity = null;
+            m_Entities.TryGetValue(target, out entity);
+            if(entity == null) {
+                log.InfoFormat("Trying to apply modifier on {0} but {0} doesn't exist.", target);
+                return;
+            }
+            modifier.ApplyEffect(entity);
         }
 
         public void Dispose() {

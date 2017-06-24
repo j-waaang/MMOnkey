@@ -10,6 +10,7 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using AI;
     using Entities;
+    using ActionObjects;
 
     internal sealed class EntityFactory {
 
@@ -50,6 +51,22 @@ namespace JYW.ThesisMMO.MMOServer {
             return entity;
         }
 
+        internal void CreateSkillEntity(ActionObject actionObject, Vector startPosition) {
+            var entityName = actionObject.actionCode.ToString() + actionObject.GetNextID();
+
+            var stringType = aiEntityNameSpace + actionObject.actionCode + "AI";
+            var actionType = Type.GetType(stringType);
+
+            if (actionType == null) {
+                log.ErrorFormat("Type {0} was not found.", stringType);
+                return;
+            }
+
+            var skillEntity = new SkillEntity(actionObject.ActionSource, entityName, startPosition, actionObject.actionCode);
+            World.Instance.AddEntity(skillEntity);
+            Activator.CreateInstance(actionType, skillEntity);
+        }
+
         internal void CreateSkillEntity(string caster, string id, ActionCode actionCode, Vector startPosition) {
             log.InfoFormat("Factory received skill entity creation request with code {0}", actionCode);
             var name = actionCode.ToString() + id;
@@ -67,7 +84,7 @@ namespace JYW.ThesisMMO.MMOServer {
             Activator.CreateInstance(actionType, skillEntity);
         }
 
-        internal void CreateAIBot(string name, Vector startPosition) {
+        internal void CreateAIBot(string name, Vector startPosition, bool canMove) {
             var position = startPosition;
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
             var attributes = new Attribute[4];
@@ -76,9 +93,10 @@ namespace JYW.ThesisMMO.MMOServer {
             attributes[2] = new ActionStateAttribute();
             attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
-            var aiEntity = new Entity(name, position, attributes, null);
-            World.Instance.AddEntity(aiEntity);
-            new TestBot(aiEntity);
+            var entity = new Entity(name, position, attributes, null);
+            World.Instance.AddEntity(entity);
+            var aiEntity = new TestBot(entity);
+            aiEntity.canMove = canMove;
         }
         
         // TODO: Change design so health does not depend on weapon.

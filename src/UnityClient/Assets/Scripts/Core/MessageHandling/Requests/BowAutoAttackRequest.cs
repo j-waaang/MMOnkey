@@ -10,11 +10,11 @@
         /// <summary>  
         ///  Builds the Move request end hands it to the forwarder.
         /// </summary>  
-        internal static void AxeAutoAttackRequest(Vector3 lookDir) {
+        internal static void BowAutoAttackRequest(Vector3 lookDir) {
 
             var data = new Dictionary<byte, object>
             {
-                    { (byte)ParameterCode.ActionCode, ActionCode.AxeAutoAttack },
+                    { (byte)ParameterCode.ActionCode, ActionCode.BowAutoAttack },
                     { (byte)ParameterCode.LookDirection, VectorExtension.Vector3ToVector(lookDir) }
             };
 

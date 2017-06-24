@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>  
 ///  Lets the character look at a direction.
@@ -9,12 +10,16 @@ public class RotationController : MonoBehaviour {
     private bool m_LockedRotation = false;
     private float m_LockEnd;
 
+    public void LookAt(Vector3 forwardVector, TimeSpan duration) {
+        LookAt(forwardVector, ((float)duration.TotalMilliseconds) * 0.001f);
+    }
+
     /// <summary>  
     ///  Lets the character look at a direction and locks that rotation for a durtaion.
     ///  A new lock request overrides the old lock request.
     /// </summary>  
-    public void LookAt(Vector3 lookDirection, float duration) {
-        transform.forward = lookDirection;
+    public void LookAt(Vector3 forwardVector, float duration) {
+        transform.forward = forwardVector;
         m_LockEnd = Time.time + duration;
         m_LockedRotation = true;
     }
