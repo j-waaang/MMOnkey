@@ -86,7 +86,7 @@
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />
     <Compile Include="Targets\CircleAreaTarget.cs" />
-    <Compile Include="Targets\ConeAreaTarget.cs" />
+    <Compile Include="Targets\Cone2DAreaTarget.cs" />
     <Compile Include="Targets\EntityTarget.cs" />
     <Compile Include="Targets\PointTarget.cs" />
     <Compile Include="Targets\RectangleAreaTarget.cs" />

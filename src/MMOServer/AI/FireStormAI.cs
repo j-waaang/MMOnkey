@@ -7,16 +7,16 @@ namespace JYW.ThesisMMO.MMOServer.AI {
 
     internal class FireStormAI : AIEntity {
 
+        private const float RADIUS = 3.5f;
+
         private ActionContinueCondition m_DamageTicker = new ContinueTick(new System.TimeSpan(0, 0, 0, 0, 500), 10);
         private IntModifier m_DamageMod = new IntModifier(ModifyMode.Addition, Common.Codes.AttributeCode.Health, -10);
         private Target m_AoeTarget;
 
         public FireStormAI(Entity entity) : base(entity) {
-            m_AoeTarget = new CircleAreaTarget() {
-                AreaTargetOption = AreaTargetOption.IgnoreSource,
-                Center = Entity.Position,
-                Radius = 3.5f,
+            m_AoeTarget = new CircleAreaTarget(Entity.Position, RADIUS) {
                 SourceName = Entity.Name,
+                AreaTargetOption = AreaTargetOption.IgnoreSource
             };
 
             m_DamageTicker.ContinueEvent += Tick;

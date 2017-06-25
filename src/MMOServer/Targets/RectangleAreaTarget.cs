@@ -7,7 +7,7 @@ namespace JYW.ThesisMMO.MMOServer.Targets {
     /// All vectors should be Y=0.
     /// AB must be perpendicular to BC. No checks implemented.
     /// </summary>
-    internal class RectangleAreaTarget : AreaTarget{
+    internal class RectangleAreaTarget : AreaTarget {
 
         public Vector A { get; private set; }
         public Vector B { get; private set; }
@@ -18,7 +18,7 @@ namespace JYW.ThesisMMO.MMOServer.Targets {
         private float m_ABAB;
         private float m_BCBC;
 
-        public RectangleAreaTarget(Vector a, Vector b, Vector c) {
+        public RectangleAreaTarget(Vector a, Vector b, Vector c){
             A = a;
             B = b;
             C = c;
@@ -29,7 +29,7 @@ namespace JYW.ThesisMMO.MMOServer.Targets {
         }
 
         public override bool IsEntityInArea(Entity entity) {
-            if (entity.Name == SourceName && AreaTargetOption == AreaTargetOption.IgnoreSource) { return false; }
+            if (!DefaultCheck(entity)) { return false; }
 
             var M = entity.Position;
 

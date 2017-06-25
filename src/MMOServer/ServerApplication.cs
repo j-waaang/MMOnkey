@@ -28,6 +28,7 @@
             CreateWorld();
             CreateTestBots();
         }
+
         protected override void TearDown() {
             AILooper.Instance.Dispose();
             log.InfoFormat("------------------------Tear Down------------------------");
@@ -58,8 +59,8 @@
         }
 
         private void CreateTestBots() {
-            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(2, 2), true);
-            EntityFactory.Instance.CreateAIBot("Ork 234932", new Vector(0, -2), true);
+            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(2, 2), false);
+            EntityFactory.Instance.CreateAIBot("Ork 234932", new Vector(0, -2), false);
             EntityFactory.Instance.CreateAIBot("Ork 452537", new Vector(-3, 4), false);
         }
     }

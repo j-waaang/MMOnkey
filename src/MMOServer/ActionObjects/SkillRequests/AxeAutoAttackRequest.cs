@@ -20,6 +20,9 @@
         public Vector LookDirection { get; set; }
         #endregion DataContract
 
+        private const float ATTACKANGLE = 150f;
+        private const float ATTACKDISTANCE = 3.0f;
+
         public override bool CheckPrerequesite() {
             return World.Instance.CanPerformAction(ActionSource, ActionCode.AxeAutoAttack);
         }
@@ -40,17 +43,23 @@
         }
 
         private void DoDamage(CallReason continueReason) {
-            var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -20);
+            var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
-            var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
 
-            var dmgArea = new RectangleAreaTarget() {
+            var dmgArea = new Cone2DAreaTarget(sourcePos, LookDirection, ATTACKANGLE, ATTACKDISTANCE) {
                 AreaTargetOption = AreaTargetOption.IgnoreSource,
-                A = sourcePos + LookDirP * 0.7f,
-                B = sourcePos - LookDirP * 0.7f,
-                C = sourcePos - LookDirP * 0.7f + LookDirection * 2,
                 SourceName = ActionSource
             };
+            
+            // Example for rectangle area setup
+            //var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
+            //var dmgArea = new RectangleAreaTarget() {
+            //    AreaTargetOption = AreaTargetOption.IgnoreSource,
+            //    A = sourcePos + LookDirP * 0.7f,
+            //    B = sourcePos - LookDirP * 0.7f,
+            //    C = sourcePos - LookDirP * 0.7f + LookDirection * 2,
+            //    SourceName = ActionSource
+            //};
 
             World.Instance.ApplyModifier(dmgArea, healthModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));

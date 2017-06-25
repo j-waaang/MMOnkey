@@ -167,7 +167,13 @@ namespace JYW.ThesisMMO.MMOServer {
         //}
 
         internal bool CanPerformAction(string actionSource, ActionCode action) {
-            return m_Entities[actionSource].CanPerformAction(action);
+            Entity entity = null;
+            m_Entities.TryGetValue(actionSource, out entity);
+            if(entity == null) {
+                log.ErrorFormat("{0} entity requesting action does not exist.", actionSource);
+                return false;
+            }
+            return entity.CanPerformAction(action);
         }
 
         internal bool CanPerformAction(string actionSource, ActionCode action, Target target) {

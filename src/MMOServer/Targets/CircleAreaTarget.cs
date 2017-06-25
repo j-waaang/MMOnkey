@@ -1,32 +1,22 @@
-﻿using System;
+﻿namespace JYW.ThesisMMO.MMOServer.Targets {
 
-namespace JYW.ThesisMMO.MMOServer.Targets {
-
-    using Entities;
     using JYW.ThesisMMO.Common.Types;
 
-    class CircleAreaTarget : AreaTarget {
+    internal class CircleAreaTarget : AreaTarget {
 
-        public float Radius { get; set; }
-        public Vector Center { get; set; }
+        public float Radius { get; private set; }
+        public Vector Center { get; private set; }
+
+        public CircleAreaTarget(Vector center, float radius) {
+            Radius = radius;
+            Center = center;
+        }
 
         public override bool IsEntityInArea(Entity entity) {
-            if(entity.GetType() == typeof(SkillEntity)) { return false; }
-            if(entity.Name == SourceName && AreaTargetOption == AreaTargetOption.IgnoreSource) { return false; }
+            if (!DefaultCheck(entity)) { return false; }
+            if (Vector.Distance(Center, entity.Position) > Radius) { return false; }
 
-            //log.InfoFormat(
-            //    "AOE Center: {0}, Radius: {1}, TargetName {2}, TargetPos {3}, TargetDistance {4}",
-            //    Center,
-            //    Radius,
-            //    entity.Name,
-            //    entity.Position,
-            //    Vector.Distance(Center, entity.Position)
-            //    );
-
-            if(Vector.Distance(Center, entity.Position) <= Radius) {
-                return true;
-            }
-            return false;
+            return true;
         }
     }
 }

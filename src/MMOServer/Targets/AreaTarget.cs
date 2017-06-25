@@ -1,4 +1,5 @@
 ﻿using JYW.ThesisMMO.Common.Types;
+using JYW.ThesisMMO.MMOServer.Entities;
 
 namespace JYW.ThesisMMO.MMOServer.Targets {
     abstract internal class AreaTarget : Target{
@@ -11,5 +12,12 @@ namespace JYW.ThesisMMO.MMOServer.Targets {
         }
 
         abstract public bool IsEntityInArea(Entity entity);
+
+        protected bool DefaultCheck(Entity entity) {
+            if (entity.GetType() == typeof(SkillEntity)) { return false; }
+            if (entity.Name == SourceName && AreaTargetOption == AreaTargetOption.IgnoreSource) { return false; }
+
+            return true;
+        }
     }
 }
