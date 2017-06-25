@@ -65,6 +65,13 @@ namespace JYW.ThesisMMO.MMOServer {
             return m_Peer.SendEvent(eventData, sendParameters);
         }
 
+        public bool IsIdle() {
+            var actionState = m_Attributes[AttributeCode.ActionState] as ActionStateAttribute;
+            if (actionState.GetActionState() != ActionCode.Idle) { return false; }
+
+            return true;
+        }
+
         public bool CanPerformAction(ActionCode action) {
             var actionState = m_Attributes[AttributeCode.ActionState] as ActionStateAttribute;
             if (actionState.GetActionState() != ActionCode.Idle) { return false; }

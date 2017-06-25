@@ -36,7 +36,7 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 2)));
 
             ContinueEvent += CreateFireStormAndSetIdle;
-            ActivateConditions();
+            StartConditions();
         }
 
         private void CreateFireStormAndSetIdle(CallReason continueReason) {

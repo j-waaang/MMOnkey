@@ -35,7 +35,7 @@
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
 
             ContinueEvent += DoHealing;
-            ActivateConditions();
+            StartConditions();
         }
 
         private void DoHealing(CallReason continueReason) {

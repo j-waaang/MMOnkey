@@ -23,10 +23,6 @@
         private const float ATTACKANGLE = 150f;
         private const float ATTACKDISTANCE = 3.0f;
 
-        public override bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(ActionSource, ActionCode.AxeAutoAttack);
-        }
-
         public override void StartAction() {
             // In case the client did not normalize
             LookDirection = LookDirection.Normalized;
@@ -39,7 +35,7 @@
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
             ContinueEvent += DoDamage;
-            ActivateConditions();
+            StartConditions();
         }
 
         private void DoDamage(CallReason continueReason) {
@@ -67,7 +63,7 @@
             ContinueEvent -= DoDamage;
             ContinueEvent += SetIdle;
 
-            ActivateConditions();
+            StartConditions();
         }
 
         private void SetIdle(CallReason continueReason) {

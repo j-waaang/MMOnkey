@@ -13,7 +13,7 @@
     /// <summary> 
     /// A game action requested by the client to change the game state.
     /// </summary>
-    internal abstract class ActionObject : Operation{
+    internal abstract class ActionObject : Operation {
 
         #region DataContract
         public ActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -41,27 +41,29 @@
         private IRpcProtocol protocol;
         private OperationRequest request;
 
-        abstract public bool CheckPrerequesite();
+        public virtual bool CheckPrerequesite() {
+            return World.Instance.CanPerformAction(ActionSource);
+        }
 
-        abstract public void StartAction();
+        public abstract void StartAction();
 
         protected void AddCondition(ActionContinueCondition condition) {
             m_ContinueConidtions.Add(condition);
             condition.ContinueEvent += OnConditionFullfilled;
         }
 
-        protected void ActivateConditions() {
+        protected void StartConditions() {
             foreach (ActionContinueCondition condition in m_ContinueConidtions) {
                 condition.Start();
             }
         }
 
         private void OnConditionFullfilled(CallReason continueReason) {
-            foreach(ActionContinueCondition condition in m_ContinueConidtions) {
+            foreach (ActionContinueCondition condition in m_ContinueConidtions) {
                 condition.Dispose();
             }
             m_ContinueConidtions.Clear();
-            
+
             ContinueEvent(continueReason);
         }
 

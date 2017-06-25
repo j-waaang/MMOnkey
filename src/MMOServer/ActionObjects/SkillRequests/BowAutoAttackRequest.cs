@@ -6,8 +6,8 @@
     using Entities.Attributes.Modifiers;
     using Common.Codes;
     using Common.ContinueObjects;
-    using Targets;
     using Common.Types;
+    using Targets;
 
     internal class BowAutoAttackRequest : CastActionObject {
 
@@ -20,31 +20,50 @@
         public Vector LookDirection { get; set; }
         #endregion DataContract
 
-        public override bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(ActionSource, ActionCode.BowAutoAttack);
-        }
+        private const float ATTACKWIDTH = 3;
+        private const float ATTACKDISTANCE = 8;
 
         public override void StartAction() {
-            SetState();
+            LookDirection = LookDirection.Normalized;
+            SetAttack();
         }
 
-        private void SetState() {
+        private void SetAttack() {
             var stateModifier = new CastActionStateModifier(ActionCode.BowAutoAttack, LookDirection);
             World.Instance.ApplyModifier(ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
-            ContinueEvent += CreateArrow;
-            ActivateConditions();
+            ContinueEvent += DoDamage;
+            StartConditions();
         }
 
-        private void CreateArrow(CallReason continueReason) {
-            ContinueEvent -= CreateArrow;
+        private void DoDamage(CallReason continueReason) {
 
+            var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
+            var sourcePos = World.Instance.GetEntity(ActionSource).Position;
+
+            var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
+            var P1 = sourcePos + LookDirP * 0.5f * ATTACKWIDTH;
+            var P2 = sourcePos - LookDirP * 0.5f * ATTACKWIDTH;
+            var P3 = P2 + LookDirection * ATTACKDISTANCE;
+
+            var dmgArea = new RectangleAreaTarget(P1, P2, P3) {
+                AreaTargetOption = AreaTargetOption.IgnoreSource,
+                SourceName = ActionSource
+            };
+
+            World.Instance.ApplyModifier(dmgArea, healthModifier);
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
+
+            ContinueEvent -= DoDamage;
+            ContinueEvent += SetIdle;
+            StartConditions();
+        }
+
+        private void SetIdle(CallReason continueReason) {
+            ContinueEvent -= SetIdle;
             var stateModifier = new ActionStateModifier(ActionCode.Idle);
             World.Instance.ApplyModifier(ActionSource, stateModifier);
-
-            var startPos = World.Instance.GetEntity(ActionSource).Position;
-            EntityFactory.Instance.CreateSkillEntity(this, startPos);
         }
     }
 }

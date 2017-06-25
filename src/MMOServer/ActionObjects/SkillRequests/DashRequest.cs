@@ -29,7 +29,7 @@
             AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
 
             ContinueEvent += ResetSpeed;
-            ActivateConditions();
+            StartConditions();
         }
 
         private void ResetSpeed(CallReason continueReason) {
