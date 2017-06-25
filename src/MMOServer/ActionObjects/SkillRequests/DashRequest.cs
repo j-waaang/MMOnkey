@@ -33,7 +33,6 @@
         }
 
         private void ResetSpeed(CallReason continueReason) {
-
             var speedModifier = new FloatModifier(ModifyMode.Divide, AttributeCode.Speed, 1.5f);
             World.Instance.ApplyModifier(ActionSource, speedModifier);
             ContinueEvent -= ResetSpeed;

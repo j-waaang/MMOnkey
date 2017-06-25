@@ -1,15 +1,23 @@
-﻿using JYW.ThesisMMO.Common.Types;
+﻿using JYW.ThesisMMO.Common.Codes;
+using JYW.ThesisMMO.Common.ContinueObjects;
+using JYW.ThesisMMO.Common.Types;
+using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
 using Photon.SocketServer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JYW.ThesisMMO.MMOServer.ActionObjects {
     internal abstract class CastActionObject : ActionObject {
         public CastActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
                 : base(actionSource, protocol, request) {
+        }
+
+        protected void StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection, Action<CallReason> onFinish) {
+            var stateModifier = new CastActionStateModifier(castState, lookDirection);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
+            AddCondition(new TimedContinueCondition(castDuration));
+
+            ContinueEvent += onFinish;
+            StartConditions();
         }
 
         protected Vector GetLookDir(string actionSource, string actionTarget) {

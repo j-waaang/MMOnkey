@@ -14,7 +14,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using Targets;
-    using Entities;
 
     /// <summary> 
     /// The game world containing entities and methods modifiying them.

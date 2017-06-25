@@ -25,26 +25,19 @@
         }
 
         public override void StartAction() {
-            SetState();
-        }
-
-        private void SetState() {
-            var lookDir = GetLookDir(ActionSource, Target);
-            var stateModifier = new CastActionStateModifier(ActionCode.OrisonOfHealing, lookDir);
-            World.Instance.ApplyModifier(ActionSource, stateModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
-
-            ContinueEvent += DoHealing;
-            StartConditions();
+            StartCast(
+                new System.TimeSpan(0, 0, 0, 1),
+                ActionCode.OrisonOfHealing,
+                GetLookDir(ActionSource, Target),
+                DoHealing);
         }
 
         private void DoHealing(CallReason continueReason) {
             ContinueEvent -= DoHealing;
-
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, 30);
             World.Instance.ApplyModifier(Target, healthModifier);
-            var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(ActionSource, stateModifier);
+
+            SetIdle(continueReason);
         }
     }
 }

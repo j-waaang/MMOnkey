@@ -25,16 +25,11 @@
 
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;
-            SetAttack();
-        }
-
-        private void SetAttack() {
-            var stateModifier = new CastActionStateModifier(ActionCode.BowAutoAttack, LookDirection);
-            World.Instance.ApplyModifier(ActionSource, stateModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
-
-            ContinueEvent += DoDamage;
-            StartConditions();
+            StartCast(
+                new System.TimeSpan(0, 0, 0, 0, 500),
+                ActionCode.BowAutoAttack,
+                LookDirection,
+                DoDamage);
         }
 
         private void DoDamage(CallReason continueReason) {
@@ -58,12 +53,6 @@
             ContinueEvent -= DoDamage;
             ContinueEvent += SetIdle;
             StartConditions();
-        }
-
-        private void SetIdle(CallReason continueReason) {
-            ContinueEvent -= SetIdle;
-            var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(ActionSource, stateModifier);
         }
     }
 }

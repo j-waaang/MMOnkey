@@ -2,17 +2,17 @@
 
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
-    using Entities.Attributes.Modifiers;
 
+    using Entities.Attributes.Modifiers;
     using Common.Codes;
     using Common.ContinueObjects;
-    using Targets;
     using Common.Types;
+    using Targets;
 
-    internal class AxeAutoAttackRequest : CastActionObject {
+    internal class DistractingShotRequest : CastActionObject {
 
         #region DataContract
-        public AxeAutoAttackRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
+        public DistractingShotRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(actionSource, protocol, request) {
         }
 
@@ -20,20 +20,25 @@
         public Vector LookDirection { get; set; }
         #endregion DataContract
 
-        private const float ATTACKANGLE = 150f;
-        private const float ATTACKDISTANCE = 3.0f;
+        private const float ATTACKWIDTH = 3;
+        private const float ATTACKDISTANCE = 8;
 
         public override void StartAction() {
-            // In case the client did not normalize
             LookDirection = LookDirection.Normalized;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.AxeAutoAttack, LookDirection, DoDamage);
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.DistractingShot, LookDirection, DoDamage);
         }
 
         private void DoDamage(CallReason continueReason) {
+
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
 
-            var dmgArea = new Cone2DAreaTarget(sourcePos, LookDirection, ATTACKANGLE, ATTACKDISTANCE) {
+            var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
+            var P1 = sourcePos + LookDirP * 0.5f * ATTACKWIDTH;
+            var P2 = sourcePos - LookDirP * 0.5f * ATTACKWIDTH;
+            var P3 = P2 + LookDirection * ATTACKDISTANCE;
+
+            var dmgArea = new RectangleAreaTarget(P1, P2, P3) {
                 AreaTargetOption = AreaTargetOption.IgnoreSource,
                 SourceName = ActionSource
             };

@@ -47,7 +47,13 @@ public class SkillEventListener : MonoBehaviour {
         switch (skill) {
             case ActionCode.DistractingShot:
                 if (GameData.Target != null || m_TargetSelector.SetTarget()) {
-                    RequestOperations.DistractingShotRequest(GameData.Target.name);
+
+                    var mousePoint = InputExtension.GetMouseHitGroundPoint();
+                    if (mousePoint == null) { return; }
+                    var forwardVec = mousePoint.Value - transform.position;
+                    forwardVec = forwardVec.normalized;
+
+                    RequestOperations.DistractingShotRequest(forwardVec);
                     CastSkill(skill, GameData.Target.transform.position, 0.5f);
                 }
                 break;

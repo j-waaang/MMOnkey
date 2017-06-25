@@ -5,7 +5,6 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
     using Common.Codes;
     using Common.ContinueObjects;
-    using Entities.Attributes.Modifiers;
     using Common.Types;
 
     internal class FireStormRequest : CastActionObject {
@@ -26,26 +25,18 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         }
 
         public override void StartAction() {
-            SetState();
+            StartCast(
+                new System.TimeSpan(0, 0, 0, 2),
+                ActionCode.FireStorm,
+                GetLookDir(ActionSource, Target),
+                CreateFireStormEntity);
         }
 
-        private void SetState() {
-            var lookDir = GetLookDir(ActionSource, Target);
-            var stateModifier = new CastActionStateModifier(ActionCode.FireStorm, lookDir);
-            World.Instance.ApplyModifier(ActionSource, stateModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 2)));
-
-            ContinueEvent += CreateFireStormAndSetIdle;
-            StartConditions();
-        }
-
-        private void CreateFireStormAndSetIdle(CallReason continueReason) {
-            log.InfoFormat("FireStoremReq with pos {0}", Target);
+        private void CreateFireStormEntity(CallReason continueReason) {
+            ContinueEvent -= CreateFireStormEntity;
             m_LastCreatedID++;
-            var stateModifier = new ActionStateModifier(ActionCode.Idle);
-            World.Instance.ApplyModifier(ActionSource, stateModifier);
+            SetIdle(continueReason);
             EntityFactory.Instance.CreateSkillEntity(ActionSource, m_LastCreatedID.ToString(), ActionCode.FireStorm, Target);
-            ContinueEvent -= CreateFireStormAndSetIdle;
         }
     }
 }

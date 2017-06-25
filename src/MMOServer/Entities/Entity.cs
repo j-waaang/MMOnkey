@@ -33,6 +33,8 @@ namespace JYW.ThesisMMO.MMOServer {
             Name = name;
             Position = position;
 
+            log.InfoFormat("Created {0} entity at {1}", name, position);
+
             if (peer != null) {
                 m_Peer = peer;
                 m_AiControlled = false;

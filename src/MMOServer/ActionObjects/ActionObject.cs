@@ -9,6 +9,7 @@
 
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.ContinueObjects;
+    using Entities.Attributes.Modifiers;
 
     /// <summary> 
     /// A game action requested by the client to change the game state.
@@ -70,6 +71,12 @@
         public int GetNextID() {
             LastUsedID++;
             return LastUsedID;
+        }
+
+        protected void SetIdle(CallReason callreason) {
+            ContinueEvent -= SetIdle;
+            var stateModifier = new ActionStateModifier(ActionCode.Idle);
+            World.Instance.ApplyModifier(ActionSource, stateModifier);
         }
     }
 }

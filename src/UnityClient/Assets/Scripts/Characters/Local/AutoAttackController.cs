@@ -43,7 +43,6 @@
             if (Input.GetButtonDown("AutoAttack")) {
                 var mousePoint = InputExtension.GetMouseHitGroundPoint();
                 if (mousePoint == null) { return; }
-
                 var forwardVec = mousePoint.Value - transform.position;
                 forwardVec = forwardVec.normalized;
                 PerformAutoAttack(forwardVec);
