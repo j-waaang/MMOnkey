@@ -28,11 +28,15 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
             StartCast(
                 new System.TimeSpan(0, 0, 0, 2),
                 ActionCode.FireStorm,
-                GetLookDir(ActionSource, Target),
-                CreateFireStormEntity);
+                GetLookDir(ActionSource, Target));
+
+            FinishedCastingEvent += CreateFireStormEntity;
+            FinishedCastingEvent += SetIdle;
         }
 
         private void CreateFireStormEntity(CallReason continueReason) {
+            if(continueReason == CallReason.Interupted) { return; }
+
             ContinueEvent -= CreateFireStormEntity;
             m_LastCreatedID++;
             SetIdle(continueReason);

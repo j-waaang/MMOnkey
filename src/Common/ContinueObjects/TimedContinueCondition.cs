@@ -21,5 +21,10 @@
             Thread.Sleep(sleepTime);
             RaiseContinueEvent(CallReason.ConditionFullfilled);
         }
+
+        public override void Dispose() {
+            m_Thread.Abort();
+            base.Dispose();
+        }
     }
 }

@@ -26,6 +26,7 @@
             SetupLogger();
             RegisterTypes();
             CreateWorld();
+            InitCombatSystem();
             CreateTestBots();
         }
 
@@ -62,6 +63,10 @@
             EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(2, 2), false);
             EntityFactory.Instance.CreateAIBot("Ork 234932", new Vector(0, -2), false);
             EntityFactory.Instance.CreateAIBot("Ork 452537", new Vector(-3, 4), false);
+        }
+
+        private void InitCombatSystem() {
+
         }
     }
 }

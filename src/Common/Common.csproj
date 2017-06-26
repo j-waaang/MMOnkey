@@ -50,7 +50,10 @@
     <Compile Include="ContinueObjects\ActionContinueCondition.cs" />
     <Compile Include="ContinueObjects\CallReason.cs" />
     <Compile Include="ContinueObjects\ContinueTick.cs" />
-    <Compile Include="ContinueObjects\InteruptContinueCondition.cs" />
+    <Compile Include="ContinueObjects\InteruptObjects\IInteruptable.cs" />
+    <Compile Include="ContinueObjects\InteruptObjects\InteruptContinueCondition.cs" />
+    <Compile Include="ContinueObjects\InteruptObjects\InteruptionHandler.cs" />
+    <Compile Include="ContinueObjects\InteruptObjects\UnsubscribeObject.cs" />
     <Compile Include="ContinueObjects\TimedContinueCondition.cs" />
     <Compile Include="Entities\CharacterEntity.cs" />
     <Compile Include="Entities\MovementState.cs" />

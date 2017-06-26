@@ -20,15 +20,19 @@
         public Vector LookDirection { get; set; }
         #endregion DataContract
 
-        private const float ATTACKWIDTH = 3;
+        private const float ATTACKWIDTH = 2;
         private const float ATTACKDISTANCE = 8;
 
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.DistractingShot, LookDirection, DoDamage);
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.DistractingShot, LookDirection);
+
+            FinishedCastingEvent += DoDamage;
+            FinishedCastingEvent += SetIdle;
         }
 
         private void DoDamage(CallReason continueReason) {
+            if(continueReason == CallReason.Interupted) { return; }
 
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
@@ -44,11 +48,6 @@
             };
 
             World.Instance.ApplyModifier(dmgArea, healthModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
-
-            ContinueEvent -= DoDamage;
-            ContinueEvent += SetIdle;
-            StartConditions();
         }
     }
 }

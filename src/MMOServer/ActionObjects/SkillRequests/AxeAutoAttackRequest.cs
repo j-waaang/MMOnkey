@@ -26,10 +26,16 @@
         public override void StartAction() {
             // In case the client did not normalize
             LookDirection = LookDirection.Normalized;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.AxeAutoAttack, LookDirection, DoDamage);
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.AxeAutoAttack, LookDirection);
+            FinishedCastingEvent += DoDamage;
         }
 
         private void DoDamage(CallReason continueReason) {
+            if (continueReason == CallReason.Interupted) {
+                SetIdle(continueReason);
+                return;
+            }
+
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
 

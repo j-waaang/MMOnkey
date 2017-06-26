@@ -28,16 +28,17 @@
             StartCast(
                 new System.TimeSpan(0, 0, 0, 1),
                 ActionCode.OrisonOfHealing,
-                GetLookDir(ActionSource, Target),
-                DoHealing);
+                GetLookDir(ActionSource, Target));
+
+            FinishedCastingEvent += DoHealing;
+            FinishedCastingEvent += SetIdle;
         }
 
         private void DoHealing(CallReason continueReason) {
-            ContinueEvent -= DoHealing;
+            if(continueReason == CallReason.Interupted) { return; }
+
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, 30);
             World.Instance.ApplyModifier(Target, healthModifier);
-
-            SetIdle(continueReason);
         }
     }
 }

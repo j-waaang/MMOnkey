@@ -28,8 +28,9 @@
             StartCast(
                 new System.TimeSpan(0, 0, 0, 0, 500),
                 ActionCode.BowAutoAttack,
-                LookDirection,
-                DoDamage);
+                LookDirection);
+
+            FinishedCastingEvent += DoDamage;
         }
 
         private void DoDamage(CallReason continueReason) {

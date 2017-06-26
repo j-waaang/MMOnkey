@@ -14,7 +14,7 @@
 
         public abstract void Start();
 
-        public void Dispose() {
+        public virtual void Dispose() {
             ContinueEvent = null;
         }
     }
