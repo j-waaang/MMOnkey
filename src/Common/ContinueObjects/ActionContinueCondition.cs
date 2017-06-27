@@ -7,15 +7,17 @@
     /// </summary>
     public abstract class ActionContinueCondition : IDisposable {
         public event Action<CallReason> ContinueEvent;
+        protected bool m_Disposed = false;
 
         protected void RaiseContinueEvent(CallReason reason) {
+            if (m_Disposed) { return; }
             ContinueEvent(reason);
         }
 
         public abstract void Start();
 
         public virtual void Dispose() {
-            ContinueEvent = null;
+            m_Disposed = true;
         }
     }
 }

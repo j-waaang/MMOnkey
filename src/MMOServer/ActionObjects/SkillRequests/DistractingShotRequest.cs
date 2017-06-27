@@ -25,10 +25,9 @@
 
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.DistractingShot, LookDirection);
-
             FinishedCastingEvent += DoDamage;
             FinishedCastingEvent += SetIdle;
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.DistractingShot, LookDirection);
         }
 
         private void DoDamage(CallReason continueReason) {
@@ -48,6 +47,9 @@
             };
 
             World.Instance.ApplyModifier(dmgArea, healthModifier);
+
+            var interupted = World.Instance.GetEntitesInArea(dmgArea);
+            m_InteruptionHandler.OnInterupt(interupted);
         }
     }
 }

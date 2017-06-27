@@ -31,7 +31,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Creates a instance of the game world.
         /// </summary>
-        internal World() {
+        public World() {
             if (Instance == null) {
                 Instance = this;
             }
@@ -42,7 +42,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Adding a entity to the game world.
         /// </summary>
-        internal void AddEntity(Entity newEntity) {
+        public void AddEntity(Entity newEntity) {
 
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
@@ -70,7 +70,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Removes the entity from the list.
         /// </summary>
-        internal void RemoveEntity(string name) {
+        public void RemoveEntity(string name) {
             var ev = new RemovePlayerEvent() {
                 Username = name,
             };
@@ -81,7 +81,7 @@ namespace JYW.ThesisMMO.MMOServer {
             m_Entities.Remove(name);
         }
 
-        internal void NotifyEntityAboutExistingPlayers(string username) {
+        public void NotifyEntityAboutExistingPlayers(string username) {
             var entityToNotify = m_Entities[username];
 
             foreach (Entity newPlayer in m_Entities.Values) {
@@ -104,7 +104,7 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        internal void MoveEntity(string username, Vector position) {
+        public void MoveEntity(string username, Vector position) {
 
             var movedEntity = m_Entities[username];
             movedEntity.Position = position;
@@ -165,7 +165,7 @@ namespace JYW.ThesisMMO.MMOServer {
         //    return entities;
         //}
 
-        internal bool CanPerformAction(string actionSource) {
+        public bool CanPerformAction(string actionSource) {
             Entity entity = null;
             m_Entities.TryGetValue(actionSource, out entity);
             if (entity == null) {
@@ -175,7 +175,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return entity.IsIdle();
         }
 
-        internal bool CanPerformAction(string actionSource, ActionCode action) {
+        public bool CanPerformAction(string actionSource, ActionCode action) {
             Entity entity = null;
             m_Entities.TryGetValue(actionSource, out entity);
             if(entity == null) {
@@ -185,7 +185,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return entity.CanPerformAction(action);
         }
 
-        internal bool CanPerformAction(string actionSource, ActionCode action, Target target) {
+        public bool CanPerformAction(string actionSource, ActionCode action, Target target) {
             if(!CanPerformAction(actionSource, action)) { return false; }
 
             // TODO: Test distance
@@ -195,7 +195,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Use this to replicate a attribute change. Do not use for position changes.
         /// </summary>
-        internal void ReplicateMessage(string src, IEventData eventData, BroadcastOptions options ) {
+        public void ReplicateMessage(string src, IEventData eventData, BroadcastOptions options ) {
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
             foreach (Entity entity in m_Entities.Values) {
@@ -205,7 +205,12 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        internal void ApplyModifier(Target target, Modifier modifier) {
+        public IEnumerable<string> GetEntitesInArea(AreaTarget area) {
+            var inArea = m_Entities.Where(a => area.IsEntityInArea(a.Value));
+            return inArea.Select(a => a.Value.Name);
+        }
+
+        public void ApplyModifier(Target target, Modifier modifier) {
             switch (target.TargetType) {
                 case TargetType.Entity:
                     ApplyModifier(((EntityTarget)target).TargetName, modifier);
@@ -227,7 +232,7 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        internal void ApplyModifier(string target, Modifier modifier) {
+        public void ApplyModifier(string target, Modifier modifier) {
             Entity entity = null;
             m_Entities.TryGetValue(target, out entity);
             if(entity == null) {

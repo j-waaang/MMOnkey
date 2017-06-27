@@ -23,5 +23,10 @@ namespace JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects {
         public override void Start() {
             m_Listener = m_InteruptionHandler.AddListener(m_Name, this);
         }
+
+        public override void Dispose() {
+            m_Listener.Dispose();
+            base.Dispose();
+        }
     }
 }

@@ -25,13 +25,12 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         }
 
         public override void StartAction() {
+            FinishedCastingEvent += CreateFireStormEntity;
+            FinishedCastingEvent += SetIdle;
             StartCast(
                 new System.TimeSpan(0, 0, 0, 2),
                 ActionCode.FireStorm,
                 GetLookDir(ActionSource, Target));
-
-            FinishedCastingEvent += CreateFireStormEntity;
-            FinishedCastingEvent += SetIdle;
         }
 
         private void CreateFireStormEntity(CallReason continueReason) {

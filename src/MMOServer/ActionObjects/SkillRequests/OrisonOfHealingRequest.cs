@@ -25,13 +25,12 @@
         }
 
         public override void StartAction() {
+            FinishedCastingEvent += DoHealing;
+            FinishedCastingEvent += SetIdle;
             StartCast(
                 new System.TimeSpan(0, 0, 0, 1),
                 ActionCode.OrisonOfHealing,
                 GetLookDir(ActionSource, Target));
-
-            FinishedCastingEvent += DoHealing;
-            FinishedCastingEvent += SetIdle;
         }
 
         private void DoHealing(CallReason continueReason) {

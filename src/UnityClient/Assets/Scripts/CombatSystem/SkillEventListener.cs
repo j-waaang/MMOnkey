@@ -46,16 +46,14 @@ public class SkillEventListener : MonoBehaviour {
         //Character target skills
         switch (skill) {
             case ActionCode.DistractingShot:
-                if (GameData.Target != null || m_TargetSelector.SetTarget()) {
+                var mousePoint = InputExtension.GetMouseHitGroundPoint();
+                if (mousePoint == null) { return; }
 
-                    var mousePoint = InputExtension.GetMouseHitGroundPoint();
-                    if (mousePoint == null) { return; }
-                    var forwardVec = mousePoint.Value - transform.position;
-                    forwardVec = forwardVec.normalized;
+                var forwardVec = mousePoint.Value - transform.position;
+                forwardVec = forwardVec.normalized;
 
-                    RequestOperations.DistractingShotRequest(forwardVec);
-                    CastSkill(skill, GameData.Target.transform.position, 0.5f);
-                }
+                RequestOperations.DistractingShotRequest(forwardVec);
+                CastSkill(skill, mousePoint.Value, 0.5f);
                 break;
             case ActionCode.OrisonOfHealing:
                 if (GameData.Target != null || m_TargetSelector.SetTarget()) {
@@ -73,7 +71,8 @@ public class SkillEventListener : MonoBehaviour {
                 RaycastHit hit;
                 if (m_GroundCollider.Raycast(screenRay, out hit, 20f)) {
                     RequestOperations.FireStormRequest(hit.point);
-                    CastSkill(skill, hit.point, 2f, () => SkillEntitySpawner.CreateSkillEntity(skill, hit.point));
+                    CastSkill(skill, hit.point, 2f);
+                    //CastSkill(skill, hit.point, 2f, () => SkillEntitySpawner.CreateSkillEntity(skill, hit.point));
                 }
                 break;
         }

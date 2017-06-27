@@ -19,5 +19,11 @@ namespace JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects {
 
             InteruptSubscribers[name].OnInterupt();
         }
+
+        public void OnInterupt(IEnumerable<string> names) {
+            foreach(string name in names) {
+                OnInterupt(name);
+            }
+        }
     }
 }

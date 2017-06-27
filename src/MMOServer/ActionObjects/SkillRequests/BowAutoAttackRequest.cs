@@ -25,12 +25,11 @@
 
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;
+            FinishedCastingEvent += DoDamage;
             StartCast(
                 new System.TimeSpan(0, 0, 0, 0, 500),
                 ActionCode.BowAutoAttack,
                 LookDirection);
-
-            FinishedCastingEvent += DoDamage;
         }
 
         private void DoDamage(CallReason continueReason) {

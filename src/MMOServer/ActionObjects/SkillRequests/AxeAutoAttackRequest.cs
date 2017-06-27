@@ -26,8 +26,8 @@
         public override void StartAction() {
             // In case the client did not normalize
             LookDirection = LookDirection.Normalized;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.AxeAutoAttack, LookDirection);
             FinishedCastingEvent += DoDamage;
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.AxeAutoAttack, LookDirection);
         }
 
         private void DoDamage(CallReason continueReason) {
