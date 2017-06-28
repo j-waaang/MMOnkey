@@ -1,0 +1,601 @@
+2017-06-27 15:24:42,608 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 15:24:42,649 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 15:24:42,655 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 15:24:42,705 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:24:42,706 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 15:24:42,706 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:24:42,706 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 15:24:42,706 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:24:42,707 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 15:24:56,521 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 15:24:56,644 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 15:24:56,644 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 15:30:10,918 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 15:30:10,957 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 15:30:10,964 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 15:30:10,981 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:30:10,982 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 15:30:10,982 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:30:10,982 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 15:30:10,982 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:30:10,982 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 15:30:55,632 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created gfghfhgf entity at V(0,00, 0,00, 0,00)
+2017-06-27 15:31:21,530 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created uktyuhjg entity at V(0,00, 0,00, 0,00)
+2017-06-27 15:31:26,897 [16] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Dispose() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 27
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 63
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-27 15:32:15,893 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ghfhhfjkk entity at V(0,00, 0,00, 0,00)
+2017-06-27 15:32:22,007 [17] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Dispose() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 27
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 63
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-27 15:51:03,745 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 15:51:03,765 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 15:51:03,765 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 15:51:38,081 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 15:51:38,148 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 15:51:38,162 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 15:51:38,193 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:51:38,196 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 15:51:38,196 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:51:38,196 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 15:51:38,197 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:51:38,197 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 15:53:58,281 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdgdfg entity at V(0,00, 0,00, 0,00)
+2017-06-27 15:54:20,853 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created wdaadawd entity at V(0,00, 0,00, 0,00)
+2017-06-27 15:54:26,734 [16] ERROR Photon.SocketServer.ApplicationBase - System.NullReferenceException: Object reference not set to an instance of an object.
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 68
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-27 15:59:27,354 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 15:59:27,395 [17] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 15:59:27,395 [17] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 15:59:37,617 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 15:59:37,678 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 15:59:37,686 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 15:59:37,705 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:59:37,707 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 15:59:37,707 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:59:37,707 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 15:59:37,707 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 15:59:37,708 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 16:00:00,109 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created asASAS entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:00:03,471 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled ConditionFullfilled cond reason
+2017-06-27 16:00:03,474 [16] ERROR Photon.SocketServer.ApplicationBase - System.NullReferenceException: Object reference not set to an instance of an object.
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 69
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-27 16:03:21,138 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 16:03:21,160 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 16:03:21,160 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 16:03:27,754 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 16:03:27,795 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 16:03:27,803 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 16:03:27,822 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:03:27,824 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 16:03:27,824 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:03:27,824 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 16:03:27,824 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:03:27,824 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 16:03:40,036 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created vnbvvnb entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:03:45,901 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:03:45,904 [16] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 16:03:45,904 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm1 entity at V(-2,35, 0,00, 0,65)
+2017-06-27 16:03:45,904 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 16:03:45,905 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 16:03:45,907 [16] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 16:03:46,413 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 90
+2017-06-27 16:03:46,416 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:46,416 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 90
+2017-06-27 16:03:46,416 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:46,917 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 80
+2017-06-27 16:03:46,917 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:46,917 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 80
+2017-06-27 16:03:46,917 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:47,418 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 70
+2017-06-27 16:03:47,418 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:47,418 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 70
+2017-06-27 16:03:47,418 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:47,919 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 60
+2017-06-27 16:03:47,919 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:47,919 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 60
+2017-06-27 16:03:47,919 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:48,419 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 50
+2017-06-27 16:03:48,420 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:48,420 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 50
+2017-06-27 16:03:48,420 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:48,920 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 40
+2017-06-27 16:03:48,920 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:48,920 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 40
+2017-06-27 16:03:48,920 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:49,421 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 30
+2017-06-27 16:03:49,421 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:49,421 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 30
+2017-06-27 16:03:49,421 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:49,922 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 20
+2017-06-27 16:03:49,922 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:49,922 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 20
+2017-06-27 16:03:49,922 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:50,423 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 10
+2017-06-27 16:03:50,423 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:50,423 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 10
+2017-06-27 16:03:50,423 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:50,923 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -10 damage. Health left: 0
+2017-06-27 16:03:50,924 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-27 16:03:50,927 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-27 16:03:50,927 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - vnbvvnb took -10 damage. Health left: 0
+2017-06-27 16:03:50,927 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - vnbvvnb died.
+2017-06-27 16:03:50,927 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to vnbvvnb.
+2017-06-27 16:03:50,928 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-27 16:05:45,099 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 16:05:45,137 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 16:05:45,137 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 16:05:52,877 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 16:05:52,927 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 16:05:52,933 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 16:05:52,958 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:05:52,960 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 16:05:52,960 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:05:52,960 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 16:05:52,960 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:05:52,960 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 16:09:07,249 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ghfghfgh entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:09:15,848 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created rtertetre entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:09:20,297 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:09:20,299 [16] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 16:09:20,300 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm1 entity at V(-6,73, 0,00, -2,30)
+2017-06-27 16:09:20,300 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 16:09:20,300 [16] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 16:09:20,302 [16] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 16:09:25,313 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-27 16:09:32,187 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:1,ip:127.0.0.1:63403, Data: F3-02-03-00-02-00-69-00-00-00-0C-0C-63-00-00-0C-C0-CB-92-32-00-00-00-00-BF-E1-B1-F8,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.FireStormRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\FireStormRequest.cs:line 34
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:09:34,184 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:09:34,184 [18] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 16:09:34,184 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm2 entity at V(-6,36, 0,00, -1,76)
+2017-06-27 16:09:34,184 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 16:09:34,184 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 16:09:34,184 [18] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 16:09:39,192 [19] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm2 died.
+2017-06-27 16:09:53,326 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:09:53,328 [20] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 16:09:53,329 [20] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm3 entity at V(-9,49, 0,00, 1,95)
+2017-06-27 16:09:53,329 [20] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 16:09:53,329 [20] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 16:09:53,329 [20] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 16:09:58,334 [21] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm3 died.
+2017-06-27 16:10:05,134 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4C-94-E9-BF-19-E3-54-3B-66-FA-33,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:05,635 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:06,138 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:07,061 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-01-09-63-00-00-0C-3F-36-C3-57-00-00-00-00-BF-33-42-38,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 33
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:07,562 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:08,066 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:09,062 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4C-13-D9-BF-1A-82-7C-BC-78-D3-B6,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:09,562 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:10,062 [6] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:10,444 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4D-E1-77-BF-18-21-B1-BC-10-97-74,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:10,944 [4] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:11,445 [22] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:11,677 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4D-C1-A8-BF-18-50-D4-3A-DD-84-19,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:12,177 [23] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:12,678 [24] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:13,243 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4D-80-A6-BF-18-A5-73-3B-FA-0A-B3,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:13,744 [25] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:14,246 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:15,027 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:63402, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4D-5E-01-BF-18-CB-A4-BC-6E-3E-05,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:10:15,528 [27] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:10:16,029 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:22:37,126 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdfgfgd entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:22:39,442 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dfgdgfdg entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:23:22,964 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created sdfsfs entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:23:24,271 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:24,773 [25] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:24,958 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:4,ip:127.0.0.1:49760, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4B-B7-95-BF-1B-04-F7-3C-05-06-F5,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:23:25,458 [24] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:25,960 [23] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:26,100 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:4,ip:127.0.0.1:49760, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4C-28-5E-BF-1A-71-59-BB-E0-76-BE,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:23:26,601 [22] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:27,101 [4] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:27,147 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:4,ip:127.0.0.1:49760, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4C-A3-3C-BF-19-CD-3B-BC-07-72-A3,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:23:27,647 [6] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:28,148 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:28,289 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:4,ip:127.0.0.1:49760, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4B-62-3B-BF-1B-76-74-3B-C7-16-F4,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:23:28,789 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:29,289 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:23:29,289 [17] INFO  JYW.ThesisMMO.MMOServer.World - Trying to apply modifier on sdfsfs but sdfsfs doesn't exist.
+2017-06-27 16:26:19,431 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fghfh entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:26:21,393 [27] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:21,894 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:22,565 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:5,ip:127.0.0.1:58624, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4D-29-7C-BF-19-18-DB-BC-1A-60-36,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:26:23,066 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:23,567 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:23,776 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:5,ip:127.0.0.1:58624, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4B-41-45-BF-1B-9E-CD-BC-19-69-DB,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:26:24,276 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:24,778 [29] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:25,781 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:5,ip:127.0.0.1:58624, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4B-C3-37-BF-1A-F8-5D-BB-84-1C-A3,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:26:26,282 [30] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:26,782 [31] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:27,057 [13] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:5,ip:127.0.0.1:58624, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4B-48-8E-BF-1B-97-B9-3B-D5-47-A5,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:26:27,557 [32] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:28,058 [33] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:28,978 [14] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:5,ip:127.0.0.1:58624, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4B-5B-BC-BF-1B-7F-37-3B-B9-1E-3A,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:26:29,478 [34] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:29,978 [35] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:30,253 [12] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:5,ip:127.0.0.1:58624, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4C-6A-33-BF-1A-17-12-3C-26-F3-63,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:26:30,753 [36] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:31,254 [37] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:26:55,107 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 16:26:55,131 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 16:26:55,131 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 16:26:59,996 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 16:27:00,034 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 16:27:00,041 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 16:27:00,059 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:27:00,060 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 16:27:00,060 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:27:00,060 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 16:27:00,060 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 16:27:00,060 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 16:27:06,977 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created qewqewqew entity at V(0,00, 0,00, 0,00)
+2017-06-27 16:27:08,945 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:27:09,455 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:32:12,140 [11] ERROR Photon.SocketServer.PeerBase - exception during handling of data.Peer:T:MMOPeer,ConnId:0,ip:127.0.0.1:60851, Data: F3-02-03-00-02-00-69-00-00-00-00-09-63-00-00-0C-BF-4C-38-DA-BF-1A-5E-06-BA-97-E6-05,
+Exception:System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptionHandler.AddListener(String name, IInteruptable listener) in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptionHandler.cs:line 10
+   at JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects.InteruptContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\InteruptObjects\InteruptContinueCondition.cs:line 24
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 31
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.AxeAutoAttackRequest.StartAction() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\AxeAutoAttackRequest.cs:line 31
+   at JYW.ThesisMMO.MMOServer.Peers.OperationHandlers.EntityOperationHandler.OperationCharacterAction(PeerBase peer, OperationRequest request) in D:\Projects\ThesisMMO\src\MMOServer\Peers\OperationHandlers\EntityOperationHandler.cs:line 55
+   at Photon.SocketServer.Rpc.Peer.OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\Rpc\Peer.cs:line 109
+   at Photon.SocketServer.PeerBase.OnReceive(Byte[] data, SendParameters sendParameters) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 1243
+   at Photon.SocketServer.PeerBase.OnReceiveInternal(Byte[] data, SendParameters sendParameters, Int32 rtt, Int32 rttVariance, Int32 numFailures) in h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:line 988
+2017-06-27 16:32:12,639 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:32:13,142 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 16:32:57,035 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 16:32:57,051 [16] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 16:32:57,051 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-27 17:00:52,987 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-27 17:00:53,032 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-27 17:00:53,040 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-27 17:00:53,059 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 17:00:53,061 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-27 17:00:53,061 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 17:00:53,061 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-27 17:00:53,061 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-27 17:00:53,061 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-27 17:01:27,664 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdfg entity at V(0,00, 0,00, 0,00)
+2017-06-27 17:01:29,304 [15] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:29,815 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:30,548 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:31,050 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:31,707 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:32,208 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:33,298 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:33,801 [22] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:34,991 [23] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:35,492 [24] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:36,348 [25] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:01:36,849 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:03:14,623 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dfsfd entity at V(0,00, 0,00, 0,00)
+2017-06-27 17:03:17,554 [27] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:03:17,556 [27] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:03:17,556 [27] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm1 entity at V(-5,94, 0,00, -0,46)
+2017-06-27 17:03:17,556 [27] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:03:17,557 [27] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:03:17,560 [27] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:03:21,064 [29] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:03:21,064 [29] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:03:21,064 [29] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm2 entity at V(5,58, 0,00, 0,71)
+2017-06-27 17:03:21,064 [29] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:03:21,064 [29] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:03:21,065 [29] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:03:22,569 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-27 17:03:24,331 [31] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:03:24,331 [31] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:03:24,331 [31] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm3 entity at V(1,91, 0,00, -5,72)
+2017-06-27 17:03:24,332 [31] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:03:24,332 [31] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:03:24,332 [31] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:03:26,070 [30] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm2 died.
+2017-06-27 17:03:29,340 [32] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm3 died.
+2017-06-27 17:05:04,304 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created sdadsfafds entity at V(0,00, 0,00, 0,00)
+2017-06-27 17:05:06,220 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created rgdfg entity at V(0,00, 0,00, 0,00)
+2017-06-27 17:05:12,786 [34] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:05:13,287 [35] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:05:13,601 [33] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:05:13,601 [33] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:05:13,601 [33] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm4 entity at V(-7,15, 0,00, 2,85)
+2017-06-27 17:05:13,601 [33] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:05:13,601 [33] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:05:13,601 [33] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:05:18,607 [34] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm4 died.
+2017-06-27 17:07:03,573 [31] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:04,074 [30] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:04,389 [32] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:04,389 [32] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:07:04,389 [32] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm5 entity at V(5,95, 0,00, -10,11)
+2017-06-27 17:07:04,389 [32] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:07:04,389 [32] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:07:04,389 [32] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:07:07,720 [27] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:08,221 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:08,636 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:08,636 [28] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:07:08,637 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm6 entity at V(-2,13, 0,00, -9,31)
+2017-06-27 17:07:08,637 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:07:08,637 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:07:08,637 [28] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:07:09,395 [29] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm5 died.
+2017-06-27 17:07:13,520 [24] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:13,644 [25] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm6 died.
+2017-06-27 17:07:14,021 [23] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:15,406 [22] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:15,906 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:16,522 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:17,023 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:18,637 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:19,139 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:20,439 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:20,941 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:23,087 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:23,590 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:24,888 [22] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:25,388 [23] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:26,006 [24] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:26,507 [25] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:27,039 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:27,539 [27] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:30,773 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:30,773 [28] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:07:30,773 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm7 entity at V(-2,92, 0,00, -7,52)
+2017-06-27 17:07:30,774 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:07:30,774 [28] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:07:30,774 [28] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:07:34,473 [30] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Cond fullfilled with callreason: ConditionFullfilled.
+2017-06-27 17:07:34,473 [30] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-27 17:07:34,473 [30] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm8 entity at V(-2,92, 0,00, -7,52)
+2017-06-27 17:07:34,473 [30] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-27 17:07:34,473 [30] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-27 17:07:34,473 [30] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-27 17:07:35,781 [29] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm7 died.
+2017-06-27 17:07:39,480 [31] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm8 died.
+2017-06-27 17:08:18,705 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-27 17:08:18,715 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-27 17:08:18,715 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

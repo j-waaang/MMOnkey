@@ -37,8 +37,8 @@
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
 
             var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
-            var P1 = sourcePos + LookDirP * 0.5f * ATTACKWIDTH;
-            var P2 = sourcePos - LookDirP * 0.5f * ATTACKWIDTH;
+            var P1 = sourcePos + LookDirP * .5f * ATTACKWIDTH;
+            var P2 = sourcePos - LookDirP * .5f * ATTACKWIDTH;
             var P3 = P2 + LookDirection * ATTACKDISTANCE;
 
             var dmgArea = new RectangleAreaTarget(P1, P2, P3) {

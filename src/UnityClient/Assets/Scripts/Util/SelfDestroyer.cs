@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SelfDestroyer {
+public class SelfDestroyer : MonoBehaviour {
 
-    public SelfDestroyer(TimeSpan timeSpan, GameObject destroyable) {
+    [SerializeField] private float destroyInSeconds = 1f;
 
+    private void Start() {
+        StartCoroutine(ActionHelper.WaitAndDo(destroyInSeconds, () => Destroy(gameObject)));
     }
 }

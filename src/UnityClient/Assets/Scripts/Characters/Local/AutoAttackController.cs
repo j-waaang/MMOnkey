@@ -13,6 +13,7 @@
     [RequireComponent(typeof(ActionStateComponent))]
     public class AutoAttackController : MonoBehaviour {
 
+        private AOEHintCreator m_AOEHintCreator;
         private ActionStateComponent m_ActionState;
         private RotationController m_RotationController;
         private ActionCode m_AutoAttackAction;
@@ -22,6 +23,7 @@
         private void Awake() {
             m_RotationController = GetComponent<RotationController>();
             m_ActionState = GetComponent<ActionStateComponent>();
+            m_AOEHintCreator = GetComponent<AOEHintCreator>();
             SetAutoAttackType();
         }
 
@@ -65,6 +67,8 @@
             var setIdleCondition = new TimedContinueCondition(AADURATION);
             setIdleCondition.ContinueEvent += (CallReason cr) => m_ActionState.ActionState = ActionCode.Idle;
             setIdleCondition.Start();
+
+            m_AOEHintCreator.PlayDelayedAttackShape(m_AutoAttackAction, 0.5f);
         }
     }
 }
