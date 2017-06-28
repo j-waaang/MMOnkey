@@ -16,7 +16,7 @@
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(ActionSource, ActionCode.Dash);
+            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code);
         }
 
         public override void StartAction() {

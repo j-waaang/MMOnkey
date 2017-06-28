@@ -95,3 +95,781 @@
 2017-06-28 15:39:07,397 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
 2017-06-28 15:39:07,491 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
 2017-06-28 15:39:07,491 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:07:14,982 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:07:15,077 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:07:15,083 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:07:15,099 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:07:15,099 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:07:15,100 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:07:15,100 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:07:15,100 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:07:15,100 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:18:29,282 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:18:29,289 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:18:29,289 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:18:33,681 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:18:33,719 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:18:33,726 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:18:33,743 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:18:33,744 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:18:33,744 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:18:33,744 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:18:33,744 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:18:33,745 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:18:49,718 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created sdsfsf entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:20:32,582 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:20:32,594 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:20:32,594 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:20:42,869 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:20:42,903 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:20:42,908 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:20:42,924 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:20:42,924 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:20:42,925 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:20:42,925 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:20:42,925 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:20:42,925 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:20:50,215 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dfsfds entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:23:13,060 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:23:13,070 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:23:13,070 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:23:22,943 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:23:22,978 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:23:22,984 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:23:22,999 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:23:23,000 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:23:23,000 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:23:23,000 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:23:23,000 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:23:23,001 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:23:34,081 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ghfghfgh entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:23:35,284 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObjectFactory - ActionObject received AxeAutoAttack creation request.
+2017-06-28 16:23:47,001 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObjectFactory - ActionObject received AxeAutoAttack creation request.
+2017-06-28 16:24:23,156 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created klk;lk;l entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:24:25,424 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObjectFactory - ActionObject received DistractingShot creation request.
+2017-06-28 16:24:25,426 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - klk;lk;l started AxeAutoAttack action
+2017-06-28 16:24:28,174 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObjectFactory - ActionObject received DistractingShot creation request.
+2017-06-28 16:24:28,174 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - klk;lk;l started AxeAutoAttack action
+2017-06-28 16:24:28,678 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 16:24:28,679 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 16:24:29,574 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObjectFactory - ActionObject received DistractingShot creation request.
+2017-06-28 16:24:29,575 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - klk;lk;l started AxeAutoAttack action
+2017-06-28 16:24:30,075 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 90
+2017-06-28 16:24:30,075 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 16:29:52,486 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:29:52,498 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:29:52,498 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:30:00,864 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:30:00,898 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:30:00,904 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:30:00,919 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:30:00,920 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:30:00,920 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:30:00,920 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:30:00,920 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:30:00,920 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:30:09,358 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created sdsdsd entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:30:11,642 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - sdsdsd started AxeAutoAttack action
+2017-06-28 16:30:12,976 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - sdsdsd started AxeAutoAttack action
+2017-06-28 16:30:13,981 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took 0 damage. Health left: 100
+2017-06-28 16:30:14,331 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - sdsdsd started AxeAutoAttack action
+2017-06-28 16:30:15,331 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took 0 damage. Health left: 100
+2017-06-28 16:30:15,524 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - sdsdsd started AxeAutoAttack action
+2017-06-28 16:30:16,525 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took 0 damage. Health left: 100
+2017-06-28 16:36:02,867 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:36:02,889 [15] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:36:02,889 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:37:40,512 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:37:40,549 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:37:40,556 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:37:40,574 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:37:40,575 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:37:40,575 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:37:40,575 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:37:40,575 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:37:40,576 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:37:56,553 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdfgd entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:38:00,846 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgd started 11 action
+2017-06-28 16:38:04,144 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgd started 11 action
+2017-06-28 16:38:06,849 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgd started 14 action
+2017-06-28 16:38:07,855 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took 0 damage. Health left: 100
+2017-06-28 16:41:42,152 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:41:42,165 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:41:42,165 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:45:39,206 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:45:39,242 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:45:39,248 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:45:39,264 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:45:39,265 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:45:39,265 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:45:39,265 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:45:39,265 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:45:39,265 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:45:49,310 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dsfsfdsdf entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:48:22,597 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdfgdg entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:48:24,035 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:25,642 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:26,941 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:27,743 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:28,375 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:29,076 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:42,110 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:45,677 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:47,394 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:48,326 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:49,308 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:50,093 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:50,927 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:51,625 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:52,526 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:53,543 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:54,443 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:55,294 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:48:56,109 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - fgdfgdg started 11 action
+2017-06-28 16:51:16,349 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:51:16,358 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:51:16,358 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:54:47,247 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:54:47,288 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:54:47,295 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:54:47,312 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:54:47,313 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:54:47,314 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:54:47,314 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:54:47,314 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:54:47,314 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:54:52,548 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dawada entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:54:54,070 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 16:54:54,589 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Distracting shot do damage
+2017-06-28 16:55:20,736 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dfsdf entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:55:21,861 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 16:55:22,371 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 16:55:22,373 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 16:55:48,383 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 16:55:48,884 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 90
+2017-06-28 16:55:48,884 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 16:56:07,714 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 16:56:08,215 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Distracting shot do damage
+2017-06-28 16:57:13,334 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:57:13,364 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:57:13,364 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:57:21,313 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:57:21,362 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:57:21,370 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:57:21,389 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:57:21,390 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:57:21,390 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:57:21,390 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:57:21,390 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:57:21,390 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:57:26,787 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created rerterte entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:57:28,082 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 16:57:28,594 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Distractingshot continueReason
+2017-06-28 16:58:03,329 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:58:03,343 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:58:03,343 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 16:58:10,017 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 16:58:10,052 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 16:58:10,058 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 16:58:10,074 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:58:10,075 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 16:58:10,075 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:58:10,075 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 16:58:10,075 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 16:58:10,075 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 16:58:15,171 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fdgdgfd entity at V(0,00, 0,00, 0,00)
+2017-06-28 16:58:17,440 [14] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 16:58:17,958 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Distractingshot continueReason ConditionFullfilled
+2017-06-28 16:58:27,523 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 16:58:27,537 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 16:58:27,537 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 17:07:18,649 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 17:07:18,687 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 17:07:18,693 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 17:07:18,711 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:07:18,712 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 17:07:18,713 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:07:18,713 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 17:07:18,713 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:07:18,713 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 17:07:18,715 [14] ERROR Photon.SocketServer.ApplicationBase - System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at JYW.ThesisMMO.MMOServer.AI.AILooper.AILoop() in D:\Projects\ThesisMMO\src\MMOServer\AI\AILooper.cs:line 48
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:07:24,978 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created saasdasd entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:07:27,066 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:07:27,588 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 17:07:27,589 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:28,091 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 90
+2017-06-28 17:07:28,091 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:28,592 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 85
+2017-06-28 17:07:28,592 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:29,050 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:07:29,093 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 80
+2017-06-28 17:07:29,099 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:29,600 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 75
+2017-06-28 17:07:29,600 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:30,101 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 70
+2017-06-28 17:07:30,101 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:30,602 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 65
+2017-06-28 17:07:30,602 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:31,103 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 60
+2017-06-28 17:07:31,103 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:31,604 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 55
+2017-06-28 17:07:31,604 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:32,104 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 50
+2017-06-28 17:07:32,104 [23] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:32,605 [24] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 45
+2017-06-28 17:07:32,607 [24] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:33,108 [25] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 40
+2017-06-28 17:07:33,108 [25] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:33,608 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 35
+2017-06-28 17:07:33,608 [23] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:34,110 [22] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 30
+2017-06-28 17:07:34,110 [22] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:34,611 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 25
+2017-06-28 17:07:34,611 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:35,112 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 20
+2017-06-28 17:07:35,112 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:35,613 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 15
+2017-06-28 17:07:35,613 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:36,114 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 10
+2017-06-28 17:07:36,114 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:36,615 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 5
+2017-06-28 17:07:36,615 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:37,115 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 0
+2017-06-28 17:07:37,118 [19] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-28 17:07:37,123 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:07:48,900 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:07:56,306 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:07:56,807 [55] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 95
+2017-06-28 17:07:56,807 [55] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:07:57,308 [57] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 90
+2017-06-28 17:07:57,308 [57] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:07:57,808 [59] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 85
+2017-06-28 17:07:57,808 [59] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:07:58,309 [61] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 80
+2017-06-28 17:07:58,309 [61] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:07:58,811 [63] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 75
+2017-06-28 17:07:58,811 [63] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:07:59,311 [65] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 70
+2017-06-28 17:07:59,311 [65] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:07:59,813 [67] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 65
+2017-06-28 17:07:59,813 [67] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:00,314 [69] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 60
+2017-06-28 17:08:00,314 [69] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:00,815 [71] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 55
+2017-06-28 17:08:00,815 [71] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:01,317 [73] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 50
+2017-06-28 17:08:01,317 [73] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:01,819 [75] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 45
+2017-06-28 17:08:01,820 [75] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:02,322 [74] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 40
+2017-06-28 17:08:02,323 [74] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:02,823 [72] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 35
+2017-06-28 17:08:02,823 [72] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:03,324 [70] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 30
+2017-06-28 17:08:03,324 [70] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:03,825 [68] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 25
+2017-06-28 17:08:03,825 [68] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:04,326 [66] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 20
+2017-06-28 17:08:04,326 [66] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:04,827 [64] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 15
+2017-06-28 17:08:04,827 [64] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:05,328 [62] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 10
+2017-06-28 17:08:05,328 [62] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:05,830 [60] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 5
+2017-06-28 17:08:05,830 [60] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:06,332 [58] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 0
+2017-06-28 17:08:06,332 [58] INFO  JYW.ThesisMMO.MMOServer.Entity - One Punch Man died.
+2017-06-28 17:08:06,332 [58] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:08:07,744 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:08:09,401 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:08:30,219 [129] ERROR Photon.SocketServer.ApplicationBase - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 33
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:08:30,372 [130] ERROR Photon.SocketServer.ApplicationBase - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 33
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:36,152 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 17:09:36,163 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 17:09:36,164 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 17:09:45,858 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 17:09:45,899 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 17:09:45,905 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 17:09:45,924 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:09:45,926 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 17:09:45,926 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:09:45,926 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 17:09:45,926 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:09:45,926 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 17:09:53,022 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fdfgd entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:09:54,831 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:09:55,346 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 17:09:55,347 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:55,848 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 90
+2017-06-28 17:09:55,848 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:55,849 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 85
+2017-06-28 17:09:55,849 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:55,851 [18] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:56,348 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 80
+2017-06-28 17:09:56,348 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:56,349 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 75
+2017-06-28 17:09:56,349 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:56,349 [19] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:56,850 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 70
+2017-06-28 17:09:56,850 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:56,850 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 65
+2017-06-28 17:09:56,850 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:56,851 [21] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:57,351 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 60
+2017-06-28 17:09:57,351 [23] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:57,351 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 55
+2017-06-28 17:09:57,351 [23] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:57,351 [23] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:57,852 [25] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 50
+2017-06-28 17:09:57,852 [25] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:57,852 [25] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 45
+2017-06-28 17:09:57,852 [25] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:57,852 [25] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:58,352 [27] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 40
+2017-06-28 17:09:58,352 [27] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:58,353 [27] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 35
+2017-06-28 17:09:58,353 [27] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:58,353 [27] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:58,854 [29] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 30
+2017-06-28 17:09:58,854 [29] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:58,855 [29] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 25
+2017-06-28 17:09:58,858 [29] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:58,859 [29] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:59,355 [31] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 20
+2017-06-28 17:09:59,357 [31] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:59,357 [31] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 15
+2017-06-28 17:09:59,357 [31] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:59,358 [31] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:09:59,858 [33] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 10
+2017-06-28 17:09:59,858 [33] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:59,859 [33] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 5
+2017-06-28 17:09:59,859 [33] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:09:59,859 [33] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:10:00,359 [32] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 0
+2017-06-28 17:10:00,360 [32] INFO  JYW.ThesisMMO.MMOServer.Entity - Ork 452537 died.
+2017-06-28 17:10:00,361 [32] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:10:00,361 [32] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:10:00,863 [29] ERROR Photon.SocketServer.ApplicationBase - System.Threading.ThreadStateException: Thread is running or terminated; it cannot restart.
+   at System.Threading.Thread.StartupSetApartmentStateInternal()
+   at System.Threading.Thread.Start(StackCrawlMark& stackMark)
+   at System.Threading.Thread.Start()
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.Start() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 18
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.StartConditions() in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 57
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 53
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:10:01,364 [8] ERROR Photon.SocketServer.ApplicationBase - System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.BowAutoAttackRequest.DoDamage(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\SkillRequests\BowAutoAttackRequest.cs:line 33
+   at JYW.ThesisMMO.MMOServer.ActionObjects.CastActionObject.OnFinishedCasting(CallReason callReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\CastActionObject.cs:line 37
+   at System.Action`1.Invoke(T obj)
+   at JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject.OnConditionFullfilled(CallReason continueReason) in D:\Projects\ThesisMMO\src\MMOServer\ActionObjects\ActionObject.cs:line 70
+   at JYW.ThesisMMO.Common.ContinueObjects.TimedContinueCondition.<>c__DisplayClass1_0.<.ctor>b__0() in D:\Projects\ThesisMMO\src\Common\ContinueObjects\TimedContinueCondition.cs:line 13
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+2017-06-28 17:10:08,618 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 17:10:08,633 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 17:10:08,634 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 17:10:17,375 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 17:10:17,410 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 17:10:17,416 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 17:10:17,432 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:10:17,433 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 17:10:17,433 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:10:17,433 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 17:10:17,433 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:10:17,433 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 17:10:27,714 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created jhkj entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:10:28,649 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:10:29,171 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 17:10:29,172 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:10:31,347 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:14:34,923 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 17:14:34,933 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 17:14:34,933 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 17:14:39,898 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 17:14:39,933 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 17:14:39,939 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 17:14:39,954 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:14:39,955 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 17:14:39,955 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:14:39,955 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 17:14:39,955 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:14:39,956 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 17:14:47,260 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdfgdfg entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:14:49,169 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:14:49,683 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,56, 0,00, 0,83)
+2017-06-28 17:14:49,687 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 17:14:49,690 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:14:51,346 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:14:51,849 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,80, -0,60, 0,01)
+2017-06-28 17:18:05,222 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created jkjklj entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:18:06,668 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:18:07,170 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,53, 0,00, 0,85)
+2017-06-28 17:18:07,170 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 90
+2017-06-28 17:18:07,170 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:18:08,458 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:18:08,959 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,09, 0,00, -1,00)
+2017-06-28 17:18:08,959 [21] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -5 damage. Health left: 95
+2017-06-28 17:18:08,961 [21] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-28 17:18:10,115 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:18:10,616 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,65, 0,00, 0,76)
+2017-06-28 17:18:10,617 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 95
+2017-06-28 17:18:10,617 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:18:11,358 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:18:11,859 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,61, 0,00, 0,79)
+2017-06-28 17:18:11,859 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 90
+2017-06-28 17:18:11,859 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:18:12,968 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:18:13,469 [17] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,03, 0,00, -1,00)
+2017-06-28 17:18:13,469 [17] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 234932 took -5 damage. Health left: 90
+2017-06-28 17:18:13,469 [17] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 234932.
+2017-06-28 17:18:14,426 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:18:14,927 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,53, 0,00, 0,85)
+2017-06-28 17:18:14,927 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 85
+2017-06-28 17:18:14,927 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:18:16,751 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:18:17,251 [8] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,85, 0,00, -0,53)
+2017-06-28 17:18:17,251 [8] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 80
+2017-06-28 17:18:17,252 [8] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:19:51,668 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created sdsfds entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:19:52,466 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created FireStorm ActionObject
+2017-06-28 17:19:54,470 [4] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-28 17:19:54,471 [4] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm1 entity at V(-6,17, 0,00, -1,23)
+2017-06-28 17:19:54,471 [4] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-28 17:19:54,472 [4] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-28 17:19:54,477 [4] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-28 17:19:59,486 [22] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-28 17:20:17,580 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 17:20:17,587 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 17:20:17,587 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 17:29:40,471 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 17:29:40,506 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 17:29:40,512 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 17:29:40,530 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:29:40,531 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 17:29:40,531 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:29:40,531 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 17:29:40,531 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:29:40,531 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 17:29:49,991 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created jkjlkjkj entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:29:51,447 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:30:05,312 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:30:05,816 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,11, 0,00, 0,99)
+2017-06-28 17:30:05,818 [18] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 95
+2017-06-28 17:30:05,819 [18] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:30:08,606 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:30:09,107 [19] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,10, 0,00, 0,99)
+2017-06-28 17:30:09,107 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 90
+2017-06-28 17:30:09,108 [19] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:30:10,611 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:30:11,112 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,10, 0,00, 0,99)
+2017-06-28 17:30:11,112 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 85
+2017-06-28 17:30:11,112 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:30:11,903 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:30:35,664 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:40:18,549 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ilkllkj entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:40:19,707 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:40:20,210 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,42, 0,00, 0,91)
+2017-06-28 17:40:20,210 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 80
+2017-06-28 17:40:20,210 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:40:22,455 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:40:22,956 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,19, 0,00, 0,98)
+2017-06-28 17:40:22,956 [28] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 75
+2017-06-28 17:40:22,956 [28] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:40:24,450 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:40:24,952 [29] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,77, 0,00, 0,64)
+2017-06-28 17:40:24,952 [29] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 95
+2017-06-28 17:40:24,954 [29] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:40:26,058 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:40:26,560 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(0,82, 0,00, 0,57)
+2017-06-28 17:40:26,560 [28] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 90
+2017-06-28 17:40:26,560 [28] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:40:27,696 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:40:28,197 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,80, 0,00, 0,60)
+2017-06-28 17:40:28,197 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 85
+2017-06-28 17:40:28,197 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:40:34,979 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:40:35,480 [24] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,97, 0,00, -0,25)
+2017-06-28 17:40:35,480 [24] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 70
+2017-06-28 17:40:35,480 [24] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:41:36,795 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created rertrtetre entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:41:47,678 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created gfsgsfft46 entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:41:49,274 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:41:49,775 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - rertrtetre took -5 damage. Health left: 65
+2017-06-28 17:41:49,775 [23] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to rertrtetre.
+2017-06-28 17:41:51,406 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:41:51,908 [23] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - rertrtetre took -5 damage. Health left: 60
+2017-06-28 17:41:51,908 [23] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to rertrtetre.
+2017-06-28 17:42:02,843 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created FireStorm ActionObject
+2017-06-28 17:42:03,623 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:42:04,125 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(0,98, 0,00, 0,17)
+2017-06-28 17:42:04,125 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 80
+2017-06-28 17:42:04,125 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:42:04,125 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - gfsgsfft46 took -5 damage. Health left: 95
+2017-06-28 17:42:04,125 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to gfsgsfft46.
+2017-06-28 17:42:04,125 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - gfsgsfft46 was interupted.
+2017-06-28 17:42:09,243 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created OrisonOfHealing ActionObject
+2017-06-28 17:42:09,246 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created FireStorm ActionObject
+2017-06-28 17:42:10,247 [19] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - rertrtetre took 10 damage. Health left: 70
+2017-06-28 17:42:15,625 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created FireStorm ActionObject
+2017-06-28 17:42:17,629 [18] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-28 17:42:17,629 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm1 entity at V(-3,22, 0,00, -3,97)
+2017-06-28 17:42:17,629 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-28 17:42:17,630 [18] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-28 17:42:17,634 [18] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-28 17:42:22,643 [17] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm1 died.
+2017-06-28 17:42:25,658 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created FireStorm ActionObject
+2017-06-28 17:42:26,257 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:42:26,759 [9] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(1,00, 0,00, 0,02)
+2017-06-28 17:42:26,759 [9] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - One Punch Man took -5 damage. Health left: 75
+2017-06-28 17:42:26,759 [9] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to One Punch Man.
+2017-06-28 17:42:26,759 [9] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - gfsgsfft46 took -5 damage. Health left: 90
+2017-06-28 17:42:26,759 [9] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to gfsgsfft46.
+2017-06-28 17:42:26,759 [9] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - gfsgsfft46 was interupted.
+2017-06-28 17:42:32,709 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created FireStorm ActionObject
+2017-06-28 17:42:34,710 [6] INFO  JYW.ThesisMMO.MMOServer.EntityFactory - Factory received skill entity creation request with code FireStorm
+2017-06-28 17:42:34,710 [6] INFO  JYW.ThesisMMO.MMOServer.Entity - Created FireStorm2 entity at V(-3,36, 0,00, -5,01)
+2017-06-28 17:42:34,710 [6] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity with actioncode AxeAutoAttack
+2017-06-28 17:42:34,711 [6] INFO  JYW.ThesisMMO.MMOServer.Entity - Creating skillentity event data with actioncode FireStorm
+2017-06-28 17:42:34,711 [6] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created FireStormAI skill entity.
+2017-06-28 17:42:39,718 [4] INFO  JYW.ThesisMMO.MMOServer.Entity - FireStorm2 died.
+2017-06-28 17:43:31,749 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created jkhjkkjh entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:43:36,848 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fgdgfd entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:43:40,745 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:43:41,247 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,99, 0,00, 0,12)
+2017-06-28 17:43:41,247 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - fgdgfd took -5 damage. Health left: 65
+2017-06-28 17:43:41,247 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to fgdgfd.
+2017-06-28 17:43:42,709 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:43:43,211 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,99, 0,00, 0,13)
+2017-06-28 17:43:43,211 [28] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - fgdgfd took -5 damage. Health left: 60
+2017-06-28 17:43:43,211 [28] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to fgdgfd.
+2017-06-28 17:43:46,162 [12] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:43:46,664 [29] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,99, 0,00, 0,12)
+2017-06-28 17:43:46,664 [29] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - fgdgfd took -5 damage. Health left: 55
+2017-06-28 17:43:46,670 [29] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to fgdgfd.
+2017-06-28 17:43:47,878 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:43:48,379 [28] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,99, 0,00, 0,12)
+2017-06-28 17:43:48,379 [28] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - fgdgfd took -5 damage. Health left: 50
+2017-06-28 17:43:48,379 [28] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to fgdgfd.
+2017-06-28 17:52:23,401 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created l;k;l;l; entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:52:27,351 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ssdfsfsd entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:52:28,529 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:52:29,029 [26] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,61, 0,00, 0,79)
+2017-06-28 17:52:29,029 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - Ork 452537 took -5 damage. Health left: 65
+2017-06-28 17:52:29,029 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to Ork 452537.
+2017-06-28 17:52:29,029 [26] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - l;k;l;l; took -5 damage. Health left: 95
+2017-06-28 17:52:29,029 [26] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to l;k;l;l;.
+2017-06-28 17:52:32,747 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:52:33,249 [6] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,64, 0,00, 0,77)
+2017-06-28 17:52:35,145 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:52:35,646 [16] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - ssdfsfsd took -5 damage. Health left: 65
+2017-06-28 17:52:35,647 [16] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to ssdfsfsd.
+2017-06-28 17:52:36,945 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created AxeAutoAttack ActionObject
+2017-06-28 17:52:44,929 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 17:52:44,955 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 17:52:44,955 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-28 17:52:51,565 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-28 17:52:51,600 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-28 17:52:51,606 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-28 17:52:51,621 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:52:51,622 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-28 17:52:51,622 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:52:51,622 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-28 17:52:51,622 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-28 17:52:51,623 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-28 17:54:59,207 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created iukgluug entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:55:04,041 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created yuyiyiy entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:55:07,709 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:55:08,221 [16] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(0,59, 0,00, 0,80)
+2017-06-28 17:55:09,952 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:55:10,453 [18] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(0,51, 0,00, -0,86)
+2017-06-28 17:55:12,905 [10] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created DistractingShot ActionObject
+2017-06-28 17:55:13,407 [20] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - DS LookDir is V(-0,98, 0,00, 0,22)
+2017-06-28 17:55:13,408 [20] INFO  JYW.ThesisMMO.MMOServer.Entities.Attributes.Attribute - iukgluug took -5 damage. Health left: 95
+2017-06-28 17:55:13,409 [20] INFO  JYW.ThesisMMO.MMOServer.World - Applying aoe to iukgluug.
+2017-06-28 17:55:59,858 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created sdadsds entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:56:15,626 [12] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ewerer entity at V(0,00, 0,00, 0,00)
+2017-06-28 17:56:16,722 [11] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:56:17,223 [21] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(0,45, 0,00, 0,89)
+2017-06-28 17:56:18,922 [13] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Created BowAutoAttack ActionObject
+2017-06-28 17:56:19,423 [23] INFO  JYW.ThesisMMO.MMOServer.ActionObjects.ActionObject - Bow Attack LookDir is V(-0,21, 0,00, -0,98)
+2017-06-28 17:56:30,036 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
+2017-06-28 17:56:30,045 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
+2017-06-28 17:56:30,046 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer

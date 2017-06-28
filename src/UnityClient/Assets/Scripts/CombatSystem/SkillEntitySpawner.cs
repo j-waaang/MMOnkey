@@ -10,10 +10,8 @@ public class SkillEntitySpawner : MonoBehaviour{
     }
 
     public static void CreateSkillEntity(string name, ActionCode skill, Vector3 position) {
-        Debug.Log("Creating remote skill entity");
         var prefabName = Enum.GetName(typeof(ActionCode), skill);
         prefabName += "Entity";
-        Debug.LogFormat("Try instantiating object with name {0}", name);
         var go = Instantiate(Resources.Load(prefabName, typeof(GameObject)), position, Quaternion.identity) as GameObject;
         go.name = name;
     }
@@ -21,7 +19,6 @@ public class SkillEntitySpawner : MonoBehaviour{
     public static void CreateSkillEntity(ActionCode skill, Vector3 position) {
         var prefabName = Enum.GetName(typeof(ActionCode), skill);
         prefabName += "Entity";
-        Debug.LogFormat("Try instantiating object with name {0}", prefabName);
         Instantiate(Resources.Load(prefabName, typeof(GameObject)), position, Quaternion.identity);
     }
 }

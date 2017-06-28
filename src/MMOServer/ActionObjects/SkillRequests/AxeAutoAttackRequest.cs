@@ -27,7 +27,7 @@
             // In case the client did not normalize
             LookDirection = LookDirection.Normalized;
             FinishedCastingEvent += DoDamage;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.AxeAutoAttack, LookDirection);
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), LookDirection);
         }
 
         private void DoDamage(CallReason continueReason) {

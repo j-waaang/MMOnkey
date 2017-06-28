@@ -20,14 +20,26 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects {
                 : base(actionSource, protocol, request) {
         }
 
-        protected void StartCast(TimeSpan castDuration, ActionCode castState, Vector lookDirection) {
-            var stateModifier = new CastActionStateModifier(castState, lookDirection);
+        protected void StartCast(TimeSpan castDuration, Vector lookDirection) {
+            var stateModifier = new CastActionStateModifier((ActionCode)Code, lookDirection);
             World.Instance.ApplyModifier(ActionSource, stateModifier);
             AddCondition(new TimedContinueCondition(castDuration));
             AddCondition(new InteruptContinueCondition(ActionSource));
 
-            ContinueEvent += FinishedCastingEvent;
+            ContinueEvent += OnFinishedCasting;
             StartConditions();
+        }
+
+        private void OnFinishedCasting(CallReason callReason) {
+            switch (callReason) {
+                case CallReason.ConditionFullfilled:
+                    FinishedCastingEvent(callReason);
+                    ContinueEvent -= OnFinishedCasting;
+                    break;
+                case CallReason.Interupted:
+                    SetIdle(callReason);
+                    break;
+            }
         }
 
         protected Vector GetLookDir(string actionSource, string actionTarget) {

@@ -68,7 +68,7 @@
             setIdleCondition.ContinueEvent += (CallReason cr) => m_ActionState.ActionState = ActionCode.Idle;
             setIdleCondition.Start();
 
-            m_AOEHintCreator.PlayDelayedAttackShape(m_AutoAttackAction, 0.5f);
+            //m_AOEHintCreator.PlayDelayedAttackShape(m_AutoAttackAction, 0.5f);
         }
     }
 }

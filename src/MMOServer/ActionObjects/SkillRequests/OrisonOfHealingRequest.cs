@@ -21,16 +21,13 @@
 
         public override bool CheckPrerequesite() {
             var target = new EntityTarget() { TargetName = Target };
-            return World.Instance.CanPerformAction(ActionSource, ActionCode.OrisonOfHealing, target);
+            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code, target);
         }
 
         public override void StartAction() {
             FinishedCastingEvent += DoHealing;
             FinishedCastingEvent += SetIdle;
-            StartCast(
-                new System.TimeSpan(0, 0, 0, 1),
-                ActionCode.OrisonOfHealing,
-                GetLookDir(ActionSource, Target));
+            StartCast(new System.TimeSpan(0, 0, 0, 1), GetLookDir(ActionSource, Target));
         }
 
         private void DoHealing(CallReason continueReason) {

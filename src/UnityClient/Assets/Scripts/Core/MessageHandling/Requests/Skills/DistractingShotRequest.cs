@@ -14,7 +14,7 @@
 
             var data = new Dictionary<byte, object>
             {
-                    { (byte)ParameterCode.ActionCode, ActionCode.AxeAutoAttack },
+                    { (byte)ParameterCode.ActionCode, ActionCode.DistractingShot },
                     { (byte)ParameterCode.LookDirection, VectorExtension.Vector3ToVector(lookDir) }
             };
 

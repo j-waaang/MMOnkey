@@ -3,8 +3,31 @@ using UnityEngine;
 
 public class AOEHintCreator : MonoBehaviour {
 
+    public void PlayDelayedAttackShape(ActionCode action) {
+        StartCoroutine(ActionHelper.WaitAndDo(GetCastTime(action), () => PlayAttackShape(action)));
+    }
+
+    private static float GetCastTime(ActionCode action) {
+        switch (action) {
+            case ActionCode.AxeAutoAttack:
+            case ActionCode.BowAutoAttack:
+            case ActionCode.DistractingShot:
+                return .5f;
+            case ActionCode.FireStorm:
+                return 2f;
+            case ActionCode.HammerBash:
+            case ActionCode.OrisonOfHealing:
+            default:
+                return 1f;
+        }
+    }
+
     public void PlayDelayedAttackShape(ActionCode action, float waitForSeconds) {
         StartCoroutine(ActionHelper.WaitAndDo(waitForSeconds, () => PlayAttackShape(action)));
+    }
+
+    private void Update() {
+
     }
 
     public void PlayAttackShape(ActionCode action) {
@@ -26,6 +49,7 @@ public class AOEHintCreator : MonoBehaviour {
                 shapeInst = Instantiate(Resources.Load<GameObject>("CylinderAOE"), transform) as GameObject;
                 break;
         }
+        if(shapeInst == null) { return; }
         shapeInst.transform.forward = transform.forward;
     }
 }

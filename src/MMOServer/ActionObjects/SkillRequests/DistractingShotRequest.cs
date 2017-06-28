@@ -20,25 +20,25 @@
         public Vector LookDirection { get; set; }
         #endregion DataContract
 
-        private const float ATTACKWIDTH = 2;
+        private const float ATTACKWIDTH = 3;
         private const float ATTACKDISTANCE = 8;
 
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;
             FinishedCastingEvent += DoDamage;
             FinishedCastingEvent += SetIdle;
-            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), ActionCode.DistractingShot, LookDirection);
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), LookDirection);
         }
 
         private void DoDamage(CallReason continueReason) {
-            if(continueReason == CallReason.Interupted) { return; }
-
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
 
+            log.InfoFormat("DS LookDir is {0}", LookDirection);
+
             var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
-            var P1 = sourcePos + LookDirP * .5f * ATTACKWIDTH;
-            var P2 = sourcePos - LookDirP * .5f * ATTACKWIDTH;
+            var P1 = sourcePos + LookDirP * 0.5f * ATTACKWIDTH;
+            var P2 = sourcePos - LookDirP * 0.5f * ATTACKWIDTH;
             var P3 = P2 + LookDirection * ATTACKDISTANCE;
 
             var dmgArea = new RectangleAreaTarget(P1, P2, P3) {

@@ -20,7 +20,7 @@
         public ActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
             ActionSource = actionSource;
-            log.DebugFormat("Created {0} ActionObject", GetType().Name);
+            log.InfoFormat("Created {0} ActionObject", (ActionCode)Code);
         }
 
         public ActionObject(IRpcProtocol protocol, OperationRequest request) {
@@ -29,7 +29,7 @@
         }
 
         [DataMember(Code = (byte)ParameterCode.ActionCode)]
-        public ActionCode actionCode { get; set; }
+        public int Code { get; set; }
         #endregion DataContract
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
@@ -60,6 +60,7 @@
         }
 
         private void OnConditionFullfilled(CallReason continueReason) {
+            if(continueReason == CallReason.Interupted) { log.InfoFormat("{0} was interupted.", ActionSource); }
             foreach (ActionContinueCondition condition in m_ContinueConidtions) {
                 condition.Dispose();
             }

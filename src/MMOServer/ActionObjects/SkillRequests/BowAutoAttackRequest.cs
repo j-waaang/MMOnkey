@@ -26,16 +26,14 @@
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;
             FinishedCastingEvent += DoDamage;
-            StartCast(
-                new System.TimeSpan(0, 0, 0, 0, 500),
-                ActionCode.BowAutoAttack,
-                LookDirection);
+            StartCast(new System.TimeSpan(0, 0, 0, 0, 500), LookDirection);
         }
 
         private void DoDamage(CallReason continueReason) {
-
             var healthModifier = new IntModifier(ModifyMode.Addition, AttributeCode.Health, -5);
             var sourcePos = World.Instance.GetEntity(ActionSource).Position;
+
+            log.InfoFormat("Bow Attack LookDir is {0}", LookDirection);
 
             var LookDirP = new Vector(LookDirection.Z, -LookDirection.X);
             var P1 = sourcePos + LookDirP * 0.5f * ATTACKWIDTH;
@@ -48,8 +46,9 @@
             };
 
             World.Instance.ApplyModifier(dmgArea, healthModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
 
+            // SetIdle
+            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 0, 500)));
             ContinueEvent -= DoDamage;
             ContinueEvent += SetIdle;
             StartConditions();

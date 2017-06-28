@@ -49,7 +49,7 @@ public class SkillEventListener : MonoBehaviour {
                 var mousePoint = InputExtension.GetMouseHitGroundPoint();
                 if (mousePoint == null) { return; }
 
-                var forwardVec = mousePoint.Value - transform.position;
+                var forwardVec = mousePoint.Value - m_Player.transform.position;
                 forwardVec = forwardVec.normalized;
 
                 RequestOperations.DistractingShotRequest(forwardVec);
@@ -66,14 +66,12 @@ public class SkillEventListener : MonoBehaviour {
         //Mouse position as target skills
         switch (skill) {
             case ActionCode.FireStorm:
-                var screenPos = Input.mousePosition;
-                var screenRay = Camera.main.ScreenPointToRay(screenPos);
-                RaycastHit hit;
-                if (m_GroundCollider.Raycast(screenRay, out hit, 20f)) {
-                    RequestOperations.FireStormRequest(hit.point);
-                    CastSkill(skill, hit.point, 2f);
-                    //CastSkill(skill, hit.point, 2f, () => SkillEntitySpawner.CreateSkillEntity(skill, hit.point));
-                }
+                var mousePoint = InputExtension.GetMouseHitGroundPoint();
+                if (mousePoint == null) { return; }
+
+                RequestOperations.FireStormRequest(mousePoint.Value);
+                CastSkill(skill, mousePoint.Value, 2f);
+                //CastSkill(skill, hit.point, 2f, () => SkillEntitySpawner.CreateSkillEntity(skill, hit.point));
                 break;
         }
     }

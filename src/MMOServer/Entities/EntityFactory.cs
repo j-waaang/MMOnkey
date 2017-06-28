@@ -52,9 +52,9 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         internal void CreateSkillEntity(ActionObject actionObject, Vector startPosition) {
-            var entityName = actionObject.actionCode.ToString() + actionObject.GetNextID();
+            var entityName = ((ActionCode)actionObject.Code).ToString() + actionObject.GetNextID();
 
-            var stringType = aiEntityNameSpace + actionObject.actionCode + "AI";
+            var stringType = aiEntityNameSpace + (ActionCode)actionObject.Code + "AI";
             var actionType = Type.GetType(stringType);
 
             if (actionType == null) {
@@ -62,7 +62,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 return;
             }
 
-            var skillEntity = new SkillEntity(actionObject.ActionSource, entityName, startPosition, actionObject.actionCode);
+            var skillEntity = new SkillEntity(actionObject.ActionSource, entityName, startPosition, (ActionCode)actionObject.Code);
             World.Instance.AddEntity(skillEntity);
             Activator.CreateInstance(actionType, skillEntity);
         }
