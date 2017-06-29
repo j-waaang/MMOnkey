@@ -361,3 +361,23 @@
 2017-06-29 16:17:49,161 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
 2017-06-29 16:17:49,167 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Tear Down------------------------
 2017-06-29 16:17:49,168 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
+2017-06-29 16:34:56,103 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - ------------------------Server Started------------------------
+2017-06-29 16:34:56,138 [1] INFO  JYW.ThesisMMO.MMOServer.ServerApplication - Created Game World.
+2017-06-29 16:34:56,144 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created One Punch Man entity at V(2,00, 0,00, 2,00)
+2017-06-29 16:34:56,159 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-29 16:34:56,160 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 234932 entity at V(0,00, 0,00, -2,00)
+2017-06-29 16:34:56,160 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-29 16:34:56,160 [1] INFO  JYW.ThesisMMO.MMOServer.Entity - Created Ork 452537 entity at V(-3,00, 0,00, 4,00)
+2017-06-29 16:34:56,160 [1] INFO  JYW.ThesisMMO.MMOServer.AI.AIEntity - Created TestBot skill entity.
+2017-06-29 16:34:56,160 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
+2017-06-29 16:35:16,233 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dfgdgg entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:35:25,168 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created erwreer entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:36:01,060 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created eewre entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:38:02,474 [14] INFO  JYW.ThesisMMO.MMOServer.Entity - Created dfsdfs entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:38:05,590 [11] INFO  JYW.ThesisMMO.MMOServer.Entity - Created ewrw entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:39:44,477 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created asdasda entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:39:47,177 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created erwrew entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:40:52,530 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created rerte entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:40:54,312 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created 786vb7 entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:41:58,131 [10] INFO  JYW.ThesisMMO.MMOServer.Entity - Created fdg entity at V(0,00, 0,00, 0,00)
+2017-06-29 16:42:00,928 [13] INFO  JYW.ThesisMMO.MMOServer.Entity - Created rtetr entity at V(0,00, 0,00, 0,00)

@@ -12,6 +12,8 @@ public class RemotePositionController : MonoBehaviour {
     private Vector3 m_LastReceivedPosition;
     private float m_LastReceivedTime;
 
+    private Vector3 m_PredictedPos;
+
     private void Start() {
         m_MovementState = GetComponent<MovementStateComponent>();
         m_RotationController = GetComponent<RotationController>();
@@ -23,6 +25,8 @@ public class RemotePositionController : MonoBehaviour {
 
         if(Time.time - m_LastReceivedTime > m_AutoIdle) {
             m_MovementState.MovementState = MovementState.Idle;
+            // Undo prediction
+            transform.position = m_LastReceivedPosition;
         }
 
         //Debug.LogFormat("Ping: {0}", Game.Instance.GetRTT());
@@ -40,13 +44,13 @@ public class RemotePositionController : MonoBehaviour {
 
         m_MovementState.MovementState = MovementState.Moving;
         transform.position = predictedPosition;
-        m_LastReceivedPosition = predictedPosition;
+        m_LastReceivedPosition = receivedPosition;
         m_LastReceivedTime = Time.time;
     }
 
-    private Vector3 PredictPosition(Vector3 outdatedPosition) {
-        // TODO: Do dead reckoning
-        return outdatedPosition;
+    private Vector3 PredictPosition(Vector3 receivedPosition) {
+        var moveDirection = receivedPosition - m_LastReceivedPosition;
+        return receivedPosition + moveDirection * 0.001f * Game.Instance.GetRTT() * 0.5f;
     }
 
     private void UpdateRotation(Vector3 newPosition) {
