@@ -10,6 +10,9 @@
     /// As a note, this is made as MonoBehaviour because we need Coroutines.
     /// </summary>
     public class MonobehaviourSingleton<T> : MonoBehaviour where T : MonoBehaviour {
+
+        [SerializeField] private static bool _dontDestroyOnLoad = false;
+
         private static T _instance;
 
         private static object _lock = new object();
@@ -39,7 +42,9 @@
                             _instance = singleton.AddComponent<T>();
                             singleton.name = "(singleton) " + typeof(T).ToString();
 
-                            DontDestroyOnLoad(singleton);
+                            if (_dontDestroyOnLoad) {
+                                DontDestroyOnLoad(singleton);
+                            }
 
                             Debug.Log("[Singleton] An instance of " + typeof(T) +
                                 " is needed in the scene, so '" + singleton +
