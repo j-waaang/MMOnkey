@@ -17,6 +17,7 @@
         private ActionStateComponent m_ActionState;
         private RotationController m_RotationController;
         private ActionCode m_AutoAttackAction;
+        private bool m_ContinueAutoAttack;
 
         private static readonly TimeSpan AADURATION = new TimeSpan(0, 0, 1);
 
@@ -49,6 +50,17 @@
                 forwardVec = forwardVec.normalized;
                 PerformAutoAttack(forwardVec);
             }
+
+            if (m_ContinueAutoAttack) {
+                if (!TargetInRange()) {
+                    m_ContinueAutoAttack = false;
+                    return;
+                }
+
+                var forwardVec = GameData.Target.transform.position - transform.position;
+                forwardVec = forwardVec.normalized;
+                PerformAutoAttack(forwardVec);
+            }
         }
         
         private void PerformAutoAttack(Vector3 lookDirection) {
@@ -66,9 +78,28 @@
 
             var setIdleCondition = new TimedContinueCondition(AADURATION);
             setIdleCondition.ContinueEvent += (CallReason cr) => m_ActionState.ActionState = ActionCode.Idle;
+            setIdleCondition.ContinueEvent += FinishedAutoAttack;
             setIdleCondition.Start();
+        }
 
-            //m_AOEHintCreator.PlayDelayedAttackShape(m_AutoAttackAction, 0.5f);
+        private void FinishedAutoAttack(CallReason cr) {
+            if (cr == CallReason.Interupted) { return; }
+            m_ContinueAutoAttack = true;
+        }
+
+        private bool TargetInRange() {
+            if(GameData.Target == null) { return false; }
+            if(GetAARange() < GetDistanceToTarget()) { return false; }
+            return true;
+        }
+
+        private float GetAARange() {
+            return m_AutoAttackAction == ActionCode.AxeAutoAttack ? 3.0f : 8.0f;
+        }
+
+        private float GetDistanceToTarget() {
+            if(GameData.Target == null) { return -1f; }
+            return Vector3.Distance(transform.position, GameData.Target.transform.position);
         }
     }
 }

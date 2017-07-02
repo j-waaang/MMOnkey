@@ -10,9 +10,18 @@
                 case OperationCode.EnterWorld:
                     OnEnterWorldResponse(operationResponse);
                     return;
+                case OperationCode.ReadyToReceiveGameEvents:
+                case OperationCode.Move:
+                case OperationCode.CharacterAction:
+                    Debug.LogFormat(
+                        "Received {0} from {1} response.",
+                        (ReturnCode)operationResponse.ReturnCode,
+                        (OperationCode)operationResponse.OperationCode);
+                    return;
+                default:
+                    Debug.LogError("Cannot handle response." + operationResponse.DebugMessage);
+                    break;
             }
-
-            Debug.LogError("Cannot handle response." + operationResponse.DebugMessage);
         }
     }
 }
