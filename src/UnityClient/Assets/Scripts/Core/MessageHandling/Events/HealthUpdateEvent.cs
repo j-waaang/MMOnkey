@@ -7,15 +7,15 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
     public sealed partial class EventOperations {
 
         public delegate void HealthUpdate(string name, int damage, int curHealth);
-        public static event HealthUpdate HealthUpdateEvent;
+        public static event HealthUpdate HealthUpdatedEvent;
 
         private static void OnHealthUpdateEvent(EventData eventData) {
-            if (HealthUpdateEvent == null) { return; }
+            if (HealthUpdatedEvent == null) { return; }
 
             var name = (string)eventData.Parameters[(byte)ParameterCode.Name];
             var damage = (int)eventData.Parameters[(byte)ParameterCode.Damage];
             var curHealth = (int)eventData.Parameters[(byte)ParameterCode.CurrentHealth];
-            HealthUpdateEvent(name, damage, curHealth);
+            HealthUpdatedEvent(name, damage, curHealth);
         }
     }
 }

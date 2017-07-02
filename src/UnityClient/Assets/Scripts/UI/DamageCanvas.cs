@@ -9,7 +9,7 @@ public class DamageCanvas : MonoBehaviour {
     [SerializeField] private Text m_HealHintPrefab;
 
     public void Start() {
-        EventOperations.HealthUpdateEvent += OnHealthUpdate;
+        EventOperations.HealthUpdatedEvent += OnHealthUpdate;
     }
 
     private void OnHealthUpdate(string name, int damage, int health) {

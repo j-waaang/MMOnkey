@@ -1,36 +1,38 @@
 ﻿using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
 using UnityEngine;
-using System;
 
 public class HealthComponent : MonoBehaviour {
 
-    public event Action<int, int, int> DamageHealthMaxHealthUpdatedEvent;
+    public delegate void HealthUpdate(int damage, int health, int maxHealth);
+    public event HealthUpdate HealthUpdatedEvent;
 
     public int Health { get; private set; }
     public int MaxHealth { get; private set; }
 
+    private void Awake() {
+        Health = 100;
+        MaxHealth = 100;
+        EventOperations.HealthUpdatedEvent += HealthChangedEvent;
+    }
+
     public void Initialize(int health, int maxHealth) {
         Health = health;
         MaxHealth = maxHealth;
-        EventOperations.HealthUpdateEvent += OnHealthUpdateEvent;
     }
 
-    private void OnHealthUpdateEvent(string name, int damage, int newHealth) {
+    private void HealthChangedEvent(string name, int damage, int newHealth) {
         if (gameObject.name != name) { return; }
-
-        //Debug.LogFormat("Update {0}'s health to {1}. Damage done {2}", name, newHealth, damage);
+        if (HealthUpdatedEvent == null) { return; }
 
         Health = newHealth;
-        if (DamageHealthMaxHealthUpdatedEvent != null) {
-            DamageHealthMaxHealthUpdatedEvent(damage, Health, MaxHealth);
-        }
+        HealthUpdatedEvent(damage, Health, MaxHealth);
     }
 
     private void OnDestroy() {
-        EventOperations.HealthUpdateEvent -= OnHealthUpdateEvent;
+        EventOperations.HealthUpdatedEvent -= HealthChangedEvent;
     }
 
     public void OnDeath() {
-        EventOperations.HealthUpdateEvent -= OnHealthUpdateEvent;
+        EventOperations.HealthUpdatedEvent -= HealthChangedEvent;
     }
 }

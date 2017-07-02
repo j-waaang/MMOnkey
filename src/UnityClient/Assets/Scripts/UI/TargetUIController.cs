@@ -34,16 +34,16 @@
 
             // Health bar
             var healthComponent = newTarget.GetComponent<HealthComponent>();
-            m_HealthImage.fillAmount = (float)healthComponent.Health / (float)healthComponent.MaxHealth;
+            m_HealthImage.fillAmount = (float)healthComponent.Health / healthComponent.MaxHealth;
             m_HealthUI.SetActive(true);
-            healthComponent.DamageHealthMaxHealthUpdatedEvent += OnHealthUpdated;
+            healthComponent.HealthUpdatedEvent += OnHealthUpdated;
 
             // Action bar
             m_SkillUI.SetActive(false);
         }
 
         private void OnHealthUpdated(int damage, int health, int maxHealth) {
-            m_HealthImage.fillAmount = (float)health / (float)maxHealth;
+            m_HealthImage.fillAmount = (float)health / maxHealth;
         }
     }
 }
