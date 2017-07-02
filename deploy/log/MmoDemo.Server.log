@@ -1,3 +1,0 @@
-2017-05-03 15:48:28,720 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=MMOServer; AppPath=D:\Projects\ThesisMMO\deploy\MMOServer, Type=JYW.ThesisMMO.MMOServer.ServerApplication 
-2017-05-03 15:57:36,680 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=MMOServer
-2017-05-03 15:57:36,680 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=MMOServer
