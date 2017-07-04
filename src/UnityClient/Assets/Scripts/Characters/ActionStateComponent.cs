@@ -5,13 +5,15 @@
     using System.Collections;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
 
     /// <summary>  
     ///  Contains the state of a character and fires onChanged events.
     /// </summary>  
-    public class ActionStateComponent : MonoBehaviour {
+    public class ActionStateComponent : MonoBehaviour, INotifyPropertyChanged {
 
-        [SerializeField] private ActionCode m_ActionState = ActionCode.Idle;
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private CharacterAnimationController m_CharacterAnimationController;
         private AOEHintCreator m_AOEHintCreator;
         private Queue<Action> m_MainThreadJobs = new Queue<Action>();
@@ -20,8 +22,9 @@
             m_CharacterAnimationController = GetComponent<CharacterAnimationController>();
             m_AOEHintCreator = GetComponent<AOEHintCreator>();
         }
-        
-        internal ActionCode ActionState {
+
+        private ActionCode m_ActionState = ActionCode.Idle;
+        public ActionCode ActionState {
             get {
                 return m_ActionState;
             }
@@ -32,6 +35,7 @@
                 if (oldState != value && oldState != m_ActionState) {
                     m_CharacterAnimationController.TriggerActionAnimation(m_ActionState);
                     m_MainThreadJobs.Enqueue(() => m_AOEHintCreator.PlayDelayedAttackShape(m_ActionState));
+                    RaisePropertyChanged("ActionState");
                 }
             }
         }
@@ -50,6 +54,11 @@
         IEnumerator WaitAndIdle(float duration) {
             yield return new WaitForSeconds(duration);
             m_ActionState = ActionCode.Idle;
+        }
+
+        private void RaisePropertyChanged(string prop) {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
     }
 }

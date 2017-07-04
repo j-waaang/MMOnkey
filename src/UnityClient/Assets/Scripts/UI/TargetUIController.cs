@@ -1,6 +1,7 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.UI {
-
+    using Characters;
     using JYW.ThesisMMO.UnityClient;
+    using System.ComponentModel;
     using UnityEngine;
     using UnityEngine.UI;
 
@@ -13,18 +14,19 @@
         private Image m_HealthImage;
 
         [SerializeField] private GameObject m_SkillUI;
+        private CastingBarController m_CastingBarController;
 
         private void Awake() {
+            DisableUI();
             GameData.TargetChangedEvent += TargetChanged;
             m_TargetName = m_NameUI.GetComponentInChildren<Text>();
             m_HealthImage = m_HealthUI.transform.GetChild(0).GetComponent<Image>();
+            m_CastingBarController = m_SkillUI.GetComponent<CastingBarController>();
         }
 
         private void TargetChanged(GameObject newTarget) {
             if (newTarget == null) {
-                m_NameUI.SetActive(false);
-                m_HealthUI.SetActive(false);
-                m_SkillUI.SetActive(false);
+                DisableUI();
                 return;
             }
 
@@ -39,11 +41,18 @@
             healthComponent.HealthUpdatedEvent += OnHealthUpdated;
 
             // Action bar
-            m_SkillUI.SetActive(false);
+            m_CastingBarController.TargetChanged(newTarget.GetComponent<ActionStateComponent>());
+            m_SkillUI.SetActive(true);
         }
 
         private void OnHealthUpdated(int damage, int health, int maxHealth) {
             m_HealthImage.fillAmount = (float)health / maxHealth;
+        }
+
+        private void DisableUI() {
+            m_NameUI.SetActive(false);
+            m_HealthUI.SetActive(false);
+            m_SkillUI.SetActive(false);
         }
     }
 }
