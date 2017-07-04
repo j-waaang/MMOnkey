@@ -26,30 +26,28 @@ public class AOEHintCreator : MonoBehaviour {
         StartCoroutine(ActionHelper.WaitAndDo(waitForSeconds, () => PlayAttackShape(action)));
     }
 
-    private void Update() {
-
-    }
-
     public void PlayAttackShape(ActionCode action) {
         GameObject shapeInst = null;
         switch (action) {
             case ActionCode.AxeAutoAttack:
-                shapeInst = Instantiate(Resources.Load<GameObject>("ConeAOE"), transform) as GameObject;
+                shapeInst = Instantiate(Resources.Load<GameObject>("ConeAOE")) as GameObject;
                 shapeInst.transform.localScale = new Vector3(2f, 0.2f, 2f);
                 break;
             case ActionCode.BowAutoAttack:
-                shapeInst = Instantiate(Resources.Load<GameObject>("RectangleAOE"), transform) as GameObject;
+                shapeInst = Instantiate(Resources.Load<GameObject>("RectangleAOE")) as GameObject;
                 shapeInst.transform.localScale = new Vector3(1f, 0.2f, 4f);
                 break;
             case ActionCode.DistractingShot:
-                shapeInst = Instantiate(Resources.Load<GameObject>("RectangleAOE"), transform) as GameObject;
+                shapeInst = Instantiate(Resources.Load<GameObject>("RectangleAOE")) as GameObject;
                 shapeInst.transform.localScale = new Vector3(.5f, 0.2f, 4f);
                 break;
             case ActionCode.HammerBash:
-                shapeInst = Instantiate(Resources.Load<GameObject>("CylinderAOE"), transform) as GameObject;
+                shapeInst = Instantiate(Resources.Load<GameObject>("CylinderAOE")) as GameObject;
+                shapeInst.transform.localScale = new Vector3(5f, 0.2f, 5f);
                 break;
         }
         if(shapeInst == null) { return; }
+        shapeInst.transform.position = transform.position;
         shapeInst.transform.forward = transform.forward;
     }
 }
