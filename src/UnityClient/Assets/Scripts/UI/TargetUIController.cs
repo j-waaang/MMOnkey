@@ -1,7 +1,6 @@
 ﻿namespace JYW.ThesisMMO.UnityClient.UI {
     using Characters;
     using JYW.ThesisMMO.UnityClient;
-    using System.ComponentModel;
     using UnityEngine;
     using UnityEngine.UI;
 
