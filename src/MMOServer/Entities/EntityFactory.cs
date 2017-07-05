@@ -44,7 +44,7 @@ namespace JYW.ThesisMMO.MMOServer {
             attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
             attributes[1] = new IntHealthAttribute(maxHealth);
             attributes[2] = new ActionStateAttribute();
-            attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
+            attributes[3] = new FloatAttribute(7f, AttributeCode.Speed);
 
             var entity = new Entity(operation.Name, position, attributes, peer);
             World.Instance.AddEntity(entity);
