@@ -9,6 +9,7 @@
     using log4net.Config;
     using System.IO;
     using AI;
+    using System.Diagnostics;
 
     /// <summary> 
     /// Main class of the server.
@@ -25,7 +26,7 @@
         protected override void Setup() {
             SetupLogger();
             RegisterTypes();
-            CreateWorld();
+            //CreateWorld();
             InitCombatSystem();
             CreateTestBots();
         }
@@ -43,7 +44,10 @@
                 XmlConfigurator.ConfigureAndWatch(configFileInfo);
             }
 
-            log.InfoFormat("------------------------Server Started------------------------");
+            log.InfoFormat("------------------------Server Started - Log Setup------------------------");
+            log.Info("Assertions test.");
+            Debug.Assert(0 == 1, "Assertions are turned on.");
+            log.Info("Assertions test ended. Assertions are turned off if the test did not generate a log message.");
         }
 
         private static void RegisterTypes() {
@@ -54,19 +58,10 @@
                 Protocol.DeserializeVector);
         }
 
-        private void CreateWorld() {
-            m_World = new World();
-            log.InfoFormat("Created Game World.");
-        }
-
         private void CreateTestBots() {
             EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(2, 2), false);
             EntityFactory.Instance.CreateAIBot("Ork 234932", new Vector(0, -2), false);
             EntityFactory.Instance.CreateAIBot("Ork 452537", new Vector(-3, 4), false);
-        }
-
-        private void InitCombatSystem() {
-
         }
     }
 }

@@ -14,53 +14,52 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using Targets;
+    using Worlds;
+    using System.Diagnostics;
 
     /// <summary> 
-    /// The game world containing entities and methods modifiying them.
+    /// World split into regions.
     /// </summary>
     internal class World : IDisposable {
 
-        public static World Instance { get; private set; }
+        public static World Instance = new World();
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
-        private Dictionary<string, Entity> m_Entities;
+        private Dictionary<string, Entity> m_Entities = new Dictionary<string, Entity>();
 
-        private const float InterestDistance = 15f;
+        private Region[,] m_Regions = new Region[m_RegionsWidth, m_RegionsWidth];
+        private const float m_RegionSize = 10f;
+        private const int m_RegionsWidth = 10;
 
-        /// <summary>
-        /// Creates a instance of the game world.
-        /// </summary>
-        public World() {
-            if (Instance == null) {
-                Instance = this;
+        private World() {
+            CreateRegions();
+        }
+
+        private void CreateRegions() {
+            var minVal = m_RegionSize * m_RegionsWidth * 0.5f * -1f;
+            var minToMax = new Vector(m_RegionSize, m_RegionSize);
+
+            for(var x = 0; x < 10; x++) {
+                for (var z = 0; z < 10; z++) {
+                    var min = new Vector(minVal + x * m_RegionSize, minVal + z * m_RegionSize);
+                    var max = min + minToMax;
+                    m_Regions[x, z] = new Region(new BoundingBox2D(min, max));
+                }
             }
-            else { return; }
-            m_Entities = new Dictionary<string, Entity>();
         }
 
         /// <summary>
         /// Adding a entity to the game world.
         /// </summary>
         public void AddEntity(Entity newEntity) {
-
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-
-            ////In case this is a skill enity we skip notifying the owner.
-            //Entity entityOwner = null;
-            //if(newEntity.GetType() == typeof(SkillEntity)) {
-            //    entityOwner = m_Entities[((SkillEntity)newEntity).Caster];
-            //}
-
             var eventData = newEntity.GetNewEntityEventData();
 
             foreach (Entity entity in m_Entities.Values) {
-                //if(entity == entityOwner) { continue; }
                 entity.SendEvent(eventData, sendParameters);
             }
-
             m_Entities.Add(newEntity.Name, newEntity);
-            //m_Entities[newEntity.Name] = newEntity;
         }
 
         public Entity GetEntity(string name) {
@@ -71,12 +70,12 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Removes the entity from the list.
         /// </summary>
         public void RemoveEntity(string name) {
+            Debug.Assert(m_Entities.ContainsKey(name), "The entity you want to remove does not exist in this region.");
+
             var ev = new RemovePlayerEvent() {
                 Username = name,
             };
-
             IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
-
             ReplicateMessage(name, eventData, BroadcastOptions.All);
             m_Entities.Remove(name);
         }
@@ -244,6 +243,23 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public void Dispose() {
             Instance = null;
+        }
+
+        private Region GetRegionFromPoint(Vector point) {
+            var minVal = m_RegionSize * m_RegionsWidth * 0.5f * -1f;
+
+            Debug.Assert(minVal < point.X, "Cannot evaluate a point outside of the game world");
+            Debug.Assert(minVal < point.Z, "Cannot evaluate a point outside of the game world");
+            Debug.Assert(-minVal > point.X, "Cannot evaluate a point outside of the game world");
+            Debug.Assert(-minVal > point.Z, "Cannot evaluate a point outside of the game world");
+
+            var x = (int)Math.Floor((point.X - minVal) % m_RegionSize);
+            var z = (int)Math.Floor((point.Z - minVal) % m_RegionSize);
+
+            Debug.Assert(x < m_RegionsWidth, "Error in calculation. Region does not exist.");
+            Debug.Assert(z < m_RegionsWidth, "Error in calculation. Region does not exist.");
+
+            return m_Regions[x,z];
         }
     }
 }

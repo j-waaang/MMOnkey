@@ -20,7 +20,6 @@ namespace JYW.ThesisMMO.MMOServer {
 
         private const string aiEntityNameSpace = "JYW.ThesisMMO.MMOServer.AI.";
 
-
         private EntityFactory() {
         }
 
