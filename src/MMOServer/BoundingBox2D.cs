@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JYW.ThesisMMO.MMOServer.Worlds {
+namespace JYW.ThesisMMO.MMOServer {
 
     using Common.Types;
     using System.Diagnostics;

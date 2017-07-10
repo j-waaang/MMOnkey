@@ -14,7 +14,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using Targets;
-    using Worlds;
     using System.Diagnostics;
 
     /// <summary> 
@@ -26,23 +25,24 @@ namespace JYW.ThesisMMO.MMOServer {
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
-        private Dictionary<string, Entity> m_Entities = new Dictionary<string, Entity>();
+        private const float RegionSize = 10f;
+        private const int TileDimension = 10;
 
-        private Region[,] m_Regions = new Region[m_RegionsWidth, m_RegionsWidth];
-        private const float m_RegionSize = 10f;
-        private const int m_RegionsWidth = 10;
+        private readonly Region[,] m_Regions = new Region[TileDimension, TileDimension];
+        private readonly Dictionary<string, Entity> m_Entities = new Dictionary<string, Entity>();
+        private readonly BoundingBox2D m_WorldArea;
 
         private World() {
+            var x = RegionSize * TileDimension * 0.5f;
+            m_WorldArea = new BoundingBox2D(new Vector(-x, -x), new Vector(x, x));
             CreateRegions();
         }
 
         private void CreateRegions() {
-            var minVal = m_RegionSize * m_RegionsWidth * 0.5f * -1f;
-            var minToMax = new Vector(m_RegionSize, m_RegionSize);
-
+            var minToMax = new Vector(RegionSize, RegionSize);
             for(var x = 0; x < 10; x++) {
                 for (var z = 0; z < 10; z++) {
-                    var min = new Vector(minVal + x * m_RegionSize, minVal + z * m_RegionSize);
+                    var min = m_WorldArea.Min + new Vector(x * RegionSize, z * RegionSize);
                     var max = min + minToMax;
                     m_Regions[x, z] = new Region(new BoundingBox2D(min, max));
                 }
@@ -94,8 +94,6 @@ namespace JYW.ThesisMMO.MMOServer {
                     CurrentHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
                     MaxHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
                 };
-
-
 
                 IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
                 var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
@@ -245,21 +243,42 @@ namespace JYW.ThesisMMO.MMOServer {
             Instance = null;
         }
 
+        public IEnumerable<Region> GetRegions(BoundingBox2D area) {
+            return GetRegionsEnumerable(area).ToArray();
+        }
+
+        private IEnumerable<Region> GetRegionsEnumerable(BoundingBox2D area) {
+            BoundingBox2D overlap = m_WorldArea.IntersectWith(area);
+            var min = overlap.Min - m_WorldArea.Min;
+            var max = overlap.Max - m_WorldArea.Min;
+            // convert to tile coordinates and check bounds
+            int x0 = Math.Max((int)(min.X / RegionSize), 0);
+            int x1 = Math.Min((int)Math.Ceiling(max.X / RegionSize), TileDimension);
+            int y0 = Math.Max((int)(min.Y / RegionSize), 0);
+            int y1 = Math.Min((int)Math.Ceiling(max.Y / RegionSize), TileDimension);
+            for (int x = x0; x < x1; x++)
+                for (int y = y0; y < y1; y++) {
+                    yield return m_Regions[x,y];
+                }
+            yield break;
+        }
+
         private Region GetRegionFromPoint(Vector point) {
-            var minVal = m_RegionSize * m_RegionsWidth * 0.5f * -1f;
+            var minVal = RegionSize * TileDimension * 0.5f * -1f;
 
             Debug.Assert(minVal < point.X, "Cannot evaluate a point outside of the game world");
             Debug.Assert(minVal < point.Z, "Cannot evaluate a point outside of the game world");
             Debug.Assert(-minVal > point.X, "Cannot evaluate a point outside of the game world");
             Debug.Assert(-minVal > point.Z, "Cannot evaluate a point outside of the game world");
 
-            var x = (int)Math.Floor((point.X - minVal) % m_RegionSize);
-            var z = (int)Math.Floor((point.Z - minVal) % m_RegionSize);
+            var x = (int)Math.Floor((point.X - minVal) % RegionSize);
+            var z = (int)Math.Floor((point.Z - minVal) % RegionSize);
 
-            Debug.Assert(x < m_RegionsWidth, "Error in calculation. Region does not exist.");
-            Debug.Assert(z < m_RegionsWidth, "Error in calculation. Region does not exist.");
+            Debug.Assert(x < TileDimension, "Error in calculation. Region does not exist.");
+            Debug.Assert(z < TileDimension, "Error in calculation. Region does not exist.");
 
             return m_Regions[x,z];
         }
+
     }
 }

@@ -36,7 +36,7 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        internal Entity CreatePeerControlledEntity(MMOPeer peer, EnterWorldRequest operation) {
+        internal Entity CreateClientEntity(MMOPeer peer, EnterWorldRequest operation) {
             var position = GetRandomWorldPosition();
             var maxHealth = GetMaxHealth((WeaponCode)operation.Weapon);
             var attributes = new Attribute[4];

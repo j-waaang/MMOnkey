@@ -80,11 +80,17 @@
     <Compile Include="Entities\Attributes\Modifiers\IntModifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\Modifier.cs" />
     <Compile Include="Entities\Attributes\Modifiers\ModifyMode.cs" />
+    <Compile Include="Entities\ClientEntity.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\Attributes\IntHealthAttribute.cs" />
     <Compile Include="Entities\SkillEntity.cs" />
+    <Compile Include="EntityRegionChangedMessage.cs" />
     <Compile Include="Events\EntityEvents\NewSkillEntityEvent.cs" />
     <Compile Include="Events\EntityEvents\NewEntityEvent.cs" />
+    <Compile Include="InterestArea.cs" />
+    <Compile Include="MessageCounters.cs" />
+    <Compile Include="BoundingBox2D.cs" />
+    <Compile Include="Region.cs" />
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />
     <Compile Include="Targets\CircleAreaTarget.cs" />
