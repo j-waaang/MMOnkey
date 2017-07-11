@@ -110,7 +110,7 @@
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\EntityEvents\NewPlayerEvent.cs" />
     <Compile Include="Events\RemovePlayerEvent.cs" />
-    <Compile Include="Message.cs" />
+    <Compile Include="EventMessage.cs" />
     <Compile Include="ActionObjects\ActionObject.cs" />
     <Compile Include="ActionObjects\SkillRequests\AxeAutoAttackRequest.cs" />
     <Compile Include="ActionObjects\SkillRequests\BowAutoAttackRequest.cs" />

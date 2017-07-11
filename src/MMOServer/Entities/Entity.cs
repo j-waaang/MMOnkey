@@ -1,6 +1,7 @@
 ﻿using ExitGames.Logging;
 using Photon.SocketServer;
 using System.Collections.Generic;
+using System;
 
 namespace JYW.ThesisMMO.MMOServer {
 
@@ -19,12 +20,22 @@ namespace JYW.ThesisMMO.MMOServer {
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
 
-        // TODO: Add quick references for attributes.
-        public string Name { get; private set; }
-        public Vector Position { get; set; }
+        public string Name { get; }
 
-        protected MMOPeer m_Peer;
+        public MMOPeer Peer { get; }
+        
         protected bool m_AiControlled;
+
+        /// <summary> 
+        /// Readonly position. Set with Move().
+        /// </summary>
+        public Vector Position { get; private set; }
+        /// <summary> 
+        /// Changes the position.
+        /// </summary>
+        public virtual void Move(Vector position) {
+            Position = position;
+        }
 
         /// <summary> 
         /// Leave out peer if this is a AI controlled enity.
@@ -36,7 +47,7 @@ namespace JYW.ThesisMMO.MMOServer {
             log.InfoFormat("Created {0} entity at {1}", name, position);
 
             if (peer != null) {
-                m_Peer = peer;
+                Peer = peer;
                 m_AiControlled = false;
             }
             else {
@@ -56,7 +67,7 @@ namespace JYW.ThesisMMO.MMOServer {
             }
             log.DebugFormat("Entity created w. name {0} w. attributes {1}", Name, attributesString);
         }
-
+        
         /// <summary> 
         /// Use this method to update the peer.
         /// </summary>
@@ -64,7 +75,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
             if (m_AiControlled) { return SendResult.Ok; }
 
-            return m_Peer.SendEvent(eventData, sendParameters);
+            return Peer.SendEvent(eventData, sendParameters);
         }
 
         public bool IsIdle() {

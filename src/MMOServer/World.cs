@@ -40,7 +40,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         private void CreateRegions() {
             var minToMax = new Vector(RegionSize, RegionSize);
-            for(var x = 0; x < 10; x++) {
+            for (var x = 0; x < 10; x++) {
                 for (var z = 0; z < 10; z++) {
                     var min = m_WorldArea.Min + new Vector(x * RegionSize, z * RegionSize);
                     var max = min + minToMax;
@@ -53,12 +53,12 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Adding a entity to the game world.
         /// </summary>
         public void AddEntity(Entity newEntity) {
-            var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-            var eventData = newEntity.GetNewEntityEventData();
+            //var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+            //var eventData = newEntity.GetNewEntityEventData();
 
-            foreach (Entity entity in m_Entities.Values) {
-                entity.SendEvent(eventData, sendParameters);
-            }
+            //foreach (Entity entity in m_Entities.Values) {
+            //    entity.SendEvent(eventData, sendParameters);
+            //}
             m_Entities.Add(newEntity.Name, newEntity);
         }
 
@@ -91,8 +91,8 @@ namespace JYW.ThesisMMO.MMOServer {
                 var newPlayerEv = new NewPlayerEvent() {
                     Name = newPlayer.Name,
                     Position = newPlayer.Position,
-                    CurrentHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
-                    MaxHealth = ((IntAttribute) newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
+                    CurrentHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
+                    MaxHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
                 };
 
                 IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
@@ -103,20 +103,21 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public void MoveEntity(string username, Vector position) {
 
-            var movedEntity = m_Entities[username];
-            movedEntity.Position = position;
-            var moveEvent = new MoveEvent() {
-                Name = movedEntity.Name,
-                Position = movedEntity.Position
-            };
+            var movedEntity = m_Entities[username].Position = position;
+            //movedEntity.Position = position;
 
-            IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
-            var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
+            //var moveEvent = new MoveEvent() {
+            //    Name = movedEntity.Name,
+            //    Position = movedEntity.Position
+            //};
 
-            foreach (Entity entity in m_Entities.Values) {
-                if(entity == movedEntity) { continue; }
-                entity.SendEvent(eventData, sendParameters);
-            }
+            //IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
+            //var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
+
+            //foreach (Entity entity in m_Entities.Values) {
+            //    if (entity == movedEntity) { continue; }
+            //    entity.SendEvent(eventData, sendParameters);
+            //}
 
             //var movedEntity = m_Entities[username];
             //IEventData eventData;
@@ -175,7 +176,7 @@ namespace JYW.ThesisMMO.MMOServer {
         public bool CanPerformAction(string actionSource, ActionCode action) {
             Entity entity = null;
             m_Entities.TryGetValue(actionSource, out entity);
-            if(entity == null) {
+            if (entity == null) {
                 log.ErrorFormat("{0} entity requesting action does not exist.", actionSource);
                 return false;
             }
@@ -183,7 +184,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public bool CanPerformAction(string actionSource, ActionCode action, Target target) {
-            if(!CanPerformAction(actionSource, action)) { return false; }
+            if (!CanPerformAction(actionSource, action)) { return false; }
 
             // TODO: Test distance
             return true;
@@ -192,11 +193,11 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Use this to replicate a attribute change. Do not use for position changes.
         /// </summary>
-        public void ReplicateMessage(string src, IEventData eventData, BroadcastOptions options ) {
+        public void ReplicateMessage(string src, IEventData eventData, BroadcastOptions options) {
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
             foreach (Entity entity in m_Entities.Values) {
-                if(options == BroadcastOptions.AllExceptMsgOwner && entity.Name == src) { continue; }
+                if (options == BroadcastOptions.AllExceptMsgOwner && entity.Name == src) { continue; }
 
                 entity.SendEvent(eventData, sendParameters);
             }
@@ -219,7 +220,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
                     //Create array because elements in dictionary could get removed in the process.
                     var entities = m_Entities.Values.ToArray();
-                    foreach(Entity entity in entities) {
+                    foreach (Entity entity in entities) {
                         if (areaTarget.IsEntityInArea(entity)) {
                             modifier.ApplyEffect(entity);
                             log.InfoFormat("Applying aoe to {0}.", entity.Name);
@@ -232,7 +233,7 @@ namespace JYW.ThesisMMO.MMOServer {
         public void ApplyModifier(string target, Modifier modifier) {
             Entity entity = null;
             m_Entities.TryGetValue(target, out entity);
-            if(entity == null) {
+            if (entity == null) {
                 log.InfoFormat("Trying to apply modifier on {0} but {0} doesn't exist.", target);
                 return;
             }
@@ -240,6 +241,9 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public void Dispose() {
+            foreach (var region in m_Regions) {
+                region.Dispose();
+            }
             Instance = null;
         }
 
@@ -258,12 +262,12 @@ namespace JYW.ThesisMMO.MMOServer {
             int y1 = Math.Min((int)Math.Ceiling(max.Y / RegionSize), TileDimension);
             for (int x = x0; x < x1; x++)
                 for (int y = y0; y < y1; y++) {
-                    yield return m_Regions[x,y];
+                    yield return m_Regions[x, y];
                 }
             yield break;
         }
 
-        private Region GetRegionFromPoint(Vector point) {
+        public Region GetRegionFromPoint(Vector point) {
             var minVal = RegionSize * TileDimension * 0.5f * -1f;
 
             Debug.Assert(minVal < point.X, "Cannot evaluate a point outside of the game world");
@@ -277,7 +281,7 @@ namespace JYW.ThesisMMO.MMOServer {
             Debug.Assert(x < TileDimension, "Error in calculation. Region does not exist.");
             Debug.Assert(z < TileDimension, "Error in calculation. Region does not exist.");
 
-            return m_Regions[x,z];
+            return m_Regions[x, z];
         }
 
     }
