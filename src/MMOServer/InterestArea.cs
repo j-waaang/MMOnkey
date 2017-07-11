@@ -1,8 +1,8 @@
 ﻿using ExitGames.Concurrency.Fibers;
+using ExitGames.Logging;
 using JYW.ThesisMMO.Common.Codes;
 using JYW.ThesisMMO.Common.Types;
 using JYW.ThesisMMO.MMOServer.Events;
-using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
 using Photon.SocketServer;
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,8 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public readonly object SyncRoot = new object();
 
+        protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
+
         private readonly IFiber m_SubscriptionManagementFiber = new PoolFiber();
         private readonly HashSet<Region> m_Regions = new HashSet<Region>();
         private readonly Dictionary<Region, IDisposable> m_RegionChangedSubscriptions = new Dictionary<Region, IDisposable>();
@@ -21,27 +23,43 @@ namespace JYW.ThesisMMO.MMOServer {
         private readonly Entity m_AttachedEntity;
         private readonly Vector m_CenterToMin;
 
+        private BoundingBox2D m_Focus {
+            get {
+                return new BoundingBox2D(m_AttachedEntity.Position + m_CenterToMin, m_AttachedEntity.Position - m_CenterToMin);
+            }
+        }
+
+        #region public methods
         public InterestArea(Entity attachedEntity, float interestRadius) {
             m_AttachedEntity = attachedEntity;
             m_CenterToMin = m_AttachedEntity.Position - new Vector(interestRadius, interestRadius);
             m_SubscriptionManagementFiber.Start();
-
-            //UpdateInterestManagment();
         }
 
-        public void UpdateInterestManagment() {
-            BoundingBox2D focus = new BoundingBox2D(m_AttachedEntity.Position + m_CenterToMin, m_AttachedEntity.Position - m_CenterToMin);
-            var focusedRegions = World.Instance.GetRegions(focus);
+        /// <summary>
+        /// Subs and unsubs from regions depending on focus.
+        /// Should be called when entering a new region or the entity moved.
+        /// </summary>
+        public void UpdateRegionSubscription() {
+            var focusedRegions = World.Instance.GetRegions(m_Focus);
             SubscribeRegions(focusedRegions);
             UnsubscribeRegionsNotIn(focusedRegions);
-        }
 
+            string subbedregions = "";
+            foreach(var region in m_Regions) {
+                subbedregions += region.ToString() + "/n";
+            }
+
+            log.InfoFormat("{0} subed to regions {1}", m_AttachedEntity.Name, subbedregions);
+        }
+        #endregion public methods
+        #region private methods
         private void SubscribeRegions(IEnumerable<Region> newRegions) {
             foreach (Region r in newRegions) {
                 if (m_Regions.Contains(r)) { continue; }
                 m_Regions.Add(r);
                 SubscribeToRegion(r);
-                r.RequestEnterRegionChannel.Publish(this);
+                r.RequestInfoInRegionChannel.Publish(this);
             }
         }
 
@@ -52,8 +70,16 @@ namespace JYW.ThesisMMO.MMOServer {
             foreach (var r in toUnsubscribe) {
                 m_Regions.Remove(r);
                 OnRegionExit(r);
-                r.RequestExitRegionChannel.Publish(this);
+                r.RequestRegionExitInfoChannel.Publish(this);
             }
+        }
+
+        private void SubscribeToRegion(Region region) {
+            var subscription = region.EntityRegionChangedChannel.Subscribe(m_SubscriptionManagementFiber, OnEntityRegionChange);
+            m_RegionChangedSubscriptions.Add(region, subscription);
+
+            subscription = region.RegionEventChannel.Subscribe(m_AttachedEntity.Peer.RequestFiber, OnItemEvent);
+            m_RegionEventSubscriptions[region] = subscription;
         }
 
         private void OnEntityRegionChange(EntityRegionChangedMessage message) {
@@ -70,14 +96,6 @@ namespace JYW.ThesisMMO.MMOServer {
             {
                 OnEntityEnter(message.Entity);
             }
-        }
-
-        private void SubscribeToRegion(Region region) {
-            var subscription = region.EntityRegionChangedChannel.Subscribe(m_SubscriptionManagementFiber, OnEntityRegionChange);
-            m_RegionChangedSubscriptions.Add(region, subscription);
-
-            subscription = region.RegionEventChannel.Subscribe(m_AttachedEntity.Peer.RequestFiber, OnItemEvent);
-            m_RegionEventSubscriptions[region] = subscription;
         }
 
         /// <summary>
@@ -110,19 +128,13 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Item exits area
         /// </summary>
-        public virtual void OnItemExit(Entity entity) {
+        private void OnItemExit(Entity entity) {
             var ev = new RemovePlayerEvent() {
                 Username = entity.Name,
             };
             IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
             m_AttachedEntity.SendEvent(eventData);
         }
-
-        /// <summary>
-        /// Region enters area.
-        /// </summary>
-
-
-
+        #endregion private methods
     }
 }

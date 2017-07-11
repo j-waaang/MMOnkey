@@ -16,11 +16,27 @@ namespace JYW.ThesisMMO.MMOServer {
             new MessageChannel<EntityRegionChangedMessage>(MessageCounters.CounterSend);
 
         /// <summary>
-        /// Message channel for entities moved form on channel to another.
+        /// Interest areas subscribed to this channel sends a snapshot of it's entity to the publisher.
+        /// Client IAs sub and pub to this channel.
+        /// Other IAs only sub to this channel.
         /// </summary>
-        public MessageChannel<InterestArea> RequestEnterRegionChannel { get; } = new MessageChannel<InterestArea>(MessageCounters.CounterSend);
-        public MessageChannel<InterestArea> RequestExitRegionChannel { get; } = new MessageChannel<InterestArea>(MessageCounters.CounterSend);
-        public MessageChannel<EventMessage> RegionEventChannel { get; } = new MessageChannel<EventMessage>(MessageCounters.CounterSend);
+        public MessageChannel<InterestArea> RequestInfoInRegionChannel { get; } =
+            new MessageChannel<InterestArea>(MessageCounters.CounterSend);
+
+        /// <summary>
+        /// Interest areas subscribed to this channel sends it's entity's name to the publisher.
+        /// Client IAs sub and pub to this channel.
+        /// Other IAs only sub to this channel.
+        /// </summary>
+        public MessageChannel<InterestArea> RequestRegionExitInfoChannel { get; } =
+            new MessageChannel<InterestArea>(MessageCounters.CounterSend);
+
+        /// <summary>
+        /// All IAs can publish the changes of it's client to this channel.
+        /// Only Client IA's sub to this channel.
+        /// </summary>
+        public MessageChannel<EventMessage> RegionEventChannel { get; } =
+            new MessageChannel<EventMessage>(MessageCounters.CounterSend);
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private readonly BoundingBox2D m_Boundaries;
@@ -31,8 +47,8 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public void Dispose() {
             EntityRegionChangedChannel.Dispose();
-            RequestEnterRegionChannel.Dispose();
-            RequestExitRegionChannel.Dispose();
+            RequestInfoInRegionChannel.Dispose();
+            RequestRegionExitInfoChannel.Dispose();
             RegionEventChannel.Dispose();
         }
 

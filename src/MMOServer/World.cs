@@ -12,7 +12,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
-    using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using Targets;
     using System.Diagnostics;
 
@@ -60,7 +59,7 @@ namespace JYW.ThesisMMO.MMOServer {
             //    entity.SendEvent(eventData, sendParameters);
             //}
             m_Entities.Add(newEntity.Name, newEntity);
-            newEntity.EnterRegion();
+            newEntity.OnAddedToWorld();
         }
 
         public Entity GetEntity(string name) {

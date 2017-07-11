@@ -18,13 +18,17 @@ namespace JYW.ThesisMMO.MMOServer {
     internal class Entity {
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
-        private Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
 
         public string Name { get; }
 
         public MMOPeer Peer { get; }
-        
+        private const float InterestRadius = 0f;
+
         protected bool m_AiControlled;
+
+        private readonly Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
+        private Region m_CurrentRegion;
+        private InterestArea m_InterestArea;
 
         /// <summary> 
         /// Readonly position. Set with Move().
@@ -36,6 +40,7 @@ namespace JYW.ThesisMMO.MMOServer {
         public virtual void Move(Vector position) {
             Position = position;
         }
+
 
         /// <summary> 
         /// Leave out peer if this is a AI controlled enity.
@@ -66,8 +71,15 @@ namespace JYW.ThesisMMO.MMOServer {
                 attributesString += code.ToString();
             }
             log.DebugFormat("Entity created w. name {0} w. attributes {1}", Name, attributesString);
+
+            SetInterestArea();
         }
-        
+
+        protected virtual void SetInterestArea() {
+            m_InterestArea = new InterestArea(this, InterestRadius);
+
+        }
+
         /// <summary> 
         /// Use this method to update the peer.
         /// </summary>
@@ -112,8 +124,28 @@ namespace JYW.ThesisMMO.MMOServer {
             World.Instance.RemoveEntity(Name);
         }
 
-        public virtual void EnterRegion() {
+        public virtual void OnAddedToWorld() {
+            UpdateInterestManagment();
+        }
 
+        private void UpdateInterestManagment() {
+            var newRegion = World.Instance.GetRegionFromPoint(Position);
+            if (m_CurrentRegion != newRegion) {
+                ChangeRegion(m_CurrentRegion, newRegion);
+            }
+
+            m_InterestArea.UpdateRegionSubscription();
+        }
+
+        private void ChangeRegion(Region from, Region to) {
+            var msg = new EntityRegionChangedMessage(from, to, this);
+
+            if (from != null) {
+                from.EntityRegionChangedChannel.Publish(msg);
+            }
+            if (to != null) {
+                to.EntityRegionChangedChannel.Publish(msg);
+            }
         }
 
         public virtual IEventData GetNewEntityEventData() {
