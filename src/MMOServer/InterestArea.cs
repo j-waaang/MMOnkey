@@ -1,5 +1,9 @@
 ﻿using ExitGames.Concurrency.Fibers;
+using JYW.ThesisMMO.Common.Codes;
 using JYW.ThesisMMO.Common.Types;
+using JYW.ThesisMMO.MMOServer.Events;
+using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
+using Photon.SocketServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,9 +56,9 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        private void OnItemRegionChange(EntityRegionChangedMessage message) {
-            var r0 = m_Regions.Contains(message.Region0);
-            var r1 = m_Regions.Contains(message.Region1);
+        private void OnEntityRegionChange(EntityRegionChangedMessage message) {
+            var r0 = m_Regions.Contains(message.From);
+            var r1 = m_Regions.Contains(message.To);
             if (r0 && r1) {
                 // do nothing
             }
@@ -64,12 +68,12 @@ namespace JYW.ThesisMMO.MMOServer {
             }
             else if (r1) // item enters area
             {
-                OnItemEnter(message.Entity);
+                OnEntityEnter(message.Entity);
             }
         }
 
         private void SubscribeToRegion(Region region) {
-            var subscription = region.EntityRegionChangedChannel.Subscribe(m_SubscriptionManagementFiber, OnItemRegionChange);
+            var subscription = region.EntityRegionChangedChannel.Subscribe(m_SubscriptionManagementFiber, OnEntityRegionChange);
             m_RegionChangedSubscriptions.Add(region, subscription);
 
             subscription = region.RegionEventChannel.Subscribe(m_AttachedEntity.Peer.RequestFiber, OnItemEvent);
@@ -92,19 +96,26 @@ namespace JYW.ThesisMMO.MMOServer {
         /// </summary>
         private void OnItemEvent(EventMessage message) {
             EventMessage.CounterEventReceive.Increment();
-            m_AttachedEntity.Peer.SendEvent(message.eventData, message.sendParameters);
+            m_AttachedEntity.Peer.SendEvent(message.EventData, message.SendParameters);
         }
 
         /// <summary>
-        /// Item enters area
+        /// Entity enters area
         /// </summary>
-        public virtual void OnItemEnter(Entity entity) {
+        private void OnEntityEnter(Entity entity) {
+            var eventData = entity.GetNewEntityEventData();
+            m_AttachedEntity.SendEvent(eventData);
         }
 
         /// <summary>
         /// Item exits area
         /// </summary>
         public virtual void OnItemExit(Entity entity) {
+            var ev = new RemovePlayerEvent() {
+                Username = entity.Name,
+            };
+            IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
+            m_AttachedEntity.SendEvent(eventData);
         }
 
         /// <summary>

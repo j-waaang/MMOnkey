@@ -3,20 +3,20 @@
     using Photon.SocketServer;
 
     /// <summary> 
-    /// Stores event data and it's parameters in on struct.
+    /// Stores event data and it's parameters.
     /// Used for Concurrency Channels which needs a message type.
     /// </summary>
-    internal struct EventMessage {
+    internal class EventMessage {
 
         public static readonly CountsPerSecondCounter CounterEventReceive = new CountsPerSecondCounter("Message.Receive");
         public static readonly CountsPerSecondCounter CounterEventSend = new CountsPerSecondCounter("Message.Send");
 
-        internal EventMessage(IEventData eventData, SendParameters sendParameters) {
-            this.eventData = eventData;
-            this.sendParameters = sendParameters;
+        public EventMessage(IEventData eventData, SendParameters sendParameters) {
+            EventData = eventData;
+            SendParameters = sendParameters;
         }
 
-        internal IEventData eventData;
-        internal SendParameters sendParameters;
+        public IEventData EventData { get; }
+        internal SendParameters SendParameters { get; }
     }
 }

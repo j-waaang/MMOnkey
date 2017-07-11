@@ -60,6 +60,7 @@ namespace JYW.ThesisMMO.MMOServer {
             //    entity.SendEvent(eventData, sendParameters);
             //}
             m_Entities.Add(newEntity.Name, newEntity);
+            newEntity.EnterRegion();
         }
 
         public Entity GetEntity(string name) {
@@ -80,30 +81,30 @@ namespace JYW.ThesisMMO.MMOServer {
             m_Entities.Remove(name);
         }
 
-        public void NotifyEntityAboutExistingPlayers(string username) {
-            var entityToNotify = m_Entities[username];
+        //public void NotifyEntityAboutExistingPlayers(string username) {
+        //    var entityToNotify = m_Entities[username];
 
-            foreach (Entity newPlayer in m_Entities.Values) {
-                if (newPlayer == entityToNotify) { continue; }
+        //    foreach (Entity newPlayer in m_Entities.Values) {
+        //        if (newPlayer == entityToNotify) { continue; }
 
-                //if (Vector.Distance(existingEntity.Position, entityToNotify.Position) > InterestDistance) { continue; }
+        //        //if (Vector.Distance(existingEntity.Position, entityToNotify.Position) > InterestDistance) { continue; }
 
-                var newPlayerEv = new NewPlayerEvent() {
-                    Name = newPlayer.Name,
-                    Position = newPlayer.Position,
-                    CurrentHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
-                    MaxHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
-                };
+        //        var newPlayerEv = new NewPlayerEvent() {
+        //            Name = newPlayer.Name,
+        //            Position = newPlayer.Position,
+        //            CurrentHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
+        //            MaxHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
+        //        };
 
-                IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
-                var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-                entityToNotify.SendEvent(eventData, sendParameters);
-            }
-        }
+        //        IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
+        //        var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+        //        entityToNotify.SendEvent(eventData, sendParameters);
+        //    }
+        //}
 
         public void MoveEntity(string username, Vector position) {
-
-            var movedEntity = m_Entities[username].Position = position;
+            m_Entities[username].Move(position);
+        }
             //movedEntity.Position = position;
 
             //var moveEvent = new MoveEvent() {
@@ -149,7 +150,7 @@ namespace JYW.ThesisMMO.MMOServer {
             //foreach (Entity entity in interestedEntities) {
             //    entity.SendEvent(eventData, sendParameters);
             //}
-        }
+        //}
 
         //private List<Entity> GetEntitiesInInterestRange(Entity centerEntity) {
         //    var entities = new List<Entity>();

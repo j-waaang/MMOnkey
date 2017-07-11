@@ -71,11 +71,16 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary> 
         /// Use this method to update the peer.
         /// </summary>
-        public SendResult SendEvent(IEventData eventData, SendParameters sendParameters) {
+        public virtual SendResult SendEvent(IEventData eventData, SendParameters sendParameters) {
+            return SendResult.Ok;
+        }
 
-            if (m_AiControlled) { return SendResult.Ok; }
-
-            return Peer.SendEvent(eventData, sendParameters);
+        /// <summary> 
+        /// Use this method to update the peer.
+        /// Default sendparameters are used. Reliable. Channel 0
+        /// </summary>
+        public virtual SendResult SendEvent(IEventData eventData) {
+            return SendResult.Ok;
         }
 
         public bool IsIdle() {
@@ -105,6 +110,10 @@ namespace JYW.ThesisMMO.MMOServer {
                 AILooper.Instance.RemoveEntity(this);
             }
             World.Instance.RemoveEntity(Name);
+        }
+
+        public virtual void EnterRegion() {
+
         }
 
         public virtual IEventData GetNewEntityEventData() {
