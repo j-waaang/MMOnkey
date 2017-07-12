@@ -1,7 +1,5 @@
 ﻿using JYW.ThesisMMO.Common.Entities;
 using JYW.ThesisMMO.UnityClient.Characters;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementStateComponent : MonoBehaviour {

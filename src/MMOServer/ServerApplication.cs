@@ -28,6 +28,7 @@
             RegisterTypes();
             //CreateWorld();
             CreateTestBots();
+            AILooper.Instance.Start();
         }
 
         protected override void TearDown() {
@@ -44,6 +45,8 @@
             }
 
             log.InfoFormat("------------------------Server Started - Log Setup------------------------");
+
+            Debug.Assert(0 == 1);
         }
 
         private static void RegisterTypes() {

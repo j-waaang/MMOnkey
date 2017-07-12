@@ -9,34 +9,24 @@ namespace JYW.ThesisMMO.MMOServer.AI {
     /// <summary> 
     /// Controlls the AI loop and holds AI Entities.
     /// </summary>
-    internal class AILooper : IDisposable{
+    internal class AILooper : IDisposable {
 
-        private List<AIEntity> m_AIEntites = new List<AIEntity>();
-        private Thread m_AIThread;
-        private bool m_Running;
-        private readonly TimeSpan m_TickTimeout = new TimeSpan(0, 0, 0, 0, 33);
+        public static AILooper Instance = new AILooper();
 
-        private static AILooper m_Instance = null;
-        private static readonly object m_Lock = new object();
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
-        public static AILooper Instance {
-            get {
-                if (m_Instance == null) {
-                    lock (m_Lock) {
-                        if (m_Instance == null) {
-                            m_Instance = new AILooper();
-                        }
-                    }
-                }
-                return m_Instance;
-            }
-        }
+        private readonly List<AIEntity> m_AIEntites = new List<AIEntity>();
+        private readonly TimeSpan m_TickTimeout = new TimeSpan(0, 0, 0, 0, 33);
+        private readonly Thread m_AIThread;
+
+        private bool m_Running;
 
         private AILooper() {
-
             m_Running = true;
             m_AIThread = new Thread(AILoop);
+        }
+
+        public void Start() {
             m_AIThread.Start();
         }
 
@@ -45,7 +35,10 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         /// </summary>
         private void AILoop() {
             while (m_Running) {
-                foreach(AIEntity entity in m_AIEntites) {
+                //copy in case list gets modified. this might take long if we have many ai entities.
+                var entities = m_AIEntites.ToArray();
+                foreach (AIEntity entity in entities) {
+                    if (entity == null) { continue; }
                     entity.Update(m_TickTimeout);
                 }
                 Thread.Sleep(m_TickTimeout);

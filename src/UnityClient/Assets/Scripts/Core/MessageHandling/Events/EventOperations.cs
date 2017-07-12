@@ -3,9 +3,10 @@
     using UnityEngine;
     using Common.Codes;
     using ExitGames.Client.Photon;
-    using System;
 
     public sealed partial class EventOperations {
+        // TODO: Merge some event codes e.g. new player event and new entity event.
+
         public static void OnEvent(EventData eventData) {
             switch ((EventCode)eventData.Code) {
                 case EventCode.ActionStateUpdate:

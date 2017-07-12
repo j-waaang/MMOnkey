@@ -13,7 +13,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Subs and unsubs from regions depending on focus.
         /// Should be called when entering a new region or the entity moved.
         /// </summary>
-        public virtual void UpdateRegionSubscription() {
+        public override void UpdateRegionSubscription() {
 
             var focusedRegions = World.Instance.GetRegions(m_Focus);
             log.InfoFormat("{0} focused {1} regions.", m_AttachedEntity.Name, focusedRegions.Count());

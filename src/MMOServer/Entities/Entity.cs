@@ -41,7 +41,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         private readonly Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
         private Region m_CurrentRegion;
-        private InterestArea m_InterestArea;
+        protected InterestArea m_InterestArea;
 
         private IDisposable m_RegionSubscription;
 
@@ -86,13 +86,10 @@ namespace JYW.ThesisMMO.MMOServer {
                 attributesString += code.ToString();
             }
             log.DebugFormat("Entity created w. name {0} w. attributes {1}", Name, attributesString);
-
-            SetInterestArea();
         }
 
         protected virtual void SetInterestArea() {
             m_InterestArea = new InterestArea(this, InterestRadius);
-
         }
 
         /// <summary> 
@@ -140,10 +137,12 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public virtual void OnAddedToWorld() {
+            SetInterestArea();
             UpdateInterestManagment();
         }
 
         private void UpdateInterestManagment() {
+
             var newRegion = World.Instance.GetRegionFromPoint(Position);
             if (m_CurrentRegion != newRegion) {
                 ChangeRegion(m_CurrentRegion, newRegion);

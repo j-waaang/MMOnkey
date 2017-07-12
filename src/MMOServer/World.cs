@@ -255,14 +255,15 @@ namespace JYW.ThesisMMO.MMOServer {
             BoundingBox2D overlap = m_WorldArea.IntersectWith(area);
             var min = overlap.Min - m_WorldArea.Min;
             var max = overlap.Max - m_WorldArea.Min;
+
             // convert to tile coordinates and check bounds
             int x0 = Math.Max((int)(min.X / RegionSize), 0);
             int x1 = Math.Min((int)Math.Ceiling(max.X / RegionSize), TileDimension);
-            int y0 = Math.Max((int)(min.Y / RegionSize), 0);
-            int y1 = Math.Min((int)Math.Ceiling(max.Y / RegionSize), TileDimension);
+            int z0 = Math.Max((int)(min.Z / RegionSize), 0);
+            int z1 = Math.Min((int)Math.Ceiling(max.Z / RegionSize), TileDimension);
             for (int x = x0; x < x1; x++)
-                for (int y = y0; y < y1; y++) {
-                    yield return m_Regions[x, y];
+                for (int z = z0; z < z1; z++) {
+                    yield return m_Regions[x, z];
                 }
             yield break;
         }

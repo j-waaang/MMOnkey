@@ -1,12 +1,15 @@
 ﻿using ExitGames.Concurrency.Fibers;
-using JYW.ThesisMMO.Common.Codes;
-using JYW.ThesisMMO.Common.Types;
-using JYW.ThesisMMO.MMOServer.Entities.Attributes;
-using JYW.ThesisMMO.MMOServer.Events;
-using JYW.ThesisMMO.MMOServer.Peers;
 using Photon.SocketServer;
+using System.Diagnostics;
 
 namespace JYW.ThesisMMO.MMOServer.Entities {
+
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.Common.Types;
+    using JYW.ThesisMMO.MMOServer.Entities.Attributes;
+    using JYW.ThesisMMO.MMOServer.Events;
+    using JYW.ThesisMMO.MMOServer.Peers;
+
     internal class ClientEntity : Entity {
 
         //public Region CurrentWorldRegion { get; private set; }
@@ -14,7 +17,6 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
         public override IFiber Fiber { get { return Peer.RequestFiber; } }
 
         private const float InterestRadius = 10f;
-        private InterestArea m_InterestArea;
         private static readonly SendParameters DefaultSendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
         public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer) : base(name, position, attributes, peer) {
