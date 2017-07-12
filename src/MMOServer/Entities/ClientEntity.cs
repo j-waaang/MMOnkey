@@ -1,5 +1,8 @@
-﻿using JYW.ThesisMMO.Common.Types;
+﻿using ExitGames.Concurrency.Fibers;
+using JYW.ThesisMMO.Common.Codes;
+using JYW.ThesisMMO.Common.Types;
 using JYW.ThesisMMO.MMOServer.Entities.Attributes;
+using JYW.ThesisMMO.MMOServer.Events;
 using JYW.ThesisMMO.MMOServer.Peers;
 using Photon.SocketServer;
 
@@ -7,6 +10,8 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
     internal class ClientEntity : Entity {
 
         //public Region CurrentWorldRegion { get; private set; }
+
+        public override IFiber Fiber { get { return Peer.RequestFiber; } }
 
         private const float InterestRadius = 10f;
         private InterestArea m_InterestArea;
@@ -52,6 +57,16 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
         /// </summary>
         public override SendResult SendEvent(IEventData eventData) {
             return SendEvent(eventData, DefaultSendParameters);
+        }
+
+        public override IEventData GetEntitySnapshot() {
+            var newPlayerEv = new NewPlayerEvent() {
+                Name = Name,
+                Position = Position,
+                CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
+                MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
+            };
+            return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
         }
     }
 }

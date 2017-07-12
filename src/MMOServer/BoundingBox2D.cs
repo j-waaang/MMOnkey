@@ -59,7 +59,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public override string ToString() {
-            return string.Format("{0}({1},{2},{3})({4})", base.ToString(), Min.X, Min.Z, Max.X, Max.Z);
+            return string.Format("Bounds ({0},{1})({2},{3})", Min.X, Min.Z, Max.X, Max.Z);
         }
     }
 }

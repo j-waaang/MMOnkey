@@ -2,6 +2,8 @@
 using Photon.SocketServer;
 using System.Collections.Generic;
 using System;
+using Photon.SocketServer.Concurrency;
+using ExitGames.Concurrency.Fibers;
 
 namespace JYW.ThesisMMO.MMOServer {
 
@@ -11,6 +13,7 @@ namespace JYW.ThesisMMO.MMOServer {
     using Entities.Attributes;
     using Events;
     using AI;
+    using System.Diagnostics;
 
     /// <summary> 
     /// Entity which is stored in the game world.
@@ -21,6 +24,16 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public string Name { get; }
 
+        private IFiber m_EntityFiber;
+        public virtual IFiber Fiber {
+            get {
+                if (m_EntityFiber == null) {
+                    m_EntityFiber = new PoolFiber();
+                    m_EntityFiber.Start();
+                }
+                return m_EntityFiber;
+            }
+        }
         public MMOPeer Peer { get; }
         private const float InterestRadius = 0f;
 
@@ -30,17 +43,19 @@ namespace JYW.ThesisMMO.MMOServer {
         private Region m_CurrentRegion;
         private InterestArea m_InterestArea;
 
+        private IDisposable m_RegionSubscription;
+
         /// <summary> 
         /// Readonly position. Set with Move().
         /// </summary>
         public Vector Position { get; private set; }
+
         /// <summary> 
         /// Changes the position.
         /// </summary>
         public virtual void Move(Vector position) {
             Position = position;
         }
-
 
         /// <summary> 
         /// Leave out peer if this is a AI controlled enity.
@@ -138,17 +153,32 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         private void ChangeRegion(Region from, Region to) {
-            var msg = new EntityRegionChangedMessage(from, to, this);
+            m_CurrentRegion = to;
 
+            if (m_RegionSubscription != null) {
+                m_RegionSubscription.Dispose();
+            }
+
+            var msg = new EntityRegionChangedMessage(from, to, this);
             if (from != null) {
                 from.EntityRegionChangedChannel.Publish(msg);
             }
-            if (to != null) {
-                to.EntityRegionChangedChannel.Publish(msg);
-            }
+
+            Debug.Assert(to != null, "Cannot change to null region.");
+
+            to.EntityRegionChangedChannel.Publish(msg);
+            m_RegionSubscription = new UnsubscriberCollection(
+                //this.EventChannel.Subscribe(this.Fiber, (m) => newRegion.ItemEventChannel.Publish(m)), // route events through region to interest area
+
+                // region entered interest area fires message to let item notify interest area about enter
+                to.RequestInfoInRegionChannel.Subscribe(Fiber, (m) => { m.OnEntityEnter(this); }),
+
+                // region exited interest area fires message to let item notify interest area about exit
+                to.RequestRegionExitInfoChannel.Subscribe(Fiber, (m) => { m.OnEntityExit(this); })
+            );
         }
 
-        public virtual IEventData GetNewEntityEventData() {
+        public virtual IEventData GetEntitySnapshot() {
             var newPlayerEv = new NewPlayerEvent() {
                 Name = Name,
                 Position = Position,

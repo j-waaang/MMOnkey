@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 using Photon.SocketServer;
 using ExitGames.Logging;
@@ -13,7 +14,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using Targets;
-    using System.Diagnostics;
 
     /// <summary> 
     /// World split into regions.
@@ -269,20 +269,11 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public Region GetRegionFromPoint(Vector point) {
             var minVal = RegionSize * TileDimension * 0.5f * -1f;
+            var x = (int)Math.Floor(Math.Abs(point.X - minVal) / RegionSize);
+            var z = (int)Math.Floor(Math.Abs(point.Z - minVal) / RegionSize);
 
-            Debug.Assert(minVal < point.X, "Cannot evaluate a point outside of the game world");
-            Debug.Assert(minVal < point.Z, "Cannot evaluate a point outside of the game world");
-            Debug.Assert(-minVal > point.X, "Cannot evaluate a point outside of the game world");
-            Debug.Assert(-minVal > point.Z, "Cannot evaluate a point outside of the game world");
-
-            var x = (int)Math.Floor((point.X - minVal) % RegionSize);
-            var z = (int)Math.Floor((point.Z - minVal) % RegionSize);
-
-            Debug.Assert(x < TileDimension, "Error in calculation. Region does not exist.");
-            Debug.Assert(z < TileDimension, "Error in calculation. Region does not exist.");
-
+            Debug.Assert(m_Regions[x, z].Boundaries.Contains(point));
             return m_Regions[x, z];
         }
-
     }
 }

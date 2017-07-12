@@ -27,7 +27,6 @@
             SetupLogger();
             RegisterTypes();
             //CreateWorld();
-            InitCombatSystem();
             CreateTestBots();
         }
 
@@ -45,9 +44,6 @@
             }
 
             log.InfoFormat("------------------------Server Started - Log Setup------------------------");
-            log.Info("Assertions test.");
-            Debug.Assert(0 == 1, "Assertions are turned on.");
-            log.Info("Assertions test ended. Assertions are turned off if the test did not generate a log message.");
         }
 
         private static void RegisterTypes() {

@@ -39,10 +39,14 @@ namespace JYW.ThesisMMO.MMOServer {
             new MessageChannel<EventMessage>(MessageCounters.CounterSend);
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
-        private readonly BoundingBox2D m_Boundaries;
+
+        /// <summary>
+        /// Used for debugging only.
+        /// </summary>
+        public BoundingBox2D Boundaries { get; }
 
         public Region(BoundingBox2D boundingBox) {
-            m_Boundaries = boundingBox;
+            Boundaries = boundingBox;
         }
 
         public void Dispose() {
@@ -53,7 +57,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public override string ToString() {
-            return string.Format("Region({0},{1})", base.ToString(), m_Boundaries.ToString());
+            return string.Format("Region {0}", Boundaries.ToString());
         }
     }
 }

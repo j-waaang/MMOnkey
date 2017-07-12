@@ -17,7 +17,7 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
             Caster = caster;
         }
 
-        public override IEventData GetNewEntityEventData() {
+        public override IEventData GetEntitySnapshot() {
             log.InfoFormat("Creating skillentity event data with actioncode {0}", ActionCode.ToString());
             var newPlayerEv = new NewSkillEntityEvent() {
                 Name = Name,
