@@ -29,8 +29,6 @@
             switch ((OperationCode)operationRequest.OperationCode) {
                 case OperationCode.EnterWorld:
                     return OperationEnterWorld(peer, operationRequest, sendParameters);
-                case OperationCode.ReadyToReceiveGameEvents:
-                    return OperationReadyToReceiveGameEventsRequest(peer, operationRequest, sendParameters);
                 default:
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotSupported);
             }
@@ -68,6 +66,7 @@
             //TODO: Missing checks when adding new entity. E.g. is there already an entity with the same name.
             //World.Instance.AddEntity(entity);
 
+            m_Peer.SetCurrentOperationHandler(new EntityOperationHandler(m_Peer));
             return null;
         }
 
@@ -80,11 +79,6 @@
             }
 
             log.DebugFormat(dbgString);
-        }
-
-        private OperationResponse OperationReadyToReceiveGameEventsRequest(PeerBase peer, OperationRequest request, SendParameters sendParameters) {
-            m_Peer.SetCurrentOperationHandler(new EntityOperationHandler(m_Peer));
-            return null;
         }
     }
 }

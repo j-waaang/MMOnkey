@@ -17,7 +17,6 @@
 
         internal EntityOperationHandler(MMOPeer peer) {
             m_Peer = peer;
-            //World.Instance.NotifyEntityAboutExistingPlayers(m_Peer.Name);
         }
 
         public void OnDisconnect(PeerBase peer) {

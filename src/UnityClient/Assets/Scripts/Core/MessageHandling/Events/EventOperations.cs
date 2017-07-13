@@ -1,12 +1,29 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
+﻿using UnityEngine;
+using ExitGames.Client.Photon;
+using System.Collections.Generic;
+using System;
 
-    using UnityEngine;
+namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
+
     using Common.Codes;
-    using ExitGames.Client.Photon;
 
     public sealed partial class EventOperations {
-        // TODO: Merge some event codes e.g. new player event and new entity event.
 
+        /// <summary>  
+        ///  If event listeners are not setup, incoming events are queued here. Fire them with FireEnqueuedEvents().
+        /// </summary>
+        private readonly static Queue<Action> EventQueue = new Queue<Action>();
+
+        /// <summary>  
+        ///  If event listeners are not setup, incoming events are queued. Fire them with this method.
+        /// </summary>
+        public static void FireEnqueuedEvents() {
+            while (EventQueue.Count > 0) {
+                EventQueue.Dequeue()();
+            }
+        }
+
+        // TODO: Merge some event codes e.g. new player event and new entity event.
         public static void OnEvent(EventData eventData) {
             switch ((EventCode)eventData.Code) {
                 case EventCode.ActionStateUpdate:

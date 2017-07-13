@@ -46,7 +46,8 @@
 
             log.InfoFormat("------------------------Server Started - Log Setup------------------------");
 
-            Debug.Assert(0 == 1);
+            //Uncomment if you want to debug the server. You can add this in any part of the code.
+            //Debug.Assert(0 == 1);
         }
 
         private static void RegisterTypes() {

@@ -10,7 +10,6 @@
                 case OperationCode.EnterWorld:
                     OnEnterWorldResponse(operationResponse);
                     return;
-                case OperationCode.ReadyToReceiveGameEvents:
                 case OperationCode.Move:
                 case OperationCode.CharacterAction:
                     Debug.LogFormat(
