@@ -43,7 +43,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 for (var z = 0; z < 10; z++) {
                     var min = m_WorldArea.Min + new Vector(x * RegionSize, z * RegionSize);
                     var max = min + minToMax;
-                    m_Regions[x, z] = new Region(new BoundingBox2D(min, max));
+                    m_Regions[x, z] = new Region(new BoundingBox2D(min, max), x, z);
                 }
             }
         }
@@ -52,12 +52,6 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Adding a entity to the game world.
         /// </summary>
         public void AddEntity(Entity newEntity) {
-            //var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-            //var eventData = newEntity.GetNewEntityEventData();
-
-            //foreach (Entity entity in m_Entities.Values) {
-            //    entity.SendEvent(eventData, sendParameters);
-            //}
             m_Entities.Add(newEntity.Name, newEntity);
             newEntity.OnAddedToWorld();
         }
@@ -247,26 +241,26 @@ namespace JYW.ThesisMMO.MMOServer {
             Instance = null;
         }
 
-        public IEnumerable<Region> GetRegions(BoundingBox2D area) {
-            return GetRegionsEnumerable(area).ToArray();
-        }
+        //public IEnumerable<Region> GetRegions(BoundingBox2D area) {
+        //    return GetRegionsEnumerable(area).ToArray();
+        //}
 
-        private IEnumerable<Region> GetRegionsEnumerable(BoundingBox2D area) {
-            BoundingBox2D overlap = m_WorldArea.IntersectWith(area);
-            var min = overlap.Min - m_WorldArea.Min;
-            var max = overlap.Max - m_WorldArea.Min;
+        //private IEnumerable<Region> GetRegionsEnumerable(BoundingBox2D area) {
+        //    BoundingBox2D overlap = m_WorldArea.IntersectWith(area);
+        //    var min = overlap.Min - m_WorldArea.Min;
+        //    var max = overlap.Max - m_WorldArea.Min;
 
-            // convert to tile coordinates and check bounds
-            int x0 = Math.Max((int)(min.X / RegionSize), 0);
-            int x1 = Math.Min((int)Math.Ceiling(max.X / RegionSize), TileDimension);
-            int z0 = Math.Max((int)(min.Z / RegionSize), 0);
-            int z1 = Math.Min((int)Math.Ceiling(max.Z / RegionSize), TileDimension);
-            for (int x = x0; x < x1; x++)
-                for (int z = z0; z < z1; z++) {
-                    yield return m_Regions[x, z];
-                }
-            yield break;
-        }
+        //    // convert to tile coordinates and check bounds
+        //    int x0 = Math.Max((int)(min.X / RegionSize), 0);
+        //    int x1 = Math.Min((int)Math.Ceiling(max.X / RegionSize), TileDimension);
+        //    int z0 = Math.Max((int)(min.Z / RegionSize), 0);
+        //    int z1 = Math.Min((int)Math.Ceiling(max.Z / RegionSize), TileDimension);
+        //    for (int x = x0; x < x1; x++)
+        //        for (int z = z0; z < z1; z++) {
+        //            yield return m_Regions[x, z];
+        //        }
+        //    yield break;
+        //}
 
         public Region GetRegionFromPoint(Vector point) {
             var minVal = RegionSize * TileDimension * 0.5f * -1f;
@@ -275,6 +269,23 @@ namespace JYW.ThesisMMO.MMOServer {
 
             Debug.Assert(m_Regions[x, z].Boundaries.Contains(point));
             return m_Regions[x, z];
+        }
+
+        public IEnumerable<Region> Get9RegionsFromPoint(Vector point) {
+            var minVal = RegionSize * TileDimension * 0.5f * -1f;
+            var x = (int)Math.Floor(Math.Abs(point.X - minVal) / RegionSize);
+            var z = (int)Math.Floor(Math.Abs(point.Z - minVal) / RegionSize);
+
+            for(int xi = x-1; xi <= x+1; xi++) {
+                if(xi < 0 || xi >= 10) { continue; }
+
+                for(int zi = z-1; zi <= x+1; zi++) {
+                    if (zi < 0 || zi >= 10) { continue; }
+
+                    yield return m_Regions[xi, zi];
+                }
+            }
+            yield break;
         }
     }
 }

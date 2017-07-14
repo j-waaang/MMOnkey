@@ -1,6 +1,5 @@
 ﻿using ExitGames.Concurrency.Fibers;
 using Photon.SocketServer;
-using System.Diagnostics;
 
 namespace JYW.ThesisMMO.MMOServer.Entities {
 

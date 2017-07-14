@@ -93,11 +93,11 @@ namespace JYW.ThesisMMO.MMOServer {
             attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
 
             var entity = new Entity(name, position, attributes, null);
-            World.Instance.AddEntity(entity);
             var aiEntity = new TestBot(entity);
             aiEntity.canMove = canMove;
+            World.Instance.AddEntity(entity);
         }
-        
+
         // TODO: Change design so health does not depend on weapon.
         private static int GetMaxHealth(WeaponCode weapon) {
             switch (weapon) {

@@ -7,7 +7,7 @@ namespace JYW.ThesisMMO.MMOServer {
     /// <summary>
     /// Entity notifies interest areas via regions.
     /// </summary>
-    internal class Region : IDisposable {
+    internal class Region : IDisposable, IEquatable<Region> {
 
         /// <summary>
         /// Message channel for entities moved form on channel to another.
@@ -44,9 +44,13 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Used for debugging only.
         /// </summary>
         public BoundingBox2D Boundaries { get; }
+        public int X { get; }
+        public int Z { get; }
 
-        public Region(BoundingBox2D boundingBox) {
+        public Region(BoundingBox2D boundingBox, int x, int z) {
             Boundaries = boundingBox;
+            X = x;
+            Z = z;
         }
 
         public void Dispose() {
@@ -57,7 +61,11 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public override string ToString() {
-            return string.Format("Region {0}", Boundaries.ToString());
+            return string.Format("{0},{1} ", X, Z);
+        }
+
+        public bool Equals(Region other) {
+            return X == other.X && Z == other.Z;
         }
     }
 }

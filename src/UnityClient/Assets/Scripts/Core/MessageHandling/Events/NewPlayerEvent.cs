@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using ExitGames.Client.Photon;
-using System.Collections.Generic;
 
 namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
 
@@ -22,11 +21,13 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
             var health = (int)eventData.Parameters[(byte)ParameterCode.CurrentHealth];
             var maxHealth = (int)eventData.Parameters[(byte)ParameterCode.MaxHealth];
 
-            if(NewPlayerEvent == null) {
-                EventQueue.Enqueue(() => NewPlayerEvent(name, vec3Pos, health, maxHealth));
+            Action action = () => NewPlayerEvent(name, vec3Pos, health, maxHealth);
+            if (NewPlayerEvent == null) {
+                EventQueue.Enqueue(action);
             }
-
-            NewPlayerEvent(name, vec3Pos, health, maxHealth);
+            else {
+                action();
+            }
         }
     }
 }

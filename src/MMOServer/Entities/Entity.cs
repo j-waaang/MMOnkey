@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 using Photon.SocketServer.Concurrency;
 using ExitGames.Concurrency.Fibers;
+using System.Diagnostics;
 
 namespace JYW.ThesisMMO.MMOServer {
 
@@ -13,7 +14,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using Entities.Attributes;
     using Events;
     using AI;
-    using System.Diagnostics;
 
     /// <summary> 
     /// Entity which is stored in the game world.
@@ -53,18 +53,27 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary> 
         /// Changes the position.
         /// </summary>
-        public virtual void Move(Vector position) {
+        public void Move(Vector position) {
             Position = position;
+
+            var moveEvent = new MoveEvent() {
+                Name = Name,
+                Position = Position
+            };
+            IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
+            var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
+            var msg = new EventMessage(eventData, sendParameters);
+            m_CurrentRegion.RegionEventChannel.Publish(msg);
         }
 
         /// <summary> 
         /// Leave out peer if this is a AI controlled enity.
         /// </summary>
         public Entity(string name, Vector position, Attribute[] attributes, MMOPeer peer) {
+            // TODO: Create AIEntity deriving from this class.
+
             Name = name;
             Position = position;
-
-            log.InfoFormat("Created {0} entity at {1}", name, position);
 
             if (peer != null) {
                 Peer = peer;
@@ -81,11 +90,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 }
             }
 
-            string attributesString = "";
-            foreach (AttributeCode code in m_Attributes.Keys) {
-                attributesString += code.ToString();
-            }
-            log.DebugFormat("Entity created w. name {0} w. attributes {1}", Name, attributesString);
+            log.InfoFormat("Created {0} at {1}", name, position);
         }
 
         protected virtual void SetInterestArea() {
@@ -142,13 +147,14 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         private void UpdateInterestManagment() {
-
+            //log.InfoFormat("{0} calling UpdateInterestManagment", Name);
             var newRegion = World.Instance.GetRegionFromPoint(Position);
             if (m_CurrentRegion != newRegion) {
+                //log.InfoFormat("{0} calling UpdateRegionSubscription", Name);
+                m_InterestArea.UpdateRegionSubscription();
+                //log.InfoFormat("{0} calling ChangeRegion", Name);
                 ChangeRegion(m_CurrentRegion, newRegion);
             }
-
-            m_InterestArea.UpdateRegionSubscription();
         }
 
         private void ChangeRegion(Region from, Region to) {
@@ -165,6 +171,8 @@ namespace JYW.ThesisMMO.MMOServer {
 
             Debug.Assert(to != null, "Cannot change to null region.");
 
+            //log.InfoFormat("{0} changed to region {1},{2}", Name, to.X, to.Z);
+            //log.InfoFormat("{0} publishing EntityRegionChangedChannel", Name);
             to.EntityRegionChangedChannel.Publish(msg);
             m_RegionSubscription = new UnsubscriberCollection(
                 //this.EventChannel.Subscribe(this.Fiber, (m) => newRegion.ItemEventChannel.Publish(m)), // route events through region to interest area
@@ -175,6 +183,8 @@ namespace JYW.ThesisMMO.MMOServer {
                 // region exited interest area fires message to let item notify interest area about exit
                 to.RequestRegionExitInfoChannel.Subscribe(Fiber, (m) => { m.OnEntityExit(this); })
             );
+            //log.InfoFormat("{0} subbed to RequestInfoInRegionChannel", Name);
+
         }
 
         public virtual IEventData GetEntitySnapshot() {
