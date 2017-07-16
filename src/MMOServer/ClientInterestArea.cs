@@ -1,31 +1,29 @@
 ﻿using JYW.ThesisMMO.Common.Codes;
 using JYW.ThesisMMO.MMOServer.Events;
 using Photon.SocketServer;
-using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JYW.ThesisMMO.MMOServer {
     class ClientInterestArea : InterestArea {
-        public ClientInterestArea(Entity attachedEntity, float interestRadius) : base(attachedEntity, interestRadius) {
+
+        protected override IEnumerable<Region> FocusedRegions {
+            get {
+                var regions = World.Instance.Get9RegionsFromPoint(Center);
+                Debug.Assert(regions.Count() <= 9 && regions.Count() >= 4, string.Format("Get region error with input {0} and region count {1}", Center, regions.Count()));
+                return regions;
+            }
         }
 
-        /// <summary>
-        /// Subs and unsubs regions surrounding center.
-        /// Should be called when entering a new region or the entity moved.
-        /// </summary>
-        public override void UpdateRegionSubscription() {
-            var focusedRegions = World.Instance.Get9RegionsFromPoint(m_Center);
-            SubscribeRegions(focusedRegions);
-            UnsubscribeRegionsNotIn(focusedRegions);
+        public ClientInterestArea(Entity attachedEntity) : base(attachedEntity) {
         }
 
         /// <summary>
         /// Entity enters area
         /// </summary>
         public override void OnEntityEnter(Entity entity) {
+            if(entity == m_AttachedEntity) { return; }
             var eventData = entity.GetEntitySnapshot();
             m_AttachedEntity.SendEvent(eventData);
         }
@@ -34,6 +32,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Item exits area
         /// </summary>
         public override void OnEntityExit(Entity entity) {
+            if (entity == m_AttachedEntity) { return; }
             var ev = new RemovePlayerEvent() {
                 Username = entity.Name,
             };

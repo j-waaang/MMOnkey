@@ -279,7 +279,7 @@ namespace JYW.ThesisMMO.MMOServer {
             for(int xi = x-1; xi <= x+1; xi++) {
                 if(xi < 0 || xi >= 10) { continue; }
 
-                for(int zi = z-1; zi <= x+1; zi++) {
+                for(int zi = z-1; zi <= z+1; zi++) {
                     if (zi < 0 || zi >= 10) { continue; }
 
                     yield return m_Regions[xi, zi];

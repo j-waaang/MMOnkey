@@ -4,12 +4,16 @@
     using Common.Types;
     using Photon.SocketServer.Rpc;
 
-    class MoveEvent {
+    internal class MoveEvent {
+        public MoveEvent(string name, Vector position) {
+            Name = name;
+            Position = position;
+        }
 
         [DataMember(Code = (byte)ParameterCode.Name)]
-        public string Name;
+        public readonly string Name;
 
         [DataMember(Code = (byte)ParameterCode.Position)]
-        public Vector Position;
+        public readonly Vector Position;
     }
 }

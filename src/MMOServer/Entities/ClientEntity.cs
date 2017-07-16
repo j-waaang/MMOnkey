@@ -5,24 +5,23 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
 
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Types;
-    using JYW.ThesisMMO.MMOServer.Entities.Attributes;
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Peers;
+    using JYW.ThesisMMO.MMOServer.Entities.Attributes;
 
     internal class ClientEntity : Entity {
 
         //public Region CurrentWorldRegion { get; private set; }
 
-        public override IFiber Fiber { get { return Peer.RequestFiber; } }
+        //public override IFiber Fiber { get { return Peer.RequestFiber; } }
 
-        private const float InterestRadius = 10f;
         private static readonly SendParameters DefaultSendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
         public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer) : base(name, position, attributes, peer) {
         }
 
         protected override void SetInterestArea() {
-            m_InterestArea = new ClientInterestArea(this, InterestRadius);
+            m_InterestArea = new ClientInterestArea(this);
         }
 
         //public override void Move(Vector position) {

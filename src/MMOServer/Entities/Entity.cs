@@ -1,10 +1,7 @@
 ﻿using ExitGames.Logging;
 using Photon.SocketServer;
 using System.Collections.Generic;
-using System;
-using Photon.SocketServer.Concurrency;
 using ExitGames.Concurrency.Fibers;
-using System.Diagnostics;
 
 namespace JYW.ThesisMMO.MMOServer {
 
@@ -23,27 +20,12 @@ namespace JYW.ThesisMMO.MMOServer {
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         public string Name { get; }
-
-        private IFiber m_EntityFiber;
-        public virtual IFiber Fiber {
-            get {
-                if (m_EntityFiber == null) {
-                    m_EntityFiber = new PoolFiber();
-                    m_EntityFiber.Start();
-                }
-                return m_EntityFiber;
-            }
-        }
         public MMOPeer Peer { get; }
-        private const float InterestRadius = 0f;
 
         protected bool m_AiControlled;
 
         private readonly Dictionary<AttributeCode, Attribute> m_Attributes = new Dictionary<AttributeCode, Attribute>();
-        private Region m_CurrentRegion;
         protected InterestArea m_InterestArea;
-
-        private IDisposable m_RegionSubscription;
 
         /// <summary> 
         /// Readonly position. Set with Move().
@@ -55,15 +37,13 @@ namespace JYW.ThesisMMO.MMOServer {
         /// </summary>
         public void Move(Vector position) {
             Position = position;
+            m_InterestArea.Update();
 
-            var moveEvent = new MoveEvent() {
-                Name = Name,
-                Position = Position
-            };
+            var moveEvent = new MoveEvent(Name, Position);
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
             var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
             var msg = new EventMessage(eventData, sendParameters);
-            m_CurrentRegion.RegionEventChannel.Publish(msg);
+            m_InterestArea.PublishEvent(msg);
         }
 
         /// <summary> 
@@ -94,7 +74,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         protected virtual void SetInterestArea() {
-            m_InterestArea = new InterestArea(this, InterestRadius);
+            m_InterestArea = new InterestArea(this);
         }
 
         /// <summary> 
@@ -143,48 +123,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public virtual void OnAddedToWorld() {
             SetInterestArea();
-            UpdateInterestManagment();
-        }
-
-        private void UpdateInterestManagment() {
-            //log.InfoFormat("{0} calling UpdateInterestManagment", Name);
-            var newRegion = World.Instance.GetRegionFromPoint(Position);
-            if (m_CurrentRegion != newRegion) {
-                //log.InfoFormat("{0} calling UpdateRegionSubscription", Name);
-                m_InterestArea.UpdateRegionSubscription();
-                //log.InfoFormat("{0} calling ChangeRegion", Name);
-                ChangeRegion(m_CurrentRegion, newRegion);
-            }
-        }
-
-        private void ChangeRegion(Region from, Region to) {
-            m_CurrentRegion = to;
-
-            if (m_RegionSubscription != null) {
-                m_RegionSubscription.Dispose();
-            }
-
-            var msg = new EntityRegionChangedMessage(from, to, this);
-            if (from != null) {
-                from.EntityRegionChangedChannel.Publish(msg);
-            }
-
-            Debug.Assert(to != null, "Cannot change to null region.");
-
-            //log.InfoFormat("{0} changed to region {1},{2}", Name, to.X, to.Z);
-            //log.InfoFormat("{0} publishing EntityRegionChangedChannel", Name);
-            to.EntityRegionChangedChannel.Publish(msg);
-            m_RegionSubscription = new UnsubscriberCollection(
-                //this.EventChannel.Subscribe(this.Fiber, (m) => newRegion.ItemEventChannel.Publish(m)), // route events through region to interest area
-
-                // region entered interest area fires message to let item notify interest area about enter
-                to.RequestInfoInRegionChannel.Subscribe(Fiber, (m) => { m.OnEntityEnter(this); }),
-
-                // region exited interest area fires message to let item notify interest area about exit
-                to.RequestRegionExitInfoChannel.Subscribe(Fiber, (m) => { m.OnEntityExit(this); })
-            );
-            //log.InfoFormat("{0} subbed to RequestInfoInRegionChannel", Name);
-
+            m_InterestArea.Update();
         }
 
         public virtual IEventData GetEntitySnapshot() {
