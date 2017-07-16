@@ -1,4 +1,5 @@
 ﻿namespace JYW.ThesisMMO.MMOServer {
+    using Events.ActionEvents;
     using ExitGames.Diagnostics.Counter;
     using Photon.SocketServer;
 
@@ -11,12 +12,16 @@
         public static readonly CountsPerSecondCounter CounterEventReceive = new CountsPerSecondCounter("Message.Receive");
         public static readonly CountsPerSecondCounter CounterEventSend = new CountsPerSecondCounter("Message.Send");
 
-        public EventMessage(IEventData eventData, SendParameters sendParameters) {
-            EventData = eventData;
-            SendParameters = sendParameters;
+        public EventMessage(IEventData eventData, SendParameters sendParameters, BroadcastOptions broadcastOptions, string sender) {
+            this.eventData = eventData;
+            this.sendParameters = sendParameters;
+            this.broadcastOptions = broadcastOptions;
+            this.sender = sender;
         }
 
-        public IEventData EventData { get; }
-        internal SendParameters SendParameters { get; }
+        internal readonly string sender;
+        internal readonly IEventData eventData;
+        internal readonly SendParameters sendParameters;
+        internal readonly BroadcastOptions broadcastOptions;
     }
 }

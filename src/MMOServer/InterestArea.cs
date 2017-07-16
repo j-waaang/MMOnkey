@@ -4,14 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Photon.SocketServer.Concurrency;
-using System.Diagnostics;
 
 namespace JYW.ThesisMMO.MMOServer {
 
     using JYW.ThesisMMO.Common.Types;
 
-
-    internal class InterestArea {
+    internal class InterestArea : IDisposable{
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
@@ -36,7 +34,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 return m_AttachedEntity.Position;
             }
         }
-        private string Name {
+        protected string EntityName {
             get {
                 return m_AttachedEntity.Name;
             }
@@ -50,15 +48,13 @@ namespace JYW.ThesisMMO.MMOServer {
         public void Update() {
             var newRegion = World.Instance.GetRegionFromPoint(Center);
             if (m_CurrentRegion != newRegion) {
-                log.InfoFormat("{0} moved to {1} region.", Name, newRegion.ToString());
+                log.InfoFormat("{0} moved to {1} region.", EntityName, newRegion.ToString());
                 UpdateRegionSubscription();
                 ChangeRegion(m_CurrentRegion, newRegion);
             }
         }
 
         private void ChangeRegion(Region from, Region to) {
-            Debug.Assert(to != null, "Cannot change to null region.");
-
             m_CurrentRegion = to;
 
             if (m_RegionSubscription != null) {
@@ -70,16 +66,18 @@ namespace JYW.ThesisMMO.MMOServer {
                 from.EntityRegionChangedChannel.Publish(msg);
             }
 
-            to.EntityRegionChangedChannel.Publish(msg);
-            m_RegionSubscription = new UnsubscriberCollection(
-                //this.EventChannel.Subscribe(this.Fiber, (m) => newRegion.ItemEventChannel.Publish(m)), // route events through region to interest area
+            if (to != null) {
+                to.EntityRegionChangedChannel.Publish(msg);
+                m_RegionSubscription = new UnsubscriberCollection(
+                    //this.EventChannel.Subscribe(this.Fiber, (m) => newRegion.ItemEventChannel.Publish(m)), // route events through region to interest area
 
-                // region entered interest area fires message to let item notify interest area about enter
-                to.RequestInfoInRegionChannel.Subscribe(m_EntityFiber, (m) => { m.OnEntityEnter(m_AttachedEntity); }),
+                    // region entered interest area fires message to let item notify interest area about enter
+                    to.RequestInfoInRegionChannel.Subscribe(m_EntityFiber, (m) => { m.OnEntityEnter(m_AttachedEntity); }),
 
-                // region exited interest area fires message to let item notify interest area about exit
-                to.RequestRegionExitInfoChannel.Subscribe(m_EntityFiber, (m) => { m.OnEntityExit(m_AttachedEntity); })
-            );
+                    // region exited interest area fires message to let item notify interest area about exit
+                    to.RequestRegionExitInfoChannel.Subscribe(m_EntityFiber, (m) => { m.OnEntityExit(m_AttachedEntity); })
+                );
+            }
         }
 
         /// <summary>
@@ -110,7 +108,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 m_Regions.Remove(r);
                 OnRegionExit(r);
                 r.RequestRegionExitInfoChannel.Publish(this);
-                log.InfoFormat("{0} unsubbed from {1}", Name, r);
+                log.InfoFormat("{0} unsubbed from {1}", EntityName, r);
             }
         }
 
@@ -175,6 +173,13 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Entity exits region
         /// </summary>
         public virtual void OnEntityExit(Entity entity) {
+        }
+
+        public void Dispose() {
+            UnsubscribeRegionsNotIn(Enumerable.Empty<Region>());
+            ChangeRegion(m_CurrentRegion, null);
+            m_SubscriptionManagementFiber.Dispose();
+            m_EntityFiber.Dispose();
         }
     }
 }

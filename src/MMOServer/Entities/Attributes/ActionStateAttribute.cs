@@ -25,7 +25,7 @@ namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
             };
             IEventData evData = new EventData((byte)EventCode.ActionStateUpdate, ev);
 
-            World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.AllExceptMsgOwner);
+            World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.IgnoreOwner);
         }
 
         public void SetActionState(ActionCode newState, Vector lookDir) {
@@ -40,7 +40,7 @@ namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
             };
             IEventData evData = new EventData((byte)EventCode.ActionStateUpdate, ev);
 
-            World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.AllExceptMsgOwner);
+            World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.IgnoreOwner);
         }
 
         internal ActionStateAttribute() : base(AttributeCode.ActionState) { }

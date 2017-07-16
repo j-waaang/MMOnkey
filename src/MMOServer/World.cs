@@ -71,6 +71,7 @@ namespace JYW.ThesisMMO.MMOServer {
             };
             IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
             ReplicateMessage(name, eventData, BroadcastOptions.All);
+            m_Entities[name].Dispose();
             m_Entities.Remove(name);
         }
 
@@ -191,7 +192,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
             foreach (Entity entity in m_Entities.Values) {
-                if (options == BroadcastOptions.AllExceptMsgOwner && entity.Name == src) { continue; }
+                if (options == BroadcastOptions.IgnoreOwner && entity.Name == src) { continue; }
 
                 entity.SendEvent(eventData, sendParameters);
             }
@@ -238,29 +239,11 @@ namespace JYW.ThesisMMO.MMOServer {
             foreach (var region in m_Regions) {
                 region.Dispose();
             }
+            foreach(var entity in m_Entities.Values) {
+                entity.Dispose();
+            }
             Instance = null;
         }
-
-        //public IEnumerable<Region> GetRegions(BoundingBox2D area) {
-        //    return GetRegionsEnumerable(area).ToArray();
-        //}
-
-        //private IEnumerable<Region> GetRegionsEnumerable(BoundingBox2D area) {
-        //    BoundingBox2D overlap = m_WorldArea.IntersectWith(area);
-        //    var min = overlap.Min - m_WorldArea.Min;
-        //    var max = overlap.Max - m_WorldArea.Min;
-
-        //    // convert to tile coordinates and check bounds
-        //    int x0 = Math.Max((int)(min.X / RegionSize), 0);
-        //    int x1 = Math.Min((int)Math.Ceiling(max.X / RegionSize), TileDimension);
-        //    int z0 = Math.Max((int)(min.Z / RegionSize), 0);
-        //    int z1 = Math.Min((int)Math.Ceiling(max.Z / RegionSize), TileDimension);
-        //    for (int x = x0; x < x1; x++)
-        //        for (int z = z0; z < z1; z++) {
-        //            yield return m_Regions[x, z];
-        //        }
-        //    yield break;
-        //}
 
         public Region GetRegionFromPoint(Vector point) {
             var minVal = RegionSize * TileDimension * 0.5f * -1f;

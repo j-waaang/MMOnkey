@@ -1,7 +1,7 @@
 ﻿using ExitGames.Logging;
 using Photon.SocketServer;
 using System.Collections.Generic;
-using ExitGames.Concurrency.Fibers;
+using System;
 
 namespace JYW.ThesisMMO.MMOServer {
 
@@ -11,11 +11,12 @@ namespace JYW.ThesisMMO.MMOServer {
     using Entities.Attributes;
     using Events;
     using AI;
+    using Events.ActionEvents;
 
     /// <summary> 
     /// Entity which is stored in the game world.
     /// </summary>
-    internal class Entity {
+    internal class Entity : IDisposable{
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
@@ -42,7 +43,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var moveEvent = new MoveEvent(Name, Position);
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
             var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
-            var msg = new EventMessage(eventData, sendParameters);
+            var msg = new EventMessage(eventData, sendParameters, BroadcastOptions.IgnoreOwner, Name);
             m_InterestArea.PublishEvent(msg);
         }
 
@@ -134,6 +135,10 @@ namespace JYW.ThesisMMO.MMOServer {
                 MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
             };
             return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
+        }
+
+        public void Dispose() {
+            m_InterestArea.Dispose();
         }
     }
 }

@@ -1,12 +1,15 @@
-﻿using JYW.ThesisMMO.Common.Codes;
-using JYW.ThesisMMO.MMOServer.Events;
-using Photon.SocketServer;
+﻿using Photon.SocketServer;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
 namespace JYW.ThesisMMO.MMOServer {
-    class ClientInterestArea : InterestArea {
+
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.MMOServer.Events;
+    using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
+
+    internal class ClientInterestArea : InterestArea {
 
         protected override IEnumerable<Region> FocusedRegions {
             get {
@@ -44,9 +47,13 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Forwards the message to the client.
         /// </summary>
         protected override void OnEntityEvent(EventMessage message) {
-            base.OnEntityEvent(message);
+            if(message.broadcastOptions == BroadcastOptions.IgnoreOwner &&
+                message.sender == EntityName) {
+                return;
+            }
+
             EventMessage.CounterEventReceive.Increment();
-            m_AttachedEntity.SendEvent(message.EventData, message.SendParameters);
+            m_AttachedEntity.SendEvent(message.eventData, message.sendParameters);
         }
     }
 }
