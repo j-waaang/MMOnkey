@@ -66,97 +66,18 @@ namespace JYW.ThesisMMO.MMOServer {
         public void RemoveEntity(string name) {
             Debug.Assert(m_Entities.ContainsKey(name), "The entity you want to remove does not exist in this region.");
 
-            var ev = new RemovePlayerEvent() {
-                Username = name,
-            };
-            IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
-            ReplicateMessage(name, eventData, BroadcastOptions.All);
+            //var ev = new RemovePlayerEvent() {
+            //    Username = name,
+            //};
+            //IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
+            //ReplicateMessage(name, eventData, BroadcastOptions.All);
             m_Entities[name].Dispose();
             m_Entities.Remove(name);
         }
 
-        //public void NotifyEntityAboutExistingPlayers(string username) {
-        //    var entityToNotify = m_Entities[username];
-
-        //    foreach (Entity newPlayer in m_Entities.Values) {
-        //        if (newPlayer == entityToNotify) { continue; }
-
-        //        //if (Vector.Distance(existingEntity.Position, entityToNotify.Position) > InterestDistance) { continue; }
-
-        //        var newPlayerEv = new NewPlayerEvent() {
-        //            Name = newPlayer.Name,
-        //            Position = newPlayer.Position,
-        //            CurrentHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.Health)).GetValue(),
-        //            MaxHealth = ((IntAttribute)newPlayer.GetAttribute(AttributeCode.MaxHealth)).GetValue()
-        //        };
-
-        //        IEventData eventData = new EventData((byte)EventCode.NewPlayer, newPlayerEv);
-        //        var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-        //        entityToNotify.SendEvent(eventData, sendParameters);
-        //    }
-        //}
-
         public void MoveEntity(string username, Vector position) {
             m_Entities[username].Move(position);
         }
-            //movedEntity.Position = position;
-
-            //var moveEvent = new MoveEvent() {
-            //    Name = movedEntity.Name,
-            //    Position = movedEntity.Position
-            //};
-
-            //IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
-            //var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
-
-            //foreach (Entity entity in m_Entities.Values) {
-            //    if (entity == movedEntity) { continue; }
-            //    entity.SendEvent(eventData, sendParameters);
-            //}
-
-            //var movedEntity = m_Entities[username];
-            //IEventData eventData;
-            //MoveEvent moveEvent;
-            //var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
-
-            //var interestedEntities = GetEntitiesInInterestRange(movedEntity);
-            //foreach (Entity interestedEntity in interestedEntities) {
-            //    if (Vector.Distance(position, interestedEntity.Position) < InterestDistance) {
-            //        moveEvent = new MoveEvent() {
-            //            Username = interestedEntity.Name,
-            //            Position = interestedEntity.Position
-            //        };
-            //        eventData = new EventData((byte)EventCode.Move, moveEvent);
-
-            //        movedEntity.SendEvent(eventData, sendParameters);
-            //    }
-            //}
-
-            //movedEntity.Position = position;
-            //// TODO: check if new position is valid
-
-            //moveEvent = new MoveEvent() {
-            //    Username = movedEntity.Name,
-            //    Position = movedEntity.Position
-            //};
-            //eventData = new EventData((byte)EventCode.Move, moveEvent);
-
-            //foreach (Entity entity in interestedEntities) {
-            //    entity.SendEvent(eventData, sendParameters);
-            //}
-        //}
-
-        //private List<Entity> GetEntitiesInInterestRange(Entity centerEntity) {
-        //    var entities = new List<Entity>();
-        //    foreach (Entity entity in m_Entities.Values) {
-        //        if (entity == centerEntity) { continue; }
-        //        if (Vector.Distance(entity.Position, centerEntity.Position) > InterestDistance) { continue; }
-
-        //        entities.Add(entity);
-        //    }
-
-        //    return entities;
-        //}
 
         public bool CanPerformAction(string actionSource) {
             Entity entity = null;
@@ -183,19 +104,6 @@ namespace JYW.ThesisMMO.MMOServer {
 
             // TODO: Test distance
             return true;
-        }
-
-        /// <summary>
-        /// Use this to replicate a attribute change. Do not use for position changes.
-        /// </summary>
-        public void ReplicateMessage(string src, IEventData eventData, BroadcastOptions options) {
-            var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
-
-            foreach (Entity entity in m_Entities.Values) {
-                if (options == BroadcastOptions.IgnoreOwner && entity.Name == src) { continue; }
-
-                entity.SendEvent(eventData, sendParameters);
-            }
         }
 
         public IEnumerable<string> GetEntitesInArea(AreaTarget area) {

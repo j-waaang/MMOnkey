@@ -39,6 +39,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 return m_AttachedEntity.Name;
             }
         }
+
         public InterestArea(Entity attachedEntity) {
             m_AttachedEntity = attachedEntity;
             m_SubscriptionManagementFiber.Start();

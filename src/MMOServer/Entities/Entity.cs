@@ -44,7 +44,7 @@ namespace JYW.ThesisMMO.MMOServer {
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
             var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
             var msg = new EventMessage(eventData, sendParameters, BroadcastOptions.IgnoreOwner, Name);
-            m_InterestArea.PublishEvent(msg);
+            PublishEvent(msg);
         }
 
         /// <summary> 
@@ -139,6 +139,10 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public void Dispose() {
             m_InterestArea.Dispose();
+        }
+
+        public void PublishEvent(EventMessage msg) {
+            m_InterestArea.PublishEvent(msg);
         }
     }
 }

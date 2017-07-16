@@ -1,7 +1,8 @@
 ﻿using ExitGames.Logging;
+using Photon.SocketServer;
 
 namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
-
+    using Events.ActionEvents;
     using JYW.ThesisMMO.Common.Codes;
 
     internal abstract class Attribute {
@@ -18,6 +19,12 @@ namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
 
         internal void SetEntity(Entity entity) {
             m_Entity = entity;
+        }
+
+        protected void PublishChange(IEventData eventData, BroadcastOptions options) {
+            var sendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
+            var msg = new EventMessage(eventData, sendParameters, options, m_Entity.Name);
+            m_Entity.PublishEvent(msg);
         }
     }
 }

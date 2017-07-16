@@ -45,8 +45,7 @@
                 CurrenHealth = m_Value
             };
             IEventData evData = new EventData((byte)EventCode.HealthUpdate, ev);
-
-            World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.All);
+            PublishChange(evData, BroadcastOptions.All);
 
             if (m_Value <= 0) {
                 m_Value = 0;

@@ -36,8 +36,7 @@
                 FloatValue = m_Value
             };
             IEventData evData = new EventData((byte)EventCode.AttributeChangedEvent, ev);
-
-            World.Instance.ReplicateMessage(m_Entity.Name, evData, BroadcastOptions.All);
+            PublishChange(evData, BroadcastOptions.All);
         }
 
         internal FloatAttribute(float value, AttributeCode attributeCode)
