@@ -41,7 +41,6 @@ namespace JYW.ThesisMMO.MMOServer.Entities.Attributes {
             PublishChange(evData, BroadcastOptions.IgnoreOwner);
         }
 
-
         internal ActionStateAttribute() : base(AttributeCode.ActionState) { }
     }
 }

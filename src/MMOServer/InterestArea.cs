@@ -16,7 +16,7 @@ namespace JYW.ThesisMMO.MMOServer {
         protected readonly IFiber m_SubscriptionManagementFiber = new PoolFiber();
         protected readonly HashSet<Region> m_Regions = new HashSet<Region>();
         protected readonly Dictionary<Region, IDisposable> m_RegionChangedSubscriptions = new Dictionary<Region, IDisposable>();
-        protected readonly Dictionary<Region, IDisposable> m_RegionEventSubscriptions = new Dictionary<Region, IDisposable>();
+        protected readonly Dictionary<Region, UnsubscriberCollection> m_RegionEventSubscriptions = new Dictionary<Region, UnsubscriberCollection>();
         protected readonly Entity m_AttachedEntity;
 
         private Region m_CurrentRegion;
@@ -117,8 +117,11 @@ namespace JYW.ThesisMMO.MMOServer {
             var subscription = region.EntityRegionChangedChannel.Subscribe(m_SubscriptionManagementFiber, OnEntityRegionChange);
             m_RegionChangedSubscriptions.Add(region, subscription);
 
-            subscription = region.RegionEventChannel.Subscribe(m_EntityFiber, OnEntityEvent);
-            m_RegionEventSubscriptions[region] = subscription;
+            m_RegionEventSubscriptions[region] = new UnsubscriberCollection(
+                region.RegionEventChannel.Subscribe(m_EntityFiber, OnEntityEvent),
+                region.PositionUpdateChannel.Subscribe(m_EntityFiber, OnPositionUpdate));
+            //subscription = region.RegionEventChannel.Subscribe(m_EntityFiber, OnEntityEvent);
+            //m_RegionEventSubscriptions[region] = subscription;
         }
 
         private void OnRequestEntitySnapshot(InterestArea obj) {
@@ -147,21 +150,38 @@ namespace JYW.ThesisMMO.MMOServer {
             m_CurrentRegion.RegionEventChannel.Publish(msg);
         }
 
+        public void PublishMove(EntityPositionMessage msg) {
+            m_CurrentRegion.PositionUpdateChannel.Publish(msg);
+        }
+
         /// <summary>
         /// Region exits area.
         /// </summary>
         private void OnRegionExit(Region region) {
-            IDisposable subscription;
-            if (m_RegionChangedSubscriptions.TryGetValue(region, out subscription)) {
-                subscription.Dispose();
-                m_RegionChangedSubscriptions.Remove(region);
-            }
+            m_RegionChangedSubscriptions[region].Dispose();
+            m_RegionChangedSubscriptions.Remove(region);
+
+            m_RegionEventSubscriptions[region].Dispose();
+            m_RegionEventSubscriptions.Remove(region);
+
+            //IDisposable subscription;
+            //if (m_RegionChangedSubscriptions.TryGetValue(region, out subscription)) {
+            //    subscription.Dispose();
+            //    m_RegionChangedSubscriptions.Remove(region);
+            //}
         }
 
         /// <summary>
-        /// Event relayed by subscribed region from region's items.
+        /// Event relayed by subscribed region from region's entities.
         /// </summary>
         protected virtual void OnEntityEvent(EventMessage message) {
+        }
+
+        /// <summary>
+        /// Position update relayed by subscribed region from region's entities.
+        /// </summary>
+        protected virtual void OnPositionUpdate(EntityPositionMessage message) {
+
         }
 
         /// <summary>

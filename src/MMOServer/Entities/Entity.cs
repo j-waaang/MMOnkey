@@ -39,12 +39,12 @@ namespace JYW.ThesisMMO.MMOServer {
         public void Move(Vector position) {
             Position = position;
             m_InterestArea.Update();
-
-            var moveEvent = new MoveEvent(Name, Position);
-            IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
-            var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
-            var msg = new EventMessage(eventData, sendParameters, BroadcastOptions.IgnoreOwner, Name);
-            PublishEvent(msg);
+            m_InterestArea.PublishMove(new EntityPositionMessage(Name, Position));
+            //var moveEvent = new MoveEvent(Name, Position);
+            //IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
+            //var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
+            //var msg = new EventMessage(eventData, sendParameters, BroadcastOptions.IgnoreOwner, Name);
+            //PublishEvent(msg);
         }
 
         /// <summary> 

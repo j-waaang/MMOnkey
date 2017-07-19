@@ -2,10 +2,10 @@ Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55063
-Multi-casting "[IP] 192.168.178.83 [Port] 55063 [Flags] 2 [Guid] 530741952 [EditorId] 2444221278 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55063]
-PlayerConnection already initialized - listening to [0.0.0.0:55063]
+PlayerConnection initialized network socket : 0.0.0.0 55432
+Multi-casting "[IP] 192.168.178.83 [Port] 55432 [Flags] 2 [Guid] 989276027 [EditorId] 279600381 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55432]
+PlayerConnection already initialized - listening to [0.0.0.0:55432]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -31,22 +31,22 @@ Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll into Unity Child Domain
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.108 seconds
+- Completed reload, in  0.020 seconds
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.996669 ms
+UnloadTime: 1.661816 ms
 Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55051
-Multi-casting "[IP] 192.168.178.83 [Port] 55051 [Flags] 2 [Guid] 3349680829 [EditorId] 2444221278 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55051]
-PlayerConnection already initialized - listening to [0.0.0.0:55051]
+PlayerConnection initialized network socket : 0.0.0.0 55340
+Multi-casting "[IP] 192.168.178.83 [Port] 55340 [Flags] 2 [Guid] 2672476282 [EditorId] 279600381 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55340]
+PlayerConnection already initialized - listening to [0.0.0.0:55340]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -79,7 +79,7 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.126696 ms
+UnloadTime: 0.899675 ms
 No connection address entered. Using localhost:5055
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -150,24 +150,24 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 48)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.717563 ms
+UnloadTime: 6.032868 ms
 System memory in use before: 18.7 MB.
 System memory in use after: 18.8 MB.
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 593.
-Total: 0.484971 ms (FindLiveObjects: 0.045644 ms CreateObjectMapping: 0.018918 ms MarkObjects: 0.412301 ms  DeleteObjects: 0.006606 ms)
+Total: 0.443231 ms (FindLiveObjects: 0.038737 ms CreateObjectMapping: 0.016215 ms MarkObjects: 0.379569 ms  DeleteObjects: 0.006906 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.441976 ms
+UnloadTime: 1.960306 ms
 System memory in use before: 20.5 MB.
 System memory in use after: 20.5 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 611.
-Total: 0.475362 ms (FindLiveObjects: 0.041140 ms CreateObjectMapping: 0.031530 ms MarkObjects: 0.365455 ms  DeleteObjects: 0.036035 ms)
+Total: 0.400289 ms (FindLiveObjects: 0.038737 ms CreateObjectMapping: 0.016215 ms MarkObjects: 0.307198 ms  DeleteObjects: 0.036935 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2a2c -> priority: 1 
-  Thread -> id: 6fc -> priority: 1 
+  Thread -> id: 1148 -> priority: 1 
+  Thread -> id: 274c -> priority: 1 
 No connection address entered. Using localhost:5055
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -238,96 +238,21 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 48)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.189922 ms
+UnloadTime: 6.359585 ms
 System memory in use before: 18.7 MB.
 System memory in use after: 18.8 MB.
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 593.
-Total: 0.497884 ms (FindLiveObjects: 0.040239 ms CreateObjectMapping: 0.018017 ms MarkObjects: 0.431219 ms  DeleteObjects: 0.006906 ms)
+Total: 0.420709 ms (FindLiveObjects: 0.037536 ms CreateObjectMapping: 0.015915 ms MarkObjects: 0.359149 ms  DeleteObjects: 0.006906 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.402364 ms
-System memory in use before: 20.7 MB.
-System memory in use after: 20.7 MB.
+UnloadTime: 2.077120 ms
+System memory in use before: 20.8 MB.
+System memory in use after: 20.9 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 619.
-Total: 0.436324 ms (FindLiveObjects: 0.041440 ms CreateObjectMapping: 0.020119 ms MarkObjects: 0.335426 ms  DeleteObjects: 0.038137 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 611.
+Total: 0.432120 ms (FindLiveObjects: 0.041440 ms CreateObjectMapping: 0.016816 ms MarkObjects: 0.333924 ms  DeleteObjects: 0.038737 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1114 -> priority: 1 
-  Thread -> id: 4bc -> priority: 1 
-Received Declined from CharacterAction response.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:LogFormat(LogType, String, Object[])
-UnityEngine.Debug:LogFormat(String, Object[])
-JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses.ResponseOperations:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Responses\ResponseOperations.cs:15)
-JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:23)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:Service()
-JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
- 
-(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Responses/ResponseOperations.cs Line: 15)
-
-Received Declined from CharacterAction response.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:LogFormat(LogType, String, Object[])
-UnityEngine.Debug:LogFormat(String, Object[])
-JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses.ResponseOperations:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Responses\ResponseOperations.cs:15)
-JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:23)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:Service()
-JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
- 
-(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Responses/ResponseOperations.cs Line: 15)
-
-Received Declined from CharacterAction response.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:LogFormat(LogType, String, Object[])
-UnityEngine.Debug:LogFormat(String, Object[])
-JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses.ResponseOperations:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Responses\ResponseOperations.cs:15)
-JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:23)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:Service()
-JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
- 
-(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Responses/ResponseOperations.cs Line: 15)
-
-Received Declined from CharacterAction response.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:LogFormat(LogType, String, Object[])
-UnityEngine.Debug:LogFormat(String, Object[])
-JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses.ResponseOperations:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Responses\ResponseOperations.cs:15)
-JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:23)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:Service()
-JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
- 
-(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Responses/ResponseOperations.cs Line: 15)
-
-Received Declined from CharacterAction response.
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:LogFormat(LogType, String, Object[])
-UnityEngine.Debug:LogFormat(String, Object[])
-JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses.ResponseOperations:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Responses\ResponseOperations.cs:15)
-JYW.ThesisMMO.UnityClient.Core.Photon.ServerPeerListener:OnOperationResponse(OperationResponse) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Photon\ServerPeerListener.cs:23)
-ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
-ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
-ExitGames.Client.Photon.PhotonPeer:Service()
-JYW.ThesisMMO.UnityClient.Core.Game:Update() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:38)
- 
-(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/MessageHandling/Responses/ResponseOperations.cs Line: 15)
-
+  Thread -> id: 2894 -> priority: 1 
+  Thread -> id: e2c -> priority: 1 

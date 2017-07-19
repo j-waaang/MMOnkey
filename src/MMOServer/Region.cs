@@ -38,6 +38,13 @@ namespace JYW.ThesisMMO.MMOServer {
         public MessageChannel<EventMessage> RegionEventChannel { get; } =
             new MessageChannel<EventMessage>(MessageCounters.CounterSend);
 
+        /// <summary>
+        /// All IAs can publish the changes of it's client to this channel.
+        /// Only Client IA's sub to this channel.
+        /// </summary>
+        public MessageChannel<EntityPositionMessage> PositionUpdateChannel { get; } =
+            new MessageChannel<EntityPositionMessage>(MessageCounters.CounterSend);
+
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         /// <summary>

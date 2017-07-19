@@ -11,10 +11,14 @@ namespace JYW.ThesisMMO.MMOServer {
 
     internal class ClientInterestArea : InterestArea {
 
+        private static SendParameters PositionSendParameters = new SendParameters() { ChannelId = (byte)ChannelId.Position, Unreliable = true };
+
         protected override IEnumerable<Region> FocusedRegions {
             get {
                 var regions = World.Instance.Get9RegionsFromPoint(Center);
-                Debug.Assert(regions.Count() <= 9 && regions.Count() >= 4, string.Format("Get region error with input {0} and region count {1}", Center, regions.Count()));
+                Debug.Assert(
+                    regions.Count() <= 9 && regions.Count() >= 4,
+                    string.Format("Get region error with input {0} and region count {1}", Center, regions.Count()));
                 return regions;
             }
         }
@@ -54,6 +58,19 @@ namespace JYW.ThesisMMO.MMOServer {
 
             EventMessage.CounterEventReceive.Increment();
             m_AttachedEntity.SendEvent(message.eventData, message.sendParameters);
+        }
+
+        protected override void OnPositionUpdate(EntityPositionMessage message) {
+            if(message.Source == EntityName) {
+                return;
+            }
+            EventMessage.CounterEventReceive.Increment();
+
+            //Replication strategy here
+
+            var moveEvent = new MoveEvent(message.Source, message.Position);
+            IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
+            m_AttachedEntity.SendEvent(eventData, PositionSendParameters);
         }
     }
 }

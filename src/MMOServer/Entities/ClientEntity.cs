@@ -11,10 +11,6 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
 
     internal class ClientEntity : Entity {
 
-        //public Region CurrentWorldRegion { get; private set; }
-
-        //public override IFiber Fiber { get { return Peer.RequestFiber; } }
-
         private static readonly SendParameters DefaultSendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
         public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer) : base(name, position, attributes, peer) {
@@ -23,26 +19,6 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
         protected override void SetInterestArea() {
             m_InterestArea = new ClientInterestArea(this);
         }
-
-        //public override void Move(Vector position) {
-        //    base.Move(position);
-        //    UpdateInterestManagment();
-        //}
-
-        //public override void OnAddedToWorld() {
-        //    UpdateInterestManagment();
-        //}
-
-        //private void UpdateInterestManagment() {
-        //    var newRegion = World.Instance.GetRegionFromPoint(Position);
-        //    if(CurrentWorldRegion != newRegion) {
-        //        ChangeRegion(CurrentWorldRegion, newRegion);
-        //    }
-
-        //    m_InterestArea.UpdateRegionSubscription();
-        //}
-
-
 
         /// <summary> 
         /// Use this method to update the peer.
