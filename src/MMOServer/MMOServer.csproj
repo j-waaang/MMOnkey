@@ -72,6 +72,7 @@
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="ChannelId.cs" />
     <Compile Include="ClientInterestArea.cs" />
+    <Compile Include="CombatStateAwarePositionFilter.cs" />
     <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
     <Compile Include="Entities\Attributes\Attribute.cs" />
     <Compile Include="Entities\Attributes\FloatAttribute.cs" />

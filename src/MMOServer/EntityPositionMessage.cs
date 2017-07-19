@@ -6,10 +6,10 @@ using JYW.ThesisMMO.Common.Types;
     {
         public EntityPositionMessage(string source, Vector position)
         {
-            this.Source = source;
-            this.Position = position;
+            this.source = source;
+            this.position = position;
         }
-        public Vector Position { get; private set; }
-        public string Source { get; private set; }
+        public readonly Vector position;
+        public readonly string source;
     }
 }

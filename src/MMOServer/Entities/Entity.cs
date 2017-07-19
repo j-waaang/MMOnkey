@@ -11,7 +11,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using Entities.Attributes;
     using Events;
     using AI;
-    using Events.ActionEvents;
 
     /// <summary> 
     /// Entity which is stored in the game world.
@@ -40,11 +39,6 @@ namespace JYW.ThesisMMO.MMOServer {
             Position = position;
             m_InterestArea.Update();
             m_InterestArea.PublishMove(new EntityPositionMessage(Name, Position));
-            //var moveEvent = new MoveEvent(Name, Position);
-            //IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
-            //var sendParameters = new SendParameters { Unreliable = true, ChannelId = 0 };
-            //var msg = new EventMessage(eventData, sendParameters, BroadcastOptions.IgnoreOwner, Name);
-            //PublishEvent(msg);
         }
 
         /// <summary> 

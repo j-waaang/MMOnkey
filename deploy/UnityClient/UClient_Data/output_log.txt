@@ -2,10 +2,10 @@ Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55432
-Multi-casting "[IP] 192.168.178.83 [Port] 55432 [Flags] 2 [Guid] 989276027 [EditorId] 279600381 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55432]
-PlayerConnection already initialized - listening to [0.0.0.0:55432]
+PlayerConnection initialized network socket : 0.0.0.0 55325
+Multi-casting "[IP] 192.168.178.83 [Port] 55325 [Flags] 2 [Guid] 1111316374 [EditorId] 279600381 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55325]
+PlayerConnection already initialized - listening to [0.0.0.0:55325]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -38,15 +38,14 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.661816 ms
 Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55340
-Multi-casting "[IP] 192.168.178.83 [Port] 55340 [Flags] 2 [Guid] 2672476282 [EditorId] 279600381 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55340]
-PlayerConnection already initialized - listening to [0.0.0.0:55340]
+PlayerConnection initialized network socket : 0.0.0.0 55404
+Multi-casting "[IP] 192.168.178.83 [Port] 55404 [Flags] 2 [Guid] 2164044795 [EditorId] 279600381 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55404]
+PlayerConnection already initialized - listening to [0.0.0.0:55404]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -72,14 +71,15 @@ Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll into Unity Child Domain
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.021 seconds
+- Completed reload, in  0.020 seconds
+UnloadTime: 0.865742 ms
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.899675 ms
+UnloadTime: 1.533291 ms
 No connection address entered. Using localhost:5055
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -150,24 +150,13 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 48)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.032868 ms
+UnloadTime: 6.117250 ms
 System memory in use before: 18.7 MB.
 System memory in use after: 18.8 MB.
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 593.
-Total: 0.443231 ms (FindLiveObjects: 0.038737 ms CreateObjectMapping: 0.016215 ms MarkObjects: 0.379569 ms  DeleteObjects: 0.006906 ms)
+Total: 0.436024 ms (FindLiveObjects: 0.038137 ms CreateObjectMapping: 0.017416 ms MarkObjects: 0.372662 ms  DeleteObjects: 0.006606 ms)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.960306 ms
-System memory in use before: 20.5 MB.
-System memory in use after: 20.5 MB.
-
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 611.
-Total: 0.400289 ms (FindLiveObjects: 0.038737 ms CreateObjectMapping: 0.016215 ms MarkObjects: 0.307198 ms  DeleteObjects: 0.036935 ms)
-
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1148 -> priority: 1 
-  Thread -> id: 274c -> priority: 1 
 No connection address entered. Using localhost:5055
 UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
 UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
@@ -238,21 +227,32 @@ UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Exte
 (Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 48)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.359585 ms
+UnloadTime: 5.929267 ms
 System memory in use before: 18.7 MB.
 System memory in use after: 18.8 MB.
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 593.
-Total: 0.420709 ms (FindLiveObjects: 0.037536 ms CreateObjectMapping: 0.015915 ms MarkObjects: 0.359149 ms  DeleteObjects: 0.006906 ms)
+Total: 0.454341 ms (FindLiveObjects: 0.038137 ms CreateObjectMapping: 0.019819 ms MarkObjects: 0.387977 ms  DeleteObjects: 0.007207 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.077120 ms
-System memory in use before: 20.8 MB.
-System memory in use after: 20.9 MB.
+UnloadTime: 2.111053 ms
+System memory in use before: 21.1 MB.
+System memory in use after: 21.1 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 611.
-Total: 0.432120 ms (FindLiveObjects: 0.041440 ms CreateObjectMapping: 0.016816 ms MarkObjects: 0.333924 ms  DeleteObjects: 0.038737 ms)
+Total: 0.400589 ms (FindLiveObjects: 0.037236 ms CreateObjectMapping: 0.018618 ms MarkObjects: 0.307499 ms  DeleteObjects: 0.036335 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2894 -> priority: 1 
-  Thread -> id: e2c -> priority: 1 
+  Thread -> id: 1b64 -> priority: 1 
+  Thread -> id: 1c54 -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.180420 ms
+System memory in use before: 20.6 MB.
+System memory in use after: 20.7 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 611.
+Total: 0.434522 ms (FindLiveObjects: 0.042341 ms CreateObjectMapping: 0.020119 ms MarkObjects: 0.333324 ms  DeleteObjects: 0.037236 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2284 -> priority: 1 
+  Thread -> id: 1260 -> priority: 1 

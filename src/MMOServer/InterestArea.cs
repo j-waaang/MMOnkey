@@ -1,8 +1,8 @@
-﻿using ExitGames.Concurrency.Fibers;
-using ExitGames.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ExitGames.Concurrency.Fibers;
+using ExitGames.Logging;
 using Photon.SocketServer.Concurrency;
 
 namespace JYW.ThesisMMO.MMOServer {
@@ -12,12 +12,13 @@ namespace JYW.ThesisMMO.MMOServer {
     internal class InterestArea : IDisposable{
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
-
         protected readonly IFiber m_SubscriptionManagementFiber = new PoolFiber();
         protected readonly HashSet<Region> m_Regions = new HashSet<Region>();
         protected readonly Dictionary<Region, IDisposable> m_RegionChangedSubscriptions = new Dictionary<Region, IDisposable>();
         protected readonly Dictionary<Region, UnsubscriberCollection> m_RegionEventSubscriptions = new Dictionary<Region, UnsubscriberCollection>();
         protected readonly Entity m_AttachedEntity;
+
+        private static int PositionUpdateIntervalInMs = 30;
 
         private Region m_CurrentRegion;
         private IDisposable m_RegionSubscription;
@@ -119,13 +120,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
             m_RegionEventSubscriptions[region] = new UnsubscriberCollection(
                 region.RegionEventChannel.Subscribe(m_EntityFiber, OnEntityEvent),
-                region.PositionUpdateChannel.Subscribe(m_EntityFiber, OnPositionUpdate));
-            //subscription = region.RegionEventChannel.Subscribe(m_EntityFiber, OnEntityEvent);
-            //m_RegionEventSubscriptions[region] = subscription;
-        }
-
-        private void OnRequestEntitySnapshot(InterestArea obj) {
-            throw new NotImplementedException();
+                region.PositionUpdateChannel.SubscribeToLast(m_EntityFiber, OnPositionUpdate, PositionUpdateIntervalInMs));
         }
 
         private void OnEntityRegionChange(EntityRegionChangedMessage message) {
@@ -163,12 +158,6 @@ namespace JYW.ThesisMMO.MMOServer {
 
             m_RegionEventSubscriptions[region].Dispose();
             m_RegionEventSubscriptions.Remove(region);
-
-            //IDisposable subscription;
-            //if (m_RegionChangedSubscriptions.TryGetValue(region, out subscription)) {
-            //    subscription.Dispose();
-            //    m_RegionChangedSubscriptions.Remove(region);
-            //}
         }
 
         /// <summary>

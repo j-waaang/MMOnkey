@@ -1,7 +1,7 @@
-﻿using Photon.SocketServer;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Photon.SocketServer;
 
 namespace JYW.ThesisMMO.MMOServer {
 
@@ -61,14 +61,14 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         protected override void OnPositionUpdate(EntityPositionMessage message) {
-            if(message.Source == EntityName) {
+            if(message.source == EntityName) {
                 return;
             }
             EventMessage.CounterEventReceive.Increment();
 
             //Replication strategy here
 
-            var moveEvent = new MoveEvent(message.Source, message.Position);
+            var moveEvent = new MoveEvent(message.source, message.position);
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
             m_AttachedEntity.SendEvent(eventData, PositionSendParameters);
         }
