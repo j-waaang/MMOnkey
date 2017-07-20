@@ -38,7 +38,7 @@ namespace JYW.ThesisMMO.MMOServer {
         public void Move(Vector position) {
             Position = position;
             m_InterestArea.Update();
-            m_InterestArea.PublishMove(new EntityPositionMessage(Name, Position));
+            m_InterestArea.PublishMove();
         }
 
         /// <summary> 

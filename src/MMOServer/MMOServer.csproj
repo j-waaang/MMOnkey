@@ -72,7 +72,6 @@
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="ChannelId.cs" />
     <Compile Include="ClientInterestArea.cs" />
-    <Compile Include="CombatStateAwarePositionFilter.cs" />
     <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
     <Compile Include="Entities\Attributes\Attribute.cs" />
     <Compile Include="Entities\Attributes\FloatAttribute.cs" />
@@ -91,9 +90,9 @@
     <Compile Include="Events\EntityEvents\NewSkillEntityEvent.cs" />
     <Compile Include="Events\EntityEvents\NewEntityEvent.cs" />
     <Compile Include="InterestArea.cs" />
-    <Compile Include="EntityPositionMessage.cs" />
     <Compile Include="MessageCounters.cs" />
     <Compile Include="BoundingBox2D.cs" />
+    <Compile Include="PositionFilter.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />

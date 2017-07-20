@@ -145,8 +145,8 @@ namespace JYW.ThesisMMO.MMOServer {
             m_CurrentRegion.RegionEventChannel.Publish(msg);
         }
 
-        public void PublishMove(EntityPositionMessage msg) {
-            m_CurrentRegion.PositionUpdateChannel.Publish(msg);
+        public void PublishMove() {
+            m_CurrentRegion.PositionUpdateChannel.Publish(m_AttachedEntity);
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary>
         /// Position update relayed by subscribed region from region's entities.
         /// </summary>
-        protected virtual void OnPositionUpdate(EntityPositionMessage message) {
+        protected virtual void OnPositionUpdate(Entity updatedEntity) {
 
         }
 

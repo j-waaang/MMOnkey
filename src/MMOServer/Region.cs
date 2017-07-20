@@ -42,8 +42,8 @@ namespace JYW.ThesisMMO.MMOServer {
         /// All IAs can publish the changes of it's client to this channel.
         /// Only Client IA's sub to this channel.
         /// </summary>
-        public MessageChannel<EntityPositionMessage> PositionUpdateChannel { get; } =
-            new MessageChannel<EntityPositionMessage>(MessageCounters.CounterSend);
+        public MessageChannel<Entity> PositionUpdateChannel { get; } =
+            new MessageChannel<Entity>(MessageCounters.CounterSend);
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 

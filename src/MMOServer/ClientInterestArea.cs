@@ -12,6 +12,7 @@ namespace JYW.ThesisMMO.MMOServer {
     internal class ClientInterestArea : InterestArea {
 
         private static SendParameters PositionSendParameters = new SendParameters() { ChannelId = (byte)ChannelId.Position, Unreliable = true };
+        private readonly PositionFilter m_PositionFilter;
 
         protected override IEnumerable<Region> FocusedRegions {
             get {
@@ -24,13 +25,14 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public ClientInterestArea(Entity attachedEntity) : base(attachedEntity) {
+            m_PositionFilter = new PositionFilter(attachedEntity);
         }
 
         /// <summary>
         /// Entity enters area
         /// </summary>
         public override void OnEntityEnter(Entity entity) {
-            if(entity == m_AttachedEntity) { return; }
+            if (entity == m_AttachedEntity) { return; }
             var eventData = entity.GetEntitySnapshot();
             m_AttachedEntity.SendEvent(eventData);
         }
@@ -51,7 +53,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Forwards the message to the client.
         /// </summary>
         protected override void OnEntityEvent(EventMessage message) {
-            if(message.broadcastOptions == BroadcastOptions.IgnoreOwner &&
+            if (message.broadcastOptions == BroadcastOptions.IgnoreOwner &&
                 message.sender == EntityName) {
                 return;
             }
@@ -60,15 +62,17 @@ namespace JYW.ThesisMMO.MMOServer {
             m_AttachedEntity.SendEvent(message.eventData, message.sendParameters);
         }
 
-        protected override void OnPositionUpdate(EntityPositionMessage message) {
-            if(message.source == EntityName) {
-                return;
-            }
+        protected override void OnPositionUpdate(Entity updatedEntity) {
+            if (updatedEntity.Name == EntityName) { return; }
+            if (m_PositionFilter.FilterPosition(updatedEntity.Position)) { return; }
+
             EventMessage.CounterEventReceive.Increment();
 
-            //Replication strategy here
+            UpdateClientPosition(updatedEntity);
+        }
 
-            var moveEvent = new MoveEvent(message.source, message.position);
+        private void UpdateClientPosition(Entity updatedEntity) {
+            var moveEvent = new MoveEvent(updatedEntity.Name, updatedEntity.Position);
             IEventData eventData = new EventData((byte)EventCode.Move, moveEvent);
             m_AttachedEntity.SendEvent(eventData, PositionSendParameters);
         }
