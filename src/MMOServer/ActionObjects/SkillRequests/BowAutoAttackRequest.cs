@@ -21,7 +21,7 @@
         #endregion DataContract
 
         private const float ATTACKWIDTH = 3;
-        private const float ATTACKDISTANCE = 8;
+        public const float ATTACKDISTANCE = 8;
 
         public override void StartAction() {
             LookDirection = LookDirection.Normalized;

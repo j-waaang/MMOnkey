@@ -21,7 +21,7 @@
         #endregion DataContract
 
         private const float ATTACKANGLE = 150f;
-        private const float ATTACKDISTANCE = 3.0f;
+        public const float ATTACKDISTANCE = 3.0f;
 
         public override void StartAction() {
             // In case the client did not normalize

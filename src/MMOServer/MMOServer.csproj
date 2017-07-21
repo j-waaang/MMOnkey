@@ -72,6 +72,7 @@
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="ChannelId.cs" />
     <Compile Include="ClientInterestArea.cs" />
+    <Compile Include="CSAIM\MsInInterval.cs" />
     <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
     <Compile Include="Entities\Attributes\Attribute.cs" />
     <Compile Include="Entities\Attributes\FloatAttribute.cs" />
@@ -84,7 +85,7 @@
     <Compile Include="Entities\Attributes\Modifiers\ModifyMode.cs" />
     <Compile Include="Entities\ClientEntity.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
-    <Compile Include="Entities\Attributes\IntHealthAttribute.cs" />
+    <Compile Include="Entities\Attributes\HealthAttribute.cs" />
     <Compile Include="Entities\SkillEntity.cs" />
     <Compile Include="EntityRegionChangedMessage.cs" />
     <Compile Include="Events\EntityEvents\NewSkillEntityEvent.cs" />
@@ -92,7 +93,7 @@
     <Compile Include="InterestArea.cs" />
     <Compile Include="MessageCounters.cs" />
     <Compile Include="BoundingBox2D.cs" />
-    <Compile Include="PositionFilter.cs" />
+    <Compile Include="CSAIM\PositionFilter.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />

@@ -14,36 +14,22 @@ namespace JYW.ThesisMMO.MMOServer {
 
     internal sealed class EntityFactory {
 
-        private static EntityFactory m_Instance = null;
-        private static readonly object m_Lock = new object();
-        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        public static EntityFactory Instance = new EntityFactory();
 
+        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private const string aiEntityNameSpace = "JYW.ThesisMMO.MMOServer.AI.";
 
-        private EntityFactory() {
-        }
-
-        public static EntityFactory Instance {
-            get {
-                if (m_Instance == null) {
-                    lock (m_Lock) {
-                        if (m_Instance == null) {
-                            m_Instance = new EntityFactory();
-                        }
-                    }
-                }
-                return m_Instance;
-            }
-        }
+        private EntityFactory() {}
 
         internal Entity CreateClientEntity(MMOPeer peer, EnterWorldRequest operation) {
             var position = GetRandomWorldPosition();
             var maxHealth = GetMaxHealth((WeaponCode)operation.Weapon);
-            var attributes = new Attribute[4];
-            attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
-            attributes[1] = new IntHealthAttribute(maxHealth);
-            attributes[2] = new ActionStateAttribute();
-            attributes[3] = new FloatAttribute(7f, AttributeCode.Speed);
+            var attributes = new Attribute[] {
+                new IntAttribute(maxHealth, AttributeCode.MaxHealth),
+                new HealthAttribute(maxHealth),
+                new ActionStateAttribute(),
+                new FloatAttribute(7f, AttributeCode.Speed),
+                new IntAttribute(operation.Weapon, AttributeCode.Weapon)};
 
             var entity = new ClientEntity(operation.Name, position, attributes, peer);
             World.Instance.AddEntity(entity);
@@ -86,11 +72,11 @@ namespace JYW.ThesisMMO.MMOServer {
         internal void CreateAIBot(string name, Vector startPosition, bool canMove) {
             var position = startPosition;
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
-            var attributes = new Attribute[4];
-            attributes[0] = new IntAttribute(maxHealth, AttributeCode.MaxHealth);
-            attributes[1] = new IntHealthAttribute(maxHealth);
-            attributes[2] = new ActionStateAttribute();
-            attributes[3] = new FloatAttribute(0.2f, AttributeCode.Speed);
+            var attributes = new Attribute[] {
+                new IntAttribute(maxHealth, AttributeCode.MaxHealth),
+                new HealthAttribute(maxHealth),
+                new ActionStateAttribute(),
+                new FloatAttribute(0.2f, AttributeCode.Speed)};
 
             var entity = new Entity(name, position, attributes, null);
             var aiEntity = new TestBot(entity);

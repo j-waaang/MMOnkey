@@ -6,7 +6,7 @@
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
 
-    internal class IntHealthAttribute : IntAttribute {
+    internal class HealthAttribute : IntAttribute {
 
         internal override void SetValue(ModifyMode mode, int value) {
 
@@ -54,7 +54,7 @@
             }
         }
 
-        internal IntHealthAttribute(int value)
+        internal HealthAttribute(int value)
             : base(value, AttributeCode.Health) { }
     }
 }

@@ -7,6 +7,7 @@
         MaxHealth,
         MovementState,
         Position,
-        Speed
+        Speed,
+        Weapon
     }
 }
