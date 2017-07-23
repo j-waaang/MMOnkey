@@ -74,7 +74,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         private void OnPositionUpdate(Entity entity) {
             if (entity.Name == EntityName) { return; }
-
+            //log.InfoFormat("{0} got {1} move update", EntityName, entity.Name);
             m_PositionFilter.OnPositionUpdate(entity);
         }
 
@@ -115,7 +115,6 @@ namespace JYW.ThesisMMO.MMOServer {
                 m_Regions.Remove(r);
                 OnRegionExit(r);
                 r.RequestRegionExitInfoChannel.Publish(this);
-                log.InfoFormat("{0} unsubbed from {1}", EntityName, r);
             }
         }
 

@@ -28,6 +28,8 @@ public class RotationController : MonoBehaviour {
     ///  Lets the character look at a direction.
     /// </summary>  
     public void LookAt(Vector3 lookDirection) {
+        if (lookDirection == Vector3.zero) { return; }
+
         if (m_LockedRotation) {
             if(m_LockEnd > Time.time) { return; }
             m_LockedRotation = false;

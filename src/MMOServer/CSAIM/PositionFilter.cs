@@ -51,13 +51,14 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
                 lock (m_QueueLock) {
                     foreach (var entity in m_QueuedPositionUpdates) {
                         var curTime = Time.ElapsedMilliseconds;
-                        if (m_PositionTimestamps[entity] + GetUpdateInterval(entity) >= curTime) {
+                        if (m_PositionTimestamps[entity] + GetUpdateInterval(entity) <= curTime) {
                             UpdateClientPosition(entity);
                             m_RemoveList.Add(entity);
                         }
                     }
                     while (m_RemoveList.Count > 0) {
                         m_QueuedPositionUpdates.Remove(m_RemoveList[0]);
+                        m_RemoveList.RemoveAt(0);
                     }
                 }
                 Thread.Sleep(DequeueIntervalInMs);
@@ -71,17 +72,6 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
                     UpdateClientPosition(entity);
                     return;
                 }
-
-                //var ms = GetUpdateInterval(entity);
-                //var nextSendTime = Time.ElapsedMilliseconds + ms;
-
-                //if (m_PositionTimestamps[entity] < nextSendTime) {
-                //    UpdateClientPosition(entity);
-                //    if (m_QueuedPositionUpdates.Contains(entity)) {
-                //        m_QueuedPositionUpdates.Remove(entity);
-                //    }
-                //    return;
-                //}
 
                 if (!m_QueuedPositionUpdates.Contains(entity)) {
                     m_QueuedPositionUpdates.Add(entity);

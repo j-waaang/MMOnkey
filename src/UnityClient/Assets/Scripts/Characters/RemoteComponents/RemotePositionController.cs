@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RemotePositionController : MonoBehaviour {
 
-    private const float m_AutoIdle = 0.1f;
+    private const float m_AutoIdle = 0.3f;
 
     private MovementStateComponent m_MovementState;
     private RotationController m_RotationController;
@@ -38,7 +38,8 @@ public class RemotePositionController : MonoBehaviour {
     private void OnMoveEvent(string name, Vector3 receivedPosition) {
         if (gameObject.name != name) { return; }
 
-        var predictedPosition = PredictPosition(receivedPosition);
+        //var predictedPosition = PredictPosition(receivedPosition);
+        var predictedPosition = receivedPosition;
 
         UpdateRotation(predictedPosition);
 
