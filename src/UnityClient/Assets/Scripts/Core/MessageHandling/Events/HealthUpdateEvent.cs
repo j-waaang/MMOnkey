@@ -4,7 +4,7 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
 
     using JYW.ThesisMMO.Common.Codes;
 
-    public sealed partial class EventOperations {
+    public static partial class EventOperations {
 
         public delegate void HealthUpdate(string name, int damage, int curHealth);
         public static event HealthUpdate HealthUpdatedEvent;

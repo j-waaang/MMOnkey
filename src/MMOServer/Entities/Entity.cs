@@ -108,7 +108,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return attribute;
         }
 
-        public void Die() {
+        public virtual void Die() {
             log.InfoFormat("{0} died.", Name);
             if (m_AiControlled) {
                 AILooper.Instance.RemoveEntity(this);

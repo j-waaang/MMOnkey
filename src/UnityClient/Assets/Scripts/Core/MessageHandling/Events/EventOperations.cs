@@ -7,7 +7,7 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
 
     using Common.Codes;
 
-    public sealed partial class EventOperations {
+    public static partial class EventOperations {
 
         /// <summary>  
         ///  If event listeners are not setup, incoming events are queued here. Fire them with FireEnqueuedEvents().
@@ -35,6 +35,12 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
                 case EventCode.HealthUpdate:
                     OnHealthUpdateEvent(eventData);
                     return;
+                case EventCode.EntityDeath:
+                    OnEntityDeathEvent(eventData);
+                    return;
+                case EventCode.EntityExitRegion:
+                    OnEntityExitRegionEvent(eventData);
+                    return;
                 case EventCode.Move:
                     OnMoveEvent(eventData);
                     return;
@@ -44,11 +50,8 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
                 case EventCode.NewPlayer:
                     OnNewPlayerEvent(eventData);
                     return;
-                case EventCode.RemovePlayer:
-                    OnRemovePlayerEvent(eventData);
-                    return;
             }
-            Debug.LogError("Don't know how to handle incoming event.");
+            Debug.LogErrorFormat("Unimplemented event {0}.", (EventCode)eventData.Code);
         }
 
         private static void AttributeUpdateEvent(EventData eventData) {
@@ -59,7 +62,7 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
                     OnSpeedUpdate(eventData);
                     return;
             }
-            Debug.LogError("Don't know how to handle incoming attribute event.");
+            Debug.LogErrorFormat("Unimplemented attribute {0} update.", attribute);
         }
     }
 }

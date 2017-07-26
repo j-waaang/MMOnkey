@@ -39,11 +39,12 @@ public class RemoteActionStateComponent : ActionStateComponent {
         }
     }
 
-    private void OnDestroy() {
+    private void OnDeath() {
+        Debug.Log("Private on death called by message");
         EventOperations.ActionStateUpdateEvent -= OnActionStateUpdateEvent;
     }
 
-    private void OnDeath() {
+    private void OnDestroy() {
         EventOperations.ActionStateUpdateEvent -= OnActionStateUpdateEvent;
     }
 }

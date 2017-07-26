@@ -42,7 +42,7 @@
             m_Animator.SetTrigger("AutoAttack");
         }
 
-        public void OnDeath() {
+        private void OnDeath() {
             m_Animator.SetTrigger("DeathTrigger");
         }
     }

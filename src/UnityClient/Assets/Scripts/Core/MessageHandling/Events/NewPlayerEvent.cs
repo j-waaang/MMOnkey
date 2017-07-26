@@ -7,7 +7,7 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Types;
 
-    public sealed partial class EventOperations {
+    public static partial class EventOperations {
 
         /// <summary>  
         ///  Called whenever a new player enters the world.

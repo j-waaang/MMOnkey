@@ -24,5 +24,9 @@
             if(GameData.Target == gameObject) { GameData.Target = null; }
             Destroy(GetComponent<Collider>());
         }
+
+        private void OnDestroy() {
+            if (GameData.Target == gameObject) { GameData.Target = null; }
+        }
     }
 }

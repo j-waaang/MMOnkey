@@ -5,7 +5,7 @@
 
     using JYW.ThesisMMO.Common.Codes;
 
-    public sealed partial class EventOperations {
+    public static partial class EventOperations {
 
         public static event Action<string, float> SpeedUpdateEvent;
 

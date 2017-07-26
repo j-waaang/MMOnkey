@@ -44,5 +44,10 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
             };
             return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
         }
+
+        public override void Die() {
+            base.Die();
+            Peer.ResetPeer();
+        }
     }
 }

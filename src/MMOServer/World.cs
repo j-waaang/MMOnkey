@@ -64,7 +64,7 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Removes the entity from the list.
         /// </summary>
         public void RemoveEntity(string name) {
-            Debug.Assert(m_Entities.ContainsKey(name), "The entity you want to remove does not exist in this region.");
+            Debug.Assert(m_Entities.ContainsKey(name), "The entity you want to remove does not exist.");
 
             //var ev = new RemovePlayerEvent() {
             //    Username = name,

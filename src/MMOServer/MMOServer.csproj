@@ -113,7 +113,7 @@
     <Compile Include="Events\ActionEvents\HealthChangedEvent.cs" />
     <Compile Include="Events\MoveEvent.cs" />
     <Compile Include="Events\EntityEvents\NewPlayerEvent.cs" />
-    <Compile Include="Events\RemovePlayerEvent.cs" />
+    <Compile Include="Events\EntityEvent.cs" />
     <Compile Include="EventMessage.cs" />
     <Compile Include="ActionObjects\ActionObject.cs" />
     <Compile Include="ActionObjects\SkillRequests\AxeAutoAttackRequest.cs" />

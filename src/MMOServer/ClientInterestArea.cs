@@ -52,10 +52,10 @@ namespace JYW.ThesisMMO.MMOServer {
         /// </summary>
         public override void OnEntityExit(Entity entity) {
             if (entity == m_AttachedEntity) { return; }
-            var ev = new RemovePlayerEvent() {
+            var ev = new EntityEvent() {
                 Username = entity.Name,
             };
-            IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
+            IEventData eventData = new EventData((byte)EventCode.EntityExitRegion, ev);
             m_AttachedEntity.SendEvent(eventData);
         }
 

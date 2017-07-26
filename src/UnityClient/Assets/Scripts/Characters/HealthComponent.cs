@@ -38,11 +38,11 @@ public class HealthComponent : MonoBehaviour, INotifyPropertyChanged {
         }
     }
 
-    private void OnDestroy() {
+    private void OnDeath() {
         EventOperations.HealthUpdatedEvent -= HealthChangedEvent;
     }
 
-    public void OnDeath() {
+    private void OnDestroy() {
         EventOperations.HealthUpdatedEvent -= HealthChangedEvent;
     }
 }

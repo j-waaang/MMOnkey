@@ -7,7 +7,7 @@
     using JYW.ThesisMMO.Common.Codes;
     using Common.Types;
 
-    public sealed partial class EventOperations {
+    public static partial class EventOperations {
 
         public static Action<string, ActionCode, Vector3?> ActionStateUpdateEvent;
 

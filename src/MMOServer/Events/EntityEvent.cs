@@ -3,7 +3,7 @@
     using Common.Codes;
     using Photon.SocketServer.Rpc;
 
-    class RemovePlayerEvent {
+    class EntityEvent {
 
         [DataMember(Code = (byte)ParameterCode.Name)]
         public string Username;
