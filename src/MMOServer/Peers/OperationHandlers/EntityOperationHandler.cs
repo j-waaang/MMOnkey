@@ -20,7 +20,7 @@
         }
 
         public void OnDisconnect(PeerBase peer) {
-            World.Instance.RemoveEntity(m_Peer.Name);
+            World.Instance.DisconnectPeer(m_Peer.Name);
             peer.Dispose();
         }
 

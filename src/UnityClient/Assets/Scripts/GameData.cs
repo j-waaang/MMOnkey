@@ -11,8 +11,6 @@
 
         internal static event Action<GameObject> TargetChangedEvent;
 
-        //internal static event Action<Vector2> AvatarPositionChangedEvent;
-
         internal static CharacterSetting characterSetting { get; set; }
 
         private static GameObject m_Target;
@@ -29,20 +27,6 @@
                 }
             }
         }
-
-        //private static Vector2 clientCharacterPosition;
-        //internal static Vector2 ClientCharacterPosition {
-        //    get {
-        //        return clientCharacterPosition;
-        //    }
-        //    set {
-        //        var oldValue = clientCharacterPosition;
-        //        clientCharacterPosition = value;
-        //        if (oldValue != value) {
-        //            AvatarPositionChangedEvent(value);
-        //        }
-        //    }
-        //}
 
         internal const float InterestDistance = 17.0f;
     }

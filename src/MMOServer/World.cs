@@ -65,14 +65,13 @@ namespace JYW.ThesisMMO.MMOServer {
         /// </summary>
         public void RemoveEntity(string name) {
             Debug.Assert(m_Entities.ContainsKey(name), "The entity you want to remove does not exist.");
-
-            //var ev = new RemovePlayerEvent() {
-            //    Username = name,
-            //};
-            //IEventData eventData = new EventData((byte)EventCode.RemovePlayer, ev);
-            //ReplicateMessage(name, eventData, BroadcastOptions.All);
             m_Entities[name].Dispose();
             m_Entities.Remove(name);
+        }
+
+        public void DisconnectPeer(string name) {
+            if (!m_Entities.ContainsKey(name)) { return; }
+            RemoveEntity(name);
         }
 
         public void MoveEntity(string username, Vector position) {

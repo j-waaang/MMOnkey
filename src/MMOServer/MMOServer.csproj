@@ -67,7 +67,6 @@
     <Compile Include="ActionObjects\SkillRequests\OrisonOfHealingRequest.cs" />
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AILooper.cs" />
-    <Compile Include="AI\BowAutoAttackAI.cs" />
     <Compile Include="AI\FireStormAI.cs" />
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="ChannelId.cs" />

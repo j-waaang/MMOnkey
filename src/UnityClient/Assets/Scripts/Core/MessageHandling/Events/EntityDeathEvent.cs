@@ -13,7 +13,6 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
         private static void OnEntityDeathEvent(EventData eventData) {
             if (EntityDeathEvent == null) { return; }
             var name = (string)eventData.Parameters[(byte)ParameterCode.Name];
-            Debug.LogFormat("{0} death event", name);
             EntityDeathEvent(name);
         }
     }

@@ -6,6 +6,8 @@ namespace JYW.ThesisMMO.UnityClient {
     using Core.MessageHandling.Events;
 
     public sealed class GameController : MonoBehaviour {
+
+        [SerializeField] private GameObject m_Player;
         
         private void Start() {
             EventOperations.EntityDeathEvent += OnEntityDeath;
@@ -14,7 +16,9 @@ namespace JYW.ThesisMMO.UnityClient {
 
         private void OnEntityDeath(string name) {
             if(name != GameData.characterSetting.Name) { return; }
-            SceneManager.LoadScene(0);
+
+            Debug.Log("Player died");
+            m_Player.SendMessage("OnDeath");
         }
     }
 }

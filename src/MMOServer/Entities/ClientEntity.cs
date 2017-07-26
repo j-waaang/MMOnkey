@@ -46,8 +46,20 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
         }
 
         public override void Die() {
+            PublishDeath();
             base.Die();
-            Peer.ResetPeer();
+        }
+
+        private void PublishDeath() {
+            var dataContract = new EntityEvent() { Username = Name };
+            IEventData evData = new EventData((byte)EventCode.EntityDeath, dataContract);
+            var msg = new EventMessage(evData, DefaultSendParameters, Events.ActionEvents.BroadcastOptions.All, Name);
+            PublishEvent(msg);
+        }
+
+        public override void Dispose() {
+            base.Dispose();
+
         }
     }
 }

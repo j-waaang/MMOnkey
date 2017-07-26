@@ -131,7 +131,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
         }
 
-        public void Dispose() {
+        public virtual void Dispose() {
             m_InterestArea.Dispose();
         }
 
