@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace JYW.ThesisMMO.UnityClient {
 
@@ -16,8 +15,6 @@ namespace JYW.ThesisMMO.UnityClient {
 
         private void OnEntityDeath(string name) {
             if(name != GameData.characterSetting.Name) { return; }
-
-            Debug.Log("Player died");
             m_Player.SendMessage("OnDeath");
         }
     }

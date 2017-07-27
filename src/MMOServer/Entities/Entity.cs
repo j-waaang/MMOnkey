@@ -21,6 +21,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public string Name { get; }
         public MMOPeer Peer { get; }
+        public bool Dead { get; private set; } = false;
 
         protected bool m_AiControlled;
 
@@ -109,11 +110,12 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public virtual void Die() {
+            Dead = true;
             log.InfoFormat("{0} died.", Name);
             if (m_AiControlled) {
                 AILooper.Instance.RemoveEntity(this);
             }
-            World.Instance.RemoveEntity(Name);
+            //World.Instance.RemoveEntity(Name);
         }
 
         public virtual void OnAddedToWorld() {

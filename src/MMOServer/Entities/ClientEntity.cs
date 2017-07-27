@@ -1,5 +1,4 @@
-﻿using ExitGames.Concurrency.Fibers;
-using Photon.SocketServer;
+﻿using Photon.SocketServer;
 
 namespace JYW.ThesisMMO.MMOServer.Entities {
 
@@ -59,7 +58,6 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
 
         public override void Dispose() {
             base.Dispose();
-
         }
     }
 }

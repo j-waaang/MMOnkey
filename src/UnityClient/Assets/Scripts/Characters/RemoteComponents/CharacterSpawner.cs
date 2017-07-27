@@ -38,6 +38,7 @@ namespace JYW.ThesisMMO.UnityClient.Characters.RemoteCharacters {
         }
 
         private void OnEntityDeathEvent(string name) {
+            if(name == GameData.characterSetting.Name) { return; }
             Debug.Assert(m_RemoteCharacters.ContainsKey(name) == true, string.Format("Cannot remove {0} because it doesn't exist.", name));
             var character = m_RemoteCharacters[name];
             character.SendMessage("OnDeath");

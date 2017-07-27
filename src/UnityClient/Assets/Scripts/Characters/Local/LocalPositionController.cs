@@ -1,10 +1,9 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Local {
+﻿using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
-    using UnityEngine;
-    using UnityStandardAssets.CrossPlatformInput;
+namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Local {
 
     using JYW.ThesisMMO.Common.Entities;
-    using JYW.ThesisMMO.UnityClient.Characters;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
 
     /// <summary>  
@@ -20,6 +19,7 @@
         private float m_LastSendTime = 0;
         private float m_MinMovDistance = 0.15f;
         private const float m_SendRateInSeconds = 0.033f;
+        private bool m_CanMove = true;
 
         private void Awake() {
             m_RotationController = GetComponent<RotationController>();
@@ -28,6 +28,7 @@
         }
 
         private void Update() {
+            if (!m_CanMove) { return; }
             UpdatePosition();
             UpdateNetworkPosition();
         }
@@ -69,6 +70,10 @@
             return
                 (Time.time - m_LastSendTime > m_SendRateInSeconds) &&
                 (distance > m_MinMovDistance);
+        }
+
+        private void OnDeath() {
+            m_CanMove = false;
         }
     }
 }
