@@ -1,7 +1,7 @@
-﻿using System.Diagnostics;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using Photon.SocketServer;
+using ExitGames.Logging;
 
 namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
@@ -10,12 +10,10 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
     using Common.Types;
     using Entities.Attributes;
     using Events;
-    using ExitGames.Logging;
 
     internal class PositionFilter {
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
-        private static readonly Stopwatch Time = new Stopwatch();
         private static readonly SendParameters PositionSendParameters = new SendParameters() { ChannelId = (byte)ChannelId.Position, Unreliable = true };
 
         private readonly Entity m_AttachedEntity;
@@ -28,10 +26,6 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         private readonly List<Entity> m_RemoveList = new List<Entity>();
         private bool m_Dequeueing = true;
         private const int DequeueIntervalInMs = 15;
-
-        static PositionFilter() {
-            Time.Start();
-        }
 
         public PositionFilter(Entity entity) {
             m_AttachedEntity = entity;
@@ -50,7 +44,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
             while (m_Dequeueing) {
                 lock (m_QueueLock) {
                     foreach (var entity in m_QueuedPositionUpdates) {
-                        var curTime = Time.ElapsedMilliseconds;
+                        var curTime = GameTime.TimeMs;
                         if (m_PositionTimestamps[entity] + GetUpdateInterval(entity) <= curTime) {
                             UpdateClientPosition(entity);
                             m_RemoveList.Add(entity);
@@ -92,7 +86,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
         private long TimeSinceLastUpdate(Entity entity) {
             if (!m_PositionTimestamps.ContainsKey(entity)) { return -1L; }
-            return Time.ElapsedMilliseconds - m_PositionTimestamps[entity];
+            return GameTime.TimeMs - m_PositionTimestamps[entity];
         }
 
         private void AddDefaultIntervals() {
@@ -123,7 +117,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         }
 
         private void AddTimeStamp(Entity entity) {
-            m_PositionTimestamps[entity] = Time.ElapsedMilliseconds;
+            m_PositionTimestamps[entity] = GameTime.TimeMs;
         }
     }
 }

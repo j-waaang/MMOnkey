@@ -12,7 +12,10 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
 
         private static readonly SendParameters DefaultSendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
-        public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer) : base(name, position, attributes, peer) {
+        private readonly SkillCollection m_EquippedSkills;
+
+        public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer, int[] skillData) : base(name, position, attributes, peer) {
+            m_EquippedSkills = new SkillCollection(skillData);
         }
 
         protected override void SetInterestArea() {

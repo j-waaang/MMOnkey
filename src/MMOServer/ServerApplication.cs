@@ -26,6 +26,7 @@
         protected override void Setup() {
             SetupLogger();
             RegisterTypes();
+            InitializeGameTime();
             //CreateWorld();
             CreateTestBots();
             AILooper.Instance.Start();
@@ -56,6 +57,11 @@
                 (byte)Protocol.CustomTypeCodes.Vector,
                 Protocol.SerializeVector,
                 Protocol.DeserializeVector);
+        }
+
+        private static void InitializeGameTime() {
+            // Call GameTime's static constructor.
+            var i = GameTime.Time;
         }
 
         private void CreateTestBots() {

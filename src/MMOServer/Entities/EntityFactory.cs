@@ -31,7 +31,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 new FloatAttribute(7f, AttributeCode.Speed),
                 new IntAttribute(operation.Weapon, AttributeCode.Weapon)};
 
-            var entity = new ClientEntity(operation.Name, position, attributes, peer);
+            var entity = new ClientEntity(operation.Name, position, attributes, peer, operation.Skills);
             World.Instance.AddEntity(entity);
             return entity;
         }
