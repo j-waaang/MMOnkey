@@ -6,24 +6,23 @@
     // Follows the a target. Usually a player.
     // Angle and offset are currently hardcoded.
     /// </summary>
+    [RequireComponent(typeof(Camera))]
     internal class CameraController : MonoBehaviour {
-
-        [SerializeField] private float m_InitViewAngle = 30;
-        [SerializeField] private float m_InitCameraHeight = 10;
-
-        private float m_ViewAngle;
-        private float m_CameraHeight;
 
         [SerializeField] private Transform m_Target = null;
         [SerializeField] private Vector3 m_CameraToTargetOffset = new Vector3(0, -5f, -10f);
+        private Camera m_Camera;
 
         private void Awake() {
             if (m_Target == null) {
                 m_Target = GameObject.FindGameObjectWithTag("Player").transform;
             }
+            m_Camera = GetComponent<Camera>();
         }
 
         private void Update() {
+            var scroll = Input.GetAxis("Mouse ScrollWheel");
+            m_Camera.orthographicSize -= scroll;
             transform.position = m_Target.position + m_CameraToTargetOffset;
         }
     }
