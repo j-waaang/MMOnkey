@@ -7,15 +7,14 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Peers;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes;
+    using Skills;
 
     internal class ClientEntity : Entity {
-
+        public SkillCollection EquippedSkills { get; }
         private static readonly SendParameters DefaultSendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
-        private readonly SkillCollection m_EquippedSkills;
-
         public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer, int[] skillData) : base(name, position, attributes, peer) {
-            m_EquippedSkills = new SkillCollection(skillData);
+            EquippedSkills = new SkillCollection(skillData);
         }
 
         protected override void SetInterestArea() {

@@ -13,5 +13,11 @@
         public bool IsInInterval(float distance) {
             return MinDistance <= distance && MaxDistance > distance;
         }
+
+        public bool IsZero {
+            get {
+                return MinDistance == MaxDistance && MaxDistance == MinDistance && MilliSeconds == 0;
+            }
+        }
     }
 }

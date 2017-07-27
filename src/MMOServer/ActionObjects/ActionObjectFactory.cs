@@ -11,16 +11,15 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects {
     /// </summary>
     internal class ActionObjectFactory {
 
-        private const string skillNamespace = "JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.";
-
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
+        private const string SkillNamespace = "JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests.";
 
         public ReturnCode LastCreationFailReason { get; private set; }
 
         public ActionObject CreateActionObject(string actionSource, IRpcProtocol protocol, OperationRequest request) {
             var action = (ActionCode)request.Parameters[(byte)ParameterCode.ActionCode];
 
-            var stringType = skillNamespace + action + "Request";
+            var stringType = SkillNamespace + action + "Request";
             var actionType = Type.GetType(stringType);
 
             if(actionType == null) {

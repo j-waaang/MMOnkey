@@ -9,7 +9,6 @@
     using log4net.Config;
     using System.IO;
     using AI;
-    using System.Diagnostics;
 
     /// <summary> 
     /// Main class of the server.
@@ -17,7 +16,6 @@
     sealed class ServerApplication : ApplicationBase {
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
-        private World m_World;
 
         protected override PeerBase CreatePeer(InitRequest initRequest) {
             return new MMOPeer(initRequest);

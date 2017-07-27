@@ -8,6 +8,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
     using ActionObjects.SkillRequests;
     using Common.Codes;
     using Common.Types;
+    using Entities;
     using Entities.Attributes;
     using Events;
 
@@ -16,7 +17,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
         private static readonly SendParameters PositionSendParameters = new SendParameters() { ChannelId = (byte)ChannelId.Position, Unreliable = true };
 
-        private readonly Entity m_AttachedEntity;
+        private readonly ClientEntity m_AttachedEntity;
         private readonly List<MsInInterval> m_MsInIntervals = new List<MsInInterval>();
         private readonly Dictionary<Entity, long> m_PositionTimestamps = new Dictionary<Entity, long>();
 
@@ -27,7 +28,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         private bool m_Dequeueing = true;
         private const int DequeueIntervalInMs = 15;
 
-        public PositionFilter(Entity entity) {
+        public PositionFilter(ClientEntity entity) {
             m_AttachedEntity = entity;
             UpdateIntervals();
             m_DequeueThread = new Thread(DequeueTask);
@@ -38,6 +39,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
             m_MsInIntervals.Clear();
             AddDefaultIntervals();
             AddWeaponInterval();
+            AddSkillIntervals();
         }
 
         private void DequeueTask() {
@@ -106,6 +108,10 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
                     m_MsInIntervals.Add(new MsInInterval(0F, BowAutoAttackRequest.ATTACKDISTANCE + 0.5F, 0));
                     break;
             }
+        }
+
+        private void AddSkillIntervals() {
+            m_MsInIntervals.AddRange(m_AttachedEntity.EquippedSkills.GetSkillConsistencyRequirements());
         }
 
         private void UpdateClientPosition(Entity entity) {

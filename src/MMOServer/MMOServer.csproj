@@ -85,9 +85,14 @@
     <Compile Include="Entities\ClientEntity.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\Attributes\HealthAttribute.cs" />
-    <Compile Include="Entities\SkillCollection.cs" />
+    <Compile Include="Skills\DashData.cs" />
+    <Compile Include="Skills\DistractingShotData.cs" />
+    <Compile Include="Skills\FireStormData.cs" />
+    <Compile Include="Skills\HammerBashData.cs" />
+    <Compile Include="Skills\OrisonOfHealingData.cs" />
+    <Compile Include="Skills\SkillCollection.cs" />
     <Compile Include="Entities\SkillEntity.cs" />
-    <Compile Include="Entities\SkillState.cs" />
+    <Compile Include="Skills\SkillData.cs" />
     <Compile Include="EntityRegionChangedMessage.cs" />
     <Compile Include="Events\EntityEvents\NewSkillEntityEvent.cs" />
     <Compile Include="Events\EntityEvents\NewEntityEvent.cs" />

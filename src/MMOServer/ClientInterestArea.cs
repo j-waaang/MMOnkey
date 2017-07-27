@@ -12,6 +12,7 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events;
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.CSAIM;
+    using Entities;
 
     internal class ClientInterestArea : InterestArea {
 
@@ -33,7 +34,7 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
-        public ClientInterestArea(Entity attachedEntity) : base(attachedEntity) {
+        public ClientInterestArea(ClientEntity attachedEntity) : base(attachedEntity) {
             m_PositionFilter = new PositionFilter(attachedEntity);
             m_SubscriptionManagementFiber.Start();
         }
