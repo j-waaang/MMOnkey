@@ -7,7 +7,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
     abstract class PositionFilter {
 
         protected static readonly SendParameters PositionSendParameters = new SendParameters() { ChannelId = (byte)ChannelId.Position, Unreliable = true };
-        protected ClientEntity m_AttachedEntity;
+        protected readonly ClientEntity m_AttachedEntity;
 
         public PositionFilter(ClientEntity entity) {
             m_AttachedEntity = entity;

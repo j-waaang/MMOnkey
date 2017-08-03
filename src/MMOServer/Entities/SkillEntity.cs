@@ -1,6 +1,7 @@
 ﻿using Photon.SocketServer;
 
 namespace JYW.ThesisMMO.MMOServer.Entities {
+    using Events;
     using Events.EntityEvents;
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Types;
@@ -17,16 +18,16 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
             Caster = caster;
         }
 
-        public override IEventData GetEntitySnapshot() {
-            log.InfoFormat("Creating skillentity event data with actioncode {0}", ActionCode.ToString());
-            var newPlayerEv = new NewSkillEntityEvent() {
+        public override NewEntityEvent GetEntitySnapshot() {
+            //log.InfoFormat("Creating skillentity event data with actioncode {0}", ActionCode.ToString());
+            return new NewSkillEntityEvent() {
                 Name = Name,
                 Position = Position,
                 ActionCode = (int)ActionCode,
                 EntityType = (int)EntityType.Skill
             };
 
-            return new EventData((byte)EventCode.NewEntity, newPlayerEv);
+            //return new EventData((byte)EventCode.NewEntity, newPlayerEv);
         }
     }
 }

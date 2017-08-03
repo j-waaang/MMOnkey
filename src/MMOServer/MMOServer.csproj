@@ -74,6 +74,10 @@
     <Compile Include="ChannelId.cs" />
     <Compile Include="ClientInterestArea.cs" />
     <Compile Include="CSAIM\DummyFilter.cs" />
+    <Compile Include="CSAIM\EnterExitEvents\DummyEnterExitFilter.cs" />
+    <Compile Include="CSAIM\EnterExitEvents\EnterExitFilter.cs" />
+    <Compile Include="CSAIM\EnterExitEvents\EnterExitFilterFactory.cs" />
+    <Compile Include="CSAIM\EnterExitEvents\SnapshotFilter.cs" />
     <Compile Include="CSAIM\FilterFactory.cs" />
     <Compile Include="CSAIM\PositionFilter.cs" />
     <Compile Include="CSAIM\MsInInterval.cs" />

@@ -4,6 +4,7 @@ namespace JYW.ThesisMMO.MMOServer.Events {
 
     using Common.Codes;
     using Common.Types;
+    using Photon.SocketServer;
 
     abstract public class NewEntityEvent {
 
@@ -15,5 +16,13 @@ namespace JYW.ThesisMMO.MMOServer.Events {
 
         [DataMember(Code = (byte)ParameterCode.EntityType)]
         public int EntityType;
+
+        public virtual bool SnapshotEquals(NewEntityEvent other) {
+            return Name == other.Name && EntityType == other.EntityType;
+        }
+
+        public virtual IEventData ToEventData() {
+            return new EventData((byte)EventCode.NewPlayer, this);
+        }
     }
 }

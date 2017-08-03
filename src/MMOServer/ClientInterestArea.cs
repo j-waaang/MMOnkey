@@ -13,6 +13,7 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using JYW.ThesisMMO.MMOServer.CSAIM;
     using Entities;
+    using CSAIM.EnterExitEvents;
 
     internal class ClientInterestArea : InterestArea {
 
@@ -23,6 +24,7 @@ namespace JYW.ThesisMMO.MMOServer {
 
         private static int PositionUpdateIntervalInMs = 30;
         private readonly PositionFilter m_PositionFilter;
+        private readonly EnterExitFilter m_EnterExitFilter;
 
         protected override IEnumerable<Region> FocusedRegions {
             get {
@@ -35,7 +37,8 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public ClientInterestArea(ClientEntity attachedEntity) : base(attachedEntity) {
-            m_PositionFilter = FilterFactory.GetPositionFilter(attachedEntity);
+            m_PositionFilter = FilterFactory.CreatePositionFilter(attachedEntity);
+            m_EnterExitFilter = EnterExitFilterFactory.CreateEnterExitFilter(attachedEntity);
             m_SubscriptionManagementFiber.Start();
         }
 
@@ -43,21 +46,23 @@ namespace JYW.ThesisMMO.MMOServer {
         /// Entity enters area
         /// </summary>
         public override void OnEntityEnter(Entity entity) {
-            if (entity == m_AttachedEntity) { return; }
-            var eventData = entity.GetEntitySnapshot();
-            m_AttachedEntity.SendEvent(eventData);
+            m_EnterExitFilter.OnEntityEnter(entity);
+            //if (entity == m_AttachedEntity) { return; }
+            //var eventData = entity.GetEntitySnapshot();
+            //m_AttachedEntity.SendEvent(eventData);
         }
 
         /// <summary>
         /// Item exits area
         /// </summary>
         public override void OnEntityExit(Entity entity) {
-            if (entity == m_AttachedEntity) { return; }
-            var ev = new EntityEvent() {
-                Username = entity.Name,
-            };
-            IEventData eventData = new EventData((byte)EventCode.EntityExitRegion, ev);
-            m_AttachedEntity.SendEvent(eventData);
+            m_EnterExitFilter.OnEntityExit(entity);
+            //if (entity == m_AttachedEntity) { return; }
+            //var ev = new EntityEvent() {
+            //    Username = entity.Name,
+            //};
+            //IEventData eventData = new EventData((byte)EventCode.EntityExitRegion, ev);
+            //m_AttachedEntity.SendEvent(eventData);
         }
 
         /// <summary>

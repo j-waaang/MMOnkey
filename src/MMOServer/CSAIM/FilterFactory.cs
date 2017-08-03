@@ -7,7 +7,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
     /// Creates the appropriate filter depending on the config file setting.
     /// </summary>
     internal static class FilterFactory {
-        public static PositionFilter GetPositionFilter(ClientEntity entity) {
+        public static PositionFilter CreatePositionFilter(ClientEntity entity) {
             if (Settings.Default.UseIndividualUpdateRates) {
                 return new IntervalledFilter(entity);
             }

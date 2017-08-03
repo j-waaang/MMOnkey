@@ -36,14 +36,20 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
             return SendEvent(eventData, DefaultSendParameters);
         }
 
-        public override IEventData GetEntitySnapshot() {
-            var newPlayerEv = new NewPlayerEvent() {
+        public override NewEntityEvent GetEntitySnapshot() {
+            return new NewPlayerEvent() {
                 Name = Name,
                 Position = Position,
                 CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
                 MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
             };
-            return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
+            //var newPlayerEv = new NewPlayerEvent() {
+            //    Name = Name,
+            //    Position = Position,
+            //    CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
+            //    MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
+            //};
+            //return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
         }
 
         public override void Die() {
