@@ -49,7 +49,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +73,9 @@
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="ChannelId.cs" />
     <Compile Include="ClientInterestArea.cs" />
+    <Compile Include="CSAIM\DummyFilter.cs" />
+    <Compile Include="CSAIM\FilterFactory.cs" />
+    <Compile Include="CSAIM\PositionFilter.cs" />
     <Compile Include="CSAIM\MsInInterval.cs" />
     <Compile Include="Entities\Attributes\ActionStateAttribute.cs" />
     <Compile Include="Entities\Attributes\Attribute.cs" />
@@ -85,6 +90,11 @@
     <Compile Include="Entities\ClientEntity.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\Attributes\HealthAttribute.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Skills\DashData.cs" />
     <Compile Include="Skills\DistractingShotData.cs" />
     <Compile Include="Skills\FireStormData.cs" />
@@ -99,7 +109,7 @@
     <Compile Include="InterestArea.cs" />
     <Compile Include="MessageCounters.cs" />
     <Compile Include="BoundingBox2D.cs" />
-    <Compile Include="CSAIM\PositionFilter.cs" />
+    <Compile Include="CSAIM\IntervalledFilter.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />
@@ -144,8 +154,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup />

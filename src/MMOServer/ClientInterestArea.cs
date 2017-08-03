@@ -35,7 +35,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public ClientInterestArea(ClientEntity attachedEntity) : base(attachedEntity) {
-            m_PositionFilter = new PositionFilter(attachedEntity);
+            m_PositionFilter = FilterFactory.GetPositionFilter(attachedEntity);
             m_SubscriptionManagementFiber.Start();
         }
 
@@ -76,13 +76,15 @@ namespace JYW.ThesisMMO.MMOServer {
         private void OnPositionUpdate(Entity entity) {
             if (entity.Name == EntityName) { return; }
             //log.InfoFormat("{0} got {1} move update", EntityName, entity.Name);
+
+
             m_PositionFilter.OnPositionUpdate(entity);
         }
 
         protected override void ChangeRegion(Region from, Region to) {
-            if (to != null) {
-                log.InfoFormat("{0} moved to {1} region.", EntityName, to.ToString());
-            }
+            //if (to != null) {
+            //    log.InfoFormat("{0} moved to {1} region.", EntityName, to.ToString());
+            //}
             UpdateRegionSubscription();
             base.ChangeRegion(from, to);
         }
