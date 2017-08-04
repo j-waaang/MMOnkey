@@ -26,7 +26,7 @@ public class RemotePositionController : MonoBehaviour {
         if(Time.time - m_LastReceivedTime > m_AutoIdle) {
             m_MovementState.MovementState = MovementState.Idle;
             // Undo prediction
-            transform.position = m_LastReceivedPosition;
+            //transform.position = m_LastReceivedPosition;
         }
 
         //Debug.LogFormat("Ping: {0}", Game.Instance.GetRTT());
