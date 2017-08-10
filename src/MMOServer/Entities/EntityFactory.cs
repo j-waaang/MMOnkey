@@ -11,6 +11,8 @@ namespace JYW.ThesisMMO.MMOServer {
     using AI;
     using Entities;
     using ActionObjects;
+    using System.Linq;
+    using System.Diagnostics;
 
     internal sealed class EntityFactory {
 
@@ -28,10 +30,13 @@ namespace JYW.ThesisMMO.MMOServer {
                 new IntAttribute(maxHealth, AttributeCode.MaxHealth),
                 new HealthAttribute(maxHealth),
                 new ActionStateAttribute(),
-                new FloatAttribute(7f, AttributeCode.Speed),
-                new IntAttribute(operation.Weapon, AttributeCode.Weapon)};
+                new FloatAttribute(7f, AttributeCode.Speed)
+            };
 
-            var entity = new ClientEntity(operation.Name, position, attributes, peer, operation.Skills);
+            var skills = operation.Skills;
+            Array.Resize(ref skills, skills.Length + 1);
+            skills[skills.Length-1] = operation.Weapon;
+            var entity = new ClientEntity(operation.Name, position, attributes, peer, skills);
             World.Instance.AddEntity(entity);
             return entity;
         }

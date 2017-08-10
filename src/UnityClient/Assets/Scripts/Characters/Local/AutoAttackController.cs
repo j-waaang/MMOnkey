@@ -6,6 +6,7 @@
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
     using Common.ContinueObjects;
     using System;
+    using Core.MessageHandling.Responses;
 
     /// <summary>
     // Performs the autoattack on input.
@@ -46,7 +47,7 @@
                 if (mousePoint == null) { return; }
                 var forwardVec = mousePoint.Value - transform.position;
                 forwardVec = forwardVec.normalized;
-                PerformAutoAttack(forwardVec);
+                RequestAutoAttack(forwardVec);
             }
 
             if (m_ContinueAutoAttack) {
@@ -57,14 +58,12 @@
 
                 var forwardVec = GameData.Target.transform.position - transform.position;
                 forwardVec = forwardVec.normalized;
-                PerformAutoAttack(forwardVec);
+                RequestAutoAttack(forwardVec);
             }
         }
-        
-        private void PerformAutoAttack(Vector3 lookDirection) {
-            m_ActionState.ActionState = m_AutoAttackAction;
-            m_RotationController.LookAt(lookDirection, AADURATION);
 
+        private void RequestAutoAttack(Vector3 lookDirection) {
+            ResponseOperations.AddActionToResponseWaitinglist(m_AutoAttackAction, new Action(() => PerformAutoAttack(lookDirection)));
             switch (m_AutoAttackAction) {
                 case ActionCode.AxeAutoAttack:
                     RequestOperations.AxeAutoAttackRequest(lookDirection);
@@ -73,6 +72,11 @@
                     RequestOperations.BowAutoAttackRequest(lookDirection);
                     break;
             }
+        }
+        
+        private void PerformAutoAttack(Vector3 lookDirection) {
+            m_ActionState.ActionState = m_AutoAttackAction;
+            m_RotationController.LookAt(lookDirection, AADURATION);
 
             var setIdleCondition = new TimedContinueCondition(AADURATION);
             setIdleCondition.ContinueEvent += (CallReason cr) => m_ActionState.ActionState = ActionCode.Idle;

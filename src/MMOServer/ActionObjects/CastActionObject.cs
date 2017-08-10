@@ -1,12 +1,14 @@
-﻿using JYW.ThesisMMO.Common.Codes;
-using JYW.ThesisMMO.Common.ContinueObjects;
-using JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects;
-using JYW.ThesisMMO.Common.Types;
-using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
-using Photon.SocketServer;
+﻿using Photon.SocketServer;
 using System;
 
 namespace JYW.ThesisMMO.MMOServer.ActionObjects {
+
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.Common.ContinueObjects;
+    using JYW.ThesisMMO.Common.ContinueObjects.InteruptObjects;
+    using JYW.ThesisMMO.Common.Types;
+    using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
+
     internal abstract class CastActionObject : ActionObject {
 
         protected static InteruptionHandler m_InteruptionHandler = new InteruptionHandler();

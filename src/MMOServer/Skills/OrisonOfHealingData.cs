@@ -1,7 +1,14 @@
-﻿using JYW.ThesisMMO.MMOServer.CSAIM;
+﻿using System;
+using JYW.ThesisMMO.MMOServer.CSAIM;
 
 namespace JYW.ThesisMMO.MMOServer.Skills {
     class OrisonOfHealingData : SkillData {
+        public override int CooldownInMs {
+            get {
+                return 4;
+            }
+        }
+
         public override float MaxRange {
             get {
                 return 8F;

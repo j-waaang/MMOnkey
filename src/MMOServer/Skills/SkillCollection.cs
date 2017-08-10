@@ -2,12 +2,16 @@
 using System.Diagnostics;
 using System.Linq;
 using System;
+using ExitGames.Logging;
 
 namespace JYW.ThesisMMO.MMOServer.Skills {
+
     using CSAIM;
     using JYW.ThesisMMO.Common.Codes;
 
     internal class SkillCollection {
+
+        protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         public ActionCode[] Skills {
             get { return m_SkillStates.Keys.ToArray(); }
@@ -39,6 +43,18 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
                 yield return data.GetConsistencyRequirement();
             }
             yield break;
+        }
+
+        public bool CanActivateSkill(ActionCode skill) {
+            if (!m_SkillStates.ContainsKey(skill)) { log.InfoFormat("skill coll doesn't contain skill {0}", skill); }
+
+            if (!m_SkillStates.ContainsKey(skill)) { return false; }
+            return m_SkillStates[skill].CanCast;
+        }
+
+        public void SetSkillOnCooldown(ActionCode skill) {
+            Debug.Assert(m_SkillStates.ContainsKey(skill));
+            m_SkillStates[skill].SetOnCooldown();
         }
     }
 }

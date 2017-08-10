@@ -7,7 +7,7 @@ using Photon.SocketServer;
 using ExitGames.Logging;
 
 namespace JYW.ThesisMMO.MMOServer {
-
+    using Entities;
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
@@ -78,16 +78,6 @@ namespace JYW.ThesisMMO.MMOServer {
             m_Entities[username].Move(position);
         }
 
-        public bool CanPerformAction(string actionSource) {
-            Entity entity = null;
-            m_Entities.TryGetValue(actionSource, out entity);
-            if (entity == null) {
-                log.ErrorFormat("{0} entity requesting action does not exist.", actionSource);
-                return false;
-            }
-            return entity.IsIdle();
-        }
-
         public bool CanPerformAction(string actionSource, ActionCode action) {
             Entity entity = null;
             m_Entities.TryGetValue(actionSource, out entity);
@@ -98,10 +88,9 @@ namespace JYW.ThesisMMO.MMOServer {
             return entity.CanPerformAction(action);
         }
 
-        public bool CanPerformAction(string actionSource, ActionCode action, Target target) {
+        public bool CanPerformAction(string actionSource, ActionCode action, string target, float maxDistance) {
             if (!CanPerformAction(actionSource, action)) { return false; }
-
-            // TODO: Test distance
+            if (Vector.Distance(m_Entities[actionSource].Position, m_Entities[target].Position) > maxDistance) { return false; }
             return true;
         }
 
@@ -132,6 +121,14 @@ namespace JYW.ThesisMMO.MMOServer {
             }
         }
 
+        public void SetSkillCooldown(string entity, ActionCode skill) {
+            Debug.Assert(m_Entities.ContainsKey(entity));
+            Debug.Assert(m_Entities[entity].GetType() == typeof(ClientEntity));
+
+            var player = m_Entities[entity] as ClientEntity;
+            player.EquippedSkills.SetSkillOnCooldown(skill);
+        }
+
         public void ApplyModifier(string target, Modifier modifier) {
             Entity entity = null;
             m_Entities.TryGetValue(target, out entity);
@@ -146,7 +143,7 @@ namespace JYW.ThesisMMO.MMOServer {
             foreach (var region in m_Regions) {
                 region.Dispose();
             }
-            foreach(var entity in m_Entities.Values) {
+            foreach (var entity in m_Entities.Values) {
                 entity.Dispose();
             }
             Instance = null;
@@ -166,10 +163,10 @@ namespace JYW.ThesisMMO.MMOServer {
             var x = (int)Math.Floor(Math.Abs(point.X - minVal) / RegionSize);
             var z = (int)Math.Floor(Math.Abs(point.Z - minVal) / RegionSize);
 
-            for(int xi = x-1; xi <= x+1; xi++) {
-                if(xi < 0 || xi >= 10) { continue; }
+            for (int xi = x - 1; xi <= x + 1; xi++) {
+                if (xi < 0 || xi >= 10) { continue; }
 
-                for(int zi = z-1; zi <= z+1; zi++) {
+                for (int zi = z - 1; zi <= z + 1; zi++) {
                     if (zi < 0 || zi >= 10) { continue; }
 
                     yield return m_Regions[xi, zi];

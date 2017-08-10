@@ -1,7 +1,8 @@
-﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
+﻿using Photon.SocketServer;
+using Photon.SocketServer.Rpc;
 
-    using Photon.SocketServer;
-    using Photon.SocketServer.Rpc;
+namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
+
     using Entities.Attributes.Modifiers;
 
     using Common.Codes;

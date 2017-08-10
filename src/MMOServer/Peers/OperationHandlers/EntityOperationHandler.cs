@@ -47,12 +47,13 @@
             }
 
             if (!actionObject.CheckPrerequesite()) {
-                return DefaultResponses.CreateNegativeResponse(request, ReturnCode.Declined);
+                log.InfoFormat("Prerequisite check failed.");
+                return DefaultResponses.CreateActionRequestResponse(request, ReturnCode.Declined);
             }
 
             actionObject.StartAction();
 
-            return null;
+            return DefaultResponses.CreateActionRequestResponse(request, ReturnCode.OK);
         }
 
         private OperationResponse OperationMove(PeerBase peer, OperationRequest request) {

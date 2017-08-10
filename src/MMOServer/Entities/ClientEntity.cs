@@ -43,13 +43,18 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
                 CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
                 MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
             };
-            //var newPlayerEv = new NewPlayerEvent() {
-            //    Name = Name,
-            //    Position = Position,
-            //    CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
-            //    MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
-            //};
-            //return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
+        }
+
+        public override bool CanPerformAction(ActionCode action) {
+            if(!base.CanPerformAction(action)) { return false; }
+            var x = EquippedSkills.CanActivateSkill(action);
+            log.InfoFormat("{0} can perfomr action test is {1}", action, x);
+
+            return x;
+        }
+
+        public override void Dispose() {
+            base.Dispose();
         }
 
         public override void Die() {
@@ -62,10 +67,6 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
             IEventData evData = new EventData((byte)EventCode.EntityDeath, dataContract);
             var msg = new EventMessage(evData, DefaultSendParameters, Events.ActionEvents.BroadcastOptions.All, Name);
             PublishEvent(msg);
-        }
-
-        public override void Dispose() {
-            base.Dispose();
         }
     }
 }

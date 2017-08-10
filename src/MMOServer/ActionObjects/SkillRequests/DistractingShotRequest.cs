@@ -27,6 +27,7 @@
             LookDirection = LookDirection.Normalized;
             FinishedCastingEvent += DoDamage;
             FinishedCastingEvent += SetIdle;
+            FinishedCastingEvent += SetActionCooldown;
             StartCast(new System.TimeSpan(0, 0, 0, 0, 500), LookDirection);
         }
 

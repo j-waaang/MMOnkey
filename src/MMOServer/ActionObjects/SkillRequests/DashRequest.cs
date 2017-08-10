@@ -1,6 +1,7 @@
-﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
+﻿using System;
+using Photon.SocketServer;
 
-    using Photon.SocketServer;
+namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
     using Common.Codes;
     using Common.ContinueObjects;
@@ -15,9 +16,7 @@
 
         #endregion DataContract
 
-        public override bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code);
-        }
+        private readonly TimeSpan m_SkillDuration = new TimeSpan(0, 0, 0, 2);
 
         public override void StartAction() {
             SetState();
@@ -26,7 +25,10 @@
         private void SetState() {
             var speedModifier = new FloatModifier(ModifyMode.Multiplication, AttributeCode.Speed, 1.5f);
             World.Instance.ApplyModifier(ActionSource, speedModifier);
-            AddCondition(new TimedContinueCondition(new System.TimeSpan(0, 0, 0, 1)));
+
+            SetActionCooldown();
+
+            AddCondition(new TimedContinueCondition(m_SkillDuration));
 
             ContinueEvent += ResetSpeed;
             StartConditions();

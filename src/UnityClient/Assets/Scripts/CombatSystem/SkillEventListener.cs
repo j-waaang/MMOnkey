@@ -3,6 +3,7 @@ using JYW.ThesisMMO.UnityClient;
 using JYW.ThesisMMO.UnityClient.Characters;
 using JYW.ThesisMMO.UnityClient.CombatSystem;
 using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
+using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Responses;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -38,8 +39,9 @@ public class SkillEventListener : MonoBehaviour {
                 RequestOperations.DashRequest();
                 break;
             case ActionCode.HammerBash:
+                var hbAction = new Action(() => CastSkill(skill, Vector3.back, 1f));
+                ResponseOperations.AddActionToResponseWaitinglist(skill, hbAction);
                 RequestOperations.HammerBashRequest();
-                CastSkill(skill, Vector3.back, 1f);
                 break;
         }
 
@@ -51,14 +53,17 @@ public class SkillEventListener : MonoBehaviour {
 
                 var forwardVec = mousePoint.Value - m_Player.transform.position;
                 forwardVec = forwardVec.normalized;
-
+                var dsAction = new Action(() => CastSkill(skill, mousePoint.Value, 0.5f));
+                ResponseOperations.AddActionToResponseWaitinglist(skill, dsAction);
                 RequestOperations.DistractingShotRequest(forwardVec);
-                CastSkill(skill, mousePoint.Value, 0.5f);
                 break;
+
             case ActionCode.OrisonOfHealing:
                 if (GameData.Target != null || m_TargetSelector.SetTarget()) {
+                    var oohAction = new Action(() => CastSkill(skill, GameData.Target.transform.position, 1f));
+                    ResponseOperations.AddActionToResponseWaitinglist(skill, oohAction);
                     RequestOperations.OrisonOfHealingRequest(GameData.Target.name);
-                    CastSkill(skill, GameData.Target.transform.position, 1f);
+                    //CastSkill(skill, GameData.Target.transform.position, 1f);
                 }
                 break;
         }
@@ -69,9 +74,9 @@ public class SkillEventListener : MonoBehaviour {
                 var mousePoint = InputExtension.GetMouseHitGroundPoint();
                 if (mousePoint == null) { return; }
 
+                var action = new Action(() => CastSkill(skill, mousePoint.Value, 2f));
+                ResponseOperations.AddActionToResponseWaitinglist(skill, action);
                 RequestOperations.FireStormRequest(mousePoint.Value);
-                CastSkill(skill, mousePoint.Value, 2f);
-                //CastSkill(skill, hit.point, 2f, () => SkillEntitySpawner.CreateSkillEntity(skill, hit.point));
                 break;
         }
     }

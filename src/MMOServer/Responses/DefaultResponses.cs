@@ -1,8 +1,10 @@
-﻿namespace JYW.ThesisMMO.MMOServer.Operations.Responses {
+﻿using Photon.SocketServer;
+using Photon.SocketServer.Rpc;
+using System.Collections.Generic;
+
+namespace JYW.ThesisMMO.MMOServer.Operations.Responses {
 
     using Common.Codes;
-    using Photon.SocketServer;
-    using Photon.SocketServer.Rpc;
 
     public static class DefaultResponses {
 
@@ -10,6 +12,17 @@
             return new OperationResponse(operationRequest.OperationCode) {
                 ReturnCode = (short)returnCode,
                 DebugMessage = returnCode.ToString() + ": " + operationRequest.OperationCode.ToString()
+            };
+        }
+
+        internal static OperationResponse CreateActionRequestResponse(OperationRequest operationRequest, ReturnCode returnCode) {
+            var paramCode = (byte)ParameterCode.ActionCode;
+            
+            return new OperationResponse(operationRequest.OperationCode) {
+                ReturnCode = (short)returnCode,
+                Parameters = new Dictionary<byte, object>() {
+                    { paramCode, operationRequest.Parameters[paramCode] }
+                }
             };
         }
 

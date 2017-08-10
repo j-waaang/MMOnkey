@@ -1,9 +1,10 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
+﻿using UnityEngine;
+using ExitGames.Client.Photon;
+using System.Collections.Generic;
 
-    using ExitGames.Client.Photon;
-    using System.Collections.Generic;
+namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
+
     using JYW.ThesisMMO.Common.Codes;
-    using UnityEngine;
 
     public partial class RequestOperations {
 

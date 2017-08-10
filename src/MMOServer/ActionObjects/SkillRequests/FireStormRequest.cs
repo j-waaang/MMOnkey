@@ -20,13 +20,10 @@ namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
         public Vector Target { get; set; }
         #endregion DataContract
 
-        public override bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code);
-        }
-
         public override void StartAction() {
             FinishedCastingEvent += CreateFireStormEntity;
             FinishedCastingEvent += SetIdle;
+            FinishedCastingEvent += SetActionCooldown;
             StartCast(new System.TimeSpan(0, 0, 0, 2), GetLookDir(ActionSource, Target));
         }
 

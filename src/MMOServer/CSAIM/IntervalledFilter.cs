@@ -34,7 +34,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         public void UpdateIntervals() {
             m_MsInIntervals.Clear();
             AddDefaultIntervals();
-            AddWeaponInterval();
+            //AddWeaponInterval();
             AddSkillIntervals();
         }
 

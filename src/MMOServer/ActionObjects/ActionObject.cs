@@ -1,11 +1,11 @@
-﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects {
+﻿using System;
+using System.Collections.Generic;
 
-    using System;
-    using System.Collections.Generic;
+using Photon.SocketServer;
+using Photon.SocketServer.Rpc;
+using ExitGames.Logging;
 
-    using Photon.SocketServer;
-    using Photon.SocketServer.Rpc;
-    using ExitGames.Logging;
+namespace JYW.ThesisMMO.MMOServer.ActionObjects {
 
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.ContinueObjects;
@@ -43,7 +43,7 @@
         private OperationRequest request;
 
         public virtual bool CheckPrerequesite() {
-            return World.Instance.CanPerformAction(ActionSource);
+            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code);
         }
 
         public abstract void StartAction();
@@ -72,6 +72,14 @@
         public int GetNextID() {
             LastUsedID++;
             return LastUsedID;
+        }
+
+        protected void SetActionCooldown() {
+            World.Instance.SetSkillCooldown(ActionSource, (ActionCode)Code);
+        }
+        protected void SetActionCooldown(CallReason callreason) {
+            if(callreason != CallReason.ConditionFullfilled) { return; }
+            World.Instance.SetSkillCooldown(ActionSource, (ActionCode)Code);
         }
 
         protected void SetIdle(CallReason callreason) {

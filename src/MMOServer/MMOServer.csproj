@@ -99,6 +99,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Skills\AxeAutoAttackData.cs" />
+    <Compile Include="Skills\BowAutoAttackData.cs" />
     <Compile Include="Skills\DashData.cs" />
     <Compile Include="Skills\DistractingShotData.cs" />
     <Compile Include="Skills\FireStormData.cs" />

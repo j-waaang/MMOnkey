@@ -1,14 +1,16 @@
-﻿namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
+﻿using Photon.SocketServer;
+using Photon.SocketServer.Rpc;
 
-    using Photon.SocketServer;
-    using Photon.SocketServer.Rpc;
+namespace JYW.ThesisMMO.MMOServer.ActionObjects.SkillRequests {
 
     using Common.Codes;
     using Common.ContinueObjects;
     using Entities.Attributes.Modifiers;
     using Targets;
 
-    class OrisonOfHealingRequest : CastActionObject {
+    internal class OrisonOfHealingRequest : CastActionObject {
+
+        private const float MaxDistance = 8F;
 
         #region DataContract
         public OrisonOfHealingRequest(string actionSource, IRpcProtocol protocol, OperationRequest request)
@@ -20,13 +22,13 @@
         #endregion DataContract
 
         public override bool CheckPrerequesite() {
-            var target = new EntityTarget() { TargetName = Target };
-            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code, target);
+            return World.Instance.CanPerformAction(ActionSource, (ActionCode)Code, Target, MaxDistance);
         }
 
         public override void StartAction() {
             FinishedCastingEvent += DoHealing;
             FinishedCastingEvent += SetIdle;
+            FinishedCastingEvent += SetActionCooldown;
             StartCast(new System.TimeSpan(0, 0, 0, 1), GetLookDir(ActionSource, Target));
         }
 

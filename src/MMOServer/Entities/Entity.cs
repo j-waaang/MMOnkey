@@ -95,7 +95,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return true;
         }
 
-        public bool CanPerformAction(ActionCode action) {
+        public virtual bool CanPerformAction(ActionCode action) {
             var actionState = m_Attributes[AttributeCode.ActionState] as ActionStateAttribute;
             if (actionState.GetActionState() != ActionCode.Idle) { return false; }
 

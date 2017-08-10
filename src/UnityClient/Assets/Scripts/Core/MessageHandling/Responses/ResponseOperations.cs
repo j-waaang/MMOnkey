@@ -16,6 +16,7 @@
                         "Received {0} from {1} response.",
                         (ReturnCode)operationResponse.ReturnCode,
                         (OperationCode)operationResponse.OperationCode);
+                    OnCharacterActionResponse(operationResponse);
                     return;
                 default:
                     Debug.LogError("Cannot handle response." + operationResponse.DebugMessage);
