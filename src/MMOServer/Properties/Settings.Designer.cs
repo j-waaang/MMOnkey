@@ -25,7 +25,7 @@ namespace JYW.ThesisMMO.MMOServer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool FilterKnownSnapshots {
             get {
                 return ((bool)(this["FilterKnownSnapshots"]));
@@ -44,6 +44,30 @@ namespace JYW.ThesisMMO.MMOServer.Properties {
             }
             set {
                 this["UseIndividualUpdateRates"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int SkillCooldownIMReactivationOffsetInMs {
+            get {
+                return ((int)(this["SkillCooldownIMReactivationOffsetInMs"]));
+            }
+            set {
+                this["SkillCooldownIMReactivationOffsetInMs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public int MinimumConsistencyCooldownInMs {
+            get {
+                return ((int)(this["MinimumConsistencyCooldownInMs"]));
+            }
+            set {
+                this["MinimumConsistencyCooldownInMs"] = value;
             }
         }
     }

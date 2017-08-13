@@ -19,5 +19,11 @@
                 return MinDistance == MaxDistance && MaxDistance == MinDistance && MilliSeconds == 0;
             }
         }
+
+        public static MsInInterval Zero {
+            get {
+                return new MsInInterval(0, 0, 0);
+            }
+        }
     }
 }

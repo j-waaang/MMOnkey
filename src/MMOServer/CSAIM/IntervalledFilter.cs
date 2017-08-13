@@ -4,11 +4,8 @@ using ExitGames.Logging;
 
 namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
-    using ActionObjects.SkillRequests;
-    using Common.Codes;
     using Common.Types;
     using Entities;
-    using Entities.Attributes;
 
     internal class IntervalledFilter : PositionFilter {
 
@@ -26,16 +23,17 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
         public IntervalledFilter(ClientEntity entity) 
             : base (entity) {
-            UpdateIntervals();
+
+            UpdateIntervals(m_AttachedEntity.EquippedSkills.GetSkillConsistencyRequirements());
+            entity.EquippedSkills.SkillConsistencyUpdateEvent += UpdateIntervals;
             m_DequeueThread = new Thread(DequeueTask);
             m_DequeueThread.Start();
         }
 
-        public void UpdateIntervals() {
+        public void UpdateIntervals(IEnumerable<MsInInterval> consistencies) {
             m_MsInIntervals.Clear();
             AddDefaultIntervals();
-            //AddWeaponInterval();
-            AddSkillIntervals();
+            AddSkillIntervals(consistencies);
         }
 
         private void DequeueTask() {
@@ -92,22 +90,8 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
             m_MsInIntervals.Add(new MsInInterval(0F, 10F, 200));
         }
 
-        private void AddWeaponInterval() {
-            var weapon = (IntAttribute)m_AttachedEntity.GetAttribute(AttributeCode.Weapon);
-            if (weapon == null) { return; }
-
-            switch ((WeaponCode)weapon.GetValue()) {
-                case WeaponCode.Axe:
-                    m_MsInIntervals.Add(new MsInInterval(0F, AxeAutoAttackRequest.ATTACKDISTANCE + 0.5F, 0));
-                    break;
-                case WeaponCode.Bow:
-                    m_MsInIntervals.Add(new MsInInterval(0F, BowAutoAttackRequest.ATTACKDISTANCE + 0.5F, 0));
-                    break;
-            }
-        }
-
-        private void AddSkillIntervals() {
-            m_MsInIntervals.AddRange(m_AttachedEntity.EquippedSkills.GetSkillConsistencyRequirements());
+        private void AddSkillIntervals(IEnumerable<MsInInterval> consistencies) {
+            m_MsInIntervals.AddRange(consistencies);
         }
 
         protected override void UpdateClientPosition(Entity entity) {

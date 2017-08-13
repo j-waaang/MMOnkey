@@ -11,6 +11,8 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
 
     internal class SkillCollection {
 
+        public event Action<IEnumerable<MsInInterval>> SkillConsistencyUpdateEvent;
+
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         public ActionCode[] Skills {
@@ -22,18 +24,27 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
         private readonly Dictionary<ActionCode, SkillData> m_SkillStates = new Dictionary<ActionCode, SkillData>();
 
         public SkillCollection(int[] skills) {
+            InitializeSkillStates(skills);
+        }
+
+        private void InitializeSkillStates(int[] skills) {
             skills = skills.Distinct().ToArray();
             Debug.Assert(skills.Count() <= MaxSkills, "Tried to initialize skill collection with more skills than allowed.");
-            
-            foreach(var skill in skills) {
+
+            foreach (var skill in skills) {
                 var code = (ActionCode)skill;
                 var type = SkillDataNamespace + code + "Data";
                 var typed = Type.GetType(type);
                 Debug.Assert(typed != null, string.Format("{0} skill doesn't exist.", type));
 
                 var instance = Activator.CreateInstance(typed) as SkillData;
+                instance.SkillConsistencyUpdated += Skill_SkillConsistencyUpdated;
                 m_SkillStates.Add(code, instance);
             }
+        }
+
+        private void Skill_SkillConsistencyUpdated() {
+            SkillConsistencyUpdateEvent(GetSkillConsistencyRequirements());
         }
 
         public IEnumerable<MsInInterval> GetSkillConsistencyRequirements() {
