@@ -8,6 +8,7 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
 
     using CSAIM;
     using JYW.ThesisMMO.Common.Codes;
+    using Properties;
 
     internal class SkillCollection {
 
@@ -20,7 +21,6 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
         }
 
         private const string SkillDataNamespace = "JYW.ThesisMMO.MMOServer.Skills.";
-        private const int MaxSkills = 3;
         private readonly Dictionary<ActionCode, SkillData> m_SkillStates = new Dictionary<ActionCode, SkillData>();
 
         public SkillCollection(int[] skills) {
@@ -29,7 +29,7 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
 
         private void InitializeSkillStates(int[] skills) {
             skills = skills.Distinct().ToArray();
-            Debug.Assert(skills.Count() <= MaxSkills, "Tried to initialize skill collection with more skills than allowed.");
+            Debug.Assert(skills.Count() <= Settings.Default.MaxNumberOfSkills, "Tried to initialize skill collection with more skills than allowed.");
 
             foreach (var skill in skills) {
                 var code = (ActionCode)skill;

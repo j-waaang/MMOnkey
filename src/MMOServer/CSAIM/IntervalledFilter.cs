@@ -6,6 +6,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
     using Common.Types;
     using Entities;
+    using Skills;
 
     internal class IntervalledFilter : PositionFilter {
 
@@ -70,10 +71,11 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         }
 
         private int GetUpdateInterval(Entity entity) {
+            var targetFaction = entity.Team == m_AttachedEntity.Team ? SkillTarget.FriendOnly : SkillTarget.FoeOnly;
             var distance = Vector.Distance(entity.Position, m_AttachedEntity.Position);
             var interval = int.MaxValue;
             foreach (var msInIntervals in m_MsInIntervals) {
-                if (!msInIntervals.IsInInterval(distance)) { continue; }
+                if (!msInIntervals.IsInInterval(distance, targetFaction)) { continue; }
                 if (msInIntervals.MilliSeconds > interval) { continue; }
                 interval = msInIntervals.MilliSeconds;
             }
@@ -86,8 +88,8 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         }
 
         private void AddDefaultIntervals() {
-            m_MsInIntervals.Add(new MsInInterval(0F, float.PositiveInfinity, 1000));
-            m_MsInIntervals.Add(new MsInInterval(0F, 10F, 200));
+            m_MsInIntervals.Add(new MsInInterval(0F, float.PositiveInfinity, 500));
+            //m_MsInIntervals.Add(new MsInInterval(0F, 10F, 200));
         }
 
         private void AddSkillIntervals(IEnumerable<MsInInterval> consistencies) {

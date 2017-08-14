@@ -14,5 +14,8 @@
     <Setting Name="MinimumConsistencyCooldownInMs" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
+    <Setting Name="MaxNumberOfSkills" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

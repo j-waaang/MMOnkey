@@ -117,6 +117,7 @@
     <Compile Include="BoundingBox2D.cs" />
     <Compile Include="CSAIM\IntervalledFilter.cs" />
     <Compile Include="Region.cs" />
+    <Compile Include="Skills\SkillTarget.cs" />
     <Compile Include="Targets\AreaTarget.cs" />
     <Compile Include="Targets\AreaTargetOption.cs" />
     <Compile Include="Targets\CircleAreaTarget.cs" />

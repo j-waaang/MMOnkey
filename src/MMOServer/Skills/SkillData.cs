@@ -29,7 +29,7 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
             if (m_ConsistencyOnCooldown) {
                 return MsInInterval.Zero;
             }
-            return new MsInInterval(0, MaxRange, 0);
+            return new MsInInterval(0, MaxRange, 0, SkillTarget.FoeOnly);
         }
 
         public void SetOnCooldown() {

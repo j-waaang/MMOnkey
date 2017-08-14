@@ -16,7 +16,7 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
         }
 
         public override MsInInterval GetConsistencyRequirement() {
-            return new MsInInterval(0, 0, 0);
+            return MsInInterval.Zero;
         }
     }
 }
