@@ -63,10 +63,10 @@
         }
 
         private void CreateTestBots() {
-            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(6, 6), true);
-            EntityFactory.Instance.CreateAIBot("Two Punch Man", new Vector(-6, -6), true);
-            EntityFactory.Instance.CreateAIBot("Three Punch Man", new Vector(-6, 6), true);
-            EntityFactory.Instance.CreateAIBot("Four Punch Man", new Vector(6, -6), true);
+            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(6, 6), "Mob", true);
+            EntityFactory.Instance.CreateAIBot("Two Punch Man", new Vector(-6, -6), "Mob", true);
+            EntityFactory.Instance.CreateAIBot("Three Punch Man", new Vector(-6, 6), "Mob", true);
+            EntityFactory.Instance.CreateAIBot("Four Punch Man", new Vector(6, -6), "Mob", true);
         }
     }
 }

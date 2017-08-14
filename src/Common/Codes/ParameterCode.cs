@@ -16,6 +16,7 @@
         Source,
         Speed,
         Target,
+        Team,
         Weapon
     }
 }

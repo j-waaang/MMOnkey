@@ -5,6 +5,7 @@
         public string Name;
         public int Weapon;
         public int[] Skills;
+        public string Team;
 
     }
 }

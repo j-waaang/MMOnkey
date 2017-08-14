@@ -11,7 +11,7 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
         public ActionCode ActionCode { get; private set; }
         public string Caster { get; private set; }
 
-        public SkillEntity(string caster, string name, Vector position, ActionCode actionCode) : base(name, position, null, null) {
+        public SkillEntity(string caster, string name, Vector position, string team, ActionCode actionCode) : base(name, position, team, null, null) {
             log.InfoFormat("Creating skillentity with actioncode {0}", ActionCode);
 
             ActionCode = actionCode;

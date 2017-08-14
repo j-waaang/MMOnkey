@@ -22,6 +22,7 @@ namespace JYW.ThesisMMO.MMOServer {
         public string Name { get; }
         public MMOPeer Peer { get; }
         public bool Dead { get; private set; } = false;
+        public string Team { get; }
 
         protected bool m_AiControlled;
 
@@ -45,11 +46,12 @@ namespace JYW.ThesisMMO.MMOServer {
         /// <summary> 
         /// Leave out peer if this is a AI controlled enity.
         /// </summary>
-        public Entity(string name, Vector position, Attribute[] attributes, MMOPeer peer) {
+        public Entity(string name, Vector position, string team, Attribute[] attributes, MMOPeer peer) {
             // TODO: Create AIEntity deriving from this class.
 
             Name = name;
             Position = position;
+            Team = team;
 
             if (peer != null) {
                 Peer = peer;
@@ -66,7 +68,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 }
             }
 
-            log.InfoFormat("Created {0} at {1}", name, position);
+            log.InfoFormat("Created {0} at {1} in team {2}", name, position, team);
         }
 
         protected virtual void SetInterestArea() {

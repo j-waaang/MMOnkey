@@ -4,7 +4,7 @@
     using Photon.SocketServer;
     using Photon.SocketServer.Rpc;
 
-    class EnterWorldRequest : Operation {
+    internal class EnterWorldRequest : Operation {
 
         public EnterWorldRequest(IRpcProtocol protocol, OperationRequest request)
             : base(protocol, request) {
@@ -12,6 +12,9 @@
 
         [DataMember(Code = (byte)ParameterCode.Name)]
         public string Name { get; set; }
+
+        [DataMember(Code = (byte)ParameterCode.Team)]
+        public string Team { get; set; }
 
         [DataMember(Code = (byte)ParameterCode.Weapon)]
         public int Weapon { get; set; }

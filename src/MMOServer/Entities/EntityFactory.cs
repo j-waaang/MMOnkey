@@ -36,7 +36,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var skills = operation.Skills;
             Array.Resize(ref skills, skills.Length + 1);
             skills[skills.Length-1] = operation.Weapon;
-            var entity = new ClientEntity(operation.Name, position, attributes, peer, skills);
+            var entity = new ClientEntity(operation.Name, position, operation.Team, attributes, peer, skills);
             World.Instance.AddEntity(entity);
             return entity;
         }
@@ -52,7 +52,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 return;
             }
 
-            var skillEntity = new SkillEntity(actionObject.ActionSource, entityName, startPosition, (ActionCode)actionObject.Code);
+            var skillEntity = new SkillEntity(actionObject.ActionSource, entityName, startPosition, TeamByEntity(actionObject.ActionSource), (ActionCode)actionObject.Code);
             World.Instance.AddEntity(skillEntity);
             Activator.CreateInstance(actionType, skillEntity);
         }
@@ -69,12 +69,16 @@ namespace JYW.ThesisMMO.MMOServer {
                 return;
             }
 
-            var skillEntity = new SkillEntity(caster, name, startPosition, actionCode);
+            var skillEntity = new SkillEntity(caster, name, startPosition, TeamByEntity(caster), actionCode);
             World.Instance.AddEntity(skillEntity);
             Activator.CreateInstance(actionType, skillEntity);
         }
 
-        internal void CreateAIBot(string name, Vector startPosition, bool canMove) {
+        private string TeamByEntity(string entity) {
+            return World.Instance.GetEntity(entity).Team;
+        }
+
+        internal void CreateAIBot(string name, Vector startPosition, string team, bool canMove) {
             var position = startPosition;
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
             var attributes = new Attribute[] {
@@ -83,7 +87,7 @@ namespace JYW.ThesisMMO.MMOServer {
                 new ActionStateAttribute(),
                 new FloatAttribute(0.2f, AttributeCode.Speed)};
 
-            var entity = new Entity(name, position, attributes, null);
+            var entity = new Entity(name, position, team, attributes, null);
             var aiEntity = new TestBot(entity);
             aiEntity.canMove = canMove;
             World.Instance.AddEntity(entity);

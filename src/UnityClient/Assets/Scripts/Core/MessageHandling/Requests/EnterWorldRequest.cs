@@ -15,7 +15,8 @@
             {
                 { (byte)ParameterCode.Name, characterSetting.Name },
                 { (byte)ParameterCode.Weapon, characterSetting.Weapon},
-                { (byte)ParameterCode.ActionCode, characterSetting.Skills}
+                { (byte)ParameterCode.ActionCode, characterSetting.Skills},
+                { (byte)ParameterCode.Team, characterSetting.Team }
             };
 
             var operationRequest = new OperationRequest() {

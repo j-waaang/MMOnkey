@@ -12,7 +12,7 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         public Entity Entity { get; private set; }
 
         public AIEntity(Entity entity) {
-            log.InfoFormat("Created ai {0} from {1}.", GetType().Name, entity.Name);
+            //log.InfoFormat("Created ai {0} from {1}.", GetType().Name, entity.Name);
             Entity = entity;
             AILooper.Instance.AddEntity(this);
         }

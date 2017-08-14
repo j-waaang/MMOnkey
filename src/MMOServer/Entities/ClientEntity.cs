@@ -13,7 +13,7 @@ namespace JYW.ThesisMMO.MMOServer.Entities {
         public SkillCollection EquippedSkills { get; }
         private static readonly SendParameters DefaultSendParameters = new SendParameters { Unreliable = false, ChannelId = 0 };
 
-        public ClientEntity(string name, Vector position, Attribute[] attributes, MMOPeer peer, int[] skillData) : base(name, position, attributes, peer) {
+        public ClientEntity(string name, Vector position, string team, Attribute[] attributes, MMOPeer peer, int[] skillData) : base(name, position, team, attributes, peer) {
             EquippedSkills = new SkillCollection(skillData);
         }
 
