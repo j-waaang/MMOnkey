@@ -78,7 +78,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return World.Instance.GetEntity(entity).Team;
         }
 
-        internal void CreateAIBot(string name, Vector startPosition, string team, bool canMove) {
+        internal TestBot CreateAIBot(string name, Vector startPosition, string team, bool canMove) {
             var position = startPosition;
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
             var attributes = new Attribute[] {
@@ -91,6 +91,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var aiEntity = new TestBot(entity);
             aiEntity.canMove = canMove;
             World.Instance.AddEntity(entity);
+            return aiEntity;
         }
 
         // TODO: Change design so health does not depend on weapon.

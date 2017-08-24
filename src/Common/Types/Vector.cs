@@ -6,6 +6,8 @@
         public const float TOLERANCE = 0.000001f;
 
         public static Vector Zero;
+        public static Vector One { get { return new Vector(1f, 1f, 1f); } }
+        public static Vector One2D { get { return new Vector(1f, 1f); } }
 
         public float X { get; set; }
 

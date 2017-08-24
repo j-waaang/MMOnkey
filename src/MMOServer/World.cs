@@ -2,8 +2,6 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Diagnostics;
-
-using Photon.SocketServer;
 using ExitGames.Logging;
 
 namespace JYW.ThesisMMO.MMOServer {
@@ -11,8 +9,6 @@ namespace JYW.ThesisMMO.MMOServer {
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.Common.Types;
     using JYW.ThesisMMO.MMOServer.Entities.Attributes.Modifiers;
-    using JYW.ThesisMMO.MMOServer.Events;
-    using JYW.ThesisMMO.MMOServer.Events.ActionEvents;
     using Targets;
 
     /// <summary> 
@@ -21,19 +17,18 @@ namespace JYW.ThesisMMO.MMOServer {
     internal class World : IDisposable {
 
         public static World Instance = new World();
+        public readonly BoundingBox2D WorldBounds;
+        public const float RegionSize = 10f;
+        public const int TileDimension = 10;
 
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
-        private const float RegionSize = 10f;
-        private const int TileDimension = 10;
-
         private readonly Region[,] m_Regions = new Region[TileDimension, TileDimension];
         private readonly Dictionary<string, Entity> m_Entities = new Dictionary<string, Entity>();
-        private readonly BoundingBox2D m_WorldArea;
 
         private World() {
             var x = RegionSize * TileDimension * 0.5f;
-            m_WorldArea = new BoundingBox2D(new Vector(-x, -x), new Vector(x, x));
+            WorldBounds = new BoundingBox2D(new Vector(-x, -x), new Vector(x, x));
             CreateRegions();
         }
 
@@ -41,7 +36,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var minToMax = new Vector(RegionSize, RegionSize);
             for (var x = 0; x < 10; x++) {
                 for (var z = 0; z < 10; z++) {
-                    var min = m_WorldArea.Min + new Vector(x * RegionSize, z * RegionSize);
+                    var min = WorldBounds.Min + new Vector(x * RegionSize, z * RegionSize);
                     var max = min + minToMax;
                     m_Regions[x, z] = new Region(new BoundingBox2D(min, max), x, z);
                 }
@@ -75,6 +70,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public void MoveEntity(string username, Vector position) {
+            if (!WorldBounds.OverlapPoint(position)) { return; }
             m_Entities[username].Move(position);
         }
 

@@ -82,5 +82,41 @@ namespace JYW.ThesisMMO.MMOServer.Properties {
                 this["MaxNumberOfSkills"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EvaluationMode {
+            get {
+                return ((bool)(this["EvaluationMode"]));
+            }
+            set {
+                this["EvaluationMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int InterestManagementMode {
+            get {
+                return ((int)(this["InterestManagementMode"]));
+            }
+            set {
+                this["InterestManagementMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int EntityScenario {
+            get {
+                return ((int)(this["EntityScenario"]));
+            }
+            set {
+                this["EntityScenario"] = value;
+            }
+        }
     }
 }

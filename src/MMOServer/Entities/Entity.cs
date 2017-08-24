@@ -132,13 +132,6 @@ namespace JYW.ThesisMMO.MMOServer {
                 CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
                 MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
             };
-            //var newPlayerEv = new NewPlayerEvent() {
-            //    Name = Name,
-            //    Position = Position,
-            //    CurrentHealth = ((IntAttribute)GetAttribute(AttributeCode.Health)).GetValue(),
-            //    MaxHealth = ((IntAttribute)GetAttribute(AttributeCode.MaxHealth)).GetValue()
-            //};
-            //return new EventData((byte)EventCode.NewPlayer, newPlayerEv);
         }
 
         public virtual void Dispose() {

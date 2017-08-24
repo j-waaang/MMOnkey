@@ -49,6 +49,10 @@ namespace JYW.ThesisMMO.MMOServer {
         public BoundingBox2D IntersectWith(BoundingBox2D other) {
             return new BoundingBox2D { Min = Vector.Max(this.Min, other.Min), Max = Vector.Min(this.Max, other.Max) };
         }
+        
+        public bool OverlapPoint(Vector point) {
+            return Min.X <= point.X && Min.Z <= point.Z && Max.X > point.X && Max.Z > point.Z;
+        }
 
         public BoundingBox2D UnionWith(BoundingBox2D other) {
             return new BoundingBox2D { Min = Vector.Min(this.Min, other.Min), Max = Vector.Max(this.Max, other.Max) };

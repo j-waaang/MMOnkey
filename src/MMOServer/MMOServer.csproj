@@ -94,6 +94,7 @@
     <Compile Include="Entities\ClientEntity.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\Attributes\HealthAttribute.cs" />
+    <Compile Include="EntityScenario.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

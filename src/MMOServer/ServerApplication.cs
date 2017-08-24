@@ -9,6 +9,7 @@
     using log4net.Config;
     using System.IO;
     using AI;
+    using Properties;
 
     /// <summary> 
     /// Main class of the server.
@@ -63,10 +64,14 @@
         }
 
         private void CreateTestBots() {
-            EntityFactory.Instance.CreateAIBot("One Punch Man", new Vector(6, 6), "Blue", true);
-            EntityFactory.Instance.CreateAIBot("Two Punch Man", new Vector(-6, -6), "Mob", true);
-            EntityFactory.Instance.CreateAIBot("Three Punch Man", new Vector(-6, 6), "Mob", true);
-            EntityFactory.Instance.CreateAIBot("Four Punch Man", new Vector(6, -6), "Blue", true);
+            switch (Settings.Default.EntityScenario) {
+                case 0:
+                    EntityScenario.CreateHomogeneousScenario();
+                    break;
+                case 1:
+                    EntityScenario.CreateCentralizedScenario();
+                    break;
+            }
         }
     }
 }
