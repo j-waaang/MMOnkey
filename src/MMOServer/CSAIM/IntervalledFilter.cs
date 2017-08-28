@@ -6,6 +6,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
     using Common.Types;
     using Entities;
+    using Events.Demo;
     using Skills;
 
     internal class IntervalledFilter : PositionFilter {
@@ -35,6 +36,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
             m_MsInIntervals.Clear();
             AddDefaultIntervals();
             AddSkillIntervals(consistencies);
+            SendIntervalsToClient();
         }
 
         private void DequeueTask() {
@@ -103,6 +105,12 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
         private void AddTimeStamp(Entity entity) {
             m_PositionTimestamps[entity] = GameTime.TimeMs;
+        }
+
+        // For demo only
+        private void SendIntervalsToClient() {
+            var ev = new IntervalTableEvent(m_MsInIntervals).ToEventData();
+            m_AttachedEntity.SendEvent(ev);
         }
     }
 }

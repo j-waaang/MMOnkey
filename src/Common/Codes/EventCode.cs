@@ -4,6 +4,7 @@
         AttributeChangedEvent,
         EntityDeath,
         EntityExitRegion,
+        FrequencyTable,
         HealthUpdate,
         Move,
         NewPlayer,

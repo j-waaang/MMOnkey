@@ -1,7 +1,7 @@
-﻿using JYW.ThesisMMO.MMOServer.Skills;
-using System;
+﻿namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
-namespace JYW.ThesisMMO.MMOServer.CSAIM {
+    using JYW.ThesisMMO.MMOServer.Skills;
+
     internal struct MsInInterval {
         public float MinDistance { get; }
         public float MaxDistance { get; }

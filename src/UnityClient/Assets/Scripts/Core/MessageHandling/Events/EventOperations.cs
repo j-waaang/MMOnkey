@@ -41,6 +41,9 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
                 case EventCode.EntityExitRegion:
                     OnEntityExitRegionEvent(eventData);
                     return;
+                case EventCode.FrequencyTable:
+                    OnFrequencyTableEvent(eventData);
+                    break;
                 case EventCode.Move:
                     OnMoveEvent(eventData);
                     return;
