@@ -8,8 +8,15 @@
         private Animator m_Animator;
 
         private void Awake() {
-            m_Animator = transform.GetChild(0).GetComponent<Animator>();
+            m_Animator = GetComponentInChildren<Animator>();
         }
+
+
+        ////TODO: Optimize this.
+        //private Animator m_Animator { get {
+        //        return transform.GetChild(1).GetComponent<Animator>();
+        //    }
+        //}
 
         public void UpdateRunningAnimation(MovementState newState) {
             switch (newState) {

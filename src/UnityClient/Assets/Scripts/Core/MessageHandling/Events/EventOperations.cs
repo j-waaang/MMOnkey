@@ -43,7 +43,7 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
                     return;
                 case EventCode.FrequencyTable:
                     OnFrequencyTableEvent(eventData);
-                    break;
+                    return;
                 case EventCode.Move:
                     OnMoveEvent(eventData);
                     return;

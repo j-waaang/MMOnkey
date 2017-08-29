@@ -1,8 +1,9 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.CSAIM {
-
+    using ExitGames.Logging;
     using JYW.ThesisMMO.MMOServer.Skills;
 
     internal struct MsInInterval {
+        
         public float MinDistance { get; }
         public float MaxDistance { get; }
         public int MilliSeconds { get; }
