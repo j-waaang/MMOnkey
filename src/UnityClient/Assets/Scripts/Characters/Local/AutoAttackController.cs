@@ -14,6 +14,8 @@
     [RequireComponent(typeof(ActionStateComponent))]
     public class AutoAttackController : MonoBehaviour {
 
+        private const bool PerformContinueAAs = false;
+
         private ActionStateComponent m_ActionState;
         private RotationController m_RotationController;
         private ActionCode m_AutoAttackAction;
@@ -50,7 +52,7 @@
                 RequestAutoAttack(forwardVec);
             }
 
-            if (m_ContinueAutoAttack) {
+            if (PerformContinueAAs && m_ContinueAutoAttack) {
                 if (!TargetInRange()) {
                     m_ContinueAutoAttack = false;
                     return;
@@ -73,7 +75,7 @@
                     break;
             }
         }
-        
+
         private void PerformAutoAttack(Vector3 lookDirection) {
             m_ActionState.ActionState = m_AutoAttackAction;
             m_RotationController.LookAt(lookDirection, AADURATION);
@@ -86,12 +88,14 @@
 
         private void FinishedAutoAttack(CallReason cr) {
             if (cr == CallReason.Interupted) { return; }
-            m_ContinueAutoAttack = true;
+            if (PerformContinueAAs) {
+                m_ContinueAutoAttack = true;
+            }
         }
 
         private bool TargetInRange() {
-            if(GameData.Target == null) { return false; }
-            if(GetAARange() < GetDistanceToTarget()) { return false; }
+            if (GameData.Target == null) { return false; }
+            if (GetAARange() < GetDistanceToTarget()) { return false; }
             return true;
         }
 
@@ -100,7 +104,7 @@
         }
 
         private float GetDistanceToTarget() {
-            if(GameData.Target == null) { return -1f; }
+            if (GameData.Target == null) { return -1f; }
             return Vector3.Distance(transform.position, GameData.Target.transform.position);
         }
     }

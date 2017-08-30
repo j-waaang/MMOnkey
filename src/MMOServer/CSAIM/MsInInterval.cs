@@ -1,5 +1,4 @@
 ﻿namespace JYW.ThesisMMO.MMOServer.CSAIM {
-    using ExitGames.Logging;
     using JYW.ThesisMMO.MMOServer.Skills;
 
     internal struct MsInInterval {
@@ -46,6 +45,10 @@
             get {
                 return new MsInInterval(0, 0, 0);
             }
+        }
+
+        public override string ToString() {
+            return string.Format("MsInInterval - Min: {0}, Max: {1}, Freq: {2}, Group: {3}", MinDistance, MaxDistance, MilliSeconds, Target);
         }
     }
 }

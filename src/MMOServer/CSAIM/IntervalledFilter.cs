@@ -90,7 +90,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         }
 
         private void AddDefaultIntervals() {
-            m_MsInIntervals.Add(new MsInInterval(0F, float.PositiveInfinity, 500));
+            m_MsInIntervals.Add(new MsInInterval(0F, 50F, 500));
             //m_MsInIntervals.Add(new MsInInterval(0F, 10F, 200));
         }
 

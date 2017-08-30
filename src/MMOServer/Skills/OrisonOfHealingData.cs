@@ -5,7 +5,7 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
     class OrisonOfHealingData : SkillData {
         public override int CooldownInMs {
             get {
-                return 4;
+                return 6;
             }
         }
 

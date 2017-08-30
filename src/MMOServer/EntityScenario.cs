@@ -16,8 +16,8 @@ namespace JYW.ThesisMMO.MMOServer {
             var start = World.Instance.WorldBounds.Min + Vector.One2D * World.RegionSize * 0.5f;
             var end = World.Instance.WorldBounds.Max - Vector.One2D * World.RegionSize * 0.5f;
 
-            for (var X = start.X; X <= end.X; X += 6) {
-                for (var Z = start.Z; Z <= end.Z; Z += 6) {
+            for (var X = start.X; X <= end.X; X += 10) {
+                for (var Z = start.Z; Z <= end.Z; Z += 10) {
                     var name = string.Format("{0}-{1} Entity", X, Z);
                     Bots.Add(EntityFactory.Instance.CreateAIBot(name, new Vector(X, Z), Teams[GetNextTeamIndex()], true));
                 }
@@ -31,7 +31,7 @@ namespace JYW.ThesisMMO.MMOServer {
             for (var X = start.X; X <= end.X; X += 15) {
                 for (var Z = start.Z; Z <= end.Z; Z += 15) {
                     var name = string.Format("{0}-{1} Entity", X, Z);
-                    Bots.Add(EntityFactory.Instance.CreateAIBot(name, new Vector(X, Z), Teams[GetNextTeamIndex()], false));
+                    Bots.Add(EntityFactory.Instance.CreateAIBot(name, new Vector(X, Z), Teams[GetNextTeamIndex()], true));
                 }
             }
         }

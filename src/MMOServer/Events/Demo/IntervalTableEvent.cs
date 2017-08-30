@@ -13,6 +13,7 @@ namespace JYW.ThesisMMO.MMOServer.Events.Demo {
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         public IntervalTableEvent(List<MsInInterval> intervals) {
+
             var x = intervals.Count;
             Mins = new float[x];
             Maxs = new float[x];
@@ -21,10 +22,13 @@ namespace JYW.ThesisMMO.MMOServer.Events.Demo {
 
             var i = 0;
             foreach (var element in intervals) {
+                //log.InfoFormat("Starting to conver interval {0}", element.ToString());
+
                 Mins[i] = element.MinDistance;
                 Maxs[i] = element.MaxDistance;
                 Frequencies[i] = element.MilliSeconds;
                 Teams[i] = (int)element.Target;
+                i++;
             }
         }
 
@@ -41,7 +45,9 @@ namespace JYW.ThesisMMO.MMOServer.Events.Demo {
         public readonly int[] Teams;
 
         public IEventData ToEventData() {
-            log.InfoFormat("Sending freqtable event with {0} entries", Mins.Length);
+            //log.InfoFormat("Sending freqtable event with {0} entries", Mins.Length);
+            //log.InfoFormat("Mins {0}, Maxs {1}, Freqs {2}, Teams {3}", string.Join(";", Mins), string.Join(";", Maxs), string.Join(";", Frequencies), string.Join(";", Teams));
+
             return new EventData((byte)EventCode.FrequencyTable, this);
         }
     }
