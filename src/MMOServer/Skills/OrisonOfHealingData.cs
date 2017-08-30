@@ -5,7 +5,7 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
     class OrisonOfHealingData : SkillData {
         public override int CooldownInMs {
             get {
-                return 6;
+                return 6000;
             }
         }
 
@@ -16,6 +16,9 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
         }
 
         public override MsInInterval GetConsistencyRequirement() {
+            if (m_ConsistencyOnCooldown) {
+                return MsInInterval.Zero;
+            }
             return new MsInInterval(MaxRange-1F, MaxRange+1F, 0, SkillTarget.FriendOnly);
         }
     }

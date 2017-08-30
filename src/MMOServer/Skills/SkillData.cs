@@ -16,8 +16,8 @@ namespace JYW.ThesisMMO.MMOServer.Skills {
 
         protected static readonly ILogger log = LogManager.GetCurrentClassLogger();
         protected int ConsistencyCooldownOffsetInMs = Settings.Default.SkillCooldownIMReactivationOffsetInMs;
+        protected bool m_ConsistencyOnCooldown;
         private long m_LastCastTime = long.MinValue;
-        private bool m_ConsistencyOnCooldown;
 
         public bool CanCast {
             get {
