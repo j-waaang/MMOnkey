@@ -1,13 +1,13 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Local {
-    using UnityClient.Characters;
-    using UnityEngine;
+﻿using UnityEngine;
+
+namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Local {
 
     public class ModelLoader : MonoBehaviour {
 
         [SerializeField] GameObject m_Prefab;
 
         private void Awake() {
-            var go = Instantiate(m_Prefab, transform);
+            Instantiate(m_Prefab, transform);
         }
     }
 }

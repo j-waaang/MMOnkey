@@ -2,10 +2,10 @@ Mono path[0] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Managed'
 Mono path[1] = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono'
 Mono config path = 'D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/Mono/etc'
 PlayerConnection initialized from D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55188
-Multi-casting "[IP] 192.168.178.83 [Port] 55188 [Flags] 2 [Guid] 3737160687 [EditorId] 3520744077 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55188]
-PlayerConnection already initialized - listening to [0.0.0.0:55188]
+PlayerConnection initialized network socket : 0.0.0.0 55111
+Multi-casting "[IP] 192.168.178.83 [Port] 55111 [Flags] 2 [Guid] 4283068296 [EditorId] 259720535 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-JingYi) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55111]
+PlayerConnection already initialized - listening to [0.0.0.0:55111]
 Player data archive not found at `D:/Projects/ThesisMMO/deploy/UnityClient/UClient_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -31,9 +31,135 @@ Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Common.dll into Unity Child Domain
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.053 seconds
+- Completed reload, in  0.019 seconds
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Projects\ThesisMMO\deploy\UnityClient\UClient_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.782234 ms
+No connection address entered. Using localhost:5055
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Assets.Scripts.MainMenu.ConnectionController:CheckConnectionAddress() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\MainMenu\ConnectionController.cs:25)
+JYW.ThesisMMO.UnityClient.Assets.Scripts.MainMenu.ConnectionController:OnConnect() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\MainMenu\ConnectionController.cs:17)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:154)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:533)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:432)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:412)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:186)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/MainMenu/ConnectionController.cs Line: 25)
+
+[Singleton] Using instance already created: ServerPeer
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Util.MonobehaviourSingleton`1:get_Instance() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Util\MonobehaviourSingleton.cs:54)
+JYW.ThesisMMO.UnityClient.Assets.Scripts.MainMenu.ConnectionController:OnConnect() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\MainMenu\ConnectionController.cs:18)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:154)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:533)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:432)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:412)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:186)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Util/MonobehaviourSingleton.cs Line: 54)
+
+Connecting to server at localhost:5055
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+JYW.ThesisMMO.UnityClient.Core.Game:Connect(String, Action) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\Game.cs:48)
+JYW.ThesisMMO.UnityClient.Assets.Scripts.MainMenu.ConnectionController:OnConnect() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\MainMenu\ConnectionController.cs:18)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:154)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:637)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:773)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:52)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:50)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:261)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:533)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:432)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:412)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:186)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:283)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Core/Game.cs Line: 48)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 11.679564 ms
+System memory in use before: 19.0 MB.
+System memory in use after: 19.0 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 620.
+Total: 0.762141 ms (FindLiveObjects: 0.046244 ms CreateObjectMapping: 0.021320 ms MarkObjects: 0.684065 ms  DeleteObjects: 0.009008 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.694822 ms
+System memory in use before: 22.2 MB.
+System memory in use after: 22.2 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1143.
+Total: 0.484371 ms (FindLiveObjects: 0.064863 ms CreateObjectMapping: 0.018918 ms MarkObjects: 0.362452 ms  DeleteObjects: 0.036935 ms)
+
+Min 0, Max 50, freq 500
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+FrequencyDrawer:OnFreqTableUpdate(IEnumerable`1) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Demo\FrequencyDrawer.cs:26)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.<OnFrequencyTableEvent>c__AnonStorey0:<>m__0() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\FrequencyTableEvent.cs:25)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:FireEnqueuedEvents() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:22)
+JYW.ThesisMMO.UnityClient.GameController:Start() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\GameController.cs:13)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Demo/FrequencyDrawer.cs Line: 26)
+
+Min 7, Max 9, freq 0
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+FrequencyDrawer:OnFreqTableUpdate(IEnumerable`1) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Demo\FrequencyDrawer.cs:26)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.<OnFrequencyTableEvent>c__AnonStorey0:<>m__0() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\FrequencyTableEvent.cs:25)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:FireEnqueuedEvents() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:22)
+JYW.ThesisMMO.UnityClient.GameController:Start() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\GameController.cs:13)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Demo/FrequencyDrawer.cs Line: 26)
+
+Min 0, Max 3.5, freq 0
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:LogFormat(LogType, String, Object[])
+UnityEngine.Debug:LogFormat(String, Object[])
+FrequencyDrawer:OnFreqTableUpdate(IEnumerable`1) (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Demo\FrequencyDrawer.cs:26)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.<OnFrequencyTableEvent>c__AnonStorey0:<>m__0() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\FrequencyTableEvent.cs:25)
+JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events.EventOperations:FireEnqueuedEvents() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\Core\MessageHandling\Events\EventOperations.cs:22)
+JYW.ThesisMMO.UnityClient.GameController:Start() (at D:\Projects\ThesisMMO\src\UnityClient\Assets\Scripts\GameController.cs:13)
+ 
+(Filename: D:/Projects/ThesisMMO/src/UnityClient/Assets/Scripts/Demo/FrequencyDrawer.cs Line: 26)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: d0 -> priority: 1 
+  Thread -> id: 3f18 -> priority: 1 

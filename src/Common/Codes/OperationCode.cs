@@ -2,6 +2,8 @@
     public enum OperationCode : byte{
         EnterWorld,
         Move,
-        CharacterAction
+        CharacterAction,
+        StartAiLoop,
+        ToggleAiLoop
     }
 }

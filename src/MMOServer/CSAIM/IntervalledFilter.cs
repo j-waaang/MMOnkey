@@ -1,12 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using ExitGames.Logging;
+using Photon.SocketServer;
 
 namespace JYW.ThesisMMO.MMOServer.CSAIM {
 
+    using Common.Codes;
     using Common.Types;
     using Entities;
+    using Events;
     using Events.Demo;
+    using Properties;
     using Skills;
 
     internal class IntervalledFilter : PositionFilter {
@@ -69,6 +73,9 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
                 if (!m_QueuedPositionUpdates.Contains(entity)) {
                     m_QueuedPositionUpdates.Add(entity);
                 }
+                if (Settings.Default.EvaluationMode) {
+                    SendFilteredPosition(entity);
+                }
             }
         }
 
@@ -101,6 +108,13 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         protected override void UpdateClientPosition(Entity entity) {
             base.UpdateClientPosition(entity);
             AddTimeStamp(entity);
+        }
+
+        protected void SendFilteredPosition(Entity entity) {
+            EventMessage.CounterEventReceive.Increment();
+            var moveEvent = new MoveEvent(entity.Name, entity.Position);
+            IEventData eventData = new EventData((byte)EventCode.FilteredPosition, moveEvent);
+            m_AttachedEntity.SendEvent(eventData, PositionSendParameters);
         }
 
         private void AddTimeStamp(Entity entity) {

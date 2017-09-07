@@ -26,9 +26,12 @@
             SetupLogger();
             RegisterTypes();
             InitializeGameTime();
-            //CreateWorld();
             CreateTestBots();
-            AILooper.Instance.Start();
+
+            //In eval mode we let the client start the ai loop
+            if (!Settings.Default.EvaluationMode) {
+                AILooper.Instance.Start();
+            }
         }
 
         protected override void TearDown() {

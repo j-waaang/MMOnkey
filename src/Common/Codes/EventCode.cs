@@ -4,6 +4,7 @@
         AttributeChangedEvent,
         EntityDeath,
         EntityExitRegion,
+        FilteredPosition,
         FrequencyTable,
         HealthUpdate,
         Move,

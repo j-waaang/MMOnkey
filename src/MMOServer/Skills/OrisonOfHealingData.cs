@@ -1,5 +1,4 @@
-﻿using System;
-using JYW.ThesisMMO.MMOServer.CSAIM;
+﻿using JYW.ThesisMMO.MMOServer.CSAIM;
 
 namespace JYW.ThesisMMO.MMOServer.Skills {
     class OrisonOfHealingData : SkillData {

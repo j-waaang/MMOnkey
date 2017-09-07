@@ -44,6 +44,9 @@ namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events {
                 case EventCode.FrequencyTable:
                     OnFrequencyTableEvent(eventData);
                     return;
+                case EventCode.FilteredPosition:
+                    OnFilteredMoveEvent(eventData);
+                    return;
                 case EventCode.Move:
                     OnMoveEvent(eventData);
                     return;

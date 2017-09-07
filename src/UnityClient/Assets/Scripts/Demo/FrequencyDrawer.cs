@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Linq;
 using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Events;
 using System.Collections.Generic;
 
@@ -23,8 +22,7 @@ public class FrequencyDrawer : MonoBehaviour {
     private void OnFreqTableUpdate(IEnumerable<FrequencyEntry> entries) {
         ClearTexture();
         foreach (var entry in entries) {
-            Debug.LogFormat("Min {0}, Max {1}, freq {2}", entry.MinDistance, entry.MaxDistance, entry.MilliSeconds);
-
+            //Debug.LogFormat("Min {0}, Max {1}, freq {2}", entry.MinDistance, entry.MaxDistance, entry.MilliSeconds);
             DrawRing((int)entry.MinDistance * m_EntrySizeToRadiusFactor,
                 (int)entry.MaxDistance * m_EntrySizeToRadiusFactor,
                 entry.MilliSeconds);

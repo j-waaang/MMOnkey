@@ -17,17 +17,24 @@ namespace JYW.ThesisMMO.MMOServer.AI {
 
         private readonly List<AIEntity> m_AIEntites = new List<AIEntity>();
         private readonly TimeSpan m_TickTimeout = new TimeSpan(0, 0, 0, 0, 33);
-        private readonly Thread m_AIThread;
+        private Thread m_AIThread;
 
-        private bool m_Running;
-
-        private AILooper() {
-            m_Running = true;
-            m_AIThread = new Thread(AILoop);
-        }
+        private bool m_Running = false;
 
         public void Start() {
+            if(m_Running == true) { return; }
+            m_Running = true;
+            m_AIThread = new Thread(AILoop);
             m_AIThread.Start();
+        }
+
+        public void ToggleLoop() {
+            m_Running = !m_Running;
+            if (m_Running) {
+                m_AIThread = new Thread(AILoop);
+                m_AIThread.Start();
+            }
+
         }
 
         /// <summary> 

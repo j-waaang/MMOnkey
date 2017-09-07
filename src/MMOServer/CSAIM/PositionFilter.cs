@@ -1,9 +1,11 @@
-﻿using JYW.ThesisMMO.Common.Codes;
-using JYW.ThesisMMO.MMOServer.Entities;
-using JYW.ThesisMMO.MMOServer.Events;
-using Photon.SocketServer;
+﻿using Photon.SocketServer;
 
 namespace JYW.ThesisMMO.MMOServer.CSAIM {
+
+    using JYW.ThesisMMO.Common.Codes;
+    using JYW.ThesisMMO.MMOServer.Entities;
+    using JYW.ThesisMMO.MMOServer.Events;
+
     abstract class PositionFilter {
 
         protected static readonly SendParameters PositionSendParameters = new SendParameters() { ChannelId = (byte)ChannelId.Position, Unreliable = true };

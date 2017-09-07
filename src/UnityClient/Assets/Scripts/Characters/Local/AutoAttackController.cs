@@ -1,11 +1,11 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Characters.Player {
+﻿using UnityEngine;
+using System;
 
-    using UnityEngine;
+namespace JYW.ThesisMMO.UnityClient.Characters.Player {
 
     using JYW.ThesisMMO.Common.Codes;
     using JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests;
     using Common.ContinueObjects;
-    using System;
     using Core.MessageHandling.Responses;
 
     /// <summary>

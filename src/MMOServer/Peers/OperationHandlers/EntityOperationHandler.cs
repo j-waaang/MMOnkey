@@ -8,6 +8,7 @@
     using JYW.ThesisMMO.MMOServer.Operations.Responses;
     using JYW.ThesisMMO.MMOServer.Requests;
     using JYW.ThesisMMO.MMOServer.ActionObjects;
+    using AI;
 
     class EntityOperationHandler : IOperationHandler {
 
@@ -33,6 +34,12 @@
                     return OperationMove(peer, operationRequest);
                 case OperationCode.CharacterAction:
                     return OperationCharacterAction(peer, operationRequest);
+                case OperationCode.StartAiLoop:
+                    AILooper.Instance.Start();
+                    return null;
+                case OperationCode.ToggleAiLoop:
+                    AILooper.Instance.ToggleLoop();
+                    return null;
                 default:
                     return DefaultResponses.CreateNegativeResponse(operationRequest, ReturnCode.OperationNotSupported);
             }
