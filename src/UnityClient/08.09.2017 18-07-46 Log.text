@@ -1,0 +1,13 @@
+Starting new log.
+Character: AxeAutoAttack DistractingShot HammerBash OrisonOfHealing
+Move/s: 50, FilteredMove/s: 264, PercentFiltered: 0.8407643
+Move/s: 51, FilteredMove/s: 272, PercentFiltered: 0.8421053
+Move/s: 51, FilteredMove/s: 284, PercentFiltered: 0.8477612
+Move/s: 51, FilteredMove/s: 260, PercentFiltered: 0.8360128
+Move/s: 51, FilteredMove/s: 294, PercentFiltered: 0.8521739
+Move/s: 52, FilteredMove/s: 256, PercentFiltered: 0.8311688
+Move/s: 54, FilteredMove/s: 296, PercentFiltered: 0.8457143
+Move/s: 47, FilteredMove/s: 234, PercentFiltered: 0.8327402
+Move/s: 55, FilteredMove/s: 304, PercentFiltered: 0.8467966
+Move/s: 48, FilteredMove/s: 248, PercentFiltered: 0.8378378
+Finished eval. MoveCounter: 510, FilterCounter: 2712, Percent Filtered: 0.8417132%

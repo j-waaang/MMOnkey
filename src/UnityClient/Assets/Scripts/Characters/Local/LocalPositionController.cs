@@ -11,14 +11,16 @@ namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Local {
     /// </summary>  
     public class LocalPositionController : MonoBehaviour {
 
+        private const string ToggleAiKey = "ToggleAi";
+
         private RemoteMovementSpeedComponent m_MovementSpeed;
         private MovementStateComponent m_MovementState;
         private RotationController m_RotationController;
 
         private Vector3 m_LastSendVector;
         private float m_LastSendTime = 0;
-        private float m_MinMovDistance = 0.15f;
-        private const float m_SendRateInSeconds = 0.033f;
+        private float m_MinMovDistance = 0.15F;
+        private const float m_SendRateInSeconds = 0.03F;
         private bool m_CanMove = true;
 
         private void Awake() {
@@ -38,6 +40,11 @@ namespace JYW.ThesisMMO.UnityClient.Assets.Scripts.Characters.Local {
         /// </summary>  
         private void UpdatePosition() {
             var inputVector = new Vector3(CrossPlatformInputManager.GetAxisRaw("Horizontal"), 0, CrossPlatformInputManager.GetAxisRaw("Vertical"));
+
+            //Move to eval start
+            if (Input.GetButtonDown(ToggleAiKey)) {
+                transform.position = new Vector3(3.5F, 0, 3.5F);
+            }
 
             if (inputVector == Vector3.zero) {
                 m_MovementState.MovementState = MovementState.Idle;

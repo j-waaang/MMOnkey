@@ -7,6 +7,8 @@ public class FrequencyDrawer : MonoBehaviour {
     private Texture2D m_MainTexture;
     private Color[,] m_DrawBoard;
     private int m_EntrySizeToRadiusFactor;
+    private bool m_HideTexture = true;
+    private IEnumerable<FrequencyEntry> m_LastTable;
 
     private void Awake() {
         m_MainTexture = GetComponent<Renderer>().material.mainTexture as Texture2D;
@@ -16,10 +18,25 @@ public class FrequencyDrawer : MonoBehaviour {
         ClearTexture();
         m_MainTexture.Apply();
         EventOperations.FrequencyTableEvent += OnFreqTableUpdate;
-        m_EntrySizeToRadiusFactor = (int) (m_MainTexture.height / 20);
+        m_EntrySizeToRadiusFactor = (int)(m_MainTexture.height / 20);
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.U)) {
+            m_HideTexture = !m_HideTexture;
+            if (!m_HideTexture) {
+                OnFreqTableUpdate(m_LastTable);
+            }
+            ClearTexture();
+        }
     }
 
     private void OnFreqTableUpdate(IEnumerable<FrequencyEntry> entries) {
+        if (m_HideTexture) {
+            m_LastTable = entries;
+            return;
+        }
+
         ClearTexture();
         foreach (var entry in entries) {
             //Debug.LogFormat("Min {0}, Max {1}, freq {2}", entry.MinDistance, entry.MaxDistance, entry.MilliSeconds);
@@ -45,7 +62,7 @@ public class FrequencyDrawer : MonoBehaviour {
             }
         }
     }
-    
+
     /// <summary>  
     ///  Draws a circle.
     ///  Used for testing only.
@@ -60,7 +77,7 @@ public class FrequencyDrawer : MonoBehaviour {
             x1 = r * Mathf.Cos(angle * Mathf.PI / 180);
             y1 = r * Mathf.Sin(angle * Mathf.PI / 180);
 
-            m_MainTexture.SetPixel(center + (int)x1, center + (int)y1, new Color(235f/255f,20f/255f,0));
+            m_MainTexture.SetPixel(center + (int)x1, center + (int)y1, new Color(235f / 255f, 20f / 255f, 0));
         }
     }
 
@@ -84,7 +101,7 @@ public class FrequencyDrawer : MonoBehaviour {
     ///  Draws a filled circle using the bresenham method.
     /// </summary>  
     private void DrawCircleFilled(int radius, int freq, DrawMode dm) {
-        if(radius <= 0) { return; }
+        if (radius <= 0) { return; }
 
         int center = m_MainTexture.height / 2;
         var col = FreqToColor(freq);
@@ -147,7 +164,7 @@ public class FrequencyDrawer : MonoBehaviour {
 
     private static Color FreqToColor(int freq) {
         //Debug.LogFormat("Freq2Col: freq: {0}", freq);
-        if(freq == -1) { return Color.clear; }
+        if (freq == -1) { return Color.clear; }
         Debug.Assert(freq >= 0 && freq <= 500, freq);
         var val = (float)freq;
         val /= 510f;

@@ -25,7 +25,7 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
         private readonly Thread m_DequeueThread;
         private readonly List<Entity> m_RemoveList = new List<Entity>();
         private bool m_Dequeueing = true;
-        private const int DequeueIntervalInMs = 15;
+        private const int DequeueIntervalInMs = 30;
 
         public IntervalledFilter(ClientEntity entity) 
             : base (entity) {
@@ -52,6 +52,9 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
                             UpdateClientPosition(entity);
                             m_RemoveList.Add(entity);
                         }
+                        else if (Settings.Default.EvaluationMode) {
+                            SendFilteredPosition(entity);
+                        }
                     }
                     while (m_RemoveList.Count > 0) {
                         m_QueuedPositionUpdates.Remove(m_RemoveList[0]);
@@ -73,9 +76,9 @@ namespace JYW.ThesisMMO.MMOServer.CSAIM {
                 if (!m_QueuedPositionUpdates.Contains(entity)) {
                     m_QueuedPositionUpdates.Add(entity);
                 }
-                if (Settings.Default.EvaluationMode) {
-                    SendFilteredPosition(entity);
-                }
+                //if (Settings.Default.EvaluationMode) {
+                //    SendFilteredPosition(entity);
+                //}
             }
         }
 

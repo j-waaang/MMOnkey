@@ -78,7 +78,7 @@ namespace JYW.ThesisMMO.MMOServer {
             return World.Instance.GetEntity(entity).Team;
         }
 
-        internal TestBot CreateAIBot(string name, Vector startPosition, string team, bool canMove) {
+        internal AIEntity CreateAIBot(string name, Vector startPosition, string team, bool canMove) {
             var position = startPosition;
             var maxHealth = GetMaxHealth(WeaponCode.Axe);
             var attributes = new Attribute[] {
@@ -89,6 +89,22 @@ namespace JYW.ThesisMMO.MMOServer {
 
             var entity = new Entity(name, position, team, attributes, null);
             var aiEntity = new TestBot(entity);
+            aiEntity.canMove = canMove;
+            World.Instance.AddEntity(entity);
+            return aiEntity;
+        }
+
+        internal AIEntity CreateAIBot2(string name, Vector startPosition, string team, bool canMove) {
+            var position = startPosition;
+            var maxHealth = GetMaxHealth(WeaponCode.Axe);
+            var attributes = new Attribute[] {
+                new IntAttribute(maxHealth, AttributeCode.MaxHealth),
+                new HealthAttribute(maxHealth),
+                new ActionStateAttribute(),
+                new FloatAttribute(0.2f, AttributeCode.Speed)};
+
+            var entity = new Entity(name, position, team, attributes, null);
+            var aiEntity = new TestBot2(entity);
             aiEntity.canMove = canMove;
             World.Instance.AddEntity(entity);
             return aiEntity;

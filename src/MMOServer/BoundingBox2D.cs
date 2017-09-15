@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Diagnostics;
+using ExitGames.Logging;
 
 namespace JYW.ThesisMMO.MMOServer {
 
     using Common.Types;
-    using System.Diagnostics;
 
     /// <summary>
     /// The 3D floating point bounding box.
@@ -12,6 +13,8 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public Vector Max { get; set; }
         public Vector Min { get; set; }
+
+        private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         public BoundingBox2D(Vector min, Vector max) : this() {
             Min = min;
@@ -42,6 +45,24 @@ namespace JYW.ThesisMMO.MMOServer {
 
         public bool Contains(Vector point) {
             // not outside of box?
+            //if((point.X < this.Min.X)) {
+            //    log.InfoFormat("MinxTestFailed !({0}<{1})", point.X, Min.X);
+            //    return false;
+            //}
+            //if ((point.X > this.Max.X)) {
+            //    log.InfoFormat("MaxxTestFailed");
+            //    return false;
+            //}
+            //if ((point.Z < this.Min.Z)) {
+            //    log.InfoFormat("MinzTestFailed");
+            //    return false;
+            //}
+            //if ((point.Z > this.Max.Z)) {
+            //    log.InfoFormat("MaxzTestFailed");
+            //    return false;
+            //}
+            //return true;
+
             return (point.X < this.Min.X || point.X > this.Max.X || point.Z < this.Min.Z || point.Z > this.Max.Z) ==
                    false;
         }
@@ -50,9 +71,9 @@ namespace JYW.ThesisMMO.MMOServer {
             return new BoundingBox2D { Min = Vector.Max(this.Min, other.Min), Max = Vector.Min(this.Max, other.Max) };
         }
         
-        public bool OverlapPoint(Vector point) {
-            return Min.X <= point.X && Min.Z <= point.Z && Max.X > point.X && Max.Z > point.Z;
-        }
+        //public bool OverlapPoint(Vector point) {
+        //    return Min.X <= point.X && Min.Z <= point.Z && Max.X > point.X && Max.Z > point.Z;
+        //}
 
         public BoundingBox2D UnionWith(BoundingBox2D other) {
             return new BoundingBox2D { Min = Vector.Min(this.Min, other.Min), Max = Vector.Max(this.Max, other.Max) };
@@ -63,7 +84,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public override string ToString() {
-            return string.Format("Bounds ({0},{1})({2},{3})", Min.X, Min.Z, Max.X, Max.Z);
+            return string.Format("Bounds Min:({0},{1}) Max:({2},{3})", Min.X, Min.Z, Max.X, Max.Z);
         }
     }
 }

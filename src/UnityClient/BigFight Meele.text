@@ -1,0 +1,13 @@
+Starting new log.
+Character: AxeAutoAttack Dash Dash Dash
+Move/s: 319, FilteredMove/s: 2621, PercentFiltered: 0.8914966
+Move/s: 305, FilteredMove/s: 2518, PercentFiltered: 0.8919589
+Move/s: 312, FilteredMove/s: 2669, PercentFiltered: 0.8953372
+Move/s: 308, FilteredMove/s: 2639, PercentFiltered: 0.895487
+Move/s: 318, FilteredMove/s: 2638, PercentFiltered: 0.8924222
+Move/s: 313, FilteredMove/s: 2606, PercentFiltered: 0.8927715
+Move/s: 311, FilteredMove/s: 2657, PercentFiltered: 0.8952156
+Move/s: 314, FilteredMove/s: 2667, PercentFiltered: 0.8946662
+Move/s: 310, FilteredMove/s: 2592, PercentFiltered: 0.8931771
+Move/s: 315, FilteredMove/s: 2722, PercentFiltered: 0.8962792
+Finished eval. MoveCounter: 3125, FilterCounter: 26329, Percent Filtered: 0.8939024%

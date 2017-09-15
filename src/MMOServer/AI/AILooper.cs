@@ -16,7 +16,7 @@ namespace JYW.ThesisMMO.MMOServer.AI {
         private static readonly ILogger log = LogManager.GetCurrentClassLogger();
 
         private readonly List<AIEntity> m_AIEntites = new List<AIEntity>();
-        private readonly TimeSpan m_TickTimeout = new TimeSpan(0, 0, 0, 0, 33);
+        private readonly TimeSpan m_TickTimeout = new TimeSpan(0, 0, 0, 0, 30);
         private Thread m_AIThread;
 
         private bool m_Running = false;

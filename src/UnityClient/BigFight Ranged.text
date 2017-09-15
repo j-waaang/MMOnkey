@@ -1,0 +1,13 @@
+Starting new log.
+Character: BowAutoAttack Dash Dash Dash
+Move/s: 904, FilteredMove/s: 2006, PercentFiltered: 0.6893471
+Move/s: 897, FilteredMove/s: 1975, PercentFiltered: 0.6876741
+Move/s: 936, FilteredMove/s: 2127, PercentFiltered: 0.6944172
+Move/s: 903, FilteredMove/s: 2099, PercentFiltered: 0.6992005
+Move/s: 907, FilteredMove/s: 2018, PercentFiltered: 0.6899145
+Move/s: 918, FilteredMove/s: 2127, PercentFiltered: 0.6985222
+Move/s: 897, FilteredMove/s: 1988, PercentFiltered: 0.6890814
+Move/s: 908, FilteredMove/s: 2100, PercentFiltered: 0.6981383
+Move/s: 943, FilteredMove/s: 1975, PercentFiltered: 0.6768335
+Move/s: 909, FilteredMove/s: 2160, PercentFiltered: 0.7038123
+Finished eval. MoveCounter: 9122, FilterCounter: 20575, Percent Filtered: 0.6928309%

@@ -1,6 +1,7 @@
-﻿namespace JYW.ThesisMMO.MMOServer.AI {
+﻿using System;
 
-    using System;
+namespace JYW.ThesisMMO.MMOServer.AI {
+
     using JYW.ThesisMMO.Common.Types;
 
     /// <summary> 

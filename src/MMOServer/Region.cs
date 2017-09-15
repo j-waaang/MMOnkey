@@ -68,7 +68,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public override string ToString() {
-            return string.Format("{0},{1} ", X, Z);
+            return string.Format("Tile: ({0},{1}), Bounds: {2}", X, Z, Boundaries.ToString());
         }
 
         public bool Equals(Region other) {

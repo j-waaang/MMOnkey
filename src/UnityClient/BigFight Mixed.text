@@ -1,0 +1,13 @@
+Starting new log.
+Character: AxeAutoAttack DistractingShot Dash Dash
+Move/s: 839, FilteredMove/s: 2067, PercentFiltered: 0.711287
+Move/s: 808, FilteredMove/s: 2038, PercentFiltered: 0.7160928
+Move/s: 855, FilteredMove/s: 2196, PercentFiltered: 0.719764
+Move/s: 853, FilteredMove/s: 2163, PercentFiltered: 0.7171751
+Move/s: 861, FilteredMove/s: 2155, PercentFiltered: 0.7145225
+Move/s: 584, FilteredMove/s: 2393, PercentFiltered: 0.8038294
+Move/s: 309, FilteredMove/s: 2691, PercentFiltered: 0.897
+Move/s: 316, FilteredMove/s: 2656, PercentFiltered: 0.8936743
+Move/s: 312, FilteredMove/s: 2607, PercentFiltered: 0.8931141
+Move/s: 313, FilteredMove/s: 2709, PercentFiltered: 0.8964262
+Finished eval. MoveCounter: 6050, FilterCounter: 23675, Percent Filtered: 0.7964676%

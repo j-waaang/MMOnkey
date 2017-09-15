@@ -70,6 +70,7 @@
     <Compile Include="AI\AIEntity.cs" />
     <Compile Include="AI\AILooper.cs" />
     <Compile Include="AI\FireStormAI.cs" />
+    <Compile Include="AI\TestBot2.cs" />
     <Compile Include="AI\TestBot.cs" />
     <Compile Include="ChannelId.cs" />
     <Compile Include="ClientInterestArea.cs" />

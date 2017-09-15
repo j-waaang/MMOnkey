@@ -1,0 +1,13 @@
+Starting new log.
+Character: AxeAutoAttack OrisonOfHealing Dash Dash
+Move/s: 27, FilteredMove/s: 288, PercentFiltered: 0.9142857
+Move/s: 31, FilteredMove/s: 292, PercentFiltered: 0.9040248
+Move/s: 24, FilteredMove/s: 312, PercentFiltered: 0.9285714
+Move/s: 35, FilteredMove/s: 276, PercentFiltered: 0.8874598
+Move/s: 20, FilteredMove/s: 326, PercentFiltered: 0.9421965
+Move/s: 35, FilteredMove/s: 264, PercentFiltered: 0.8829432
+Move/s: 24, FilteredMove/s: 327, PercentFiltered: 0.9316239
+Move/s: 31, FilteredMove/s: 259, PercentFiltered: 0.8931034
+Move/s: 24, FilteredMove/s: 318, PercentFiltered: 0.9298246
+Move/s: 31, FilteredMove/s: 265, PercentFiltered: 0.8952703
+Finished eval. MoveCounter: 282, FilterCounter: 2927, Percent Filtered: 0.9121221%

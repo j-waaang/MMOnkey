@@ -74,6 +74,9 @@
                 case 1:
                     EntityScenario.CreateCentralizedScenario();
                     break;
+                case 2:
+                    EntityScenario.CreateSingleEnemy();
+                    break;
             }
         }
     }

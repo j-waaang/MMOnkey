@@ -1,8 +1,9 @@
-﻿namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
+﻿using ExitGames.Client.Photon;
+using System.Collections.Generic;
 
-    using ExitGames.Client.Photon;
+namespace JYW.ThesisMMO.UnityClient.Core.MessageHandling.Requests {
+
     using Common.Codes;
-    using System.Collections.Generic;
     using JYW.ThesisMMO.UnityClient.CharacterSelection;
 
     public partial class RequestOperations {

@@ -132,7 +132,8 @@ namespace JYW.ThesisMMO.MMOServer {
 
             m_RegionEventSubscriptions[region] = new UnsubscriberCollection(
                 region.RegionEventChannel.Subscribe(m_EntityFiber, OnEntityEvent),
-                region.PositionUpdateChannel.SubscribeToLast(m_EntityFiber, OnPositionUpdate, PositionUpdateIntervalInMs));
+                region.PositionUpdateChannel.Subscribe(m_EntityFiber, OnPositionUpdate));
+                //region.PositionUpdateChannel.SubscribeToLast(m_EntityFiber, OnPositionUpdate, PositionUpdateIntervalInMs));
         }
 
         protected void OnEntityRegionChange(EntityRegionChangedMessage message) {

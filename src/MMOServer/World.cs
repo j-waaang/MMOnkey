@@ -70,7 +70,7 @@ namespace JYW.ThesisMMO.MMOServer {
         }
 
         public void MoveEntity(string username, Vector position) {
-            if (!WorldBounds.OverlapPoint(position)) { return; }
+            if (!WorldBounds.Contains(position)) { return; }
             m_Entities[username].Move(position);
         }
 
@@ -150,7 +150,7 @@ namespace JYW.ThesisMMO.MMOServer {
             var x = (int)Math.Floor(Math.Abs(point.X - minVal) / RegionSize);
             var z = (int)Math.Floor(Math.Abs(point.Z - minVal) / RegionSize);
 
-            Debug.Assert(m_Regions[x, z].Boundaries.Contains(point));
+            //Debug.Assert(m_Regions[x, z].Boundaries.Contains(point), string.Format("Point {0} not in region {1}",point, m_Regions[x,z]));
             return m_Regions[x, z];
         }
 
