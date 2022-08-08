@@ -1,4 +1,4 @@
-# ThesisMMO
+# MMOnkey
 
 ### Configure server:
 - Open: D:\Projects\ThesisMMO\deploy\MMOServer\bin\MMOServer.dll.config
